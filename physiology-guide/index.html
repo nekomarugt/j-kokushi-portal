@@ -1,60 +1,51 @@
 <!doctype html>
 <html lang="ja">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0b5ea8">
-  <meta name="description" content="生理学の授業プリントを章別に整理した国家試験対策・授業復習用の学習資料です。">
-  <title>生理学 学習資料</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b5ea8'/%3E%3Cpath d='M9 34h10l5-13 9 27 7-18 5 10h10' fill='none' stroke='white' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="brand">
-      <span class="brand-mark" aria-hidden="true">∿</span>
-      <div>
-        <h1>生理学 学習資料</h1>
-        <p>国家試験対策・授業復習用</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b1730" />
+    <meta name="robots" content="noindex" />
+    <meta
+      name="description"
+      content="生理学の学習資料は note で有料公開しています"
+    />
+    <title>生理学 学習資料｜noteで読む（有料）</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="cta-shell">
+      <header class="cta-header">
+        <p class="eyebrow">PHYSIOLOGY · 学習資料</p>
+        <h1>生理学の学習資料は note で公開（有料）</h1>
+        <p class="lead">
+          ポータル上での全文公開は終了しました。章別の解説・理解度チェック・詳しい補足は note で読めます。
+        </p>
+      </header>
+
+      <section class="cta-card" aria-labelledby="includes-title">
+        <h2 id="includes-title">含まれる内容（概要）</h2>
+        <ul>
+          <li>章別の授業解説（基礎・筋・神経・循環・呼吸・代謝など）</li>
+          <li>理解度チェックと詳しい補足</li>
+          <li>国家試験につながるポイント整理</li>
+        </ul>
+        <p class="price-hint">有料記事として note で公開予定／公開中（価格は note 側を確認）</p>
+      </section>
+
+      <div class="cta-actions">
+        <a
+          class="btn-primary"
+          href="https://note.com/tomo703"
+          target="_blank"
+          rel="noopener noreferrer"
+        >noteで読む（有料）</a>
+        <a class="btn-secondary" href="../">ポータルトップへ戻る</a>
       </div>
-    </div>
-    <button id="answerToggle" class="answer-toggle" type="button" aria-pressed="true">赤字を隠す</button>
-  </header>
 
-  <div class="notice">
-    本サイトは国家試験対策・授業復習のための補助教材です。医学的エビデンスや診療・臨床判断の根拠として使用するものではありません。
-  </div>
-
-  <main class="app-shell">
-    <nav class="chapter-nav" aria-label="章を選ぶ">
-      <div id="chapterTabs" class="chapter-tabs" role="tablist"></div>
-    </nav>
-
-    <section class="chapter-stage">
-      <div id="chapterIntro" class="chapter-intro"></div>
-      <div id="sectionList" class="section-list"></div>
-      <div id="chapterDeepDive"></div>
-      <div id="chapterQuiz" class="chapter-quiz"></div>
-      <div class="chapter-pager">
-        <button id="prevChapter" type="button">前の章</button>
-        <button id="nextChapter" type="button">次の章</button>
-      </div>
-    </section>
-  </main>
-
-  <a class="portal-dock" href="../" aria-label="3科目まとめポータルへ戻る">ポータルへ戻る</a>
-
-  <footer>
-    <a href="../physiology/">生理学 国家試験過去問へ</a>
-    <button id="toTop" type="button">ページ上部へ</button>
-  </footer>
-
-  <dialog id="imageViewer" class="image-viewer" aria-labelledby="viewerCaption">
-    <div class="viewer-toolbar"><p id="viewerCaption"></p><button id="closeImageViewer" type="button" autofocus>閉じる</button></div>
-    <div class="viewer-scroll"><img id="viewerImage" alt=""></div>
-  </dialog>
-  <script src="content.js"></script>
-  <script src="deepdive.js"></script>
-  <script src="app.js"></script>
-</body>
+      <p class="free-note">
+        <strong>過去問はポータルで無料のまま</strong>
+        — 生理学・解剖学・一般臨床医学の過去問アプリは、これまでどおり登録不要で利用できます。
+      </p>
+    </main>
+  </body>
 </html>
