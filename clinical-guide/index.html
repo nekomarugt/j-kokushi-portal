@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#103f3a" />
+    <meta name="description" content="一般臨床医学の国家試験対策・授業復習用の個人制作補助教材。診療・臨床判断の根拠として使用するものではありません。" />
+    <title>一般臨床医学 学習資料</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="portal-return" href="../" aria-label="過去問・学習資料のポータルへ戻る">← ポータルへ戻る</a>
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="一般臨床医学 学習資料のトップへ">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span><small>授業補助教材</small><strong>一般臨床医学 学習資料</strong></span>
+      </a>
+      <a class="quiz-link" href="../clinical/">過去問を解く</a>
+    </header>
+
+    <aside class="purpose-notice" role="note" aria-label="このサイトの用途">
+      <div>
+        <strong>国家試験対策・授業復習用</strong>
+        <span>本サイトは授業補助教材です。診療・臨床判断の根拠となる医学的エビデンスを示す目的で作成したものではありません。</span>
+      </div>
+    </aside>
+
+    <div class="course-tabs" role="navigation" aria-label="資料区分">
+      <button class="course-tab is-active" type="button" data-course="general">総論</button>
+      <button class="course-tab" type="button" data-course="diseases">各論</button>
+    </div>
+
+    <main id="app" class="app-shell">
+      <section class="loading" aria-live="polite">資料を読み込んでいます</section>
+    </main>
+
+    <footer>
+      <p>個人制作の授業補助教材です。学校公式サイトではありません。</p>
+    </footer>
+
+    <dialog id="image-viewer" class="image-viewer" aria-labelledby="image-viewer-caption">
+      <div class="image-viewer-panel">
+        <button class="image-viewer-close" type="button" data-close-viewer aria-label="拡大画像を閉じる">閉じる</button>
+        <img id="image-viewer-image" src="" alt="" />
+        <p id="image-viewer-caption"></p>
+      </div>
+    </dialog>
+
+    <script src="./content.js"></script>
+    <script src="./explanations.js"></script>
+    <script src="./disease-content.js"></script>
+    <script src="./disease-explanations.js"></script>
+    <script src="./deepdives.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

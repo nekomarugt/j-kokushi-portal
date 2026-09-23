@@ -1,0 +1,2119 @@
+{
+  "counts": {
+    "symbol_dupe": 239,
+    "typo_garbled": 1,
+    "typo_empty": 26,
+    "number_dupe_notes": 2
+  },
+  "issues": [
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "①",
+      "snippet": "①胆石症、尿管結石 ① （エビ姿勢 ） （体をまげる） 疝痛",
+      "loc": "inspection/blocks[1]/note:n19",
+      "between": "胆石症、尿管結石 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "②",
+      "snippet": "②重症心疾患、肺疾患 ② 起坐位",
+      "loc": "inspection/blocks[2]/note:n20",
+      "between": "重症心疾患、肺疾患 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "③",
+      "snippet": "③脳血管障害 ③ （マン・ウェルニッケ姿勢 ）\n（麻痺側",
+      "loc": "inspection/blocks[3]/note:n21",
+      "between": "脳血管障害 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "④",
+      "snippet": "④ 坐骨神経痛 ④ 脊柱 側弯姿勢",
+      "loc": "inspection/blocks[4]",
+      "between": " 坐骨神経痛 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "⑤",
+      "snippet": "⑤ パーキンソン病 ⑤ （前かがみ姿勢 ）",
+      "loc": "inspection/blocks[5]/note:n22",
+      "between": " パーキンソン病 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "⑥",
+      "snippet": "⑥ 髄膜炎、破傷風 ⑥ （後弓反張）\n（後頚部・背部・上下肢の",
+      "loc": "inspection/blocks[6]/note:n23",
+      "between": " 髄膜炎、破傷風 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "②",
+      "snippet": "② BMI ②（ 22 ） ――― ―― ―― → 標",
+      "loc": "inspection/blocks[10]",
+      "between": " BMI "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "③",
+      "snippet": "③ BMI ③（18 . 5 未満） ―― ―― → ",
+      "loc": "inspection/blocks[11]/note:n25",
+      "between": " BMI "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "④",
+      "snippet": "④ BMI ④（ 25 以上 ） ――――― ― → ",
+      "loc": "inspection/blocks[12]",
+      "between": " BMI "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "⑦",
+      "snippet": "⑦ 肥満度 ： ⑦ （ －9～9％ ） ―― ―― → 標",
+      "loc": "inspection/blocks[15]",
+      "between": " 肥満度 ： "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "⑧",
+      "snippet": "⑧ 肥満度 ： ⑧ （ －20％ 以下 ） ―― ―― →",
+      "loc": "inspection/blocks[16]/note:n27",
+      "between": " 肥満度 ： "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "⑨",
+      "snippet": "⑨肥満度 ： ⑨ （ 20％ 以上 ） ―― ―― → ",
+      "loc": "inspection/blocks[17]/note:n28",
+      "between": "肥満度 ： "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "①",
+      "snippet": "①症候性肥満となるのは？ ① （クッシング症候群） 、 （甲状腺機能",
+      "loc": "inspection/blocks[18]/note:n29",
+      "between": "症候性肥満となるのは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "①",
+      "snippet": "① 症候性やせとなるのは？ ① （糖尿病 ）、（バセドウ病 ）、（アジ",
+      "loc": "inspection/blocks[20]/note:n30",
+      "between": " 症候性やせとなるのは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "②",
+      "snippet": "② 極端にやせが進んだ状態は？ ② 悪液質 （がん末期の衰弱した状態）",
+      "loc": "inspection/blocks[21]/note:n31",
+      "between": " 極端にやせが進んだ状態は？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "①",
+      "snippet": "①意識状態とは？ ①大脳皮質全体の興奮水準を意味する。",
+      "loc": "inspection/blocks[23]/note:n32",
+      "between": "意識状態とは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "②",
+      "snippet": "②清明 ②意識がしっかりしている状態",
+      "loc": "inspection/blocks[24]/note:n33",
+      "between": "清明 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "①",
+      "snippet": "①高身長 ① （下垂体性） 巨人症、マルファン症候群",
+      "loc": "inspection/blocks[34]/note:n41",
+      "between": "高身長 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "②",
+      "snippet": "②低身長 ② （ターナー症候群） ： 45X 〇 、",
+      "loc": "inspection/blocks[35]/note:n42",
+      "between": "低身長 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "①",
+      "snippet": "①痙攣とは？ ①筋肉が不随意に激しく攣縮する状態 （強直",
+      "loc": "inspection/blocks[43]/note:n47",
+      "between": "痙攣とは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "②",
+      "snippet": "②破傷風でみられるのは？ ② （痙笑）",
+      "loc": "inspection/blocks[44]/note:n48",
+      "between": "破傷風でみられるのは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "③",
+      "snippet": "③ （テタニー） が みられるのは？ ③ 低カルシウム血症（副甲状腺機能低下症 ",
+      "loc": "inspection/blocks[45]/note:n49",
+      "between": " （テタニー） が みられるのは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "①",
+      "snippet": "①振戦とは？ ①リズミカルに動く不随意運動",
+      "loc": "inspection/blocks[47]/note:n50",
+      "between": "振戦とは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "②",
+      "snippet": "②振戦がみられるのは？ ② （バセドウ病 ） 、アルコール中毒、精",
+      "loc": "inspection/blocks[48]/note:n51",
+      "between": "振戦がみられるのは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "③",
+      "snippet": "③ 企図振戦 がみられるのは？ ③多発性硬化症、小脳疾患 （＝動こうとした",
+      "loc": "inspection/blocks[49]/note:n52",
+      "between": " 企図振戦 がみられるのは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "④",
+      "snippet": "④羽ばたき振戦がみられるのは？ ④ （肝硬変） 、 （ウィルソン病 ） ※",
+      "loc": "inspection/blocks[50]/note:n53",
+      "between": "羽ばたき振戦がみられるのは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "①",
+      "snippet": "①舞踏病様振戦とは？ ①不規則で目的のないような非対称性の迅速で",
+      "loc": "inspection/blocks[52]/note:n54",
+      "between": "舞踏病様振戦とは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "②",
+      "snippet": "②その代表例は？ ②小舞踏病 （リウマチ熱） 、ハンチントン",
+      "loc": "inspection/blocks[53]/note:n55",
+      "between": "その代表例は？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "①",
+      "snippet": "①アテトーゼ運動とは？ ①ゆっくりと持続性のある運動。 虫の這うよ",
+      "loc": "inspection/blocks[55]/note:n56",
+      "between": "アテトーゼ運動とは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "②",
+      "snippet": "②その代表例は？ ②先天性脳性小児麻痺",
+      "loc": "inspection/blocks[56]/note:n57",
+      "between": "その代表例は？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "①",
+      "snippet": "①チックとは？ ①単一か複数の筋肉が目的もなく運動を反復す",
+      "loc": "inspection/blocks[58]/note:n58",
+      "between": "チックとは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "①",
+      "snippet": "①ミオクローヌスとは？ ① 突発性に （不規則） 一部の筋肉がすば",
+      "loc": "inspection/blocks[60]/note:n59",
+      "between": "ミオクローヌスとは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "②",
+      "snippet": "②その原因は？ ②脳炎の後遺症 、脳炎\n★ミオトニア：筋 ",
+      "loc": "inspection/blocks[61]/note:n60",
+      "between": "その原因は？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "①",
+      "snippet": "①疼痛性跛行 ①下肢に痛みあるとき患側をゆっくり地につき",
+      "loc": "inspection/blocks[63]/note:n61",
+      "between": "疼痛性跛行 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "②",
+      "snippet": "②間欠性跛行 ②歩行しているとときどき歩行できなくなる。",
+      "loc": "inspection/blocks[64]/note:n62",
+      "between": "間欠性跛行 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "③",
+      "snippet": "③トレンデレンブルグ(現象)歩行 ③患側下肢で起立すると 健側 骨盤が下がる",
+      "loc": "inspection/blocks[65]/note:n63",
+      "between": "トレンデレンブルグ(現象)歩行 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "④",
+      "snippet": "④片麻痺歩行 ④１側性の上位運動ニューロン(錐体路)の障",
+      "loc": "inspection/blocks[66]/note:n64",
+      "between": "片麻痺歩行 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "⑤",
+      "snippet": "⑤アヒル歩行 ⑤脊椎前弯を伴う （進行性筋ジストロフィー",
+      "loc": "inspection/blocks[67]/note:n65",
+      "between": "アヒル歩行 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "⑥",
+      "snippet": "⑥痙性 （ 対 ） 麻痺歩行 ⑥はさみ状歩行。 尖足歩行。 両側の錐体路",
+      "loc": "inspection/blocks[68]/note:n66",
+      "between": "痙性 （ 対 ） 麻痺歩行 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "⑦",
+      "snippet": "⑦失調性歩行 ⑦ 脊椎、小脳、迷路の障害 により運動失調",
+      "loc": "inspection/blocks[69]/note:n67",
+      "between": "失調性歩行 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "⑧",
+      "snippet": "⑧小歩症 ⑧前かがみの姿勢でちょこちょこ歩く\n小刻み",
+      "loc": "inspection/blocks[72]/note:n70",
+      "between": "小歩症 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "⑨",
+      "snippet": "⑨麻痺性歩行 ⑨下位運動ニューロン障害 、腰椎椎間板ヘル",
+      "loc": "inspection/blocks[73]/note:n71",
+      "between": "麻痺性歩行 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "⑩",
+      "snippet": "⑩随意性跛行 ⑩注意すれば跛行しない。\n小児股関節結核、",
+      "loc": "inspection/blocks[74]/note:n72",
+      "between": "随意性跛行 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "⑪",
+      "snippet": "⑪ 動揺性歩行 ⑪ 筋疾患、筋ジストロフィーのアヒル歩行な",
+      "loc": "inspection/blocks[75]/note:n73",
+      "between": " 動揺性歩行 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "⑫",
+      "snippet": "⑫ 疼痛性歩行 ⑫ 神経痛",
+      "loc": "inspection/blocks[76]/note:n74",
+      "between": " 疼痛性歩行 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "⑬",
+      "snippet": "⑬ 関節障害性歩行 ⑬ 関節疾患、関節炎",
+      "loc": "inspection/blocks[77]/note:n75",
+      "between": " 関節障害性歩行 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "①",
+      "snippet": "①蒼白 ①高度の貧血。ショック状態。眼瞼結膜･口腔",
+      "loc": "inspection/blocks[80]/note:n76",
+      "between": "蒼白 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "②",
+      "snippet": "②チアノーゼ ② 暗紫赤色 、還元ヘモグロビンの増加、末",
+      "loc": "inspection/blocks[81]/note:n77",
+      "between": "チアノーゼ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "③",
+      "snippet": "③黄疸 ③ビリルビン濃度の上昇。眼球結膜･口腔粘膜",
+      "loc": "inspection/blocks[82]/note:n78",
+      "between": "黄疸 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "④",
+      "snippet": "④ 潮紅 ④発熱や精神的に興奮した状態 。多血症でも",
+      "loc": "inspection/blocks[83]/note:n79",
+      "between": " 潮紅 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "①",
+      "snippet": "①体液の分類 ①細胞 内液（40%）\n細胞外液（20%）",
+      "loc": "inspection/blocks[86]/note:n80",
+      "between": "体液の分類 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "②",
+      "snippet": "②浮腫とは ②組織間液の増加 .皮下 組織に水分が過剰",
+      "loc": "inspection/blocks[87]/note:n81",
+      "between": "浮腫とは "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "③",
+      "snippet": "③浮腫の成因 ③１ 、（血管透過性の亢進 ） （炎症）\n",
+      "loc": "inspection/blocks[88]/note:n82",
+      "between": "浮腫の成因 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "④",
+      "snippet": "④ 全身性浮腫 ④心・腎・肝疾患、栄養障害、高度の貧血、内",
+      "loc": "inspection/blocks[89]/note:n83",
+      "between": " 全身性浮腫 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "⑤",
+      "snippet": "⑤限局性浮腫 ⑤炎症、静脈血栓症、象皮症、 （クインケ浮",
+      "loc": "inspection/blocks[90]/note:n84",
+      "between": "限局性浮腫 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "⑥",
+      "snippet": "⑥クインケ 浮腫 ⑥発作性･一過性･限局性の浮腫（顔面･四肢",
+      "loc": "inspection/blocks[91]/note:n85",
+      "between": "クインケ 浮腫 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "②",
+      "snippet": "② （紫斑） ② 再生不良性貧血、 特発性血小板減少性紫",
+      "loc": "inspection/blocks[95]/note:n88",
+      "between": " （紫斑） "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "③",
+      "snippet": "③ （コプリック斑） ③ 麻疹",
+      "loc": "inspection/blocks[96]/note:n89",
+      "between": " （コプリック斑） "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "④",
+      "snippet": "④ （バラ疹） ④ 腸チフス、梅毒 Ⅱ期",
+      "loc": "inspection/blocks[97]/note:n90",
+      "between": " （バラ疹） "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "⑤",
+      "snippet": "⑤ 水疱疹 ⑤ 帯状疱疹、単純性疱疹 … 疼痛を伴う",
+      "loc": "inspection/blocks[98]/note:n91",
+      "between": " 水疱疹 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "⑥",
+      "snippet": "⑥ 口腔粘膜アフタ ⑥ ベーチェット病",
+      "loc": "inspection/blocks[99]/note:n92",
+      "between": " 口腔粘膜アフタ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "⑦",
+      "snippet": "⑦ （オスラー結節） ⑦ 細菌性心内膜炎。手足の 指にできる。 ",
+      "loc": "inspection/blocks[100]/note:n93",
+      "between": " （オスラー結節） "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "⑧",
+      "snippet": "⑧ ヘバーデン結節 ⑧ 遠位指節間関節の 変形性関節症 。 中",
+      "loc": "inspection/blocks[101]/note:n94",
+      "between": " ヘバーデン結節 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "⑨",
+      "snippet": "⑨蕁麻疹 ⑨アレルギー反応（輸血、食品）\n薬疹では、",
+      "loc": "inspection/blocks[102]/note:n95",
+      "between": "蕁麻疹 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "①",
+      "snippet": "①レイノー現象とは？ ①四肢小動脈の発作性痙攣。\n皮膚が蒼白･チ",
+      "loc": "inspection/blocks[104]/note:n96",
+      "between": "レイノー現象とは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "②",
+      "snippet": "②クモ状血管腫 ②肝硬変",
+      "loc": "inspection/blocks[105]/note:n97",
+      "between": "クモ状血管腫 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "①",
+      "snippet": "①鉄欠乏性貧血でみられるのは？ ① スプーン様爪(さじ状爪) ：薄くなって",
+      "loc": "inspection/blocks[107]/note:n98",
+      "between": "鉄欠乏性貧血でみられるのは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "②",
+      "snippet": "②貧血では？ ② 蒼白となる。（正常はピンク色）",
+      "loc": "inspection/blocks[108]/note:n99",
+      "between": "貧血では？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "③",
+      "snippet": "③ ネフローゼ症候群・低アルブミン血症 ③ 横に向かって帯状の白線が見られる。",
+      "loc": "inspection/blocks[109]/note:n100",
+      "between": " ネフローゼ症候群・低アルブミン血症 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "④",
+      "snippet": "④爪の真菌症 ④ 爪が厚く、縦に走る線が見られる。",
+      "loc": "inspection/blocks[110]/note:n101",
+      "between": "爪の真菌症 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "①",
+      "snippet": "①苦悶状顔貌 ①疼痛による苦痛の表情",
+      "loc": "inspection/blocks[113]/note:n102",
+      "between": "苦悶状顔貌 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "②",
+      "snippet": "②有熱顔貌 ②顔面が熱により紅潮",
+      "loc": "inspection/blocks[114]/note:n103",
+      "between": "有熱顔貌 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "③",
+      "snippet": "③無欲状顔貌 ③表情に活気なく眼光は鈍く周囲に無関心。\n",
+      "loc": "inspection/blocks[115]/note:n104",
+      "between": "無欲状顔貌 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "④",
+      "snippet": "④仮面様顔貌(マスク様顔貌) ④顔面筋の硬直で表情が乏しい能面のよう。\n",
+      "loc": "inspection/blocks[116]/note:n105",
+      "between": "仮面様顔貌(マスク様顔貌) "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "⑤",
+      "snippet": "⑤ヒポクラテス顔貌 ⑤死期が近い 。表情が乏しく、眼窩がくぼん",
+      "loc": "inspection/blocks[117]/note:n106",
+      "between": "ヒポクラテス顔貌 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "⑥",
+      "snippet": "⑥満月様顔貌 ⑥ （クッシング症候群 ） 、\n副腎 皮質",
+      "loc": "inspection/blocks[118]/note:n107",
+      "between": "満月様顔貌 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "①",
+      "snippet": "① 眼球が突出するのは？ ① （バセドウ病 ） （グレーブス病）",
+      "loc": "inspection/blocks[120]/note:n108",
+      "between": " 眼球が突出するのは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "②",
+      "snippet": "② 眼瞼下垂するのは？ ② （動眼神経麻痺 ） 、 （重症筋無力症",
+      "loc": "inspection/blocks[121]/note:n109",
+      "between": " 眼瞼下垂するのは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "③",
+      "snippet": "③眼球陥凹するのは？ ③ ホルネル症候群（眼球陥凹、眼瞼下垂、縮",
+      "loc": "inspection/blocks[122]/note:n110",
+      "between": "眼球陥凹するのは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "④",
+      "snippet": "④ ベル現象とは？ ④ 眼を閉じると麻痺側の眼球が上方、やや ",
+      "loc": "inspection/blocks[123]/note:n111",
+      "between": " ベル現象とは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "⑤",
+      "snippet": "⑤ 複視 ⑤ 動眼、滑車、外転 神経の麻痺。\n１側麻",
+      "loc": "inspection/blocks[129]/note:n116",
+      "between": " 複視 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "⑥",
+      "snippet": "⑥共同偏視 ⑥ 両側の眼球が一方向へ偏位。 （脳血管障",
+      "loc": "inspection/blocks[130]/note:n117",
+      "between": "共同偏視 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "⑦",
+      "snippet": "⑦斜視 ⑦ １眼が外方 （外斜視） または内方 （",
+      "loc": "inspection/blocks[132]/note:n118",
+      "between": "斜視 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "⑧",
+      "snippet": "⑧眼振 ⑧ 眼球が一定方向へぴくぴくと反復性に迅速",
+      "loc": "inspection/blocks[133]/note:n119",
+      "between": "眼振 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "①",
+      "snippet": "①イチゴ舌 （イチゴショート） ① （猩紅熱）",
+      "loc": "inspection/blocks[135]/note:n120",
+      "between": "イチゴ舌 （イチゴショート） "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "②",
+      "snippet": "②ハンター舌炎 （悪いハンター） ② （悪性貧血）",
+      "loc": "inspection/blocks[136]/note:n121",
+      "between": "ハンター舌炎 （悪いハンター） "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "③",
+      "snippet": "③コプリック斑 （コプリック マシーン） ③ （麻疹）",
+      "loc": "inspection/blocks[137]/note:n122",
+      "between": "コプリック斑 （コプリック マシーン） "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "④",
+      "snippet": "④アフタ ④ （ベーチェット病 ）",
+      "loc": "inspection/blocks[138]/note:n123",
+      "between": "アフタ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "⑤",
+      "snippet": "⑤色素沈着 （クロアジ） ⑤（アジソン病 ）",
+      "loc": "inspection/blocks[139]/note:n124",
+      "between": "色素沈着 （クロアジ） "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "⑥",
+      "snippet": "⑥偽膜形成 ⑥ （ジフテリア）",
+      "loc": "inspection/blocks[140]/note:n125",
+      "between": "偽膜形成 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "①",
+      "snippet": "①翼状頚 ① （ターナー症候群 ） （45XO）",
+      "loc": "inspection/blocks[142]/note:n126",
+      "between": "翼状頚 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "②",
+      "snippet": "②斜頚 ②先天性に 胸鎖乳突筋 が拘縮、短縮など",
+      "loc": "inspection/blocks[143]/note:n127",
+      "between": "斜頚 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "③",
+      "snippet": "③腫瘤 ③甲状腺（ バセドウ病 ）、リンパ節（感染",
+      "loc": "inspection/blocks[144]/note:n128",
+      "between": "腫瘤 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "④",
+      "snippet": "④運動 ④髄膜炎： 項部硬直 、\n破傷風、パーキン",
+      "loc": "inspection/blocks[145]/note:n129",
+      "between": "運動 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "①",
+      "snippet": "① （樽状胸） ① （肺気腫 （COPD）） 、 （気管支",
+      "loc": "inspection/blocks[147]/note:n130",
+      "between": " （樽状胸） "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "②",
+      "snippet": "② （漏斗胸） ② （マルファン症候群 ）",
+      "loc": "inspection/blocks[148]/note:n131",
+      "between": " （漏斗胸） "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "③",
+      "snippet": "③鳩胸 ③ （くる病 ） 、 モルキ オ 病",
+      "loc": "inspection/blocks[149]/note:n132",
+      "between": "鳩胸 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "④",
+      "snippet": "④扁平胸 ④無力型体型",
+      "loc": "inspection/blocks[150]/note:n133",
+      "between": "扁平胸 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "⑤",
+      "snippet": "⑤靴工胸 ⑤先天性",
+      "loc": "inspection/blocks[151]/note:n134",
+      "between": "靴工胸 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "⑥",
+      "snippet": "⑥女性化乳房 ⑥肝硬変、クラインフェルター症候群",
+      "loc": "inspection/blocks[152]/note:n135",
+      "between": "女性化乳房 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "①",
+      "snippet": "①腹壁静脈の怒張 ① （肝硬変） 、下大静脈血栓症などで 門",
+      "loc": "inspection/blocks[154]/note:n136",
+      "between": "腹壁静脈の怒張 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "②",
+      "snippet": "②赤色皮膚線状 ② （クッシング症候群 ）",
+      "loc": "inspection/blocks[155]/note:n137",
+      "between": "赤色皮膚線状 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "③",
+      "snippet": "③白色皮膚線状 ③妊娠経験者 、元肥満",
+      "loc": "inspection/blocks[156]/note:n138",
+      "between": "白色皮膚線状 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "④",
+      "snippet": "④腹部陥凹 ④食道癌、胃癌 、長期の狭窄で腸管が空虚と",
+      "loc": "inspection/blocks[157]/note:n139",
+      "between": "腹部陥凹 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "①",
+      "snippet": "①猿手 ①正中神経麻痺、筋萎縮性側索硬化症 、骨髄",
+      "loc": "inspection/blocks[160]/note:n140",
+      "between": "猿手 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "②",
+      "snippet": "②鷲手 ②尺骨神経麻痺（ フローマン徴候 ）、筋萎",
+      "loc": "inspection/blocks[161]/note:n141",
+      "between": "鷲手 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "③",
+      "snippet": "③下垂手 ③橈骨神経麻痺",
+      "loc": "inspection/blocks[162]/note:n142",
+      "between": "下垂手 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "④",
+      "snippet": "④ 関節リウマチ ④ボタン穴変形、尺側偏位、スワンネック変形",
+      "loc": "inspection/blocks[163]/note:n143",
+      "between": " 関節リウマチ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "⑤",
+      "snippet": "⑤ヘーベルデン結節 ⑤変形性関節症、手の遠位指節間関節",
+      "loc": "inspection/blocks[164]/note:n144",
+      "between": "ヘーベルデン結節 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "⑥",
+      "snippet": "⑥鋤手 ⑥先端肥大症",
+      "loc": "inspection/blocks[165]/note:n145",
+      "between": "鋤手 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "⑦",
+      "snippet": "⑦クモ状指 ⑦ （マルファン症候群）",
+      "loc": "inspection/blocks[166]/note:n146",
+      "between": "クモ状指 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "⑧",
+      "snippet": "⑧太鼓ばち指 ⑧ （先天性 心 疾患、慢性 肺 疾患）",
+      "loc": "inspection/blocks[167]/note:n147",
+      "between": "太鼓ばち指 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "①",
+      "snippet": "①内反膝 ①Ｏ脚 ：軟骨無形成症",
+      "loc": "inspection/blocks[169]/note:n148",
+      "between": "内反膝 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "②",
+      "snippet": "②外反膝 ②Ｘ脚 ： （くる病 ） 、モルキオ病",
+      "loc": "inspection/blocks[170]/note:n149",
+      "between": "外反膝 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "③",
+      "snippet": "③尖足 ③ （腓骨神経麻痺 ） 、前脛骨筋麻痺、下",
+      "loc": "inspection/blocks[171]/note:n150",
+      "between": "尖足 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "④",
+      "snippet": "④踵足 ④ （脛骨神経麻痺 ） 、下腿三頭筋麻痺",
+      "loc": "inspection/blocks[173]/note:n151",
+      "between": "踵足 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "①",
+      "snippet": "①中枢性麻痺とは？ ①上位運動ニューロンの障害。筋は緊張、腱反",
+      "loc": "inspection/blocks[176]/note:n152",
+      "between": "中枢性麻痺とは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "②",
+      "snippet": "②その代表例 ②核上性麻痺（ 脳血管障害、筋萎縮性側索硬",
+      "loc": "inspection/blocks[177]/note:n153",
+      "between": "その代表例 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "③",
+      "snippet": "③末梢性麻痺とは？ ③下位運動ニューロンの障害。筋は弛緩、腱反",
+      "loc": "inspection/blocks[178]/note:n154",
+      "between": "末梢性麻痺とは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "④",
+      "snippet": "④その代表例 ④筋肉の障害（末梢神経損傷、ギラン・バレー",
+      "loc": "inspection/blocks[179]/note:n155",
+      "between": "その代表例 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "⑤",
+      "snippet": "⑤分布別分類 ⑤単麻痺：１肢のみが麻痺\n片麻痺：１側半身",
+      "loc": "inspection/blocks[180]/note:n156",
+      "between": "分布別分類 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "①",
+      "snippet": "①筋トーヌスとは？ ①筋肉を弛緩させても不随意に緊張した状態",
+      "loc": "inspection/blocks[182]/note:n157",
+      "between": "筋トーヌスとは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "②",
+      "snippet": "②筋トーヌスの亢進でおこるのは？ ②痙直、硬直",
+      "loc": "inspection/blocks[183]/note:n158",
+      "between": "筋トーヌスの亢進でおこるのは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "③",
+      "snippet": "③痙直 ③屈筋･伸筋のどちらか一方のみ障害。 （錐",
+      "loc": "inspection/blocks[184]/note:n159",
+      "between": "痙直 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "④",
+      "snippet": "④硬直 ④屈筋･伸筋の両方障害。 （錐体外路障害）",
+      "loc": "inspection/blocks[185]/note:n160",
+      "between": "硬直 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "⑤",
+      "snippet": "⑤筋トーヌスの低下 ⑤振り子様運動。 小脳疾患、片麻痺初期、脊",
+      "loc": "inspection/blocks[186]/note:n161",
+      "between": "筋トーヌスの低下 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "①",
+      "snippet": "①クローヌスとは？ ①深部反射が亢進しているとき連続的に反復運",
+      "loc": "inspection/blocks[188]/note:n162",
+      "between": "クローヌスとは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "②",
+      "snippet": "②膝クローヌス ②下肢伸展脱力時に膝蓋骨を急に下方へ動かす",
+      "loc": "inspection/blocks[189]/note:n163",
+      "between": "膝クローヌス "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#inspection",
+      "marker": "③",
+      "snippet": "③足クローヌス ③足関節を急に背屈する。間代性に背屈と足底",
+      "loc": "inspection/blocks[190]/note:n164",
+      "between": "足クローヌス "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#percussion",
+      "marker": "①",
+      "snippet": "①清音 ①正常肺野 ：空間のあるところ トントン",
+      "loc": "percussion/blocks[1]/note:n165",
+      "between": "清音 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#percussion",
+      "marker": "②",
+      "snippet": "②濁音 ②心臓･肝臓など実質臓器 が詰まっていると",
+      "loc": "percussion/blocks[2]/note:n166",
+      "between": "濁音 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#percussion",
+      "marker": "③",
+      "snippet": "③鼓音 ③胃･腸など空気が パンパンに 入っている",
+      "loc": "percussion/blocks[3]/note:n167",
+      "between": "鼓音 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#percussion",
+      "marker": "④",
+      "snippet": "④肺肝境界 低下は ④ （肺気腫） で肺下界が下降",
+      "loc": "percussion/blocks[5]/note:n168",
+      "between": "肺肝境界 低下は "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#percussion",
+      "marker": "⑤",
+      "snippet": "⑤過共鳴音がきかれるのは？ ⑤ （肺気腫） 、 （気胸） 鼓音",
+      "loc": "percussion/blocks[6]/note:n169",
+      "between": "過共鳴音がきかれるのは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#percussion",
+      "marker": "⑥",
+      "snippet": "⑥ 心濁音界とは？ ⑥心臓の大きさ、形、位置を判定。 右界 …",
+      "loc": "percussion/blocks[7]/note:n170",
+      "between": " 心濁音界とは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#percussion",
+      "marker": "⑦",
+      "snippet": "⑦心濁音界が拡大するのは？ ⑦心嚢水貯留（心臓肥大、心膜炎） 、妊娠",
+      "loc": "percussion/blocks[9]/note:n171",
+      "between": "心濁音界が拡大するのは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#percussion",
+      "marker": "⑧",
+      "snippet": "⑧濁音が で るのは？ ⑧ （肺炎） 、肺化膿症 、肺腫瘍、 （無",
+      "loc": "percussion/blocks[10]/note:n172",
+      "between": "濁音が で るのは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#percussion",
+      "marker": "①",
+      "snippet": "①鼓音増強 ① （ 腸閉塞 ：イレウス）",
+      "loc": "percussion/blocks[12]/note:n173",
+      "between": "鼓音増強 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#percussion",
+      "marker": "②",
+      "snippet": "②濁音 ②腹水貯留、肝腫大、腹部腫瘤\n正常よりも空",
+      "loc": "percussion/blocks[13]/note:n174",
+      "between": "濁音 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#auscultation",
+      "marker": "①",
+      "snippet": "①呼吸音が増強するのは？ ① （気管支炎） 、 （肺炎） 、 （肺結",
+      "loc": "auscultation/blocks[2]/note:n175",
+      "between": "呼吸音が増強するのは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#auscultation",
+      "marker": "②",
+      "snippet": "②呼吸音が減弱するのは？ ② （胸水貯留） 、 （気胸） 、 （肺気",
+      "loc": "auscultation/blocks[3]/note:n176",
+      "between": "呼吸音が減弱するのは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#auscultation",
+      "marker": "③",
+      "snippet": "③胸膜摩擦音がきこえるのは？ ③胸膜炎(乾性)",
+      "loc": "auscultation/blocks[4]/note:n177",
+      "between": "胸膜摩擦音がきこえるのは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#auscultation",
+      "marker": "④",
+      "snippet": "④声音聴診で声音が減弱するのは？ ④胸水貯留、 （気胸） 、 （気管支閉塞）",
+      "loc": "auscultation/blocks[5]/note:n178",
+      "between": "声音聴診で声音が減弱するのは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#auscultation",
+      "marker": "①",
+      "snippet": "①グル音が増強するのは？ ① （急性腸炎、腸管閉塞、狭窄症） 腸管運",
+      "loc": "auscultation/blocks[7]/note:n179",
+      "between": "グル音が増強するのは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#auscultation",
+      "marker": "②",
+      "snippet": "②グル音が消失するのは？ ②（急性腹膜炎）、（麻痺性イレウス）\n有響",
+      "loc": "auscultation/blocks[8]/note:n180",
+      "between": "グル音が消失するのは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#auscultation",
+      "marker": "③",
+      "snippet": "③血管雑音がきけるのは？ ③ （大動脈炎症候群） 、動脈硬化症、腹部",
+      "loc": "auscultation/blocks[9]/note:n181",
+      "between": "血管雑音がきけるのは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#auscultation",
+      "marker": "①",
+      "snippet": "① Ⅰ音 ①心室収縮と同時に、房室弁（僧帽弁、三尖弁",
+      "loc": "auscultation/blocks[11]/note:n182",
+      "between": " Ⅰ音 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#auscultation",
+      "marker": "②",
+      "snippet": "②Ⅱ音 ②収縮期の終わりに半月弁（大動脈弁、肺動脈",
+      "loc": "auscultation/blocks[12]/note:n183",
+      "between": "Ⅱ音 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#auscultation",
+      "marker": "③",
+      "snippet": "③ Ⅲ音、Ⅳ音がきけるのは？ ③ 弁膜症、心不全",
+      "loc": "auscultation/blocks[13]/note:n184",
+      "between": " Ⅲ音、Ⅳ音がきけるのは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#auscultation",
+      "marker": "④",
+      "snippet": "④ 心音が亢進するのは？ ④ （甲状腺機能亢進症、不整脈、心臓弁膜症",
+      "loc": "auscultation/blocks[14]/note:n185",
+      "between": " 心音が亢進するのは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#auscultation",
+      "marker": "⑤",
+      "snippet": "⑤ 心音が減弱するのは？ ⑤ 肥満、 （肺気腫、心嚢水貯留、安静、心",
+      "loc": "auscultation/blocks[15]/note:n186",
+      "between": " 心音が減弱するのは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#auscultation",
+      "marker": "⑥",
+      "snippet": "⑥ 心雑音がきけるのは？ ⑥ 拡張期 ：心臓弁膜症（僧帽弁狭窄症、大",
+      "loc": "auscultation/blocks[16]/note:n187",
+      "between": " 心雑音がきけるのは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#auscultation",
+      "marker": "⑦",
+      "snippet": "⑦ 無害性雑音が聞けるのは？ ⑦ 貧血、甲状腺機能亢進症などの収縮期雑音",
+      "loc": "auscultation/blocks[19]/note:n189",
+      "between": " 無害性雑音が聞けるのは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#auscultation",
+      "marker": "⑧",
+      "snippet": "⑧心膜摩擦音 ⑧急性 心膜炎",
+      "loc": "auscultation/blocks[20]/note:n190",
+      "between": "心膜摩擦音 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#palpation",
+      "marker": "①",
+      "snippet": "①胃潰瘍の圧痛点 ① （ボアス点 ） (左第10～12胸椎棘",
+      "loc": "palpation/blocks[3]/note:n191",
+      "between": "胃潰瘍の圧痛点 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#palpation",
+      "marker": "①",
+      "snippet": "①虫垂炎の圧痛点 ① （ムンロー、マックバーネー、ランツ）\n",
+      "loc": "palpation/blocks[5]/note:n192",
+      "between": "虫垂炎の圧痛点 "
+    },
+    {
+      "type": "typo_garbled",
+      "scope": "clinical-guide/content.js#palpation",
+      "loc": "palpation/blocks[6]",
+      "found": "キュンメル",
+      "suggested": null,
+      "snippet": "キュンメル ：臍部下すぐ右側。臨床 では あまり使用しない。",
+      "confidence": "review"
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#palpation",
+      "marker": "①",
+      "snippet": "①筋肉の触診の注意点は？ ①左右の同部位を比較、四肢周径の測定",
+      "loc": "palpation/blocks[8]/note:n193",
+      "between": "筋肉の触診の注意点は？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#palpation",
+      "marker": "②",
+      "snippet": "②筋萎縮の判断要素は？ ②力を入れても硬くならない",
+      "loc": "palpation/blocks[9]/note:n194",
+      "between": "筋萎縮の判断要素は？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#palpation",
+      "marker": "③",
+      "snippet": "③四肢全域の萎縮が見られるのは？ ③ （多発性筋炎、多発性神経炎、筋緊張性ジ",
+      "loc": "palpation/blocks[10]/note:n195",
+      "between": "四肢全域の萎縮が見られるのは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#palpation",
+      "marker": "④",
+      "snippet": "④四肢の遠位に萎縮がみられるのは？ ④ 筋萎縮性側索硬化症、神経性進行性筋萎縮",
+      "loc": "palpation/blocks[11]/note:n196",
+      "between": "四肢の遠位に萎縮がみられるのは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#palpation",
+      "marker": "⑤",
+      "snippet": "⑤四肢の近位に萎縮がみられるのは？ ⑤ （進行性筋ジストロフィー ）",
+      "loc": "palpation/blocks[12]/note:n197",
+      "between": "四肢の近位に萎縮がみられるのは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#palpation",
+      "marker": "⑥",
+      "snippet": "⑥デュシェンヌ型筋ジストロフィーとは？ ⑥ 筋肉は萎縮。一部の筋肉は仮性肥大： （",
+      "loc": "palpation/blocks[13]/note:n198",
+      "between": "デュシェンヌ型筋ジストロフィーとは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#palpation",
+      "marker": "①",
+      "snippet": "①筋性防御 ①腹腔内の炎症が壁側腹膜に及ぶと反射的に腹",
+      "loc": "palpation/blocks[16]/note:n199",
+      "between": "筋性防御 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#palpation",
+      "marker": "②",
+      "snippet": "②反動痛 ②手を離した瞬間に強い疼痛を訴える （ブル",
+      "loc": "palpation/blocks[17]/note:n200",
+      "between": "反動痛 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#vitals",
+      "marker": "①",
+      "snippet": "①生命徴候とは？ ① ＝ バイタルサイン （体温、血圧、脈拍",
+      "loc": "vitals/blocks[0]/note:n206",
+      "between": "生命徴候とは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#vitals",
+      "marker": "①",
+      "snippet": "①発熱とは？ ①体温が腋窩 温 で37.0度を超えること",
+      "loc": "vitals/blocks[3]/note:n208",
+      "between": "発熱とは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#vitals",
+      "marker": "②",
+      "snippet": "②稽留熱 ②体温が持続的に高く日内変動が１℃以内\n渓",
+      "loc": "vitals/blocks[4]/note:n209",
+      "between": "稽留熱 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#vitals",
+      "marker": "③",
+      "snippet": "③弛張熱 ③体温が持続的に高く日内変動が１℃以上\n市",
+      "loc": "vitals/blocks[5]/note:n210",
+      "between": "弛張熱 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#vitals",
+      "marker": "④",
+      "snippet": "④間欠熱 ④日内変動が１℃以上あり低いときには正常体",
+      "loc": "vitals/blocks[6]/note:n211",
+      "between": "間欠熱 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#vitals",
+      "marker": "⑤",
+      "snippet": "⑤周期的発熱(波状熱) ⑤高熱と発熱のない時期が周期的にみられる\n",
+      "loc": "vitals/blocks[7]/note:n212",
+      "between": "周期的発熱(波状熱) "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#vitals",
+      "marker": "⑥",
+      "snippet": "⑥微熱の持続 ⑥ 37℃位の熱が続く。 バセドウ病、貧血",
+      "loc": "vitals/blocks[8]/note:n213",
+      "between": "微熱の持続 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#vitals",
+      "marker": "⑦",
+      "snippet": "⑦低体温 ⑦36.0℃未満。\n甲状腺機能低下、 慢性",
+      "loc": "vitals/blocks[9]/note:n214",
+      "between": "低体温 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#vitals",
+      "marker": "①",
+      "snippet": "①触診法 ① （最高血圧のみわかる ） が聴診法より",
+      "loc": "vitals/blocks[11]/note:n215",
+      "between": "触診法 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#vitals",
+      "marker": "②",
+      "snippet": "② 聴診法 ②肘窩の上腕動脈の拍動部に聴診器を当てる ",
+      "loc": "vitals/blocks[12]/note:n216",
+      "between": " 聴診法 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#vitals",
+      "marker": "③",
+      "snippet": "③ＷＨＯの高血圧とは？ ③ （140/90以上 ）\n正常血圧 とは",
+      "loc": "vitals/blocks[13]/note:n217",
+      "between": "ＷＨＯの高血圧とは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#vitals",
+      "marker": "④",
+      "snippet": "④高血圧になる疾患 ④ 本態性 ：原因不明",
+      "loc": "vitals/blocks[14]",
+      "between": "高血圧になる疾患 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#vitals",
+      "marker": "⑤",
+      "snippet": "⑤低血圧とは？ ⑤男性で最高血圧100mmHg、女性90m",
+      "loc": "vitals/blocks[17]/note:n219",
+      "between": "低血圧とは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#vitals",
+      "marker": "⑥",
+      "snippet": "⑥低血圧 になる疾患 ⑥本態性：やせた無力性体質が多い\n二次性：",
+      "loc": "vitals/blocks[18]/note:n220",
+      "between": "低血圧 になる疾患 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#vitals",
+      "marker": "①",
+      "snippet": "①触診できる脈は？ ① (橈骨動脈) 、上腕動脈、膝窩動脈、大",
+      "loc": "vitals/blocks[22]/note:n223",
+      "between": "触診できる脈は？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#vitals",
+      "marker": "②",
+      "snippet": "②頻脈 ② 脈拍数が毎分100以上の場合。\n発熱、",
+      "loc": "vitals/blocks[23]/note:n224",
+      "between": "頻脈 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#vitals",
+      "marker": "③",
+      "snippet": "③徐脈 ③ 脈拍数が毎分60以下の場合。 アダムス",
+      "loc": "vitals/blocks[24]/note:n225",
+      "between": "徐脈 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#vitals",
+      "marker": "④",
+      "snippet": "④速脈 ④大動脈弁閉鎖不全症、甲状腺機能亢進症、貧",
+      "loc": "vitals/blocks[25]/note:n226",
+      "between": "速脈 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#vitals",
+      "marker": "⑤",
+      "snippet": "⑤遅脈 ⑤大動脈弁狭窄症 脈がゆっくり大きくなって",
+      "loc": "vitals/blocks[26]/note:n227",
+      "between": "遅脈 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#vitals",
+      "marker": "⑥",
+      "snippet": "⑥大脈 ⑥大動脈弁閉鎖不全症、甲状腺機能亢進症、高",
+      "loc": "vitals/blocks[27]/note:n228",
+      "between": "大脈 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#vitals",
+      "marker": "⑦",
+      "snippet": "⑦小脈 ⑦大動脈弁狭窄症 拍動の振幅が小さい脈 。",
+      "loc": "vitals/blocks[28]/note:n229",
+      "between": "小脈 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#vitals",
+      "marker": "⑧",
+      "snippet": "⑧交互脈 ⑧脈拍の大きさが交互に変化。 心筋炎、心筋",
+      "loc": "vitals/blocks[29]/note:n230",
+      "between": "交互脈 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#vitals",
+      "marker": "⑨",
+      "snippet": "⑨期外収縮 ⑨心拍がおこるべき時期より早期に出現",
+      "loc": "vitals/blocks[30]/note:n231",
+      "between": "期外収縮 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#vitals",
+      "marker": "⑩",
+      "snippet": "⑩奇脈 ⑩ 正常な脈 。 吸気 時に小さくなりとき",
+      "loc": "vitals/blocks[31]/note:n232",
+      "between": "奇脈 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#vitals",
+      "marker": "⑪",
+      "snippet": "⑪洞性不整脈 ⑪吸気時に脈拍数が多く、呼気時に少ない＝ ",
+      "loc": "vitals/blocks[32]/note:n233",
+      "between": "洞性不整脈 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#vitals",
+      "marker": "⑫",
+      "snippet": "⑫絶対性不整脈 ⑫心房細動によるものが多い",
+      "loc": "vitals/blocks[33]/note:n234",
+      "between": "絶対性不整脈 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#vitals",
+      "marker": "①",
+      "snippet": "①チェーンストークス呼吸 ①呼吸期と無呼吸期が交互に繰り返す。予後悪",
+      "loc": "vitals/blocks[35]/note:n235",
+      "between": "チェーンストークス呼吸 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#vitals",
+      "marker": "②",
+      "snippet": "②クスマウル呼吸 ② 異常に深く大きく呼吸数も増加。 H が",
+      "loc": "vitals/blocks[36]/note:n236",
+      "between": "クスマウル呼吸 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#vitals",
+      "marker": "③",
+      "snippet": "③ビオー呼吸 ③数回の短い呼吸のあと 休止し 再び呼吸。",
+      "loc": "vitals/blocks[38]",
+      "between": "ビオー呼吸 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#vitals",
+      "marker": "④",
+      "snippet": "④ 過換気症候群 ④ 突発的な過呼吸が生じ呼吸困難、テタニー",
+      "loc": "vitals/blocks[40]/note:n238",
+      "between": " 過換気症候群 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#sensation",
+      "marker": "⑥",
+      "snippet": "⑥ *ロンベルグ試験 陽性 ： ⑥ （脊髄性失調） （陽性）",
+      "loc": "sensation/blocks[14]/note:n243",
+      "between": " *ロンベルグ試験 陽性 ： "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#sensation",
+      "marker": "⑦",
+      "snippet": "⑦ *酩酊歩行： ⑦ （小脳性失調） （ ロンベルグは 陰性",
+      "loc": "sensation/blocks[15]/note:n244",
+      "between": " *酩酊歩行： "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "①",
+      "snippet": "① 反射の種類は？ ① ・表在反射（粘膜反射、皮膚反射）\n・深",
+      "loc": "reflex/blocks[1]/note:n245",
+      "between": " 反射の種類は？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "①",
+      "snippet": "①表在反射の種類は？ ①・ 粘膜反射… （角膜反射） 、咽頭反射",
+      "loc": "reflex/blocks[3]/note:n246",
+      "between": "表在反射の種類は？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "①",
+      "snippet": "① 角膜反射の反射弓は？ ① 三叉神経→橋→顔面神経",
+      "loc": "reflex/blocks[5]/note:n247",
+      "between": " 角膜反射の反射弓は？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "②",
+      "snippet": "②咽頭反射の反射弓は？ ② 舌咽神経→延髄→迷走神経\n※粘膜反射に",
+      "loc": "reflex/blocks[6]/note:n248",
+      "between": "咽頭反射の反射弓は？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "①",
+      "snippet": "①皮膚反射のうち錐体路の障害で ① 腹壁反射、挙睾筋反射、足底反射 ＊AL",
+      "loc": "reflex/blocks[8]/note:n249",
+      "between": "皮膚反射のうち錐体路の障害で "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "②",
+      "snippet": "② 挙睾筋反射の反射弓は？ ② 大腿神経→Ｌ １ →陰部大腿神経",
+      "loc": "reflex/blocks[9]/note:n250",
+      "between": " 挙睾筋反射の反射弓は？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "③",
+      "snippet": "③ 足底反射の反射弓は？ ③ 脛骨神経→Ｓ １，２ →脛骨神経",
+      "loc": "reflex/blocks[10]/note:n251",
+      "between": " 足底反射の反射弓は？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "④",
+      "snippet": "④足底反射の病的反射 ④バビンスキー反射 陽性：母趾が背屈。\n片",
+      "loc": "reflex/blocks[11]/note:n252",
+      "between": "足底反射の病的反射 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "⑤",
+      "snippet": "⑤ 肛門反射の反射弓は？ ⑤ 陰部神経→Ｓ ４，５ →陰部神経",
+      "loc": "reflex/blocks[12]/note:n253",
+      "between": " 肛門反射の反射弓は？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "⑥",
+      "snippet": "⑥ 肛門反射が消失、減弱するのは？ ⑥ 会陰部の感覚脱失、脊髄円錐部、馬尾神経",
+      "loc": "reflex/blocks[13]/note:n254",
+      "between": " 肛門反射が消失、減弱するのは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "①",
+      "snippet": "①深部反射の種類は？ ①下顎反射、 上腕二頭筋反射、上腕三頭筋反",
+      "loc": "reflex/blocks[15]/note:n255",
+      "between": "深部反射の種類は？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "②",
+      "snippet": "②下顎反射とは？ ②口を軽くあけ、オトガイ部をたたくと口を閉",
+      "loc": "reflex/blocks[16]/note:n256",
+      "between": "下顎反射とは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "③",
+      "snippet": "③上腕二頭筋反射の反射弓 ③筋皮神経→Ｃ ５，６ →筋皮神経",
+      "loc": "reflex/blocks[17]/note:n257",
+      "between": "上腕二頭筋反射の反射弓 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "④",
+      "snippet": "④上腕三頭筋反射の反射弓 ④橈骨神経→Ｃ ６，７ →橈骨神経",
+      "loc": "reflex/blocks[18]/note:n258",
+      "between": "上腕三頭筋反射の反射弓 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "⑤",
+      "snippet": "⑤橈骨反射の反射弓 ⑤橈骨神経→ Ｃ ６，７ →橈骨神経",
+      "loc": "reflex/blocks[19]/note:n259",
+      "between": "橈骨反射の反射弓 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "⑥",
+      "snippet": "⑥膝蓋腱反射の反射弓 ⑥大腿神経→Ｌ ２～４ →大腿神経 L3/",
+      "loc": "reflex/blocks[20]/note:n260",
+      "between": "膝蓋腱反射の反射弓 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "⑦",
+      "snippet": "⑦アキレス腱反射の反射弓 ⑦脛骨神経→Ｓ １，２ →脛骨神経 L5/",
+      "loc": "reflex/blocks[21]/note:n261",
+      "between": "アキレス腱反射の反射弓 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "⑧",
+      "snippet": "⑧深部反射減弱・消失する疾患 ⑧脊髄 前角 障害（ ポリオ ）、脊髄 （",
+      "loc": "reflex/blocks[22]/note:n262",
+      "between": "深部反射減弱・消失する疾患 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "⑨",
+      "snippet": "⑨深部反射亢進する疾患 ⑨ （上位運動ニューロン障害 ） （錐体路",
+      "loc": "reflex/blocks[23]/note:n263",
+      "between": "深部反射亢進する疾患 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "①",
+      "snippet": "①病的反射が出現するのは？ ①錐体路の障害 ※健常児でもみられることが",
+      "loc": "reflex/blocks[25]/note:n264",
+      "between": "病的反射が出現するのは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "①",
+      "snippet": "①下肢の病的反射の種類 ① （バビンスキー、チャドック、オッペンハ",
+      "loc": "reflex/blocks[27]/note:n265",
+      "between": "下肢の病的反射の種類 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "②",
+      "snippet": "② バビンスキー反射 ②足底 をこする 。 （ 母指の背屈） 、",
+      "loc": "reflex/blocks[28]/note:n266",
+      "between": " バビンスキー反射 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "③",
+      "snippet": "③ チャドック反射 ③外果の後ろから足背外側 をこする 。 母",
+      "loc": "reflex/blocks[29]/note:n267",
+      "between": " チャドック反射 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "④",
+      "snippet": "④オッペンハイム反射 ④ 脛骨 前面をこする 。母指の背屈",
+      "loc": "reflex/blocks[30]/note:n268",
+      "between": "オッペンハイム反射 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "⑤",
+      "snippet": "⑤ゴードン反射 ⑤腓腹筋 をつかむ 。母指の背屈",
+      "loc": "reflex/blocks[31]/note:n269",
+      "between": "ゴードン反射 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "⑥",
+      "snippet": "⑥シェーファー反射 ⑥アキレス腱 をつかむ 。母指の背屈",
+      "loc": "reflex/blocks[32]/note:n270",
+      "between": "シェーファー反射 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "⑦",
+      "snippet": "⑦ゴンダ反射 ⑦第４指を足底側へ屈曲して急に放す。母指の",
+      "loc": "reflex/blocks[33]/note:n271",
+      "between": "ゴンダ反射 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "⑧",
+      "snippet": "⑧ ロッソリーモ反射 ⑧足底面の足指付け根 を叩く 。 全指の底",
+      "loc": "reflex/blocks[34]/note:n272",
+      "between": " ロッソリーモ反射 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "⑨",
+      "snippet": "⑨メンデル ・ ベヒテレフ反射 ⑨足背部で立方骨の上 を叩く 。第２ ～４",
+      "loc": "reflex/blocks[35]/note:n273",
+      "between": "メンデル ・ ベヒテレフ反射 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "①",
+      "snippet": "①上肢の病的反射の種類 ① （ホフマン、トレムナー、ワルテンベルグ",
+      "loc": "reflex/blocks[37]/note:n274",
+      "between": "上肢の病的反射の種類 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "②",
+      "snippet": "②ホフマン反射 ②中指をはさみ屈曲して急に放す。母指 が屈",
+      "loc": "reflex/blocks[38]/note:n275",
+      "between": "ホフマン反射 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "③",
+      "snippet": "③トレムナー反射 ③中指を掌側からはじく。全指とくに母指が屈",
+      "loc": "reflex/blocks[39]/note:n276",
+      "between": "トレムナー反射 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "④",
+      "snippet": "④ ワルテンベルグ反射 ④ 全指の屈曲",
+      "loc": "reflex/blocks[40]/note:n277",
+      "between": " ワルテンベルグ反射 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "①",
+      "snippet": "①自律神経反射の種類 ①・瞳孔反射…対光反射、輻輳反射\n・ （ア",
+      "loc": "reflex/blocks[42]/note:n278",
+      "between": "自律神経反射の種類 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "③",
+      "snippet": "③アシュネル反射とは？ ③両眼球を圧迫すると （徐脈） になる。\n",
+      "loc": "reflex/blocks[46]/note:n282",
+      "between": "アシュネル反射とは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "④",
+      "snippet": "④ツェルマク・ヘーリング反射とは？ ④頸動脈圧迫で （徐脈と血圧下降） 。\n（",
+      "loc": "reflex/blocks[47]/note:n283",
+      "between": "ツェルマク・ヘーリング反射とは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "⑤",
+      "snippet": "⑤血管運動反射 ⑤皮膚紋画症",
+      "loc": "reflex/blocks[48]/note:n284",
+      "between": "血管運動反射 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "⑥",
+      "snippet": "⑥発汗反射 ⑥発汗消失： 交感神経麻痺",
+      "loc": "reflex/blocks[49]/note:n285",
+      "between": "発汗反射 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#reflex",
+      "marker": "⑦",
+      "snippet": "⑦立毛筋反射 ⑦ 鳥肌",
+      "loc": "reflex/blocks[50]/note:n286",
+      "between": "立毛筋反射 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#symptoms",
+      "marker": "①",
+      "snippet": "①出血傾向とは ①止血機構に異常があり止血しにくい状態。\n",
+      "loc": "symptoms/blocks[1]/note:n287",
+      "between": "出血傾向とは "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#symptoms",
+      "marker": "②",
+      "snippet": "②出血傾向の原因 ②１、 （血管 壁の異常 ） ：血管壁が弱",
+      "loc": "symptoms/blocks[2]/note:n288",
+      "between": "出血傾向の原因 "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#symptoms",
+      "marker": "①",
+      "snippet": "①髄膜刺激症候群とは？ ①髄膜炎・クモ膜下出血などで髄膜に刺激が加",
+      "loc": "symptoms/blocks[5]/note:n290",
+      "between": "髄膜刺激症候群とは？ "
+    },
+    {
+      "type": "symbol_dupe",
+      "scope": "clinical-guide/content.js#symptoms",
+      "marker": "②",
+      "snippet": "②検査は？ ② （項部硬直、 ブルジンスキー徴候、 ケ",
+      "loc": "symptoms/blocks[6]/note:n291",
+      "between": "検査は？ "
+    },
+    {
+      "type": "typo_empty",
+      "scope": "clinical-guide/disease-content.js#cardiovascular",
+      "loc": "cardiovascular/blocks[135].rows[2][1][1].text",
+      "snippet": "'\\n'"
+    },
+    {
+      "type": "typo_empty",
+      "scope": "clinical-guide/disease-content.js#respiratory",
+      "loc": "respiratory/blocks[80].rows[5][3][1].text",
+      "snippet": "'\\n'"
+    },
+    {
+      "type": "typo_empty",
+      "scope": "clinical-guide/disease-content.js#respiratory",
+      "loc": "respiratory/blocks[80].rows[5][4][1].text",
+      "snippet": "'\\n'"
+    },
+    {
+      "type": "typo_empty",
+      "scope": "clinical-guide/disease-content.js#respiratory",
+      "loc": "respiratory/blocks[80].rows[5][5][1].text",
+      "snippet": "'\\n'"
+    },
+    {
+      "type": "typo_empty",
+      "scope": "clinical-guide/disease-content.js#digestive",
+      "loc": "digestive/blocks[84].rows[3][1][1].text",
+      "snippet": "'\\n'"
+    },
+    {
+      "type": "typo_empty",
+      "scope": "clinical-guide/disease-content.js#digestive",
+      "loc": "digestive/blocks[84].rows[3][3][1].text",
+      "snippet": "'\\n'"
+    },
+    {
+      "type": "number_dupe_notes",
+      "scope": "clinical-guide/disease-content.js#hematology",
+      "number": "②",
+      "count": 2,
+      "items": [
+        {
+          "text": "②分類　\nａ．先天性　赤血球膜の異常（遺伝性球状赤血球症）\n赤血球酵素の異常\nヘモグロビン異常\nｂ．後天性　（自己免疫）など抗体によるもの\n",
+          "loc": "hematology/blocks[22]/note:n17"
+        },
+        {
+          "text": "②の作用は肝臓も持っている。溶血性貧血、肝硬変、慢性骨髄性白血病では脾臓が大きく腫れる。",
+          "loc": "hematology/blocks[26]/note:n21"
+        }
+      ]
+    },
+    {
+      "type": "typo_empty",
+      "scope": "clinical-guide/disease-content.js#neurology",
+      "loc": "neurology/blocks[71].rows[1][1][1].text",
+      "snippet": "'\\n'"
+    },
+    {
+      "type": "typo_empty",
+      "scope": "clinical-guide/disease-content.js#neurology",
+      "loc": "neurology/blocks[71].rows[1][1][3].text",
+      "snippet": "'\\n'"
+    },
+    {
+      "type": "typo_empty",
+      "scope": "clinical-guide/disease-content.js#neurology",
+      "loc": "neurology/blocks[71].rows[1][1][5].text",
+      "snippet": "'\\n'"
+    },
+    {
+      "type": "typo_empty",
+      "scope": "clinical-guide/disease-content.js#neurology",
+      "loc": "neurology/blocks[71].rows[1][2][1].text",
+      "snippet": "'\\n'"
+    },
+    {
+      "type": "typo_empty",
+      "scope": "clinical-guide/disease-content.js#neurology",
+      "loc": "neurology/blocks[71].rows[1][2][5].text",
+      "snippet": "'\\n'"
+    },
+    {
+      "type": "typo_empty",
+      "scope": "clinical-guide/disease-content.js#neurology",
+      "loc": "neurology/blocks[71].rows[1][2][7].text",
+      "snippet": "'\\n'"
+    },
+    {
+      "type": "typo_empty",
+      "scope": "clinical-guide/disease-content.js#neurology",
+      "loc": "neurology/blocks[71].rows[2][2][1].text",
+      "snippet": "'\\n'"
+    },
+    {
+      "type": "typo_empty",
+      "scope": "clinical-guide/disease-content.js#neurology",
+      "loc": "neurology/blocks[71].rows[3][1][2].text",
+      "snippet": "'\\n'"
+    },
+    {
+      "type": "typo_empty",
+      "scope": "clinical-guide/disease-content.js#neurology",
+      "loc": "neurology/blocks[71].rows[3][1][4].text",
+      "snippet": "'\\n'"
+    },
+    {
+      "type": "typo_empty",
+      "scope": "clinical-guide/disease-content.js#neurology",
+      "loc": "neurology/blocks[71].rows[3][1][6].text",
+      "snippet": "'\\n'"
+    },
+    {
+      "type": "typo_empty",
+      "scope": "clinical-guide/disease-content.js#neurology",
+      "loc": "neurology/blocks[71].rows[3][1][8].text",
+      "snippet": "'\\n'"
+    },
+    {
+      "type": "typo_empty",
+      "scope": "clinical-guide/disease-content.js#neurology",
+      "loc": "neurology/blocks[71].rows[3][3][1].text",
+      "snippet": "'\\n'"
+    },
+    {
+      "type": "typo_empty",
+      "scope": "clinical-guide/disease-content.js#neurology",
+      "loc": "neurology/blocks[71].rows[3][3][3].text",
+      "snippet": "'\\n'"
+    },
+    {
+      "type": "typo_empty",
+      "scope": "clinical-guide/disease-content.js#neurology",
+      "loc": "neurology/blocks[73].rows[4][1][1].text",
+      "snippet": "'\\n'"
+    },
+    {
+      "type": "typo_empty",
+      "scope": "clinical-guide/disease-content.js#neurology",
+      "loc": "neurology/blocks[73].rows[4][2][1].text",
+      "snippet": "'\\n'"
+    },
+    {
+      "type": "typo_empty",
+      "scope": "clinical-guide/disease-content.js#neurology",
+      "loc": "neurology/blocks[73].rows[5][1][1].text",
+      "snippet": "'\\n'"
+    },
+    {
+      "type": "typo_empty",
+      "scope": "clinical-guide/disease-content.js#neurology",
+      "loc": "neurology/blocks[75].rows[3][2][3].text",
+      "snippet": "'\\n'"
+    },
+    {
+      "type": "typo_empty",
+      "scope": "clinical-guide/disease-content.js#neurology",
+      "loc": "neurology/blocks[75].rows[4][1][1].text",
+      "snippet": "'\\n'"
+    },
+    {
+      "type": "typo_empty",
+      "scope": "clinical-guide/disease-content.js#neurology",
+      "loc": "neurology/blocks[75].rows[4][2][3].text",
+      "snippet": "'\\n'"
+    },
+    {
+      "type": "typo_empty",
+      "scope": "clinical-guide/disease-content.js#neurology",
+      "loc": "neurology/blocks[75].rows[5][0][1].text",
+      "snippet": "'\\n'"
+    },
+    {
+      "type": "number_dupe_notes",
+      "scope": "clinical-guide/disease-content.js#renal",
+      "number": "①",
+      "count": 2,
+      "items": [
+        {
+          "text": "①定義　膀胱粘膜と粘膜下組織が炎症をおこす疾患。\n急性細菌性膀胱炎がほとんど。\n他にウイルス性、薬物性、放射線、間質性など",
+          "loc": "renal/blocks[39]/note:n28"
+        },
+        {
+          "text": "①糸球体腎炎（急・慢）②尿管、膀胱、尿道の腫瘍③尿路結石（尿管・尿道）である。",
+          "loc": "renal/blocks[50]/note:n39"
+        }
+      ]
+    }
+  ]
+}

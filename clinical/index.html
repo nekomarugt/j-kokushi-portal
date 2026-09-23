@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0c4f45" />
+    <meta
+      name="description"
+      content="第18回から第34回までの柔道整復師国家試験・一般臨床医学過去問393問を練習できるアプリ"
+    />
+    <title>一般臨床医学 国家試験過去問</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="portal-return" href="../" aria-label="3科目過去問ポータルへ戻る">← 3科目ポータルへ</a>
+    <main class="app-shell">
+      <header class="app-header">
+        <button class="brand-mark" id="home-logo" type="button" aria-label="トップへ戻る">
+          <span></span><span></span><span></span>
+        </button>
+        <div>
+          <p class="eyebrow">柔道整復師 国家試験</p>
+          <h1>一般臨床医学 過去問</h1>
+        </div>
+        <div class="question-total" id="header-total" aria-label="収録問題数">—</div>
+      </header>
+
+      <section id="loading-view" class="surface status-surface" aria-live="polite">
+        <div class="loading-ring" aria-hidden="true"></div>
+        <p>問題を読み込んでいます</p>
+      </section>
+
+      <section id="home-view" class="surface is-hidden" aria-labelledby="home-title">
+        <div class="surface-heading">
+          <div>
+            <p class="section-kicker">出題方法</p>
+            <h2 id="home-title">どこからやる？</h2>
+          </div>
+          <div class="history-summary" id="history-summary"></div>
+        </div>
+
+        <div class="mode-grid">
+          <button class="mode-card" type="button" data-mode="round">
+            <span class="mode-icon">回</span>
+            <span><strong>回数別</strong><small>第18〜34回</small></span>
+            <span class="mode-arrow" aria-hidden="true">→</span>
+          </button>
+          <button class="mode-card" type="button" data-mode="general">
+            <span class="mode-icon">総</span>
+            <span><strong>総論</strong><small id="general-count">—</small></span>
+            <span class="mode-arrow" aria-hidden="true">→</span>
+          </button>
+          <button class="mode-card" type="button" data-mode="specific">
+            <span class="mode-icon">各</span>
+            <span><strong>各論</strong><small id="specific-count">—</small></span>
+            <span class="mode-arrow" aria-hidden="true">→</span>
+          </button>
+          <button class="mode-card" type="button" data-mode="random">
+            <span class="mode-icon">乱</span>
+            <span><strong>全問ランダム</strong><small>全範囲から出題</small></span>
+            <span class="mode-arrow" aria-hidden="true">→</span>
+          </button>
+        </div>
+
+        <button class="review-button is-hidden" id="review-saved-button" type="button">
+          <span><strong>苦手問題を復習</strong><small id="review-count"></small></span>
+          <span aria-hidden="true">→</span>
+        </button>
+
+        <div class="study-entry-grid">
+          <div class="frequent-entry">
+            <div>
+              <p class="section-kicker">読む</p>
+              <h3>頻出疾患まとめ</h3>
+              <p>何度も形を変えて出てくる疾患だけ、要点を短く確認。</p>
+            </div>
+            <button class="outline-button" id="open-topics-button" type="button">まとめを見る</button>
+          </div>
+
+          <div class="findings-entry">
+            <div>
+              <p class="section-kicker">つなげる</p>
+              <h3>所見から逆引き</h3>
+              <p>歩行・顔貌・呼吸・検査値などから、考える疾患へ。</p>
+            </div>
+            <button class="outline-button" id="open-findings-button" type="button">所見から探す</button>
+          </div>
+        </div>
+
+        <div class="source-note">
+          <span>第18〜34回・393問</span>
+          <span>学習記録はこの端末に保存</span>
+          <span>学校公式ではありません</span>
+        </div>
+      </section>
+
+      <section id="selector-view" class="surface is-hidden" aria-labelledby="selector-title">
+        <button class="back-button" id="selector-back" type="button">← トップへ</button>
+        <div class="selector-heading">
+          <p class="section-kicker" id="selector-kicker">出題設定</p>
+          <h2 id="selector-title"></h2>
+          <p id="selector-description"></p>
+        </div>
+        <div id="round-grid" class="round-grid is-hidden"></div>
+        <div id="count-panel" class="count-panel is-hidden">
+          <fieldset class="field count-field">
+            <legend>出題数</legend>
+            <div class="segmented" id="count-options">
+              <label><input type="radio" name="count" value="10" checked /><span>10問</span></label>
+              <label><input type="radio" name="count" value="20" /><span>20問</span></label>
+              <label><input type="radio" name="count" value="all" /><span>全部</span></label>
+            </div>
+          </fieldset>
+          <button class="primary-button" id="start-button" type="button">
+            <span>ランダムに開始</span><span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </section>
+
+      <section id="quiz-view" class="surface quiz-surface is-hidden" aria-labelledby="question-text">
+        <div class="quiz-topline">
+          <button class="text-button" id="quit-button" type="button">終了</button>
+          <div class="progress-copy"><strong id="progress-current">1</strong><span>/</span><span id="progress-total">10</span></div>
+          <div class="source-badge" id="source-badge"></div>
+        </div>
+        <div class="progress-track" aria-hidden="true"><div id="progress-bar"></div></div>
+
+        <article class="question-card">
+          <p class="multi-note is-hidden" id="multi-note">正しいものをすべて選択</p>
+          <h2 id="question-text"></h2>
+          <img id="question-image" class="question-image is-hidden" alt="問題に付属する図・写真" />
+          <div class="choices" id="choices"></div>
+          <button class="primary-button compact answer-button" id="submit-answer-button" type="button" disabled>解答する</button>
+        </article>
+
+        <div id="feedback" class="feedback is-hidden" aria-live="polite">
+          <div class="feedback-title"><span id="feedback-icon" aria-hidden="true"></span><strong id="feedback-label"></strong></div>
+          <p id="feedback-answer"></p>
+          <div class="feedback-explanation">
+            <strong>解説</strong>
+            <p id="feedback-explanation"></p>
+          </div>
+          <div id="related-topics" class="related-topics is-hidden"></div>
+          <button class="primary-button compact" id="next-button" type="button">次の問題へ</button>
+        </div>
+      </section>
+
+      <section id="result-view" class="surface result-surface is-hidden" aria-labelledby="result-title">
+        <p class="section-kicker">RESULT</p>
+        <h2 id="result-title">今回の結果</h2>
+        <div class="score-ring" id="score-ring">
+          <div><strong id="score-percent">0</strong><span>%</span></div>
+        </div>
+        <p class="score-detail"><strong id="score-correct">0</strong> / <span id="score-total">0</span> 問正解</p>
+        <p class="result-message" id="result-message"></p>
+        <div class="result-actions">
+          <button class="primary-button is-hidden" id="retry-wrong-button" type="button">間違えた問題だけ</button>
+          <button class="secondary-button" id="back-to-home-button" type="button">トップへ戻る</button>
+        </div>
+      </section>
+
+      <section id="topics-view" class="surface is-hidden" aria-labelledby="topics-title">
+        <button class="back-button" id="topics-back" type="button">← トップへ</button>
+        <div class="selector-heading">
+          <p class="section-kicker">頻出疾患まとめ</p>
+          <h2 id="topics-title">繰り返し出る10テーマ</h2>
+          <p>出題範囲を限定するものではなく、過去問で繰り返された要点の整理です。</p>
+        </div>
+        <div class="topic-grid" id="topic-grid"></div>
+      </section>
+
+      <section id="topic-detail-view" class="surface is-hidden" aria-labelledby="topic-title">
+        <button class="back-button" id="topic-detail-back" type="button">← 頻出疾患一覧へ</button>
+        <article class="topic-article">
+          <p class="section-kicker">頻出疾患</p>
+          <h2 id="topic-title"></h2>
+          <section class="topic-overview" aria-labelledby="topic-overview-heading">
+            <h3 id="topic-overview-heading">どんな病気？</h3>
+            <p class="topic-summary" id="topic-summary"></p>
+          </section>
+          <div class="topic-detail-grid">
+            <section class="topic-info-box topic-findings" aria-labelledby="topic-findings-heading">
+              <h3 id="topic-findings-heading">代表的な所見</h3>
+              <ul id="topic-findings"></ul>
+            </section>
+            <section class="topic-info-box topic-connections" aria-labelledby="topic-connections-heading">
+              <h3 id="topic-connections-heading">病態・関連</h3>
+              <ul id="topic-connections"></ul>
+            </section>
+          </div>
+          <div class="topic-point-box">
+            <h3>国試で押さえる</h3>
+            <ul id="topic-points"></ul>
+          </div>
+          <div class="topic-trap">
+            <strong>引っかけ注意</strong>
+            <p id="topic-trap"></p>
+          </div>
+          <button class="primary-button" id="topic-quiz-button" type="button"></button>
+        </article>
+      </section>
+
+      <section id="findings-view" class="surface is-hidden" aria-labelledby="findings-title">
+        <button class="back-button" id="findings-back" type="button">← トップへ</button>
+        <div class="selector-heading findings-heading">
+          <p class="section-kicker">一般臨床「所見から逆引き」</p>
+          <h2 id="findings-title">見えた所見から疾患を探す</h2>
+          <p>総論で観察する所見を、各論の疾患へつなげます。まず所見の種類を選んでください。</p>
+        </div>
+        <div class="finding-tabs" id="finding-tabs" aria-label="所見の種類"></div>
+        <div class="finding-list-heading">
+          <div>
+            <p class="section-kicker" id="finding-category-kicker"></p>
+            <h3 id="finding-category-title"></h3>
+          </div>
+          <span id="finding-count"></span>
+        </div>
+        <div class="finding-grid" id="finding-grid"></div>
+      </section>
+
+      <section id="error-view" class="surface status-surface is-hidden" role="alert">
+        <h2>問題を読み込めませんでした</h2>
+        <p>ページを再読み込みしてください。</p>
+      </section>
+
+      <footer>
+        <span>一般臨床医学 国家試験問題（18–34）</span>
+        <button id="reset-history-button" class="footer-button is-hidden" type="button">学習記録をリセット</button>
+      </footer>
+    </main>
+    <script src="./app.js" defer></script>
+  </body>
+</html>

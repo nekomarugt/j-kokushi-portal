@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b5ea8">
+  <meta name="description" content="生理学の授業プリントを章別に整理した国家試験対策・授業復習用の学習資料です。">
+  <title>生理学 学習資料</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b5ea8'/%3E%3Cpath d='M9 34h10l5-13 9 27 7-18 5 10h10' fill='none' stroke='white' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">∿</span>
+      <div>
+        <h1>生理学 学習資料</h1>
+        <p>国家試験対策・授業復習用</p>
+      </div>
+    </div>
+    <button id="answerToggle" class="answer-toggle" type="button" aria-pressed="true">赤字を隠す</button>
+  </header>
+
+  <div class="notice">
+    本サイトは国家試験対策・授業復習のための補助教材です。医学的エビデンスや診療・臨床判断の根拠として使用するものではありません。
+  </div>
+
+  <main class="app-shell">
+    <nav class="chapter-nav" aria-label="章を選ぶ">
+      <div id="chapterTabs" class="chapter-tabs" role="tablist"></div>
+    </nav>
+
+    <section class="chapter-stage">
+      <div id="chapterIntro" class="chapter-intro"></div>
+      <div id="sectionList" class="section-list"></div>
+      <div id="chapterDeepDive"></div>
+      <div id="chapterQuiz" class="chapter-quiz"></div>
+      <div class="chapter-pager">
+        <button id="prevChapter" type="button">前の章</button>
+        <button id="nextChapter" type="button">次の章</button>
+      </div>
+    </section>
+  </main>
+
+  <a class="portal-dock" href="../" aria-label="3科目まとめポータルへ戻る">ポータルへ戻る</a>
+
+  <footer>
+    <a href="../physiology/">生理学 国家試験過去問へ</a>
+    <button id="toTop" type="button">ページ上部へ</button>
+  </footer>
+
+  <dialog id="imageViewer" class="image-viewer" aria-labelledby="viewerCaption">
+    <div class="viewer-toolbar"><p id="viewerCaption"></p><button id="closeImageViewer" type="button" autofocus>閉じる</button></div>
+    <div class="viewer-scroll"><img id="viewerImage" alt=""></div>
+  </dialog>
+  <script src="content.js"></script>
+  <script src="deepdive.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

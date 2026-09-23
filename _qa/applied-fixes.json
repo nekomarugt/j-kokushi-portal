@@ -1,0 +1,435 @@
+[
+  {
+    "file": "clinical-guide/content.js",
+    "loc": "intro/blocks[19]/note:n12",
+    "before": "④プライバシ―を守る。",
+    "after": "④プライバシーを守る。",
+    "kind": "typo",
+    "note": "長音符がダッシュ",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/content.js",
+    "loc": "intro (主 訴×2)",
+    "before": "主 訴",
+    "after": "主訴",
+    "kind": "typo",
+    "note": "OCR空白",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/content.js",
+    "loc": "sensation (感 覚×複数)",
+    "before": "感 覚",
+    "after": "感覚",
+    "kind": "typo",
+    "note": "OCR空白",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/content.js",
+    "loc": "sensation/blocks[1]",
+    "before": "頭頂葉障害 があ るがとうか判断できる",
+    "after": "頭頂葉障害 があるかどうか判断できる",
+    "kind": "typo",
+    "note": "OCR崩れ",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/content.js",
+    "loc": "inspection/blocks[17]/note:n28",
+    "before": "肥 満度",
+    "after": "肥満度",
+    "kind": "typo",
+    "note": "OCR空白",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/content.js",
+    "loc": "inspection (神 経/麻 痺)",
+    "before": "神 経 / 麻 痺",
+    "after": "神経 / 麻痺",
+    "kind": "typo",
+    "note": "OCR空白",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/content.js",
+    "loc": "vitals/note:n233",
+    "before": "洞性不 整脈 / 脈拍 数",
+    "after": "洞性不整脈 / 脈拍数",
+    "kind": "typo",
+    "note": "OCR空白",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/content.js",
+    "loc": "palpation/blocks[22]",
+    "before": "右側副部",
+    "after": "右側腹部",
+    "kind": "typo",
+    "note": "誤字",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/content.js",
+    "loc": "intro/blocks[1]",
+    "before": "診察 の意義",
+    "after": "診察の意義",
+    "kind": "typo",
+    "note": "OCR空白",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/content.js",
+    "loc": "inspection headings 10-12",
+    "before": "１ ０ ． / １ １ ． / １ ２ ．",
+    "after": "１０．/１１．/１２．",
+    "kind": "typo",
+    "note": "OCR番号空白",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/content.js",
+    "loc": "intro/blocks[21]",
+    "before": "２ ． 問診の内容",
+    "after": "２．問診の内容",
+    "kind": "typo",
+    "note": "OCR空白",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/content.js",
+    "loc": "inspection/blocks[111]",
+    "before": "８ ． 頭部・顔面の視診",
+    "after": "８．頭部・顔面の視診",
+    "kind": "typo",
+    "note": "OCR空白",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/content.js",
+    "loc": "inspection/note:n111",
+    "before": "ベル現象 と は？",
+    "after": "ベル現象とは？",
+    "kind": "typo",
+    "note": "OCR空白",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/content.js",
+    "loc": "inspection/note:n94",
+    "before": "ヘバーデン 結 節",
+    "after": "ヘバーデン結節",
+    "kind": "typo",
+    "note": "OCR空白",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/content.js",
+    "loc": "inspection (尖 足/踵 足)",
+    "before": "尖 足 / 踵 足",
+    "after": "尖足 / 踵足",
+    "kind": "typo",
+    "note": "OCR空白",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/content.js",
+    "loc": "intro/note:n16",
+    "before": "ど のように",
+    "after": "どのように",
+    "kind": "typo",
+    "note": "OCR空白",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/content.js",
+    "loc": "intro/blocks[15]",
+    "before": "１． 問診の意義と方法",
+    "after": "（１）問診の意義と方法",
+    "kind": "number_dupe",
+    "note": "同章「１．」重複解消",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/content.js",
+    "loc": "inspection/note:n154",
+    "before": "③末梢性麻痺とは？ ②下位…",
+    "after": "③末梢性麻痺とは？ ③下位…",
+    "kind": "symbol_dupe",
+    "note": "穴埋め番号不一致",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/content.js",
+    "loc": "inspection (inserted heading)",
+    "before": "(なし)",
+    "after": "……顔面神経麻痺の徴候……",
+    "kind": "number_dupe",
+    "note": "眼所見と顔面麻痺の番号衝突を分離",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/content.js",
+    "loc": "inspection/n112-n115",
+    "before": "②額…③ベル…④鼻唇溝…⑤口角…",
+    "after": "①額…②ベル…③鼻唇溝…④口角…",
+    "kind": "number_dupe",
+    "note": "顔面麻痺所見を①から振り直し",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/content.js",
+    "loc": "inspection (inserted heading)",
+    "before": "(なし) / 本文末尾の…クローヌス…",
+    "after": "……クローヌス……見出し",
+    "kind": "number_dupe",
+    "note": "トーヌスとクローヌスの番号再掲を分離",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/content.js",
+    "loc": "symptoms/note:n292",
+    "before": "②一側下肢に被動的に…",
+    "after": "③一側下肢に被動的に…",
+    "kind": "number_dupe",
+    "note": "髄膜刺激検査の②重複",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/disease-content.js",
+    "loc": "digestive/blocks[45]/note:n34",
+    "before": "④検査　X腺：正常レリーフの消失、壁の不整",
+    "after": "④検査　X線：正常レリーフの消失、壁の不整",
+    "kind": "typo",
+    "note": "OCR誤字（X線）",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/disease-content.js",
+    "loc": "metabolic/blocks[7]/note:n6",
+    "before": "ａ．急性ａ．・糖尿病性（",
+    "after": "ａ．急性・糖尿病性（",
+    "kind": "typo",
+    "note": "記号重複「ａ．」",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/disease-content.js",
+    "loc": "neurology/blocks[71]/r4c0",
+    "before": "治 療",
+    "after": "治療",
+    "kind": "typo",
+    "note": "OCR空白",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/disease-content.js",
+    "loc": "cardiovascular/blocks[66]/note:n53",
+    "before": "⑥経過：致死性不整脈、心不全、機械的合併症などに注意する。発症早期の再灌流と二次予防が予後を左右する。",
+    "after": "⑦経過：致死性不整脈、心不全、機械的合併症などに注意する。発症早期の再灌流と二次予防が予後を左右する。",
+    "kind": "number_dupe",
+    "note": "心筋梗塞：③重複の解消",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/disease-content.js",
+    "loc": "cardiovascular/blocks[65]/note:n52",
+    "before": "⑤治療：速やかな再灌流療法が中心で、適応があれば緊急PCIを行う。抗血小板薬・抗凝固薬などを併用し、酸素や鎮痛薬は状態に応じて用いる。",
+    "after": "⑥治療：速やかな再灌流療法が中心で、適応があれば緊急PCIを行う。抗血小板薬・抗凝固薬などを併用し、酸素や鎮痛薬は状態に応じて用いる。",
+    "kind": "number_dupe",
+    "note": "心筋梗塞：③重複の解消",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/disease-content.js",
+    "loc": "cardiovascular/blocks[64]/note:n51",
+    "before": "④検査　",
+    "after": "⑤検査　",
+    "kind": "number_dupe",
+    "note": "心筋梗塞：③重複の解消",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/disease-content.js",
+    "loc": "cardiovascular/blocks[63]/note:n50",
+    "before": "③症状：胸部の圧迫感や胸痛が持続し、安静やニトログリセリンだけでは改善しにくい。冷汗、悪心、呼吸困難、不整脈を伴うことがある。",
+    "after": "④症状：胸部の圧迫感や胸痛が持続し、安静やニトログリセリンだけでは改善しにくい。冷汗、悪心、呼吸困難、不整脈を伴うことがある。",
+    "kind": "number_dupe",
+    "note": "心筋梗塞：③重複の解消",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/disease-content.js",
+    "loc": "digestive/blocks[15]/note:n11",
+    "before": "④予後　悪い。５年生存率は20％前後",
+    "after": "④予後　悪い。５年生存率は20％前後…",
+    "kind": "number_dupe",
+    "note": "潰瘍性大腸炎：④重複 → 誤修正のため④に戻した（食道癌は①②③④で正当）",
+    "fixed": true,
+    "reverted": true
+  },
+  {
+    "file": "clinical-guide/disease-content.js",
+    "loc": "metabolic/blocks[8]/note:n7",
+    "before": "⑥治療での注意点は？　食事、運動、体重管理、薬物療法",
+    "after": "⑦治療での注意点は？　食事、運動、体重管理、薬物療法",
+    "kind": "number_dupe",
+    "note": "糖尿病：⑥重複",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/disease-content.js",
+    "loc": "metabolic/blocks[53]/note:n41",
+    "before": "①症状　出血傾向（歯肉出血、皮下出血、骨膜下出血、腸管出血、尿路出血）",
+    "after": "②症状　出血傾向（歯肉出血、皮下出血、骨膜下出血、腸管出血、尿路出血）",
+    "kind": "number_dupe",
+    "note": "壊血症：①重複",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/disease-content.js",
+    "loc": "metabolic/blocks[60]/note:n47",
+    "before": "⑤検査　血液：血清リンの低下、アルカリホスファターゼ（ＡＬＰ）上昇",
+    "after": "⑥検査　血液：血清リンの低下、アルカリホスファターゼ（ＡＬＰ）上昇",
+    "kind": "number_dupe",
+    "note": "くる病番号繰り下げ",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/disease-content.js",
+    "loc": "metabolic/blocks[59]/note:n46",
+    "before": "④骨軟化症　成人（骨端線閉鎖後）、易骨折、軟化により長管骨の弯曲、",
+    "after": "⑤骨軟化症　成人（骨端線閉鎖後）、易骨折、軟化により長管骨の弯曲、",
+    "kind": "number_dupe",
+    "note": "くる病番号繰り下げ",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/disease-content.js",
+    "loc": "metabolic/blocks[58]/note:n45",
+    "before": "③くる病　小児期、小人症、脊椎後弯、Ｏ脚＞Ｘ脚変形、骨端の肥厚",
+    "after": "④くる病　小児期、小人症、脊椎後弯、Ｏ脚＞Ｘ脚変形、骨端の肥厚",
+    "kind": "number_dupe",
+    "note": "くる病：③重複",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/disease-content.js",
+    "loc": "hematology/blocks[25]/note:n20",
+    "before": "④治療　遺伝性球状赤血球症には脾臓摘出手術。",
+    "after": "⑤治療　遺伝性球状赤血球症には脾臓摘出手術。",
+    "kind": "number_dupe",
+    "note": "溶血性貧血：②重複ほか",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/disease-content.js",
+    "loc": "hematology/blocks[24]/note:n19",
+    "before": "③検査　（",
+    "after": "④検査　（",
+    "kind": "number_dupe",
+    "note": "溶血性貧血：②重複ほか",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/disease-content.js",
+    "loc": "hematology/blocks[23]/note:n18",
+    "before": "②症状　貧血の症状、（",
+    "after": "③症状　貧血の症状、（",
+    "kind": "number_dupe",
+    "note": "溶血性貧血：②重複ほか",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/disease-content.js",
+    "loc": "neurology/blocks[31]/note:n20",
+    "before": "①病態：アミロイドβの蓄積やタウ蛋白の異常などに関連して神経細胞が障害され、大脳皮質を中心に萎縮が進む。",
+    "after": "④病態：アミロイドβの蓄積やタウ蛋白の異常などに関連して神経細胞が障害され、大脳皮質を中心に萎縮が進む。",
+    "kind": "number_dupe",
+    "note": "アルツハイマー型番号",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/disease-content.js",
+    "loc": "neurology/blocks[32]/note:n21",
+    "before": "②分類　若年性（６５歳以前の発症）と晩期発症（６５歳以後の発症）",
+    "after": "⑤分類　若年性（６５歳以前の発症）と晩期発症（６５歳以後の発症）",
+    "kind": "number_dupe",
+    "note": "アルツハイマー型番号",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/disease-content.js",
+    "loc": "neurology/blocks[39]/note:n26",
+    "before": "④治療：レボドパを中心に、ドパミン作動薬などを症状と経過に応じて用いる。運動療法や生活支援も重要。",
+    "after": "⑤治療：レボドパを中心に、ドパミン作動薬などを症状と経過に応じて用いる。運動療法や生活支援も重要。",
+    "kind": "number_dupe",
+    "note": "パーキンソン病：②重複ほか",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/disease-content.js",
+    "loc": "neurology/blocks[38]/note:n25",
+    "before": "③症状　（",
+    "after": "④症状　（",
+    "kind": "number_dupe",
+    "note": "パーキンソン病：②重複ほか",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/disease-content.js",
+    "loc": "neurology/blocks[37]/note:n24",
+    "before": "②好発：加齢とともに増え、主に中高年以降に発症する。",
+    "after": "③好発：加齢とともに増え、主に中高年以降に発症する。",
+    "kind": "number_dupe",
+    "note": "パーキンソン病：②重複ほか",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/disease-content.js",
+    "loc": "neurology/blocks[48]/note:n32",
+    "before": "④経過：呼吸筋麻痺が生命予後に関わる。進行速度には個人差があり、呼吸・栄養・意思伝達の支援を早期から組み合わせる。",
+    "after": "⑤経過：呼吸筋麻痺が生命予後に関わる。進行速度には個人差があり、呼吸・栄養・意思伝達の支援を早期から組み合わせる。",
+    "kind": "number_dupe",
+    "note": "ALS番号",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/disease-content.js",
+    "loc": "neurology/blocks[47]/note:n31",
+    "before": "③比較的保たれやすい機能：感覚、眼球運動、膀胱直腸機能。認知・行動変化を伴う例もある。",
+    "after": "④比較的保たれやすい機能：感覚、眼球運動、膀胱直腸機能。認知・行動変化を伴う例もある。",
+    "kind": "number_dupe",
+    "note": "ALS：③重複",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/disease-content.js",
+    "loc": "renal/blocks[69]/note:n53",
+    "before": "③治療：薬物療法や内視鏡手術などを、症状と重症度に応じて選ぶ。",
+    "after": "④治療：薬物療法や内視鏡手術などを、症状と重症度に応じて選ぶ。",
+    "kind": "number_dupe",
+    "note": "前立腺肥大症：③重複",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/disease-content.js",
+    "loc": "digestive/blocks[46]/note:n35",
+    "before": "④予後　増悪と寛解を繰り返す。長期罹患は癌化率高くなる。",
+    "after": "⑤予後　増悪と寛解を繰り返す。長期罹患は癌化率高くなる。",
+    "kind": "number_dupe",
+    "note": "潰瘍性大腸炎：④検査と④予後の重複（前回誤って別項目を修正していた）",
+    "fixed": true
+  },
+  {
+    "file": "clinical-guide/disease-content.js",
+    "loc": "digestive/blocks[15]/note:n11",
+    "before": "⑤予後　悪い。５年生存率は20％前後…",
+    "after": "④予後　悪い。５年生存率は20％前後…",
+    "kind": "number_dupe",
+    "note": "誤って繰り下げた食道癌の予後番号を④へ復帰",
+    "fixed": true
+  }
+]
