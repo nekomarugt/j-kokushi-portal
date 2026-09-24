@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b1730" />
+    <meta
+      name="description"
+      content="柔道整復師向け・血液と免疫の基礎一問一答（無料）。答えと理由を短く確認できるドリル。"
+    />
+    <title>基礎の一問一答｜血液・免疫</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="./app.css" />
+  </head>
+  <body>
+    <a class="portal-return" href="../" aria-label="学習ポータルへ戻る">← ポータルへ</a>
+
+    <main class="qa-shell">
+      <header class="qa-header">
+        <div class="qa-mark" aria-hidden="true">基</div>
+        <div>
+          <p class="eyebrow">無料・基礎ドリル</p>
+          <h1>一問一答</h1>
+        </div>
+        <div class="question-total" id="header-total">—</div>
+      </header>
+
+      <section id="setup-view" class="qa-surface" aria-labelledby="setup-title">
+        <div class="surface-heading">
+          <p>短く問う → 答え → なぜ</p>
+          <h2 id="setup-title">何をやる？</h2>
+        </div>
+
+        <fieldset class="topic-field">
+          <legend>分野</legend>
+          <div class="segmented" id="topic-options" role="radiogroup" aria-label="分野の選択">
+            <label>
+              <input type="radio" name="topic" value="全部" checked />
+              <span>全部</span>
+            </label>
+            <label>
+              <input type="radio" name="topic" value="血液" />
+              <span>血液</span>
+            </label>
+            <label>
+              <input type="radio" name="topic" value="免疫" />
+              <span>免疫</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <p class="setup-note" id="setup-count">—</p>
+
+        <button class="primary-button" id="start-button" type="button">
+          <span>シャッフルして開始</span><span aria-hidden="true">→</span>
+        </button>
+
+        <div class="source-note">
+          <span>択一ではない短答ドリル</span>
+          <span>オフラインでも使えます</span>
+        </div>
+      </section>
+
+      <section id="drill-view" class="qa-surface is-hidden" aria-labelledby="question-text">
+        <div class="quiz-topline">
+          <button class="text-button" id="quit-button" type="button">終了</button>
+          <div class="progress-copy">
+            <strong id="progress-current">1</strong><span>/</span><span id="progress-total">0</span>
+          </div>
+          <div class="topic-badge" id="topic-badge"></div>
+        </div>
+        <div class="progress-track" aria-hidden="true"><div id="progress-bar"></div></div>
+
+        <article class="question-card">
+          <h2 id="question-text"></h2>
+
+          <button class="primary-button" id="reveal-button" type="button">答えを見る</button>
+
+          <div id="reveal-panel" class="reveal-panel is-hidden" aria-live="polite">
+            <div class="answer-block">
+              <strong>答え</strong>
+              <p id="answer-text"></p>
+            </div>
+            <div class="why-block">
+              <strong>なぜ</strong>
+              <p id="why-text"></p>
+            </div>
+            <button class="primary-button compact" id="next-button" type="button">次へ</button>
+          </div>
+        </article>
+      </section>
+
+      <section id="done-view" class="qa-surface result-surface is-hidden" aria-labelledby="done-title">
+        <p class="section-kicker">DONE</p>
+        <h2 id="done-title">一周おつかれさま</h2>
+        <p class="done-detail"><strong id="done-count">0</strong> 問を確認しました</p>
+        <p class="done-message">答えだけでなく「なぜ」まで読めたかがポイントです。</p>
+        <div class="result-actions">
+          <button class="primary-button" id="restart-button" type="button">もう一周（シャッフル）</button>
+          <button class="secondary-button" id="back-setup-button" type="button">分野を変える</button>
+        </div>
+      </section>
+
+      <footer>
+        <span>基礎の一問一答｜血液・免疫</span>
+        <span>過去問の択一とは別の確認用</span>
+      </footer>
+    </main>
+
+    <script src="./questions.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
