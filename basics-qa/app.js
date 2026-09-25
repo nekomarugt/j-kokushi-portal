@@ -67,7 +67,7 @@
     var count = filterByTopic(topic).length;
     els.setupCount.textContent =
       topic === "全部"
-        ? "血液＋免疫＋細胞・全" + count + "問（シャッフル出題）"
+        ? "全分野・全" + count + "問（シャッフル出題）"
         : topic + "・" + count + "問（シャッフル出題）";
     els.headerTotal.textContent = ALL.length + "問";
   }
