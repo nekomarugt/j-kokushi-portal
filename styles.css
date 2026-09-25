@@ -240,10 +240,15 @@ footer span::before {
 .basics-section { margin-top: 36px; padding-top: 30px; border-top: 1px solid var(--line); }
 .study-card.basics { border-left-color: var(--navy); background: #eef2f9; }
 .study-card.basics:hover { border-color: var(--navy); }
-.basics-section .study-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .study-card.basics.clinical-qa { border-left-color: var(--teal); background: #edf8f4; }
 .study-card.basics.clinical-qa:hover { border-color: var(--teal); }
-@media (max-width: 780px) { .basics-section .study-grid { grid-template-columns: 1fr; } }
+.basics-section .study-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.basics-section .study-card { gap: 10px; padding: 20px 18px; }
+.basics-section .study-card h3 { font-size: clamp(1.2rem, 1.9vw, 1.4rem); }
+.basics-section .study-card p { font-size: 0.93rem; }
+.study-card.basics.anatomy-qa { border-left-color: #c2410c; background: #fff5ee; }
+.study-card.basics.anatomy-qa:hover { border-color: #c2410c; }
+@media (max-width: 980px) { .basics-section .study-grid { grid-template-columns: 1fr; } }
 
 .study-card.anatomy { grid-column: 1 / -1; border-left-color: #c2410c; background: #fff5ee; }
 .study-card.anatomy:hover { border-color: #c2410c; }
