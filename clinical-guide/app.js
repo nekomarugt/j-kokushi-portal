@@ -51,7 +51,7 @@
     if (block.type === "heading") return block.text;
     if (block.type === "note") return block.segments.map((part) => part.text).join("");
     if (block.type === "table") return block.rows.flat(2).map((part) => part.text).join("");
-    if (block.type === "figure") return `${block.caption || ""} ${block.alt || ""}`;
+    if (block.type === "figure") return `${block.caption || ""} ${block.alt || ""} ${block.point || ""}`;
     return "";
   }
 
@@ -87,12 +87,13 @@
       const src = escapeHtml(block.src);
       const alt = escapeHtml(block.alt || "");
       const caption = escapeHtml(block.caption || "");
-      return `<figure class="study-figure">
+      const point = block.point ? `<span class="fig-point"><strong>ひとことポイント</strong>${escapeHtml(block.point)}</span>` : "";
+      return `<figure class="study-figure${block.point ? " fig-diagram" : ""}">
         <button class="figure-zoom" type="button" data-image-src="${src}" data-image-alt="${alt}" data-image-caption="${caption}" aria-label="${caption}を拡大表示">
           <img src="${src}" alt="${alt}" loading="lazy" decoding="async" />
           <span class="zoom-hint" aria-hidden="true">タップで拡大</span>
         </button>
-        <figcaption>${caption}</figcaption>
+        <figcaption><span class="fig-title">${caption}</span>${point}</figcaption>
       </figure>`;
     }
 
