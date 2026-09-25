@@ -15,7 +15,8 @@
   const qViewerBody = document.getElementById('qViewerBody');
 
   // pages: overview, chapters..., reverse
-  const pages = [{id: 'overview', number: '00', title: '出題基準と頻度'}]
+  // 00ページの id は 'home'（第1章の id 'overview' と重ならないように。#overview は第1章を開く）
+  const pages = [{id: 'home', number: '00', title: '出題基準と頻度'}]
     .concat(chapters.map((c) => ({id: c.id, number: c.number, title: c.title, chapter: c})))
     .concat([{id: 'reverse', number: '逆', title: '過去問から逆引き'}]);
   const pointMap = {};
@@ -199,7 +200,7 @@
 
   function render(focusPoint) {
     const page = pages[currentIndex];
-    // 第1章の id も 'overview' なので、章かどうかは page.chapter で判定する
+    // 章かどうかは page.chapter で判定する
     if (page.chapter) renderChapter(page.chapter, focusPoint);
     else if (page.id === 'reverse') renderReverse();
     else renderOverview();
