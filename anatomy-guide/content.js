@@ -709,7 +709,7 @@ window.anatomyChapters = [
     "items": [
      "2-G"
     ],
-    "anchor": "<div class=\"table-wrap\"><table><thead><tr><th>筋</th><th>起始→停止</th><th>支配神経</th><th>作用</th></tr></thead><tbody><tr><td><span class=\"answer\">棘上筋</span></td><td>棘上窩→大結節（上）</td><td>肩甲上神経</td><td>外転（三角筋下包に接する）</td></tr><tr><td>棘下筋</td><td>棘下窩→大結節（中）</td><td>肩甲上神経</td><td>外旋</td></tr><tr><td>小円筋</td><td>肩甲骨外側縁→大結節（下）</td><td>腋窩神経</td><td>外旋</td></tr><tr><td><span class=\"answer\">肩甲下筋</span></td><td>肩甲下窩→小結節</td><td>肩甲下神経</td><td><span class=\"answer\">内旋</span></td></tr></tbody></table></div><p>腱板＝棘上筋・棘下筋・小円筋・肩甲下筋。<span class=\"answer\">大円筋は腱板に含まれない</span>。</p>",
+    "anchor": "<div class=\"table-wrap\"><table><thead><tr><th>筋</th><th>起始→停止</th><th>支配神経</th><th>作用</th></tr></thead><tbody><tr><td><span class=\"answer\">棘上筋</span></td><td>棘上窩→大結節（上）</td><td>肩甲上神経</td><td>外転（三角筋下包に接する）</td></tr><tr><td>棘下筋</td><td>棘下窩→大結節（中）</td><td>肩甲上神経</td><td>外旋</td></tr><tr><td>小円筋</td><td>肩甲骨外側縁→大結節（下）</td><td>腋窩神経</td><td>外旋</td></tr><tr><td><span class=\"answer\">肩甲下筋</span></td><td>肩甲下窩→小結節</td><td>肩甲下神経</td><td><span class=\"answer\">内旋</span></td></tr></tbody></table></div><p>腱板＝棘上筋・棘下筋・小円筋・肩甲下筋。<span class=\"answer\">大円筋は腱板に含まれない</span>。</p><figure class=\"fig\"><a href=\"figures/rotator_cuff.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/rotator_cuff.svg\" width=\"560\" height=\"560\" alt=\"回旋筋腱板の4筋と上腕骨への付着の模式図\" loading=\"lazy\"></a><figcaption><strong>ひとことポイント</strong>　大結節に上から「棘上・棘下・小円」、小結節に「肩甲下」。4つとも骨頭のすぐ横に付いて骨頭を支えるので「板」になる。大円筋は下の小結節稜に付くので入らない。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
     "why": "なぜ：腱板の4筋はどれも肩甲骨から起こって上腕骨頭のすぐそば（大結節・小結節）に付き、骨頭を関節窩に押し付けて安定させる。大円筋は上腕骨の少し下（小結節稜）に付くので、骨頭を包む「板」にならない。棘上筋腱は肩峰の下を通り、三角筋下包（肩峰下包）と接するので傷みやすい。",
     "qs": [
      "21-33",
@@ -750,7 +750,7 @@ window.anatomyChapters = [
     "items": [
      "2-G"
     ],
-    "anchor": "<ul><li>上肢帯＝<span class=\"answer\">鎖骨と肩甲骨</span>。自由上肢＝上腕骨・橈骨・尺骨・手の骨。</li><li>手根骨の近位列（橈側→尺側）：舟状骨・<span class=\"answer\">月状骨</span>・三角骨・豆状骨。</li><li>遠位列（橈側→尺側）：<span class=\"answer\">大菱形骨</span>・小菱形骨・有頭骨・<span class=\"answer\">有鈎骨</span>。</li><li>第1中手骨は<span class=\"answer\">大菱形骨</span>と鞍関節をつくる（母指CM関節）。</li><li>橈骨手根関節は橈骨と舟状骨・<span class=\"answer\">月状骨</span>・三角骨（関節円板をはさむ）でつくる。有頭骨・有鈎骨・豆状骨は入らない。</li><li>肘を伸ばすと尺骨の<span class=\"answer\">肘頭</span>が上腕骨の肘頭窩に入る（26-35は図の問題）。</li></ul>",
+    "anchor": "<ul><li>上肢帯＝<span class=\"answer\">鎖骨と肩甲骨</span>。自由上肢＝上腕骨・橈骨・尺骨・手の骨。</li><li>手根骨の近位列（橈側→尺側）：舟状骨・<span class=\"answer\">月状骨</span>・三角骨・豆状骨。</li><li>遠位列（橈側→尺側）：<span class=\"answer\">大菱形骨</span>・小菱形骨・有頭骨・<span class=\"answer\">有鈎骨</span>。</li><li>第1中手骨は<span class=\"answer\">大菱形骨</span>と鞍関節をつくる（母指CM関節）。</li><li>橈骨手根関節は橈骨と舟状骨・<span class=\"answer\">月状骨</span>・三角骨（関節円板をはさむ）でつくる。有頭骨・有鈎骨・豆状骨は入らない。</li><li>肘を伸ばすと尺骨の<span class=\"answer\">肘頭</span>が上腕骨の肘頭窩に入る（26-35は図の問題）。</li></ul><figure class=\"fig\"><a href=\"figures/carpals.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/carpals.svg\" width=\"560\" height=\"560\" alt=\"手根骨8個の並びの模式図\" loading=\"lazy\"></a><figcaption><strong>ひとことポイント</strong>　どちらの列も親指側から「舟・月・三角・豆」「大・小・有頭・有鈎」。親指は大菱形骨と鞍関節をつくるので、ほかの指と向き合える。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
     "why": "なぜ：語呂「舟・月・三角・豆／大・小・有頭・有鈎」で、いずれも親指側から並ぶ。母指は大菱形骨と鞍関節をつくるので、ほかの指と向き合える（対立運動）。",
     "qs": [
      "24-2",
@@ -897,7 +897,7 @@ window.anatomyChapters = [
     "items": [
      "2-H"
     ],
-    "anchor": "<ul><li><span class=\"answer\">大腿三角</span>（スカルパ三角）：上＝鼠径靱帯、外側＝<span class=\"answer\">縫工筋</span>、内側＝<span class=\"answer\">長内転筋</span>。薄筋は含まない。</li><li>中身は<span class=\"answer\">内側から 大腿静脈→大腿動脈→大腿神経</span>（V・A・N）。</li><li><span class=\"answer\">内転筋管</span>（ハンター管）：大腿三角の先から膝窩へ続く管。<span class=\"answer\">大腿動脈</span>・大腿静脈・<span class=\"answer\">伏在神経</span>が通る。</li><li><span class=\"answer\">鵞足</span>：<span class=\"answer\">縫工筋・薄筋・半腱様筋</span>の腱が脛骨上端の内側に付く所。下腿三頭筋は鵞足ではなく踵骨腱（アキレス腱）で踵骨に付く。</li></ul>",
+    "anchor": "<ul><li><span class=\"answer\">大腿三角</span>（スカルパ三角）：上＝鼠径靱帯、外側＝<span class=\"answer\">縫工筋</span>、内側＝<span class=\"answer\">長内転筋</span>。薄筋は含まない。</li><li>中身は<span class=\"answer\">内側から 大腿静脈→大腿動脈→大腿神経</span>（V・A・N）。</li><li><span class=\"answer\">内転筋管</span>（ハンター管）：大腿三角の先から膝窩へ続く管。<span class=\"answer\">大腿動脈</span>・大腿静脈・<span class=\"answer\">伏在神経</span>が通る。</li><li><span class=\"answer\">鵞足</span>：<span class=\"answer\">縫工筋・薄筋・半腱様筋</span>の腱が脛骨上端の内側に付く所。下腿三頭筋は鵞足ではなく踵骨腱（アキレス腱）で踵骨に付く。</li></ul><figure class=\"fig\"><a href=\"figures/femoral_triangle.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/femoral_triangle.svg\" width=\"560\" height=\"560\" alt=\"大腿三角の境界と中身の並びの模式図\" loading=\"lazy\"></a><figcaption><strong>ひとことポイント</strong>　三角の辺は 上＝鼠径靱帯、外側＝縫工筋、内側＝長内転筋。中身は内側から 静脈・動脈・神経。動脈が皮膚のすぐ下にあるので拍動を触れられる。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
     "why": "なぜ：大腿動脈は大腿三角で皮膚のすぐ下にあるので、拍動を触れたり採血に使ったりできる。伏在神経は大腿神経の皮枝で、筋を支配せず膝の内側〜下腿内側の皮膚へ行くため、血管と同じ内転筋管を通る。鵞足の3筋は「縫工筋（大腿神経）・薄筋（閉鎖神経）・半腱様筋（坐骨神経）」と支配神経が3つとも違う。",
     "qs": [
      "18-34",
@@ -938,7 +938,7 @@ window.anatomyChapters = [
     "items": [
      "2-H"
     ],
-    "anchor": "<ul><li>足根骨7個：距骨・踵骨・舟状骨・立方骨・内側/中間/外側楔状骨。</li><li><span class=\"answer\">ショパール関節</span>（横足根関節）＝距舟関節＋踵立方関節。楔状骨は入らない。</li><li><span class=\"answer\">リスフラン関節</span>（足根中足関節）＝3つの楔状骨・<span class=\"answer\">立方骨</span>と中足骨。</li><li>外側縦足弓：踵骨・<span class=\"answer\">立方骨</span>・第4〜5中足骨。内側縦足弓：踵骨・距骨・舟状骨・楔状骨・第1〜3中足骨。</li><li><span class=\"answer\">距骨</span>：筋が付かない。距骨頭が舟状骨と関節し、<span class=\"answer\">距骨頸は頭の近位</span>にある。立方骨とは関節しない。</li><li>距腿関節の内側は<span class=\"answer\">三角靱帯</span>（内側靱帯）、外側は前・後距腓靱帯と踵腓靱帯が補強。</li></ul>",
+    "anchor": "<ul><li>足根骨7個：距骨・踵骨・舟状骨・立方骨・内側/中間/外側楔状骨。</li><li><span class=\"answer\">ショパール関節</span>（横足根関節）＝距舟関節＋踵立方関節。楔状骨は入らない。</li><li><span class=\"answer\">リスフラン関節</span>（足根中足関節）＝3つの楔状骨・<span class=\"answer\">立方骨</span>と中足骨。</li><li>外側縦足弓：踵骨・<span class=\"answer\">立方骨</span>・第4〜5中足骨。内側縦足弓：踵骨・距骨・舟状骨・楔状骨・第1〜3中足骨。</li><li><span class=\"answer\">距骨</span>：筋が付かない。距骨頭が舟状骨と関節し、<span class=\"answer\">距骨頸は頭の近位</span>にある。立方骨とは関節しない。</li><li>距腿関節の内側は<span class=\"answer\">三角靱帯</span>（内側靱帯）、外側は前・後距腓靱帯と踵腓靱帯が補強。</li></ul><figure class=\"fig\"><a href=\"figures/foot_bones.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/foot_bones.svg\" width=\"560\" height=\"640\" alt=\"足の骨とショパール関節・リスフラン関節の模式図\" loading=\"lazy\"></a><figcaption><strong>ひとことポイント</strong>　ショパール関節は足根骨の「後ろの列（距骨・踵骨）」と「前の列（舟状骨・立方骨）」の境目。リスフラン関節は足根骨と中足骨の境目。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
     "why": "なぜ：ショパール関節は足根骨の後ろの列（距骨・踵骨）と前の列（舟状骨・立方骨）の境目、リスフラン関節は足根骨と中足骨の境目。どの骨の間の境目かを図で覚える。",
     "qs": [
      "18-37",
@@ -978,7 +978,7 @@ window.anatomyChapters = [
      "2-H",
      "9-F"
     ],
-    "anchor": "<div class=\"table-wrap\"><table><thead><tr><th>群</th><th>筋</th><th>支配</th><th>作用</th></tr></thead><tbody><tr><td>前群（伸筋）</td><td>前脛骨筋・長母趾伸筋・長趾伸筋・<span class=\"answer\">第三腓骨筋</span></td><td><span class=\"answer\">深腓骨神経</span></td><td>足関節の<span class=\"answer\">背屈</span></td></tr><tr><td>外側群</td><td><span class=\"answer\">長腓骨筋</span>・短腓骨筋</td><td><span class=\"answer\">浅腓骨神経</span></td><td>底屈・外がえし</td></tr><tr><td>後群（屈筋）</td><td>下腿三頭筋・後脛骨筋・長趾屈筋・長母趾屈筋・足底筋・膝窩筋</td><td>脛骨神経</td><td>底屈・内がえし</td></tr></tbody></table></div>",
+    "anchor": "<div class=\"table-wrap\"><table><thead><tr><th>群</th><th>筋</th><th>支配</th><th>作用</th></tr></thead><tbody><tr><td>前群（伸筋）</td><td>前脛骨筋・長母趾伸筋・長趾伸筋・<span class=\"answer\">第三腓骨筋</span></td><td><span class=\"answer\">深腓骨神経</span></td><td>足関節の<span class=\"answer\">背屈</span></td></tr><tr><td>外側群</td><td><span class=\"answer\">長腓骨筋</span>・短腓骨筋</td><td><span class=\"answer\">浅腓骨神経</span></td><td>底屈・外がえし</td></tr><tr><td>後群（屈筋）</td><td>下腿三頭筋・後脛骨筋・長趾屈筋・長母趾屈筋・足底筋・膝窩筋</td><td>脛骨神経</td><td>底屈・内がえし</td></tr></tbody></table></div><figure class=\"fig\"><a href=\"figures/leg_compartments.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/leg_compartments.svg\" width=\"560\" height=\"600\" alt=\"下腿の3つの筋群と支配神経の模式図\" loading=\"lazy\"></a><figcaption><strong>ひとことポイント</strong>　前・外側・後ろの3つの部屋で神経が決まる。前は背屈、後ろは底屈。長・短腓骨筋は外くるぶしの後ろを回るので底屈と外がえしに働く。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
     "why": "なぜ：腓骨筋という名前でも、第三腓骨筋だけは前群（長趾伸筋の一部）なので背屈に働き、深腓骨神経支配。長・短腓骨筋は外くるぶしの後ろを回るので底屈に働く。",
     "qs": [
      "25-38",
@@ -1145,7 +1145,7 @@ window.anatomyChapters = [
     "items": [
      "3-B"
     ],
-    "anchor": "<p>大静脈→<span class=\"answer\">右心房</span>→<span class=\"answer\">三尖弁</span>→右心室→肺動脈弁→<span class=\"answer\">肺動脈幹</span>→肺→肺静脈→左心房→<span class=\"answer\">僧帽弁（2尖）</span>→左心室→大動脈弁→大動脈</p><ul><li>房室弁（<span class=\"answer\">三尖弁・僧帽弁</span>）には<span class=\"answer\">腱索と乳頭筋</span>が付く。動脈弁（大動脈弁・肺動脈弁＝半月弁）には付かない。</li><li>右心房にあるもの：上・下大静脈口、<span class=\"answer\">冠状静脈洞口</span>、<span class=\"answer\">卵円窩</span>（心房中隔）、洞房結節、房室結節。</li><li>上大静脈は右心房に入る（左心房ではない）。卵円窩は心房中隔にある（心室中隔ではない）。</li><li>動脈管索は大動脈弓と肺動脈の間にある（胎児期の動脈管の名残）。</li></ul>",
+    "anchor": "<p>大静脈→<span class=\"answer\">右心房</span>→<span class=\"answer\">三尖弁</span>→右心室→肺動脈弁→<span class=\"answer\">肺動脈幹</span>→肺→肺静脈→左心房→<span class=\"answer\">僧帽弁（2尖）</span>→左心室→大動脈弁→大動脈</p><ul><li>房室弁（<span class=\"answer\">三尖弁・僧帽弁</span>）には<span class=\"answer\">腱索と乳頭筋</span>が付く。動脈弁（大動脈弁・肺動脈弁＝半月弁）には付かない。</li><li>右心房にあるもの：上・下大静脈口、<span class=\"answer\">冠状静脈洞口</span>、<span class=\"answer\">卵円窩</span>（心房中隔）、洞房結節、房室結節。</li><li>上大静脈は右心房に入る（左心房ではない）。卵円窩は心房中隔にある（心室中隔ではない）。</li><li>動脈管索は大動脈弓と肺動脈の間にある（胎児期の動脈管の名残）。</li></ul><figure class=\"fig\"><a href=\"figures/heart_flow.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/heart_flow.svg\" width=\"560\" height=\"676\" alt=\"心臓の部屋と弁を血液の流れの順に並べた模式図\" loading=\"lazy\"></a><figcaption><strong>ひとことポイント</strong>　右（静脈血）→肺→左（動脈血）の順に、弁は「三尖弁→肺動脈弁→僧帽弁→大動脈弁」。房室弁は心室が縮んでもめくれないよう腱索と乳頭筋で引っぱられている。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
     "why": "なぜ：房室弁は心室が縮むときに心房側へめくれ返らないよう、腱索と乳頭筋でパラシュートのひものように引っ張られている。動脈弁はポケット状の3枚の弁なので、ひもが要らない。全身の静脈血が最初に通る弁は三尖弁（32-61）。",
     "qs": [
      "18-38",
@@ -1168,7 +1168,7 @@ window.anatomyChapters = [
     "items": [
      "3-C"
     ],
-    "anchor": "<div class=\"table-wrap\"><table><thead><tr><th>高さ</th><th>腹大動脈の枝</th></tr></thead><tbody><tr><td>第12胸椎</td><td><span class=\"answer\">腹腔動脈</span>（左胃動脈・総肝動脈・脾動脈）</td></tr><tr><td>第1腰椎</td><td>上腸間膜動脈</td></tr><tr><td>第1〜2腰椎</td><td>腎動脈</td></tr><tr><td>第2腰椎</td><td><span class=\"answer\">精巣動脈・卵巣動脈</span></td></tr><tr><td>第3腰椎</td><td><span class=\"answer\">下腸間膜動脈</span>（最も尾側の内臓枝）</td></tr><tr><td>第4腰椎</td><td>左右の総腸骨動脈に分かれる</td></tr></tbody></table></div><ul><li>胸大動脈の枝：<span class=\"answer\">肋間動脈</span>（第3以下）・気管支動脈・食道動脈。</li><li>腹腔動脈の領域：胃・肝臓・胆嚢・脾臓・膵臓（膵頭の一部を含む）・十二指腸上部。</li><li><span class=\"answer\">脾動脈</span>は膵臓の上縁に沿って後腹壁（壁側腹膜の後ろ）を走る。</li><li>固有肝動脈・回結腸動脈・左結腸動脈は、腹大動脈から直接出る枝ではない。</li></ul>",
+    "anchor": "<div class=\"table-wrap\"><table><thead><tr><th>高さ</th><th>腹大動脈の枝</th></tr></thead><tbody><tr><td>第12胸椎</td><td><span class=\"answer\">腹腔動脈</span>（左胃動脈・総肝動脈・脾動脈）</td></tr><tr><td>第1腰椎</td><td>上腸間膜動脈</td></tr><tr><td>第1〜2腰椎</td><td>腎動脈</td></tr><tr><td>第2腰椎</td><td><span class=\"answer\">精巣動脈・卵巣動脈</span></td></tr><tr><td>第3腰椎</td><td><span class=\"answer\">下腸間膜動脈</span>（最も尾側の内臓枝）</td></tr><tr><td>第4腰椎</td><td>左右の総腸骨動脈に分かれる</td></tr></tbody></table></div><ul><li>胸大動脈の枝：<span class=\"answer\">肋間動脈</span>（第3以下）・気管支動脈・食道動脈。</li><li>腹腔動脈の領域：胃・肝臓・胆嚢・脾臓・膵臓（膵頭の一部を含む）・十二指腸上部。</li><li><span class=\"answer\">脾動脈</span>は膵臓の上縁に沿って後腹壁（壁側腹膜の後ろ）を走る。</li><li>固有肝動脈・回結腸動脈・左結腸動脈は、腹大動脈から直接出る枝ではない。</li></ul><figure class=\"fig\"><a href=\"figures/aorta.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/aorta.svg\" width=\"560\" height=\"900\" alt=\"大動脈弓の3本の枝と腹大動脈の枝の高さの模式図\" loading=\"lazy\"></a><figcaption><strong>ひとことポイント</strong>　大動脈弓の枝は右から 腕頭・左総頸・左鎖骨下（腕頭動脈は右だけ）。腹大動脈の内臓枝は腸ができた順に上から 腹腔→上腸間膜→下腸間膜。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
     "why": "なぜ：腹大動脈の内臓枝は、腸の発生の順（前腸＝腹腔動脈、中腸＝上腸間膜動脈、後腸＝下腸間膜動脈）に上から並ぶ。精巣は腎臓の近くで発生してから陰嚢へ下りるので、精巣動脈は腎動脈のすぐ下の腹大動脈から出る。",
     "qs": [
      "18-40",
@@ -1366,7 +1366,7 @@ window.anatomyChapters = [
     "items": [
      "3-B"
     ],
-    "anchor": "<p><span class=\"answer\">洞房結節</span>（右心房・上大静脈の入口付近）→<span class=\"answer\">房室結節</span>（右心房・心房中隔の下部）→ヒス束→右脚・左脚→プルキンエ線維</p>",
+    "anchor": "<p><span class=\"answer\">洞房結節</span>（右心房・上大静脈の入口付近）→<span class=\"answer\">房室結節</span>（右心房・心房中隔の下部）→ヒス束→右脚・左脚→プルキンエ線維</p><figure class=\"fig\"><a href=\"figures/conduction.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/conduction.svg\" width=\"560\" height=\"530\" alt=\"刺激伝導系の順番の模式図\" loading=\"lazy\"></a><figcaption><strong>ひとことポイント</strong>　2つの結節はどちらも右心房。房室結節で少し遅れるので、心房が縮み終わってから心室が縮む。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
     "why": "なぜ：洞房結節が一番速いリズムで興奮するので心臓のペースメーカーになる。房室結節で少し伝導が遅れることで、心房が縮み終わってから心室が縮む。どちらの結節も右心房にある（22-38・31-58）。",
     "qs": [
      "22-38",
@@ -1418,7 +1418,7 @@ window.anatomyChapters = [
     "items": [
      "3-F"
     ],
-    "anchor": "<div class=\"table-wrap\"><table><thead><tr><th>構造</th><th>はたらき</th><th>生後の名残</th></tr></thead><tbody><tr><td>臍静脈（1本）</td><td>胎盤から<span class=\"answer\">酸素の多い血液</span>を運ぶ</td><td>肝円索</td></tr><tr><td>静脈管（アランチウス管）</td><td>臍静脈→下大静脈（肝臓を迂回）</td><td>静脈管索</td></tr><tr><td>卵円孔</td><td>右心房→左心房</td><td><span class=\"answer\">卵円窩</span></td></tr><tr><td><span class=\"answer\">動脈管（ボタロー管）</span></td><td><span class=\"answer\">肺動脈→大動脈</span></td><td>動脈管索</td></tr><tr><td><span class=\"answer\">臍動脈</span>（2本）</td><td><span class=\"answer\">酸素の最も少ない血液</span>を胎盤へ戻す</td><td>臍動脈索</td></tr></tbody></table></div>",
+    "anchor": "<div class=\"table-wrap\"><table><thead><tr><th>構造</th><th>はたらき</th><th>生後の名残</th></tr></thead><tbody><tr><td>臍静脈（1本）</td><td>胎盤から<span class=\"answer\">酸素の多い血液</span>を運ぶ</td><td>肝円索</td></tr><tr><td>静脈管（アランチウス管）</td><td>臍静脈→下大静脈（肝臓を迂回）</td><td>静脈管索</td></tr><tr><td>卵円孔</td><td>右心房→左心房</td><td><span class=\"answer\">卵円窩</span></td></tr><tr><td><span class=\"answer\">動脈管（ボタロー管）</span></td><td><span class=\"answer\">肺動脈→大動脈</span></td><td>動脈管索</td></tr><tr><td><span class=\"answer\">臍動脈</span>（2本）</td><td><span class=\"answer\">酸素の最も少ない血液</span>を胎盤へ戻す</td><td>臍動脈索</td></tr></tbody></table></div><figure class=\"fig\"><a href=\"figures/fetal.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/fetal.svg\" width=\"560\" height=\"806\" alt=\"胎児循環の流れと3つの近道の模式図\" loading=\"lazy\"></a><figcaption><strong>ひとことポイント</strong>　胎児は肺で呼吸しないので、静脈管・卵円孔・動脈管の3つの近道で肝臓と肺を素通りする。胎盤から来たばかりの臍静脈が一番酸素が多い。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
     "why": "なぜ：胎児は肺で呼吸しないので、肺へ行く血液を近道（卵円孔・動脈管）で全身へ回す。胎盤に戻る臍動脈には全身を回り終えた血液が流れるので、酸素飽和度が一番低い。",
     "qs": [
      "24-41",
@@ -1524,7 +1524,7 @@ window.anatomyChapters = [
     "items": [
      "4-F"
     ],
-    "anchor": "<ul><li>走行順：<span class=\"answer\">上部→下行部→水平部→上行部</span>→十二指腸空腸曲。</li><li><span class=\"answer\">大十二指腸乳頭</span>（ファーター乳頭）は<span class=\"answer\">下行部</span>にあり、<span class=\"answer\">総胆管</span>と主膵管が開口する。ここに<span class=\"answer\">オッディ括約筋</span>がある。</li><li>小十二指腸乳頭には副膵管が開口する。</li><li>胆嚢管は総肝管と合流して総胆管になる（胆嚢管が直接十二指腸に開口するのではない）。</li></ul>",
+    "anchor": "<ul><li>走行順：<span class=\"answer\">上部→下行部→水平部→上行部</span>→十二指腸空腸曲。</li><li><span class=\"answer\">大十二指腸乳頭</span>（ファーター乳頭）は<span class=\"answer\">下行部</span>にあり、<span class=\"answer\">総胆管</span>と主膵管が開口する。ここに<span class=\"answer\">オッディ括約筋</span>がある。</li><li>小十二指腸乳頭には副膵管が開口する。</li><li>胆嚢管は総肝管と合流して総胆管になる（胆嚢管が直接十二指腸に開口するのではない）。</li></ul><figure class=\"fig\"><a href=\"figures/duodenum.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/duodenum.svg\" width=\"560\" height=\"600\" alt=\"十二指腸の4つの部分と乳頭の模式図\" loading=\"lazy\"></a><figcaption><strong>ひとことポイント</strong>　十二指腸は膵頭を「C」の字に囲む。胆汁と膵液の出口（大十二指腸乳頭）は2番目の下行部にある。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
     "why": "なぜ：オッディ括約筋は胆汁と膵液の出口の「栓」なので、胃の幽門や回腸の末端ではなく、乳頭のある十二指腸下行部にある。「胆汁の出口＝下行部」は何度も出ている。",
     "qs": [
      "18-43",
@@ -1664,7 +1664,7 @@ window.anatomyChapters = [
     "items": [
      "4-H"
     ],
-    "anchor": "<ul><li>肝臓の上面（横隔面）は<span class=\"answer\">横隔膜</span>に接する。右葉・左葉・方形葉・尾状葉。</li><li>肝小葉の間の結合組織＝<span class=\"answer\">グリソン鞘</span>（小葉間動脈・小葉間静脈・小葉間胆管の三つ組）。</li><li><span class=\"answer\">胆汁は肝臓（肝細胞）でつくられ</span>、胆嚢で濃縮・貯蔵される。</li><li>胆嚢窩は肝臓の下面（臓側面）にある。ラセンヒダは胆嚢管にある。</li></ul>",
+    "anchor": "<ul><li>肝臓の上面（横隔面）は<span class=\"answer\">横隔膜</span>に接する。右葉・左葉・方形葉・尾状葉。</li><li>肝小葉の間の結合組織＝<span class=\"answer\">グリソン鞘</span>（小葉間動脈・小葉間静脈・小葉間胆管の三つ組）。</li><li><span class=\"answer\">胆汁は肝臓（肝細胞）でつくられ</span>、胆嚢で濃縮・貯蔵される。</li><li>胆嚢窩は肝臓の下面（臓側面）にある。ラセンヒダは胆嚢管にある。</li></ul><figure class=\"fig\"><a href=\"figures/bile_duct.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/bile_duct.svg\" width=\"560\" height=\"560\" alt=\"胆汁と膵液の通り道の模式図\" loading=\"lazy\"></a><figcaption><strong>ひとことポイント</strong>　胆汁は肝臓でつくられ、胆嚢で濃くして貯める。胆嚢管は総肝管と合流して総胆管になり、主膵管といっしょに大十二指腸乳頭に開く。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
     "why": "なぜ：胆嚢は胆汁をつくる臓器ではなく「ためて濃くするタンク」。肝細胞がつくった胆汁は毛細胆管→小葉間胆管→肝管→総胆管と流れる。",
     "qs": [
      "19-44",
@@ -1805,7 +1805,7 @@ window.anatomyChapters = [
     "items": [
      "5-D"
     ],
-    "anchor": "<ul><li>気管の分岐は<span class=\"answer\">第4〜5胸椎</span>の高さ（前では胸骨角）。</li><li><span class=\"answer\">右主気管支</span>は左より<span class=\"answer\">太く・短く</span>、<span class=\"answer\">垂直に近い</span>（分岐角が小さい）。</li><li>→誤って吸い込んだ異物は<span class=\"answer\">右気管支に入りやすい</span>。</li><li>気管は食道の<span class=\"answer\">前</span>にある。粘膜は多列線毛円柱上皮。</li><li>気管支の壁：軟骨・平滑筋・線毛・杯細胞。<span class=\"answer\">横紋筋はない</span>。</li></ul>",
+    "anchor": "<ul><li>気管の分岐は<span class=\"answer\">第4〜5胸椎</span>の高さ（前では胸骨角）。</li><li><span class=\"answer\">右主気管支</span>は左より<span class=\"answer\">太く・短く</span>、<span class=\"answer\">垂直に近い</span>（分岐角が小さい）。</li><li>→誤って吸い込んだ異物は<span class=\"answer\">右気管支に入りやすい</span>。</li><li>気管は食道の<span class=\"answer\">前</span>にある。粘膜は多列線毛円柱上皮。</li><li>気管支の壁：軟骨・平滑筋・線毛・杯細胞。<span class=\"answer\">横紋筋はない</span>。</li></ul><figure class=\"fig\"><a href=\"figures/lungs.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/lungs.svg\" width=\"560\" height=\"730\" alt=\"気管支と左右の肺の葉・裂の模式図\" loading=\"lazy\"></a><figcaption><strong>ひとことポイント</strong>　右主気管支は太く・短く・まっすぐ下を向くので、飲みこんだ異物は右へ入りやすい。左肺は心臓があるぶん小さく、2葉で水平裂がない。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
     "why": "なぜ：左主気管支は大動脈弓と心臓をよけるため横へ長く伸びる。右はまっすぐ下へ太く伸びるので、落ちてきた物がそのまま入りやすい。",
     "qs": [
      "18-45",
@@ -2038,7 +2038,7 @@ window.anatomyChapters = [
      "6-B",
      "6-A"
     ],
-    "anchor": "<ul><li>第12胸椎〜第3腰椎の高さ、<span class=\"answer\">第12肋骨の前方</span>の後腹壁にある<span class=\"answer\">腹膜後器官</span>。</li><li><span class=\"answer\">右腎は左腎より低い</span>（上に肝臓があるため）。</li><li>長軸は上方で内側に寄る（延長線は<span class=\"answer\">上方</span>で交わる）。</li><li>被膜は内側から：<span class=\"answer\">線維被膜</span>→脂肪被膜→<span class=\"answer\">腎筋膜（ゲロータ筋膜）</span>。腎筋膜は<span class=\"answer\">副腎もいっしょに包む</span>。</li><li>大きさ：長さ約10cm・重さ約130g。肉様膜は陰嚢の膜で腎臓とは関係ない。</li></ul>",
+    "anchor": "<ul><li>第12胸椎〜第3腰椎の高さ、<span class=\"answer\">第12肋骨の前方</span>の後腹壁にある<span class=\"answer\">腹膜後器官</span>。</li><li><span class=\"answer\">右腎は左腎より低い</span>（上に肝臓があるため）。</li><li>長軸は上方で内側に寄る（延長線は<span class=\"answer\">上方</span>で交わる）。</li><li>被膜は内側から：<span class=\"answer\">線維被膜</span>→脂肪被膜→<span class=\"answer\">腎筋膜（ゲロータ筋膜）</span>。腎筋膜は<span class=\"answer\">副腎もいっしょに包む</span>。</li><li>大きさ：長さ約10cm・重さ約130g。肉様膜は陰嚢の膜で腎臓とは関係ない。</li></ul><figure class=\"fig\"><a href=\"figures/kidney_capsule.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/kidney_capsule.svg\" width=\"560\" height=\"520\" alt=\"腎臓の3つの被膜の模式図\" loading=\"lazy\"></a><figcaption><strong>ひとことポイント</strong>　被膜は内側から 線維被膜→脂肪被膜→腎筋膜。いちばん外の腎筋膜（ゲロータ筋膜）は副腎もいっしょに包む。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
     "why": "なぜ：腎臓は腰の筋（大腰筋）の上に「ハの字」に乗るので、上の端どうしが近い。腎筋膜の中には脂肪と副腎も入っていて、腎臓を後腹壁に固定している。",
     "qs": [
      "20-46",
@@ -2083,7 +2083,7 @@ window.anatomyChapters = [
     "items": [
      "6-B"
     ],
-    "anchor": "<ul><li><span class=\"answer\">ネフロン</span>＝<span class=\"answer\">腎小体</span>（糸球体＋ボーマン嚢）＋尿細管（近位→ヘンレのワナ→遠位）。集合管・腎杯・腎錐体は含まない。</li><li><span class=\"answer\">原尿は腎小体</span>でつくられる（糸球体からボーマン嚢へこし出される）。</li><li><span class=\"answer\">糸球体</span>は毛細血管のかたまり（血液が流れる）。ボーマン嚢・尿細管・腎杯には尿（原尿）が流れる。</li><li>近位尿細管はボーマン嚢の尿細管極から始まる（遠位ではない）。</li><li>傍糸球体細胞（輸入細動脈の壁）がレニンを分泌。緻密斑は遠位尿細管にある。</li><li>尿細管は<span class=\"answer\">毛細血管に取り巻かれ</span>、再吸収した物をすぐ血液に戻す。</li></ul>",
+    "anchor": "<ul><li><span class=\"answer\">ネフロン</span>＝<span class=\"answer\">腎小体</span>（糸球体＋ボーマン嚢）＋尿細管（近位→ヘンレのワナ→遠位）。集合管・腎杯・腎錐体は含まない。</li><li><span class=\"answer\">原尿は腎小体</span>でつくられる（糸球体からボーマン嚢へこし出される）。</li><li><span class=\"answer\">糸球体</span>は毛細血管のかたまり（血液が流れる）。ボーマン嚢・尿細管・腎杯には尿（原尿）が流れる。</li><li>近位尿細管はボーマン嚢の尿細管極から始まる（遠位ではない）。</li><li>傍糸球体細胞（輸入細動脈の壁）がレニンを分泌。緻密斑は遠位尿細管にある。</li><li>尿細管は<span class=\"answer\">毛細血管に取り巻かれ</span>、再吸収した物をすぐ血液に戻す。</li></ul><figure class=\"fig\"><a href=\"figures/nephron.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/nephron.svg\" width=\"560\" height=\"760\" alt=\"ネフロンの各部分と皮質・髄質の位置の模式図\" loading=\"lazy\"></a><figcaption><strong>ひとことポイント</strong>　ネフロン＝腎小体＋尿細管（近位→ヘンレのワナ→遠位）。集合管は入らない。腎小体と曲がった尿細管は皮質、ヘンレのワナと集合管は髄質にある。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
     "why": "なぜ：血管極（輸入・輸出細動脈の出入り口）の反対側が尿細管極で、原尿はそこから近位尿細管へ流れ出る。レニンを出すのは緻密斑ではなく傍糸球体細胞（21-47）。",
     "qs": [
      "18-46",
@@ -2266,7 +2266,7 @@ window.anatomyChapters = [
      "7-C",
      "8-H"
     ],
-    "anchor": "<ul><li>原始卵胞（扁平な卵胞上皮1層）→<span class=\"answer\">一次卵胞</span>（<span class=\"answer\">単層の立方〜円柱上皮</span>）→二次卵胞（多層・卵胞腔）→成熟卵胞（グラーフ卵胞）→排卵。</li><li>排卵された卵子は腹膜腔に出て、<span class=\"answer\">卵管采</span>に取り込まれる。卵子は卵巣の卵胞の中で成熟する。</li><li><span class=\"answer\">黄体は排卵後</span>に卵胞からでき、<span class=\"answer\">プロゲステロン</span>（とエストロゲン）を分泌（ルテイン細胞）。妊娠しなければ白体になる。</li><li>原始卵胞のほとんどは成熟せずに退化（閉鎖卵胞）。卵巣動脈は腹大動脈の枝。</li></ul>",
+    "anchor": "<ul><li>原始卵胞（扁平な卵胞上皮1層）→<span class=\"answer\">一次卵胞</span>（<span class=\"answer\">単層の立方〜円柱上皮</span>）→二次卵胞（多層・卵胞腔）→成熟卵胞（グラーフ卵胞）→排卵。</li><li>排卵された卵子は腹膜腔に出て、<span class=\"answer\">卵管采</span>に取り込まれる。卵子は卵巣の卵胞の中で成熟する。</li><li><span class=\"answer\">黄体は排卵後</span>に卵胞からでき、<span class=\"answer\">プロゲステロン</span>（とエストロゲン）を分泌（ルテイン細胞）。妊娠しなければ白体になる。</li><li>原始卵胞のほとんどは成熟せずに退化（閉鎖卵胞）。卵巣動脈は腹大動脈の枝。</li></ul><figure class=\"fig\"><a href=\"figures/follicle.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/follicle.svg\" width=\"560\" height=\"560\" alt=\"卵胞の成熟から排卵・黄体・白体までの模式図\" loading=\"lazy\"></a><figcaption><strong>ひとことポイント</strong>　原始→一次→二次→成熟（グラーフ）卵胞→排卵。残った卵胞が黄体になりプロゲステロンを出す。妊娠しなければ白体になる。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
     "why": "なぜ：卵胞上皮は、成熟につれて扁平→立方・円柱→多層と厚くなる。一次卵胞で初めて細胞が背の高い形になる。〔注意：18-49「月経直前に形成されているのは」の保存データの正答は「白体」。月経直前は黄体が退化し始める時期で、教科書によって答え方が分かれるため要確認。〕",
     "qs": [
      "18-49",
@@ -2287,7 +2287,7 @@ window.anatomyChapters = [
     "items": [
      "7-B"
     ],
-    "anchor": "<p>精巣→精巣上体（<span class=\"answer\">精巣上体管は精管に続く</span>）→<span class=\"answer\">精管</span>（精索の中を上行）→<span class=\"answer\">浅鼠径輪→鼠径管→深鼠径輪</span>→骨盤内→<span class=\"answer\">精管膨大部</span>（膀胱の後ろ）→<span class=\"answer\">射精管</span>（前立腺を貫く）→尿道前立腺部</p><ul><li>精管は約40〜45cm。精管膨大部は陰嚢ではなく膀胱の後ろにある。射精管は前立腺の中を通る（尿道海綿体ではない）。</li><li>精索の中：精管・精巣動脈・精巣静脈（<span class=\"answer\">蔓状静脈叢として精巣動脈を取り巻く</span>）・神経・リンパ管。</li></ul>",
+    "anchor": "<p>精巣→精巣上体（<span class=\"answer\">精巣上体管は精管に続く</span>）→<span class=\"answer\">精管</span>（精索の中を上行）→<span class=\"answer\">浅鼠径輪→鼠径管→深鼠径輪</span>→骨盤内→<span class=\"answer\">精管膨大部</span>（膀胱の後ろ）→<span class=\"answer\">射精管</span>（前立腺を貫く）→尿道前立腺部</p><ul><li>精管は約40〜45cm。精管膨大部は陰嚢ではなく膀胱の後ろにある。射精管は前立腺の中を通る（尿道海綿体ではない）。</li><li>精索の中：精管・精巣動脈・精巣静脈（<span class=\"answer\">蔓状静脈叢として精巣動脈を取り巻く</span>）・神経・リンパ管。</li></ul><figure class=\"fig\"><a href=\"figures/sperm_path.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/sperm_path.svg\" width=\"560\" height=\"720\" alt=\"精子の通り道と付属生殖腺の模式図\" loading=\"lazy\"></a><figcaption><strong>ひとことポイント</strong>　精管は精巣から上がって鼠径管を通り、おなかの中へ入る。射精管は前立腺を貫いて尿道に開く。精液の大部分は精嚢の液。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
     "why": "なぜ：精巣はもともと腹腔の後ろで発生し、陰嚢へ降りるときに鼠径管を通った。精管はその道をさかのぼって骨盤へ戻るので、鼠径管を通る。",
     "qs": [
      "18-48",
@@ -2442,7 +2442,7 @@ window.anatomyChapters = [
     "items": [
      "8-B"
     ],
-    "anchor": "<div class=\"table-wrap\"><table><thead><tr><th></th><th>前葉（腺下垂体）</th><th>後葉（神経下垂体）</th></tr></thead><tbody><tr><td>組織</td><td>腺組織</td><td><span class=\"answer\">神経組織</span>（視床下部の神経細胞の軸索の末端）</td></tr><tr><td>ホルモン</td><td>成長ホルモン・プロラクチン・甲状腺刺激ホルモン・副腎皮質刺激ホルモン・<span class=\"answer\">卵胞刺激ホルモン</span>・黄体形成ホルモン</td><td><span class=\"answer\">バソプレシン</span>（抗利尿ホルモン）・<span class=\"answer\">オキシトシン</span></td></tr><tr><td>視床下部とのつながり</td><td><span class=\"answer\">下垂体門脈</span>（放出ホルモンが血液で届く）</td><td>神経の軸索（神経内分泌）</td></tr></tbody></table></div><p>位置：<span class=\"answer\">間脳（視床下部）の下</span>、蝶形骨の<span class=\"answer\">トルコ鞍</span>の中。間脳の上後部にあるのは松果体。</p>",
+    "anchor": "<div class=\"table-wrap\"><table><thead><tr><th></th><th>前葉（腺下垂体）</th><th>後葉（神経下垂体）</th></tr></thead><tbody><tr><td>組織</td><td>腺組織</td><td><span class=\"answer\">神経組織</span>（視床下部の神経細胞の軸索の末端）</td></tr><tr><td>ホルモン</td><td>成長ホルモン・プロラクチン・甲状腺刺激ホルモン・副腎皮質刺激ホルモン・<span class=\"answer\">卵胞刺激ホルモン</span>・黄体形成ホルモン</td><td><span class=\"answer\">バソプレシン</span>（抗利尿ホルモン）・<span class=\"answer\">オキシトシン</span></td></tr><tr><td>視床下部とのつながり</td><td><span class=\"answer\">下垂体門脈</span>（放出ホルモンが血液で届く）</td><td>神経の軸索（神経内分泌）</td></tr></tbody></table></div><p>位置：<span class=\"answer\">間脳（視床下部）の下</span>、蝶形骨の<span class=\"answer\">トルコ鞍</span>の中。間脳の上後部にあるのは松果体。</p><figure class=\"fig\"><a href=\"figures/pituitary.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/pituitary.svg\" width=\"560\" height=\"600\" alt=\"下垂体の前葉と後葉のホルモンの模式図\" loading=\"lazy\"></a><figcaption><strong>ひとことポイント</strong>　前葉には視床下部から血管（下垂体門脈）で指令が届き、6つのホルモンをつくる。後葉のホルモン2つは視床下部でつくられ、神経の軸索で運ばれてくる。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
     "why": "なぜ：後葉ホルモンは視床下部の神経細胞がつくり、軸索を通って後葉まで運ばれて血液に出る（神経内分泌）。前葉には視床下部から門脈で指令ホルモンが届く。「門脈系をもつ内分泌腺＝下垂体」（26-50）。",
     "qs": [
      "19-51",
@@ -2463,7 +2463,7 @@ window.anatomyChapters = [
     "items": [
      "8-E"
     ],
-    "anchor": "<div class=\"table-wrap\"><table><thead><tr><th>部位</th><th>ホルモン</th></tr></thead><tbody><tr><td>皮質　<span class=\"answer\">球状帯</span>（外層）</td><td><span class=\"answer\">電解質（鉱質）コルチコイド</span>＝<span class=\"answer\">アルドステロン</span></td></tr><tr><td>皮質　束状帯（中層）</td><td>糖質コルチコイド＝コルチゾール</td></tr><tr><td>皮質　網状帯（内層）</td><td>性ホルモン（アンドロゲン）</td></tr><tr><td>髄質</td><td>アドレナリン・ノルアドレナリン（カテコールアミン）</td></tr></tbody></table></div><ul><li><span class=\"answer\">皮質は3層</span>で<span class=\"answer\">中胚葉</span>由来、<span class=\"answer\">髄質は外胚葉</span>（神経堤）由来で交感神経節に相当する。</li><li>皮質と髄質からなる内分泌腺＝<span class=\"answer\">副腎</span>。腎臓の上端にのる（腎門ではない）。副腎静脈は右が下大静脈、左が左腎静脈へ。</li></ul>",
+    "anchor": "<div class=\"table-wrap\"><table><thead><tr><th>部位</th><th>ホルモン</th></tr></thead><tbody><tr><td>皮質　<span class=\"answer\">球状帯</span>（外層）</td><td><span class=\"answer\">電解質（鉱質）コルチコイド</span>＝<span class=\"answer\">アルドステロン</span></td></tr><tr><td>皮質　束状帯（中層）</td><td>糖質コルチコイド＝コルチゾール</td></tr><tr><td>皮質　網状帯（内層）</td><td>性ホルモン（アンドロゲン）</td></tr><tr><td>髄質</td><td>アドレナリン・ノルアドレナリン（カテコールアミン）</td></tr></tbody></table></div><ul><li><span class=\"answer\">皮質は3層</span>で<span class=\"answer\">中胚葉</span>由来、<span class=\"answer\">髄質は外胚葉</span>（神経堤）由来で交感神経節に相当する。</li><li>皮質と髄質からなる内分泌腺＝<span class=\"answer\">副腎</span>。腎臓の上端にのる（腎門ではない）。副腎静脈は右が下大静脈、左が左腎静脈へ。</li></ul><figure class=\"fig\"><a href=\"figures/adrenal.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/adrenal.svg\" width=\"560\" height=\"560\" alt=\"副腎の皮質3層と髄質のホルモンの模式図\" loading=\"lazy\"></a><figcaption><strong>ひとことポイント</strong>　皮質は外から「球・束・網」＝「塩・糖・性」。髄質は交感神経の仲間なので、アドレナリンを出す。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
     "why": "なぜ：「塩（電解質）・糖・性」を外から順に「球・束・網」。髄質はもともと交感神経の神経細胞の仲間なので、交感神経の伝達物質とほぼ同じアドレナリンを出す。",
     "qs": [
      "19-52",
@@ -2624,7 +2624,7 @@ window.anatomyChapters = [
     "items": [
      "9-B"
     ],
-    "anchor": "<div class=\"table-wrap\"><table><thead><tr><th>中枢</th><th>場所</th></tr></thead><tbody><tr><td><span class=\"answer\">運動野</span></td><td><span class=\"answer\">前頭葉</span>（中心前回）</td></tr><tr><td>体性感覚野</td><td>頭頂葉（中心後回）</td></tr><tr><td><span class=\"answer\">視覚野</span></td><td><span class=\"answer\">後頭葉</span>（<span class=\"answer\">鳥距溝</span>の周り）</td></tr><tr><td>聴覚野</td><td>側頭葉（横側頭回）</td></tr><tr><td><span class=\"answer\">運動性言語野（ブローカ野）</span></td><td>前頭葉（下前頭回）</td></tr><tr><td><span class=\"answer\">感覚性言語野（ウェルニッケ野）</span></td><td><span class=\"answer\">側頭葉</span>（上側頭回の後部）</td></tr></tbody></table></div>",
+    "anchor": "<div class=\"table-wrap\"><table><thead><tr><th>中枢</th><th>場所</th></tr></thead><tbody><tr><td><span class=\"answer\">運動野</span></td><td><span class=\"answer\">前頭葉</span>（中心前回）</td></tr><tr><td>体性感覚野</td><td>頭頂葉（中心後回）</td></tr><tr><td><span class=\"answer\">視覚野</span></td><td><span class=\"answer\">後頭葉</span>（<span class=\"answer\">鳥距溝</span>の周り）</td></tr><tr><td>聴覚野</td><td>側頭葉（横側頭回）</td></tr><tr><td><span class=\"answer\">運動性言語野（ブローカ野）</span></td><td>前頭葉（下前頭回）</td></tr><tr><td><span class=\"answer\">感覚性言語野（ウェルニッケ野）</span></td><td><span class=\"answer\">側頭葉</span>（上側頭回の後部）</td></tr></tbody></table></div><figure class=\"fig\"><a href=\"figures/cortex.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/cortex.svg\" width=\"560\" height=\"650\" alt=\"大脳皮質の機能局在の模式図\" loading=\"lazy\"></a><figcaption><strong>ひとことポイント</strong>　中心溝の前が運動野、後ろが体性感覚野。言語野は2つ：話す＝ブローカ野（前頭葉）、聞いてわかる＝ウェルニッケ野（側頭葉）。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
     "why": "なぜ：ブローカ野が壊れると言葉は分かるのにうまく話せない（運動性失語）。ウェルニッケ野が壊れると話せるが意味の通らない言葉になり、人の話も分からない（感覚性失語）。ブローカ野は運動野の顔・口の領域のすぐ前にある。",
     "qs": [
      "18-54",
@@ -2707,7 +2707,7 @@ window.anatomyChapters = [
     "items": [
      "9-B"
     ],
-    "anchor": "<p>側脳室（脈絡叢でつくられる）→<span class=\"answer\">室間孔</span>→第三脳室→中脳水道→<span class=\"answer\">第四脳室</span>→正中口・外側口→<span class=\"answer\">クモ膜下腔</span>→クモ膜顆粒→静脈洞</p><ul><li><span class=\"answer\">室間孔＝側脳室と第三脳室</span>をつなぐ。</li><li>側脳室の前角は前頭葉にある。</li><li>第三脳室＝間脳（視床・視床下部）に囲まれる。中脳＝中脳水道。<span class=\"answer\">第四脳室＝橋・延髄と小脳の間</span>。</li></ul>",
+    "anchor": "<p>側脳室（脈絡叢でつくられる）→<span class=\"answer\">室間孔</span>→第三脳室→中脳水道→<span class=\"answer\">第四脳室</span>→正中口・外側口→<span class=\"answer\">クモ膜下腔</span>→クモ膜顆粒→静脈洞</p><ul><li><span class=\"answer\">室間孔＝側脳室と第三脳室</span>をつなぐ。</li><li>側脳室の前角は前頭葉にある。</li><li>第三脳室＝間脳（視床・視床下部）に囲まれる。中脳＝中脳水道。<span class=\"answer\">第四脳室＝橋・延髄と小脳の間</span>。</li></ul><figure class=\"fig\"><a href=\"figures/csf.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/csf.svg\" width=\"560\" height=\"720\" alt=\"脳脊髄液の流れと髄膜の層の模式図\" loading=\"lazy\"></a><figcaption><strong>ひとことポイント</strong>　髄液は脈絡叢でつくられ、脳室を上から順に流れて、第四脳室の孔からクモ膜下腔へ出る。最後はクモ膜顆粒から静脈洞（静脈血）にもどる。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
     "why": "なぜ：脳室の中の髄液は、第四脳室の3つの孔からはじめて外側のクモ膜下腔へ出る。どこかが詰まると髄液がたまって脳室が広がる（水頭症）。",
     "qs": [
      "20-52",
@@ -2727,7 +2727,7 @@ window.anatomyChapters = [
      "9-C",
      "9-G"
     ],
-    "anchor": "<ul><li><span class=\"answer\">前角</span>＝運動神経細胞（骨格筋へ）。</li><li><span class=\"answer\">側角</span>＝<span class=\"answer\">交感神経</span>の節前神経細胞（胸髄〜上部腰髄 T1〜L2）。</li><li>後角＝感覚を中継する神経細胞。</li><li><span class=\"answer\">前根</span>＝<span class=\"answer\">遠心性</span>（運動・自律）線維のみ。後根＝求心性（感覚）線維。後根の途中に脊髄神経節（椎間孔内）。</li><li>成人の脊髄の下端は第1〜2腰椎。それより下は馬尾。</li></ul>",
+    "anchor": "<ul><li><span class=\"answer\">前角</span>＝運動神経細胞（骨格筋へ）。</li><li><span class=\"answer\">側角</span>＝<span class=\"answer\">交感神経</span>の節前神経細胞（胸髄〜上部腰髄 T1〜L2）。</li><li>後角＝感覚を中継する神経細胞。</li><li><span class=\"answer\">前根</span>＝<span class=\"answer\">遠心性</span>（運動・自律）線維のみ。後根＝求心性（感覚）線維。後根の途中に脊髄神経節（椎間孔内）。</li><li>成人の脊髄の下端は第1〜2腰椎。それより下は馬尾。</li></ul><figure class=\"fig\"><a href=\"figures/spinal_cord.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/spinal_cord.svg\" width=\"560\" height=\"640\" alt=\"脊髄の断面の模式図\" loading=\"lazy\"></a><figcaption><strong>ひとことポイント</strong>　前は運動（前角・前根）、後ろは感覚（後角・後根）。後根の途中に脊髄神経節がある。側角は交感神経の出どころなので T1〜L2 にだけある。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
     "why": "なぜ：「前は出す（運動）、後ろは受ける（感覚）」がベル・マジャンディーの法則。前枝・後枝は前根と後根が合わさった後なので、運動と感覚の両方を含む。",
     "qs": [
      "18-4",
@@ -2746,7 +2746,7 @@ window.anatomyChapters = [
     "items": [
      "9-D"
     ],
-    "anchor": "<p>中心前回（運動野）→放線冠→<span class=\"answer\">内包</span>後脚→<span class=\"answer\">大脳脚</span>（中脳）→<span class=\"answer\">橋底部（腹側）</span>→延髄の錐体→<span class=\"answer\">錐体交叉（延髄下部）</span>→脊髄の側索→<span class=\"answer\">前角</span></p><ul><li>橋の背側部（橋被蓋）は通らない。</li><li>錐体外路（赤核脊髄路・前庭脊髄路・網様体脊髄路・視蓋脊髄路）はすべて下行性。</li></ul>",
+    "anchor": "<p>中心前回（運動野）→放線冠→<span class=\"answer\">内包</span>後脚→<span class=\"answer\">大脳脚</span>（中脳）→<span class=\"answer\">橋底部（腹側）</span>→延髄の錐体→<span class=\"answer\">錐体交叉（延髄下部）</span>→脊髄の側索→<span class=\"answer\">前角</span></p><ul><li>橋の背側部（橋被蓋）は通らない。</li><li>錐体外路（赤核脊髄路・前庭脊髄路・網様体脊髄路・視蓋脊髄路）はすべて下行性。</li></ul><figure class=\"fig\"><a href=\"figures/pathways.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/pathways.svg\" width=\"560\" height=\"640\" alt=\"錐体路と感覚の伝導路が交叉する高さの模式図\" loading=\"lazy\"></a><figcaption><strong>ひとことポイント</strong>　交叉する高さが違う：錐体路は延髄の下部、後索路は延髄、温痛覚（脊髄視床路）は脊髄に入ってすぐ。だから脊髄の片側が傷つくと、運動と深部感覚は同じ側、温痛覚は反対側がまひする。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
     "why": "なぜ：錐体路の線維の大部分が延髄の下部で反対側へ渡るので、右の脳が傷つくと左半身が麻痺する。「錐体」は延髄の腹側でこの線維束がつくる高まりの名前。",
     "qs": [
      "22-52",
@@ -2876,7 +2876,7 @@ window.anatomyChapters = [
     "items": [
      "9-F"
     ],
-    "anchor": "<div class=\"table-wrap\"><table><thead><tr><th>神経</th><th>通り道</th><th>主な支配</th></tr></thead><tbody><tr><td><span class=\"answer\">筋皮神経</span></td><td><span class=\"answer\">烏口腕筋を貫く</span></td><td>上腕の屈筋（上腕二頭筋・烏口腕筋・上腕筋）。皮枝＝<span class=\"answer\">外側前腕皮神経</span></td></tr><tr><td>腋窩神経</td><td>上腕骨<span class=\"answer\">外科頸</span>の後ろを回る</td><td>三角筋・小円筋</td></tr><tr><td>橈骨神経</td><td>上腕骨体後面の橈骨神経溝</td><td>上腕・前腕の伸筋</td></tr><tr><td><span class=\"answer\">正中神経</span></td><td><span class=\"answer\">上腕動脈に伴走し肘窩</span>を通る</td><td><span class=\"answer\">前腕の屈筋</span>の大部分・母指球</td></tr><tr><td><span class=\"answer\">尺骨神経</span></td><td><span class=\"answer\">上腕骨内側上顆の後ろ</span></td><td>尺側手根屈筋・深指屈筋の尺側・手の内在筋の多く</td></tr><tr><td>長胸神経</td><td>胸壁の外側</td><td><span class=\"answer\">前鋸筋</span></td></tr></tbody></table></div><ul><li>腕神経叢は<span class=\"answer\">斜角筋隙</span>（前斜角筋と中斜角筋の間）を通る。</li><li>前腕の筋を支配しないのは<span class=\"answer\">筋皮神経</span>（上腕の筋だけ）。</li></ul>",
+    "anchor": "<div class=\"table-wrap\"><table><thead><tr><th>神経</th><th>通り道</th><th>主な支配</th></tr></thead><tbody><tr><td><span class=\"answer\">筋皮神経</span></td><td><span class=\"answer\">烏口腕筋を貫く</span></td><td>上腕の屈筋（上腕二頭筋・烏口腕筋・上腕筋）。皮枝＝<span class=\"answer\">外側前腕皮神経</span></td></tr><tr><td>腋窩神経</td><td>上腕骨<span class=\"answer\">外科頸</span>の後ろを回る</td><td>三角筋・小円筋</td></tr><tr><td>橈骨神経</td><td>上腕骨体後面の橈骨神経溝</td><td>上腕・前腕の伸筋</td></tr><tr><td><span class=\"answer\">正中神経</span></td><td><span class=\"answer\">上腕動脈に伴走し肘窩</span>を通る</td><td><span class=\"answer\">前腕の屈筋</span>の大部分・母指球</td></tr><tr><td><span class=\"answer\">尺骨神経</span></td><td><span class=\"answer\">上腕骨内側上顆の後ろ</span></td><td>尺側手根屈筋・深指屈筋の尺側・手の内在筋の多く</td></tr><tr><td>長胸神経</td><td>胸壁の外側</td><td><span class=\"answer\">前鋸筋</span></td></tr></tbody></table></div><ul><li>腕神経叢は<span class=\"answer\">斜角筋隙</span>（前斜角筋と中斜角筋の間）を通る。</li><li>前腕の筋を支配しないのは<span class=\"answer\">筋皮神経</span>（上腕の筋だけ）。</li></ul><figure class=\"fig\"><a href=\"figures/brachial.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/brachial.svg\" width=\"560\" height=\"700\" alt=\"腕神経叢の主な枝と上腕骨との位置関係の模式図\" loading=\"lazy\"></a><figcaption><strong>ひとことポイント</strong>　骨にくっついて走る所で骨折すると神経も傷つく：外科頸→腋窩神経、骨体（橈骨神経溝）→橈骨神経、内側上顆→尺骨神経。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
     "why": "なぜ：肘の内側をぶつけるとビリッとする「ファニーボーン」は、骨のすぐ上を尺骨神経が通るため。上腕骨の骨折では、骨に接する神経（外科頸＝腋窩神経、骨幹＝橈骨神経、内側上顆＝尺骨神経）が傷つきやすい。",
     "qs": [
      "20-55",
@@ -2901,7 +2901,7 @@ window.anatomyChapters = [
     "items": [
      "9-E"
     ],
-    "anchor": "<div class=\"table-wrap\"><table><thead><tr><th>番号・名前</th><th>性質</th><th>主な分布・働き</th></tr></thead><tbody><tr><td>I 嗅神経</td><td>感覚</td><td>嗅覚（篩板を通る）</td></tr><tr><td>II 視神経</td><td>感覚</td><td>視覚（視交叉で内側半分が交叉）</td></tr><tr><td>III <span class=\"answer\">動眼神経</span></td><td>運動＋<span class=\"answer\">副交感</span></td><td>上眼瞼挙筋・上直筋・下直筋・内側直筋・下斜筋／瞳孔括約筋・毛様体筋</td></tr><tr><td>IV <span class=\"answer\">滑車神経</span></td><td>運動</td><td><span class=\"answer\">上斜筋</span></td></tr><tr><td>V 三叉神経</td><td>感覚＋運動</td><td>顔の感覚／咀嚼筋（下顎神経）</td></tr><tr><td>VI 外転神経</td><td>運動</td><td>外側直筋</td></tr><tr><td>VII <span class=\"answer\">顔面神経</span></td><td>運動＋感覚＋<span class=\"answer\">副交感</span></td><td>表情筋／舌の前2/3の味覚／涙腺・顎下腺・舌下腺</td></tr><tr><td>VIII 内耳神経</td><td>感覚</td><td>聴覚（<span class=\"answer\">蝸牛神経</span>）・平衡覚（前庭神経）</td></tr><tr><td>IX <span class=\"answer\">舌咽神経</span></td><td>運動＋感覚＋<span class=\"answer\">副交感</span></td><td>舌の後1/3の味覚・頸動脈洞／<span class=\"answer\">耳下腺</span></td></tr><tr><td>X <span class=\"answer\">迷走神経</span></td><td>運動＋感覚＋<span class=\"answer\">副交感</span></td><td>喉頭の筋・胸腹部の内臓</td></tr><tr><td>XI 副神経</td><td>運動</td><td>胸鎖乳突筋・僧帽筋</td></tr><tr><td>XII <span class=\"answer\">舌下神経</span></td><td><span class=\"answer\">運動のみ</span></td><td><span class=\"answer\">舌筋</span>（舌の運動）</td></tr></tbody></table></div><ul><li>副交感線維を含む脳神経は<span class=\"answer\">4つ</span>（III・VII・IX・X）。</li><li>運動線維のみ：IV・VI・XI・XII（動眼神経は副交感を含むので「運動のみ」ではない）。</li></ul>",
+    "anchor": "<div class=\"table-wrap\"><table><thead><tr><th>番号・名前</th><th>性質</th><th>主な分布・働き</th></tr></thead><tbody><tr><td>I 嗅神経</td><td>感覚</td><td>嗅覚（篩板を通る）</td></tr><tr><td>II 視神経</td><td>感覚</td><td>視覚（視交叉で内側半分が交叉）</td></tr><tr><td>III <span class=\"answer\">動眼神経</span></td><td>運動＋<span class=\"answer\">副交感</span></td><td>上眼瞼挙筋・上直筋・下直筋・内側直筋・下斜筋／瞳孔括約筋・毛様体筋</td></tr><tr><td>IV <span class=\"answer\">滑車神経</span></td><td>運動</td><td><span class=\"answer\">上斜筋</span></td></tr><tr><td>V 三叉神経</td><td>感覚＋運動</td><td>顔の感覚／咀嚼筋（下顎神経）</td></tr><tr><td>VI 外転神経</td><td>運動</td><td>外側直筋</td></tr><tr><td>VII <span class=\"answer\">顔面神経</span></td><td>運動＋感覚＋<span class=\"answer\">副交感</span></td><td>表情筋／舌の前2/3の味覚／涙腺・顎下腺・舌下腺</td></tr><tr><td>VIII 内耳神経</td><td>感覚</td><td>聴覚（<span class=\"answer\">蝸牛神経</span>）・平衡覚（前庭神経）</td></tr><tr><td>IX <span class=\"answer\">舌咽神経</span></td><td>運動＋感覚＋<span class=\"answer\">副交感</span></td><td>舌の後1/3の味覚・頸動脈洞／<span class=\"answer\">耳下腺</span></td></tr><tr><td>X <span class=\"answer\">迷走神経</span></td><td>運動＋感覚＋<span class=\"answer\">副交感</span></td><td>喉頭の筋・胸腹部の内臓</td></tr><tr><td>XI 副神経</td><td>運動</td><td>胸鎖乳突筋・僧帽筋</td></tr><tr><td>XII <span class=\"answer\">舌下神経</span></td><td><span class=\"answer\">運動のみ</span></td><td><span class=\"answer\">舌筋</span>（舌の運動）</td></tr></tbody></table></div><ul><li>副交感線維を含む脳神経は<span class=\"answer\">4つ</span>（III・VII・IX・X）。</li><li>運動線維のみ：IV・VI・XI・XII（動眼神経は副交感を含むので「運動のみ」ではない）。</li></ul><figure class=\"fig\"><a href=\"figures/cranial_nerves.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/cranial_nerves.svg\" width=\"560\" height=\"560\" alt=\"脳神経12対の名前と主な働きの一覧図\" loading=\"lazy\"></a><figcaption><strong>ひとことポイント</strong>　感覚だけはⅠ・Ⅱ・Ⅷ、運動だけはⅣ・Ⅵ・Ⅺ・Ⅻ。副交感神経を含むのはⅢ・Ⅶ・Ⅸ・Ⅹの4つ。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
     "why": "なぜ：副交感神経の4本は「3・7・9・10（ミ・ナ・ク・ト）」。瞳（III）、涙と唾液（VII・IX）、内臓（X）と、それぞれ受け持ちが違う。",
     "qs": [
      "20-54",
@@ -2924,7 +2924,7 @@ window.anatomyChapters = [
     "items": [
      "9-G"
     ],
-    "anchor": "<div class=\"table-wrap\"><table><thead><tr><th></th><th>交感神経</th><th>副交感神経</th></tr></thead><tbody><tr><td>節前ニューロンの場所</td><td><span class=\"answer\">胸髄〜腰髄の側角</span>（T1〜L2）</td><td><span class=\"answer\">脳幹</span>（III・VII・IX・X）と<span class=\"answer\">仙髄</span>（S2〜S4）</td></tr><tr><td>神経節</td><td>交感神経幹・<span class=\"answer\">腹腔神経節</span>・上頸神経節など</td><td><span class=\"answer\">毛様体・翼口蓋・顎下・耳神経節</span>、臓器の近く</td></tr><tr><td>代表的な神経</td><td>大・小内臓神経・下腹神経</td><td>迷走神経・<span class=\"answer\">骨盤内臓神経</span></td></tr><tr><td>眼</td><td><span class=\"answer\">瞳孔散大筋</span></td><td>瞳孔括約筋・毛様体筋</td></tr></tbody></table></div>",
+    "anchor": "<div class=\"table-wrap\"><table><thead><tr><th></th><th>交感神経</th><th>副交感神経</th></tr></thead><tbody><tr><td>節前ニューロンの場所</td><td><span class=\"answer\">胸髄〜腰髄の側角</span>（T1〜L2）</td><td><span class=\"answer\">脳幹</span>（III・VII・IX・X）と<span class=\"answer\">仙髄</span>（S2〜S4）</td></tr><tr><td>神経節</td><td>交感神経幹・<span class=\"answer\">腹腔神経節</span>・上頸神経節など</td><td><span class=\"answer\">毛様体・翼口蓋・顎下・耳神経節</span>、臓器の近く</td></tr><tr><td>代表的な神経</td><td>大・小内臓神経・下腹神経</td><td>迷走神経・<span class=\"answer\">骨盤内臓神経</span></td></tr><tr><td>眼</td><td><span class=\"answer\">瞳孔散大筋</span></td><td>瞳孔括約筋・毛様体筋</td></tr></tbody></table></div><figure class=\"fig\"><a href=\"figures/autonomic.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/autonomic.svg\" width=\"560\" height=\"620\" alt=\"交感神経と副交感神経が出る場所の模式図\" loading=\"lazy\"></a><figcaption><strong>ひとことポイント</strong>　交感は胸髄と上の腰髄（T1〜L2）の側角から、副交感は脳幹（Ⅲ・Ⅶ・Ⅸ・Ⅹ）と仙髄（S2〜S4）から出る。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
     "why": "なぜ：交感神経は体の中央（胸・腰）から出て、脊柱のそばの神経節で乗りかえる。副交感神経は上下の端（脳と仙骨）から出て、臓器のすぐ近くで乗りかえる。腹腔神経節は交感神経（大内臓神経）の乗りかえ場所。",
     "qs": [
      "18-4",
@@ -3158,7 +3158,7 @@ window.anatomyChapters = [
     "items": [
      "10-B"
     ],
-    "anchor": "<ul><li>光の経路：角膜→<span class=\"answer\">眼房</span>→瞳孔→<span class=\"answer\">水晶体</span>→<span class=\"answer\">硝子体</span>→<span class=\"answer\">網膜</span>。</li><li>眼球壁：外膜（線維膜）＝角膜・強膜、中膜（血管膜・ぶどう膜）＝虹彩・<span class=\"answer\">毛様体</span>・脈絡膜、内膜＝網膜。</li><li><span class=\"answer\">毛様体</span>：<span class=\"answer\">平滑筋</span>（毛様体筋）を含み、<span class=\"answer\">眼房水をつくる</span>。</li><li><span class=\"answer\">白内障＝水晶体の混濁</span>。眼房水の流れが悪く眼圧が上がる＝緑内障。</li><li>黄斑の中心（中心窩）が最もよく見える所。<span class=\"answer\">視神経乳頭</span>は黄斑の内側（鼻側）にあり、視細胞がない（盲点）。</li><li>網膜は硝子体側（浅層）から<span class=\"answer\">視神経細胞層→双極細胞層→視細胞層</span>。光は視細胞まで奥へ届いてから感じ取られる。</li></ul>",
+    "anchor": "<ul><li>光の経路：角膜→<span class=\"answer\">眼房</span>→瞳孔→<span class=\"answer\">水晶体</span>→<span class=\"answer\">硝子体</span>→<span class=\"answer\">網膜</span>。</li><li>眼球壁：外膜（線維膜）＝角膜・強膜、中膜（血管膜・ぶどう膜）＝虹彩・<span class=\"answer\">毛様体</span>・脈絡膜、内膜＝網膜。</li><li><span class=\"answer\">毛様体</span>：<span class=\"answer\">平滑筋</span>（毛様体筋）を含み、<span class=\"answer\">眼房水をつくる</span>。</li><li><span class=\"answer\">白内障＝水晶体の混濁</span>。眼房水の流れが悪く眼圧が上がる＝緑内障。</li><li>黄斑の中心（中心窩）が最もよく見える所。<span class=\"answer\">視神経乳頭</span>は黄斑の内側（鼻側）にあり、視細胞がない（盲点）。</li><li>網膜は硝子体側（浅層）から<span class=\"answer\">視神経細胞層→双極細胞層→視細胞層</span>。光は視細胞まで奥へ届いてから感じ取られる。</li></ul><figure class=\"fig\"><a href=\"figures/eye.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/eye.svg\" width=\"560\" height=\"720\" alt=\"眼球の構造と光の通り道の模式図\" loading=\"lazy\"></a><figcaption><strong>ひとことポイント</strong>　光は角膜→眼房→瞳孔→水晶体→硝子体→網膜の順。壁は3層：外膜（角膜・強膜）、中膜（虹彩・毛様体・脈絡膜）、内膜（網膜）。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
     "why": "なぜ：網膜は「裏返し」の構造で、光を受ける視細胞が一番奥（脈絡膜側）にある。視神経乳頭には視細胞がないので、そこに映った物は見えない（盲点）。",
     "qs": [
      "19-57",
@@ -3179,7 +3179,7 @@ window.anatomyChapters = [
     "items": [
      "10-A"
     ],
-    "anchor": "<ul><li>表皮（深い方から）：基底層→有棘層→顆粒層→（淡明層）→<span class=\"answer\">角質層</span>（最表層）。</li><li><span class=\"answer\">マイスナー小体</span>＝<span class=\"answer\">真皮乳頭</span>（触覚）。<span class=\"answer\">パチニ小体</span>＝真皮深層〜皮下組織（振動・圧）。メルケル盤＝表皮の基底層。自由神経終末＝痛覚・温度覚。</li><li><span class=\"answer\">エクリン汗腺</span>の本体は<span class=\"answer\">真皮</span>（〜皮下）にある。アポクリン汗腺は腋窩などにあり毛包に開く。</li><li>毛・爪は<span class=\"answer\">表皮</span>が変化したもの。<span class=\"answer\">爪母基</span>から新しい爪が伸びる。立毛筋は<span class=\"answer\">平滑筋</span>（交感神経）。</li><li>皮膚腺＝汗腺・脂腺・<span class=\"answer\">乳腺</span>（乳腺はアポクリン汗腺が変化したもの）。</li><li><span class=\"answer\">筋紡錘</span>の錘内筋線維にはγ運動神経（<span class=\"answer\">運動神経</span>）が分布する。</li></ul>",
+    "anchor": "<ul><li>表皮（深い方から）：基底層→有棘層→顆粒層→（淡明層）→<span class=\"answer\">角質層</span>（最表層）。</li><li><span class=\"answer\">マイスナー小体</span>＝<span class=\"answer\">真皮乳頭</span>（触覚）。<span class=\"answer\">パチニ小体</span>＝真皮深層〜皮下組織（振動・圧）。メルケル盤＝表皮の基底層。自由神経終末＝痛覚・温度覚。</li><li><span class=\"answer\">エクリン汗腺</span>の本体は<span class=\"answer\">真皮</span>（〜皮下）にある。アポクリン汗腺は腋窩などにあり毛包に開く。</li><li>毛・爪は<span class=\"answer\">表皮</span>が変化したもの。<span class=\"answer\">爪母基</span>から新しい爪が伸びる。立毛筋は<span class=\"answer\">平滑筋</span>（交感神経）。</li><li>皮膚腺＝汗腺・脂腺・<span class=\"answer\">乳腺</span>（乳腺はアポクリン汗腺が変化したもの）。</li><li><span class=\"answer\">筋紡錘</span>の錘内筋線維にはγ運動神経（<span class=\"answer\">運動神経</span>）が分布する。</li></ul><figure class=\"fig\"><a href=\"figures/skin.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/skin.svg\" width=\"560\" height=\"640\" alt=\"皮膚の層と感覚受容器の模式図\" loading=\"lazy\"></a><figcaption><strong>ひとことポイント</strong>　表皮は深い方から 基底層→有棘層→顆粒層→（淡明層）→角質層。基底層で生まれた細胞が上へ押し上げられ、最後は角質になってはがれる。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
     "why": "なぜ：角質層は死んだ細胞が重なった層で、体の水分が逃げるのを防ぐ。筋紡錘は感覚器なのに運動神経が来る唯一の受容器で、γ運動神経が錘内筋を縮めて感度を調節する。〔注意：30-77の問題文は保存データでは「皮脂腺はどれか」だが、正答が乳腺であることから本来は「皮膚腺はどれか」と思われる。〕",
     "qs": [
      "18-57",
@@ -3200,7 +3200,7 @@ window.anatomyChapters = [
     "items": [
      "10-C"
     ],
-    "anchor": "<div class=\"table-wrap\"><table><thead><tr><th>区分</th><th>含まれるもの</th></tr></thead><tbody><tr><td>外耳</td><td>耳介・外耳道（耳道腺）</td></tr><tr><td>中耳</td><td>鼓膜・鼓室・耳小骨（ツチ骨・キヌタ骨・アブミ骨）・<span class=\"answer\">耳管</span></td></tr><tr><td>内耳</td><td>骨迷路（<span class=\"answer\">前庭</span>・骨半規管・<span class=\"answer\">蝸牛</span>）と膜迷路</td></tr></tbody></table></div><p><span class=\"answer\">耳管</span>は<span class=\"answer\">中耳（鼓室）と咽頭</span>（<span class=\"answer\">咽頭鼻部＝上咽頭</span>）をつなぐ。</p>",
+    "anchor": "<div class=\"table-wrap\"><table><thead><tr><th>区分</th><th>含まれるもの</th></tr></thead><tbody><tr><td>外耳</td><td>耳介・外耳道（耳道腺）</td></tr><tr><td>中耳</td><td>鼓膜・鼓室・耳小骨（ツチ骨・キヌタ骨・アブミ骨）・<span class=\"answer\">耳管</span></td></tr><tr><td>内耳</td><td>骨迷路（<span class=\"answer\">前庭</span>・骨半規管・<span class=\"answer\">蝸牛</span>）と膜迷路</td></tr></tbody></table></div><p><span class=\"answer\">耳管</span>は<span class=\"answer\">中耳（鼓室）と咽頭</span>（<span class=\"answer\">咽頭鼻部＝上咽頭</span>）をつなぐ。</p><figure class=\"fig\"><a href=\"figures/ear.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/ear.svg\" width=\"560\" height=\"640\" alt=\"耳の構造と音の伝わる順の模式図\" loading=\"lazy\"></a><figcaption><strong>ひとことポイント</strong>　音は鼓膜から耳小骨（ツチ→キヌタ→アブミ）を通って前庭窓から蝸牛へ。平衡覚は前庭（傾き）と半規管（回転）。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
     "why": "なぜ：耳管は鼓室の圧を外気と同じに保つ換気の管。飛行機で耳がつまるのは、耳管が閉じて鼓室の圧が外とずれるため。",
     "qs": [
      "18-58",
@@ -3357,7 +3357,7 @@ window.anatomyChapters = [
     "items": [
      "11-D"
     ],
-    "anchor": "<div class=\"table-wrap\"><table><thead><tr><th>動脈</th><th>触れる場所</th></tr></thead><tbody><tr><td>浅側頭動脈</td><td>耳の前（こめかみ）</td></tr><tr><td><span class=\"answer\">顔面動脈</span></td><td><span class=\"answer\">下顎体</span>（咬筋の前縁）</td></tr><tr><td><span class=\"answer\">後頭動脈</span></td><td>後頭部（外後頭隆起の外側）</td></tr><tr><td><span class=\"answer\">総頸動脈</span></td><td><span class=\"answer\">頸動脈三角</span>（胸鎖乳突筋の前縁）</td></tr><tr><td><span class=\"answer\">鎖骨下動脈</span></td><td>鎖骨上窩</td></tr><tr><td>腋窩動脈・上腕動脈</td><td>腋窩・上腕の内側（内側二頭筋溝）</td></tr><tr><td>橈骨動脈・尺骨動脈</td><td>手首の掌側</td></tr><tr><td><span class=\"answer\">大腿動脈</span></td><td>鼠径部（大腿三角）</td></tr><tr><td>膝窩動脈</td><td>膝窩</td></tr><tr><td><span class=\"answer\">後脛骨動脈</span></td><td>内果の後ろ</td></tr><tr><td>足背動脈</td><td>足の甲（長母趾伸筋腱の外側）</td></tr></tbody></table></div><p>触れない：<span class=\"answer\">椎骨動脈</span>（横突孔の中）・<span class=\"answer\">閉鎖動脈</span>（骨盤内）・舌動脈・顎動脈・肋間動脈・外腸骨動脈・腕頭動脈。</p>",
+    "anchor": "<div class=\"table-wrap\"><table><thead><tr><th>動脈</th><th>触れる場所</th></tr></thead><tbody><tr><td>浅側頭動脈</td><td>耳の前（こめかみ）</td></tr><tr><td><span class=\"answer\">顔面動脈</span></td><td><span class=\"answer\">下顎体</span>（咬筋の前縁）</td></tr><tr><td><span class=\"answer\">後頭動脈</span></td><td>後頭部（外後頭隆起の外側）</td></tr><tr><td><span class=\"answer\">総頸動脈</span></td><td><span class=\"answer\">頸動脈三角</span>（胸鎖乳突筋の前縁）</td></tr><tr><td><span class=\"answer\">鎖骨下動脈</span></td><td>鎖骨上窩</td></tr><tr><td>腋窩動脈・上腕動脈</td><td>腋窩・上腕の内側（内側二頭筋溝）</td></tr><tr><td>橈骨動脈・尺骨動脈</td><td>手首の掌側</td></tr><tr><td><span class=\"answer\">大腿動脈</span></td><td>鼠径部（大腿三角）</td></tr><tr><td>膝窩動脈</td><td>膝窩</td></tr><tr><td><span class=\"answer\">後脛骨動脈</span></td><td>内果の後ろ</td></tr><tr><td>足背動脈</td><td>足の甲（長母趾伸筋腱の外側）</td></tr></tbody></table></div><p>触れない：<span class=\"answer\">椎骨動脈</span>（横突孔の中）・<span class=\"answer\">閉鎖動脈</span>（骨盤内）・舌動脈・顎動脈・肋間動脈・外腸骨動脈・腕頭動脈。</p><figure class=\"fig\"><a href=\"figures/pulse.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/pulse.svg\" width=\"560\" height=\"720\" alt=\"拍動を触れる動脈の位置の模式図\" loading=\"lazy\"></a><figcaption><strong>ひとことポイント</strong>　拍動を触れるのは、動脈が皮膚のすぐ下を通り、下に骨などの固い支えがある所。椎骨動脈は横突孔の中にあるので触れない。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
     "why": "なぜ：拍動を触れるのは、動脈が皮膚のすぐ下にあり、下に骨などの硬いものがあって押しつけられる場所。骨のトンネル（横突孔）や骨盤の奥にある動脈は触れない。〔25-4は財団発表で正答が2つ（鎖骨下動脈・大腿動脈）。〕",
     "qs": [
      "18-60",

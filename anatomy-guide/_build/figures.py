@@ -340,6 +340,8 @@ def spine():
     return svg(W, H, ''.join(b), '脊柱の骨の数と特徴の模式図（横から見た図）')
 
 FIGS = {'epithelium': epithelium, 'organelles': organelles, 'joints': joints, 'bone': bone, 'fontanelle': fontanelle, 'spine': spine}
+from figures2 import FIGS2  # 第4〜15章の図
+FIGS.update(FIGS2)
 
 def write_all():
     os.makedirs(OUTDIR, exist_ok=True)

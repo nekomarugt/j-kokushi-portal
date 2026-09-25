@@ -33,6 +33,8 @@ for line in open(os.path.join(HERE, 'tagmap.txt')):
         n, c = p.split(); tag[f"{e}-{n}"] = c
 assert set(tag) == set(qmap), 'tag mismatch'
 chapters = A + B + C
+from figmap import apply_figs
+apply_figs(chapters)  # 第4〜15章の図解を付ける
 def conv(s):
     return re.sub(r'\[\[(.+?)\]\]', r'<span class="answer">\1</span>', s)
 errors = []
