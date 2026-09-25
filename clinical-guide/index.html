@@ -3,51 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0b1730" />
-    <meta name="robots" content="noindex" />
-    <meta
-      name="description"
-      content="一般臨床医学の学習資料は note で有料公開しています"
-    />
-    <title>一般臨床医学 学習資料｜noteで読む（有料）</title>
+    <meta name="theme-color" content="#103f3a" />
+    <meta name="description" content="一般臨床医学の国家試験対策・授業復習用の個人制作補助教材。診療・臨床判断の根拠として使用するものではありません。" />
+    <title>一般臨床医学 学習資料</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <main class="cta-shell">
-      <header class="cta-header">
-        <p class="eyebrow">CLINICAL MEDICINE · 学習資料</p>
-        <h1>一般臨床医学の学習資料は note で公開（有料）</h1>
-        <p class="lead">
-          ポータル上での全文公開は終了しました。総論・各論・疾患の授業資料と理解の補足は note で読めます。
-        </p>
-      </header>
+    <a class="portal-return" href="../" aria-label="過去問・学習資料のポータルへ戻る">← ポータルへ戻る</a>
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="一般臨床医学 学習資料のトップへ">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span><small>授業補助教材</small><strong>一般臨床医学 学習資料</strong></span>
+      </a>
+      <a class="quiz-link" href="../clinical/">過去問を解く</a>
+    </header>
 
-      <section class="cta-card" aria-labelledby="includes-title">
-        <h2 id="includes-title">含まれる内容（概要）</h2>
-        <ul>
-          <li>総論：診察の流れ、視診・打診・聴診・触診、バイタル、感覚・反射</li>
-          <li>各論：循環器・呼吸器・消化器・代謝・内分泌・血液・神経・腎・感染症など</li>
-          <li>疾患ごとのポイント整理と詳しい補足</li>
-        </ul>
-        <p class="price-hint">
-          noteで公開中。購入すると学習資料（PDF含む）を読めます。
-        </p>
-      </section>
-
-      <div class="cta-actions">
-        <a
-          class="btn-primary"
-          href="https://note.com/tomo703/n/nee2e68fe3e88"
-          target="_blank"
-          rel="noopener noreferrer"
-        >noteで読む（有料）</a>
-        <a class="btn-secondary" href="../">ポータルトップへ戻る</a>
+    <aside class="purpose-notice" role="note" aria-label="このサイトの用途">
+      <div>
+        <strong>国家試験対策・授業復習用</strong>
+        <span>本サイトは授業補助教材です。診療・臨床判断の根拠となる医学的エビデンスを示す目的で作成したものではありません。</span>
       </div>
+    </aside>
 
-      <p class="free-note">
-        <strong>過去問はポータルで無料のまま</strong>
-        — 一般臨床医学・生理学・解剖学の過去問アプリは、これまでどおり登録不要で利用できます。
-      </p>
+    <div class="course-tabs" role="navigation" aria-label="資料区分">
+      <button class="course-tab is-active" type="button" data-course="general">総論</button>
+      <button class="course-tab" type="button" data-course="diseases">各論</button>
+    </div>
+
+    <main id="app" class="app-shell">
+      <section class="loading" aria-live="polite">資料を読み込んでいます</section>
     </main>
+
+    <footer>
+      <p>個人制作の授業補助教材です。学校公式サイトではありません。</p>
+    </footer>
+
+    <dialog id="image-viewer" class="image-viewer" aria-labelledby="image-viewer-caption">
+      <div class="image-viewer-panel">
+        <button class="image-viewer-close" type="button" data-close-viewer aria-label="拡大画像を閉じる">閉じる</button>
+        <img id="image-viewer-image" src="" alt="" />
+        <p id="image-viewer-caption"></p>
+      </div>
+    </dialog>
+
+    <script src="./content.js"></script>
+    <script src="./explanations.js"></script>
+    <script src="./disease-content.js"></script>
+    <script src="./disease-explanations.js"></script>
+    <script src="./deepdives.js"></script>
+    <script src="./app.js"></script>
   </body>
 </html>
