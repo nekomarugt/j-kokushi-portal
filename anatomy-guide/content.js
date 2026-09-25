@@ -20,7 +20,7 @@ window.anatomyChapters = [
     "items": [
      "1-C"
     ],
-    "anchor": "<div class=\"table-wrap\"><table><thead><tr><th>上皮の種類</th><th>代表的な場所</th></tr></thead><tbody><tr><td>単層扁平上皮</td><td><span class=\"answer\">血管の内皮</span>・肺胞・胸膜や腹膜（中皮）</td></tr><tr><td>単層立方上皮</td><td>甲状腺の濾胞・尿細管</td></tr><tr><td>単層円柱上皮</td><td>胃・小腸・大腸・胆嚢・子宮</td></tr><tr><td>多列線毛円柱上皮</td><td><span class=\"answer\">気管・気管支</span>・鼻腔</td></tr><tr><td>重層扁平上皮</td><td>皮膚（表皮）・口腔・<span class=\"answer\">食道</span>・肛門・腟</td></tr><tr><td>移行上皮</td><td>腎盂・<span class=\"answer\">尿管</span>・<span class=\"answer\">膀胱</span></td></tr><tr><td>線毛上皮</td><td><span class=\"answer\">気管</span>（異物を外へ運ぶ）・<span class=\"answer\">卵管</span>（卵子を子宮へ運ぶ）</td></tr></tbody></table></div>",
+    "anchor": "<div class=\"table-wrap\"><table><thead><tr><th>上皮の種類</th><th>代表的な場所</th></tr></thead><tbody><tr><td>単層扁平上皮</td><td><span class=\"answer\">血管の内皮</span>・肺胞・胸膜や腹膜（中皮）</td></tr><tr><td>単層立方上皮</td><td>甲状腺の濾胞・尿細管</td></tr><tr><td>単層円柱上皮</td><td>胃・小腸・大腸・胆嚢・子宮</td></tr><tr><td>多列線毛円柱上皮</td><td><span class=\"answer\">気管・気管支</span>・鼻腔</td></tr><tr><td>重層扁平上皮</td><td>皮膚（表皮）・口腔・<span class=\"answer\">食道</span>・肛門・腟</td></tr><tr><td>移行上皮</td><td>腎盂・<span class=\"answer\">尿管</span>・<span class=\"answer\">膀胱</span></td></tr><tr><td>線毛上皮</td><td><span class=\"answer\">気管</span>（異物を外へ運ぶ）・<span class=\"answer\">卵管</span>（卵子を子宮へ運ぶ）</td></tr></tbody></table></div><figure class=\"fig\"><a href=\"figures/epithelium.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/epithelium.svg\" width=\"560\" height=\"692\" alt=\"上皮の6つの種類と代表的な場所の模式図\" loading=\"lazy\"></a><figcaption><strong>ひとことポイント</strong>　形は「仕事」で決まる。こすれる所（皮膚・口・食道・肛門）は重層扁平で丈夫に、伸び縮みする膀胱は移行上皮、吸収する胃・腸は背の高い円柱、物を通す血管・肺胞はうすい扁平。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
     "why": "なぜ：上皮の形は「その場所の仕事」で決まる。物がこすれる入口と出口（口・食道・肛門・皮膚）は、何層にも重なって丈夫な重層扁平上皮。尿をためて伸び縮みする膀胱・尿管は、形を変えられる移行上皮。吸収や分泌をする胃・腸は背の高い単層円柱上皮。ガスや物質を通す血管・肺胞は、薄い単層扁平上皮。胃は重層扁平ではない（19-31）、食道は単層円柱ではない（28-51）点がよく狙われる。",
     "qs": [
      "18-42",
@@ -116,7 +116,7 @@ window.anatomyChapters = [
     "items": [
      "1-B"
     ],
-    "anchor": "<ul><li><span class=\"answer\">ミトコンドリア</span>：内膜と外膜の二重膜。ATP（エネルギー物質）を産生。</li><li>粗面小胞体：リボソームが付着、タンパク質合成。滑面小胞体：脂質合成・Ca²⁺貯蔵。</li><li>ゴルジ装置：タンパク質の加工・分泌。リソソーム：分解酵素で不要物を分解。</li><li>ヘモグロビンは赤血球内のタンパク質で、細胞小器官ではない。</li></ul>",
+    "anchor": "<ul><li><span class=\"answer\">ミトコンドリア</span>：内膜と外膜の二重膜。ATP（エネルギー物質）を産生。</li><li>粗面小胞体：リボソームが付着、タンパク質合成。滑面小胞体：脂質合成・Ca²⁺貯蔵。</li><li>ゴルジ装置：タンパク質の加工・分泌。リソソーム：分解酵素で不要物を分解。</li><li>ヘモグロビンは赤血球内のタンパク質で、細胞小器官ではない。</li></ul><figure class=\"fig\"><a href=\"figures/organelles.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/organelles.svg\" width=\"560\" height=\"760\" alt=\"細胞と細胞小器官の模式図\" loading=\"lazy\"></a><figcaption><strong>ひとことポイント</strong>　二重膜なのは「核」と「ミトコンドリア」。タンパク質は リボソーム（つくる）→ 粗面小胞体 → ゴルジ装置（加工・分泌）の順に流れる。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
     "why": "なぜ：ミトコンドリアはもともと別の細菌が細胞内に入り込んだもの（共生説）と考えられており、そのため自分の膜と取り込まれたときの膜で二重になっている。核も核膜という二重膜をもつ。",
     "qs": [
      "20-1",
@@ -266,7 +266,7 @@ window.anatomyChapters = [
     "items": [
      "2-B"
     ],
-    "anchor": "<div class=\"table-wrap\"><table><thead><tr><th>関節の形</th><th>代表例</th></tr></thead><tbody><tr><td>球関節</td><td><span class=\"answer\">肩関節</span></td></tr><tr><td>臼状関節（球関節の一種）</td><td><span class=\"answer\">股関節</span></td></tr><tr><td>蝶番関節</td><td><span class=\"answer\">腕尺関節</span>・指節間関節</td></tr><tr><td>らせん関節（蝶番の変形）</td><td>距腿関節</td></tr><tr><td>車軸関節</td><td><span class=\"answer\">上橈尺関節</span>・下橈尺関節・正中環軸関節</td></tr><tr><td>楕円関節</td><td>橈骨手根関節</td></tr><tr><td>鞍関節</td><td>母指の手根中手関節</td></tr><tr><td>顆状関節</td><td>膝関節・中手指節関節</td></tr><tr><td>平面関節</td><td>椎間関節・肩鎖関節・手根間関節</td></tr></tbody></table></div><ul><li><span class=\"answer\">複関節</span>＝1つの関節包に3つ以上の骨が入る関節。代表は<span class=\"answer\">肘関節</span>（腕尺・腕橈・上橈尺関節）。</li><li>橈骨と尺骨は<span class=\"answer\">上橈尺関節と下橈尺関節の2か所</span>で連結する。</li><li>恥骨結合は線維軟骨でつながる<span class=\"answer\">軟骨結合</span>（動かない連結）。</li></ul>",
+    "anchor": "<div class=\"table-wrap\"><table><thead><tr><th>関節の形</th><th>代表例</th></tr></thead><tbody><tr><td>球関節</td><td><span class=\"answer\">肩関節</span></td></tr><tr><td>臼状関節（球関節の一種）</td><td><span class=\"answer\">股関節</span></td></tr><tr><td>蝶番関節</td><td><span class=\"answer\">腕尺関節</span>・指節間関節</td></tr><tr><td>らせん関節（蝶番の変形）</td><td>距腿関節</td></tr><tr><td>車軸関節</td><td><span class=\"answer\">上橈尺関節</span>・下橈尺関節・正中環軸関節</td></tr><tr><td>楕円関節</td><td>橈骨手根関節</td></tr><tr><td>鞍関節</td><td>母指の手根中手関節</td></tr><tr><td>顆状関節</td><td>膝関節・中手指節関節</td></tr><tr><td>平面関節</td><td>椎間関節・肩鎖関節・手根間関節</td></tr></tbody></table></div><ul><li><span class=\"answer\">複関節</span>＝1つの関節包に3つ以上の骨が入る関節。代表は<span class=\"answer\">肘関節</span>（腕尺・腕橈・上橈尺関節）。</li><li>橈骨と尺骨は<span class=\"answer\">上橈尺関節と下橈尺関節の2か所</span>で連結する。</li><li>恥骨結合は線維軟骨でつながる<span class=\"answer\">軟骨結合</span>（動かない連結）。</li></ul><figure class=\"fig\"><a href=\"figures/joints.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/joints.svg\" width=\"560\" height=\"704\" alt=\"形による関節の分類と代表例の模式図\" loading=\"lazy\"></a><figcaption><strong>ひとことポイント</strong>　動ける方向は関節面の形で決まる。球＝どの方向にも、蝶番と車軸＝1方向（1軸）、楕円と鞍＝2方向（2軸）。上橈尺関節＝車軸、腕尺関節＝蝶番を入れかえない。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
     "why": "なぜ：関節面の形が動く方向を決める。球＝あらゆる方向、蝶番＝ドアのように1方向、車軸＝軸のまわりの回転（前腕の回内・回外）。車軸関節と蝶番関節の入れかえ（上橈尺関節＝車軸、腕尺関節＝蝶番）は毎年のように狙われる。",
     "qs": [
      "20-33",
@@ -310,7 +310,7 @@ window.anatomyChapters = [
     "items": [
      "2-A"
     ],
-    "anchor": "<ul><li>骨質は<span class=\"answer\">緻密質</span>（表面）と<span class=\"answer\">海綿質</span>（内部）からなる。</li><li>ハバース管＝緻密質を縦に走る管（骨単位の中心）。<span class=\"answer\">フォルクマン管</span>＝横に走り、ハバース管どうしや骨膜をつなぐ<span class=\"answer\">血管の通り道</span>。</li><li>シャーピー線維＝骨膜を骨に固定する線維。</li><li>骨の<span class=\"answer\">太さの成長は骨膜</span>、長さの成長は骨端軟骨（骨端線）。</li><li>関節面は骨膜ではなく関節軟骨（硝子軟骨）で覆われる。</li><li><span class=\"answer\">付加骨</span>（膜内骨化でできる骨）：頭蓋冠の骨・<span class=\"answer\">鎖骨</span>・顔面の骨の多く。</li><li>ディッセ腔は肝臓の構造（骨にはない）。</li></ul>",
+    "anchor": "<ul><li>骨質は<span class=\"answer\">緻密質</span>（表面）と<span class=\"answer\">海綿質</span>（内部）からなる。</li><li>ハバース管＝緻密質を縦に走る管（骨単位の中心）。<span class=\"answer\">フォルクマン管</span>＝横に走り、ハバース管どうしや骨膜をつなぐ<span class=\"answer\">血管の通り道</span>。</li><li>シャーピー線維＝骨膜を骨に固定する線維。</li><li>骨の<span class=\"answer\">太さの成長は骨膜</span>、長さの成長は骨端軟骨（骨端線）。</li><li>関節面は骨膜ではなく関節軟骨（硝子軟骨）で覆われる。</li><li><span class=\"answer\">付加骨</span>（膜内骨化でできる骨）：頭蓋冠の骨・<span class=\"answer\">鎖骨</span>・顔面の骨の多く。</li><li>ディッセ腔は肝臓の構造（骨にはない）。</li></ul><figure class=\"fig\"><a href=\"figures/bone.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/bone.svg\" width=\"560\" height=\"1040\" alt=\"長い骨（長骨）の構造と緻密質の拡大の模式図\" loading=\"lazy\"></a><figcaption><strong>ひとことポイント</strong>　長さは骨端軟骨（大人は骨端線）、太さは骨膜で成長する。ハバース管は「たて」、フォルクマン管は「よこ」の血管の通り道。関節面には骨膜がなく、関節軟骨でおおわれる。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
     "why": "なぜ：骨膜の内側の骨芽細胞が外側に骨を付け足して太くなり、骨端軟骨が増えて骨に置きかわることで長くなる。鎖骨は体で最初に骨化が始まる骨で、軟骨を経ずに直接骨になる。",
     "qs": [
      "19-33",
@@ -427,7 +427,7 @@ window.anatomyChapters = [
     "items": [
      "2-D"
     ],
-    "anchor": "<ul><li>冠状縫合＝前頭骨と頭頂骨、矢状縫合＝左右の頭頂骨、<span class=\"answer\">ラムダ縫合＝頭頂骨と後頭骨</span>、鱗状縫合＝頭頂骨と側頭骨。</li><li>大泉門：冠状縫合と矢状縫合の交わる所。ひし形。<span class=\"answer\">生後1年半〜2年</span>で閉じる。</li><li>小泉門：<span class=\"answer\">矢状縫合とラムダ縫合</span>の交わる所。三角形。生後まもなく（数か月以内）閉じる。</li></ul>",
+    "anchor": "<ul><li>冠状縫合＝前頭骨と頭頂骨、矢状縫合＝左右の頭頂骨、<span class=\"answer\">ラムダ縫合＝頭頂骨と後頭骨</span>、鱗状縫合＝頭頂骨と側頭骨。</li><li>大泉門：冠状縫合と矢状縫合の交わる所。ひし形。<span class=\"answer\">生後1年半〜2年</span>で閉じる。</li><li>小泉門：<span class=\"answer\">矢状縫合とラムダ縫合</span>の交わる所。三角形。生後まもなく（数か月以内）閉じる。</li></ul><figure class=\"fig\"><a href=\"figures/fontanelle.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/fontanelle.svg\" width=\"560\" height=\"680\" alt=\"新生児の頭蓋を上から見た図（縫合と泉門）\" loading=\"lazy\"></a><figcaption><strong>ひとことポイント</strong>　大泉門は「前」のひし形（冠状縫合＋矢状縫合）、小泉門は「後ろ」の三角形（矢状縫合＋ラムダ縫合）。大泉門は脳が大きくなる間、最後まで開いている。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
     "why": "なぜ：ラムダ縫合は形がギリシャ文字のλ（ラムダ）に似ていることから。後頭骨の上縁が逆V字で頭頂骨とかみ合う。大泉門は脳の成長に合わせて最後まで開いている。",
     "qs": [
      "23-33",
@@ -540,7 +540,7 @@ window.anatomyChapters = [
     "items": [
      "2-F"
     ],
-    "anchor": "<div class=\"table-wrap\"><table><thead><tr><th>部位</th><th>数</th><th>見分けるポイント</th></tr></thead><tbody><tr><td>頸椎</td><td>7</td><td><span class=\"answer\">横突孔</span>（椎骨動脈が通る）。第1頸椎＝環椎（<span class=\"answer\">椎体がない</span>）、第2＝軸椎（歯突起）、第7＝<span class=\"answer\">隆椎</span>（棘突起が長く触れる）</td></tr><tr><td>胸椎</td><td>12</td><td>肋骨と関節する肋骨窩</td></tr><tr><td>腰椎</td><td>5</td><td>肋骨突起・<span class=\"answer\">乳頭突起</span>・副突起</td></tr><tr><td>仙骨</td><td>1（5個が癒合）</td><td><span class=\"answer\">岬角</span>・仙骨孔・仙骨裂孔</td></tr><tr><td>尾骨</td><td>1（3〜5個が癒合）</td><td></td></tr></tbody></table></div><p>成人の脊柱は<span class=\"answer\">26個</span>（7＋12＋5＋1＋1）。</p>",
+    "anchor": "<div class=\"table-wrap\"><table><thead><tr><th>部位</th><th>数</th><th>見分けるポイント</th></tr></thead><tbody><tr><td>頸椎</td><td>7</td><td><span class=\"answer\">横突孔</span>（椎骨動脈が通る）。第1頸椎＝環椎（<span class=\"answer\">椎体がない</span>）、第2＝軸椎（歯突起）、第7＝<span class=\"answer\">隆椎</span>（棘突起が長く触れる）</td></tr><tr><td>胸椎</td><td>12</td><td>肋骨と関節する肋骨窩</td></tr><tr><td>腰椎</td><td>5</td><td>肋骨突起・<span class=\"answer\">乳頭突起</span>・副突起</td></tr><tr><td>仙骨</td><td>1（5個が癒合）</td><td><span class=\"answer\">岬角</span>・仙骨孔・仙骨裂孔</td></tr><tr><td>尾骨</td><td>1（3〜5個が癒合）</td><td></td></tr></tbody></table></div><p>成人の脊柱は<span class=\"answer\">26個</span>（7＋12＋5＋1＋1）。</p><figure class=\"fig\"><a href=\"figures/spine.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/spine.svg\" width=\"560\" height=\"960\" alt=\"脊柱を横から見た模式図（椎骨の数と弯曲）\" loading=\"lazy\"></a><figcaption><strong>ひとことポイント</strong>　数は上から7・12・5。首と腰は前へ、胸と仙骨は後ろへカーブ（前弯・後弯）して、頭の重さをバネのように受け止める。腰椎は体重を一番支えるので一番大きい。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
     "why": "なぜ：頸椎だけに横突孔があるのは、脳へ行く椎骨動脈を骨のトンネルで守るため（椎骨動脈は通常第6頸椎から入る）。環椎は椎体の部分が軸椎の歯突起になったので椎体がない。",
     "qs": [
      "18-2",

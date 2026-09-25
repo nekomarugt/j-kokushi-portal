@@ -3,6 +3,8 @@ sys.path.insert(0, os.path.dirname(__file__))
 from ch01_05 import CH as A
 from ch06_10 import CH as B
 from ch11_15 import CH as C
+import figures
+figures.write_all()  # 図解SVG（figures/*.svg）を書き出す
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.abspath(os.path.join(HERE, '..', '..'))
 OUT = REPO + '/anatomy-guide'

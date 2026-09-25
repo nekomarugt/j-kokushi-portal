@@ -43,7 +43,7 @@
     const h = decodeURIComponent(location.hash.replace(/^#/, ''));
     if (!h) return {page: 0};
     if (pointMap[h]) {
-      return {page: pages.findIndex((p) => p.id === pointMap[h].chapter.id), point: h};
+      return {page: pages.findIndex((p) => p.chapter === pointMap[h].chapter), point: h};
     }
     const idx = pages.findIndex((p) => p.id === h);
     return {page: idx >= 0 ? idx : 0};
@@ -199,9 +199,10 @@
 
   function render(focusPoint) {
     const page = pages[currentIndex];
-    if (page.id === 'overview') renderOverview();
+    // 第1章の id も 'overview' なので、章かどうかは page.chapter で判定する
+    if (page.chapter) renderChapter(page.chapter, focusPoint);
     else if (page.id === 'reverse') renderReverse();
-    else renderChapter(page.chapter, focusPoint);
+    else renderOverview();
     prevButton.disabled = currentIndex === 0;
     nextButton.disabled = currentIndex === pages.length - 1;
     prevButton.textContent = currentIndex === 0 ? '前の章' : '← ' + pages[currentIndex - 1].title;

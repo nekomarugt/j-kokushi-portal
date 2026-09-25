@@ -66,6 +66,9 @@ html, body { margin: 0; font-family: "Noto Sans CJK JP", "Noto Sans JP", "Hiragi
 .anchor table { width: 100%; border-collapse: collapse; margin: 1mm 0 2mm; font-size: 9pt; }
 .anchor th, .anchor td { border: 1px solid #b9c7d6; padding: 1.2mm 2mm; text-align: left; vertical-align: top; }
 .anchor th { background: #e3edf6; }
+.fig { margin: 2mm 0; page-break-inside: avoid; }
+.fig img { display: block; width: auto; height: auto; max-width: 110mm; max-height: 105mm; margin: 2mm auto; }
+.fig figcaption { font-size: 8.8pt; color: #333; } .fig-zoom { display: none; }
 strong.key { color: #8b0000; background: #fff3cd; padding: 0 1.5px; }
 .explanation { margin: 2mm 0; padding: 2.2mm 3mm; background: #fbf6e6; border-radius: 2px; }
 .qs { margin: 1.5mm 0; font-size: 8.8pt; color: #333; }
