@@ -504,7 +504,7 @@ body { padding-bottom: calc(92px + env(safe-area-inset-bottom, 0px)); }
 
 /* ---- 模式図（_build_clinical/figs.css から追加） ---- */
 .study-figure.fig-diagram { background: #fff; }
-.study-figure.fig-diagram .figure-zoom img { max-width: 560px; margin: 0 auto; }
+.study-figure.fig-diagram .figure-zoom img { width: 100%; max-width: 560px; margin: 0 auto; }
 .study-figure .fig-title { display: block; }
 .study-figure .fig-point { display: block; margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--line); color: var(--ink, #1f2d2b); font-size: 0.92rem; font-weight: 500; line-height: 1.75; }
 .study-figure .fig-point strong { display: inline-block; margin-right: 0.5em; padding: 1px 8px; border-radius: 999px; background: #e6f2ef; color: #0f5b52; font-size: 0.8rem; font-weight: 850; }
@@ -513,3 +513,7 @@ body { padding-bottom: calc(92px + env(safe-area-inset-bottom, 0px)); }
   .study-figure.fig-diagram .figure-zoom img { max-width: 110mm; max-height: 110mm; width: auto; }
   .study-figure .fig-point { font-size: 9pt; line-height: 1.55; }
 }
+/* 図（SVG・幅560）がグリッドの列幅を押し広げないように */
+.notes-list { grid-template-columns: minmax(0, 1fr); }
+.notes-list > * { min-width: 0; }
+.study-figure .figure-zoom img { max-width: 100%; }
