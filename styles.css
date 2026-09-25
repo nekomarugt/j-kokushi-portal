@@ -244,3 +244,7 @@ footer span::before {
 .study-card.basics.clinical-qa { border-left-color: var(--teal); background: #edf8f4; }
 .study-card.basics.clinical-qa:hover { border-color: var(--teal); }
 @media (max-width: 780px) { .basics-section .study-grid { grid-template-columns: 1fr; } }
+
+.study-card.anatomy { grid-column: 1 / -1; border-left-color: #c2410c; background: #fff5ee; }
+.study-card.anatomy:hover { border-color: #c2410c; }
+.free-badge { display: inline-block; margin-left: 6px; padding: 2px 9px; border-radius: 99px; background: #16764b; color: #fff; font-size: 0.72rem; font-weight: 800; vertical-align: 0.2em; }

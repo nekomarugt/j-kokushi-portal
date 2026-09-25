@@ -1,0 +1,4248 @@
+{
+ "source": "anatomy/questions.json",
+ "kijun": "柔道整復師国家試験出題基準 2022年版（第30回〜適用、公益財団法人 柔道整復研修試験財団）",
+ "kijunUrl": "https://www.zaijusei.com/doc/syutudai_kijun_2020.pdf",
+ "note": "code = 大項目番号-中項目記号。11-Z は出題基準に明記のない画像（CT値）問題。1問につき主たる中項目を1つ付与。",
+ "tags": {
+  "18-1": {
+   "code": "2-D",
+   "major": "運動器系",
+   "mid": "頭部",
+   "points": [
+    "locomotor-general-4"
+   ]
+  },
+  "18-2": {
+   "code": "2-F",
+   "major": "運動器系",
+   "mid": "体幹",
+   "points": [
+    "trunk-1"
+   ]
+  },
+  "18-3": {
+   "code": "3-D",
+   "major": "脈管系（循環器系）",
+   "mid": "静脈",
+   "points": [
+    "vascular-11"
+   ]
+  },
+  "18-4": {
+   "code": "9-G",
+   "major": "神経系",
+   "mid": "自律神経",
+   "points": [
+    "cns-6",
+    "pns-3"
+   ]
+  },
+  "18-31": {
+   "code": "1-C",
+   "major": "人体解剖学概説",
+   "mid": "組織",
+   "points": [
+    "overview-4"
+   ]
+  },
+  "18-32": {
+   "code": "1-E",
+   "major": "人体解剖学概説",
+   "mid": "人体の発生",
+   "points": [
+    "overview-2"
+   ]
+  },
+  "18-33": {
+   "code": "2-H",
+   "major": "運動器系",
+   "mid": "下肢",
+   "points": [
+    "lower-limb-6"
+   ]
+  },
+  "18-34": {
+   "code": "2-H",
+   "major": "運動器系",
+   "mid": "下肢",
+   "points": [
+    "upper-limb-4",
+    "lower-limb-1"
+   ]
+  },
+  "18-35": {
+   "code": "2-F",
+   "major": "運動器系",
+   "mid": "体幹",
+   "points": [
+    "trunk-3"
+   ]
+  },
+  "18-36": {
+   "code": "2-G",
+   "major": "運動器系",
+   "mid": "上肢",
+   "points": [
+    "upper-limb-6"
+   ]
+  },
+  "18-37": {
+   "code": "2-H",
+   "major": "運動器系",
+   "mid": "下肢",
+   "points": [
+    "lower-limb-3"
+   ]
+  },
+  "18-38": {
+   "code": "3-B",
+   "major": "脈管系（循環器系）",
+   "mid": "心臓",
+   "points": [
+    "vascular-1"
+   ]
+  },
+  "18-39": {
+   "code": "3-C",
+   "major": "脈管系（循環器系）",
+   "mid": "動脈",
+   "points": [
+    "vascular-4"
+   ]
+  },
+  "18-40": {
+   "code": "3-C",
+   "major": "脈管系（循環器系）",
+   "mid": "動脈",
+   "points": [
+    "vascular-2"
+   ]
+  },
+  "18-41": {
+   "code": "3-E",
+   "major": "脈管系（循環器系）",
+   "mid": "リンパ系",
+   "points": [
+    "vascular-3",
+    "vascular-7"
+   ]
+  },
+  "18-42": {
+   "code": "1-C",
+   "major": "人体解剖学概説",
+   "mid": "組織",
+   "points": [
+    "overview-1"
+   ]
+  },
+  "18-43": {
+   "code": "4-F",
+   "major": "消化器系",
+   "mid": "小腸",
+   "points": [
+    "digestive-1"
+   ]
+  },
+  "18-44": {
+   "code": "5-C",
+   "major": "呼吸器系",
+   "mid": "喉頭",
+   "points": [
+    "respiratory-4"
+   ]
+  },
+  "18-45": {
+   "code": "5-D",
+   "major": "呼吸器系",
+   "mid": "気管および気管支",
+   "points": [
+    "respiratory-1",
+    "respiratory-8"
+   ]
+  },
+  "18-46": {
+   "code": "6-B",
+   "major": "泌尿器系",
+   "mid": "腎臓",
+   "points": [
+    "urinary-3"
+   ]
+  },
+  "18-47": {
+   "code": "6-C",
+   "major": "泌尿器系",
+   "mid": "尿管",
+   "points": [
+    "urinary-4"
+   ]
+  },
+  "18-48": {
+   "code": "7-B",
+   "major": "生殖器系",
+   "mid": "男性生殖器",
+   "points": [
+    "reproductive-4"
+   ]
+  },
+  "18-49": {
+   "code": "7-C",
+   "major": "生殖器系",
+   "mid": "女性生殖器",
+   "points": [
+    "reproductive-3"
+   ]
+  },
+  "18-50": {
+   "code": "8-D",
+   "major": "内分泌器系",
+   "mid": "甲状腺",
+   "points": [
+    "endocrine-4"
+   ]
+  },
+  "18-51": {
+   "code": "8-I",
+   "major": "内分泌器系",
+   "mid": "松果体",
+   "points": [
+    "endocrine-5"
+   ]
+  },
+  "18-52": {
+   "code": "9-A",
+   "major": "神経系",
+   "mid": "概説（分類・髄膜）",
+   "points": [
+    "cns-4"
+   ]
+  },
+  "18-53": {
+   "code": "9-B",
+   "major": "神経系",
+   "mid": "脳",
+   "points": [
+    "cns-3"
+   ]
+  },
+  "18-54": {
+   "code": "9-B",
+   "major": "神経系",
+   "mid": "脳",
+   "points": [
+    "cns-1"
+   ]
+  },
+  "18-55": {
+   "code": "9-E",
+   "major": "神経系",
+   "mid": "脳神経",
+   "points": [
+    "pns-4"
+   ]
+  },
+  "18-56": {
+   "code": "9-E",
+   "major": "神経系",
+   "mid": "脳神経",
+   "points": [
+    "locomotor-general-2",
+    "pns-7"
+   ]
+  },
+  "18-57": {
+   "code": "10-A",
+   "major": "感覚器系",
+   "mid": "外皮",
+   "points": [
+    "sensory-3"
+   ]
+  },
+  "18-58": {
+   "code": "10-C",
+   "major": "感覚器系",
+   "mid": "聴覚器・平衡覚器",
+   "points": [
+    "sensory-4"
+   ]
+  },
+  "18-59": {
+   "code": "11-B",
+   "major": "体表解剖",
+   "mid": "骨格",
+   "points": [
+    "surface-2"
+   ]
+  },
+  "18-60": {
+   "code": "11-D",
+   "major": "体表解剖",
+   "mid": "脈管",
+   "points": [
+    "surface-1"
+   ]
+  },
+  "19-1": {
+   "code": "2-H",
+   "major": "運動器系",
+   "mid": "下肢",
+   "points": [
+    "lower-limb-1"
+   ]
+  },
+  "19-2": {
+   "code": "9-B",
+   "major": "神経系",
+   "mid": "脳",
+   "points": [
+    "cns-3"
+   ]
+  },
+  "19-3": {
+   "code": "3-D",
+   "major": "脈管系（循環器系）",
+   "mid": "静脈",
+   "points": [
+    "vascular-6"
+   ]
+  },
+  "19-4": {
+   "code": "9-G",
+   "major": "神経系",
+   "mid": "自律神経",
+   "points": [
+    "pns-3"
+   ]
+  },
+  "19-31": {
+   "code": "1-C",
+   "major": "人体解剖学概説",
+   "mid": "組織",
+   "points": [
+    "overview-1"
+   ]
+  },
+  "19-32": {
+   "code": "1-C",
+   "major": "人体解剖学概説",
+   "mid": "組織",
+   "points": [
+    "overview-5"
+   ]
+  },
+  "19-33": {
+   "code": "2-A",
+   "major": "運動器系",
+   "mid": "骨",
+   "points": [
+    "locomotor-general-3"
+   ]
+  },
+  "19-34": {
+   "code": "2-C",
+   "major": "運動器系",
+   "mid": "筋",
+   "points": [
+    "locomotor-general-6"
+   ]
+  },
+  "19-35": {
+   "code": "2-D",
+   "major": "運動器系",
+   "mid": "頭部",
+   "points": [
+    "locomotor-general-10"
+   ]
+  },
+  "19-36": {
+   "code": "2-G",
+   "major": "運動器系",
+   "mid": "上肢",
+   "points": [
+    "upper-limb-5"
+   ]
+  },
+  "19-37": {
+   "code": "2-H",
+   "major": "運動器系",
+   "mid": "下肢",
+   "points": [
+    "lower-limb-4"
+   ]
+  },
+  "19-38": {
+   "code": "3-A",
+   "major": "脈管系（循環器系）",
+   "mid": "概説",
+   "points": [
+    "vascular-8"
+   ]
+  },
+  "19-39": {
+   "code": "3-B",
+   "major": "脈管系（循環器系）",
+   "mid": "心臓",
+   "points": [
+    "vascular-1"
+   ]
+  },
+  "19-40": {
+   "code": "3-C",
+   "major": "脈管系（循環器系）",
+   "mid": "動脈",
+   "points": [
+    "vascular-2"
+   ]
+  },
+  "19-41": {
+   "code": "3-D",
+   "major": "脈管系（循環器系）",
+   "mid": "静脈",
+   "points": [
+    "vascular-3"
+   ]
+  },
+  "19-42": {
+   "code": "3-E",
+   "major": "脈管系（循環器系）",
+   "mid": "リンパ系",
+   "points": [
+    "vascular-7"
+   ]
+  },
+  "19-43": {
+   "code": "4-F",
+   "major": "消化器系",
+   "mid": "小腸",
+   "points": [
+    "digestive-1"
+   ]
+  },
+  "19-44": {
+   "code": "4-H",
+   "major": "消化器系",
+   "mid": "肝臓",
+   "points": [
+    "digestive-8"
+   ]
+  },
+  "19-45": {
+   "code": "5-C",
+   "major": "呼吸器系",
+   "mid": "喉頭",
+   "points": [
+    "respiratory-6"
+   ]
+  },
+  "19-46": {
+   "code": "5-E",
+   "major": "呼吸器系",
+   "mid": "肺",
+   "points": [
+    "respiratory-2"
+   ]
+  },
+  "19-47": {
+   "code": "6-A",
+   "major": "泌尿器系",
+   "mid": "概説",
+   "points": [
+    "urinary-4"
+   ]
+  },
+  "19-48": {
+   "code": "6-B",
+   "major": "泌尿器系",
+   "mid": "腎臓",
+   "points": [
+    "urinary-3"
+   ]
+  },
+  "19-49": {
+   "code": "7-A",
+   "major": "生殖器系",
+   "mid": "概説",
+   "points": [
+    "reproductive-7"
+   ]
+  },
+  "19-50": {
+   "code": "7-C",
+   "major": "生殖器系",
+   "mid": "女性生殖器",
+   "points": [
+    "reproductive-6"
+   ]
+  },
+  "19-51": {
+   "code": "8-B",
+   "major": "内分泌器系",
+   "mid": "下垂体",
+   "points": [
+    "endocrine-2"
+   ]
+  },
+  "19-52": {
+   "code": "8-E",
+   "major": "内分泌器系",
+   "mid": "副腎",
+   "points": [
+    "endocrine-3"
+   ]
+  },
+  "19-53": {
+   "code": "1-C",
+   "major": "人体解剖学概説",
+   "mid": "組織",
+   "points": [
+    "overview-8"
+   ]
+  },
+  "19-54": {
+   "code": "9-A",
+   "major": "神経系",
+   "mid": "概説（分類・髄膜）",
+   "points": [
+    "cns-4"
+   ]
+  },
+  "19-55": {
+   "code": "9-F",
+   "major": "神経系",
+   "mid": "脊髄神経",
+   "points": [
+    "pns-8"
+   ]
+  },
+  "19-56": {
+   "code": "9-E",
+   "major": "神経系",
+   "mid": "脳神経",
+   "points": [
+    "pns-5",
+    "sensory-1"
+   ]
+  },
+  "19-57": {
+   "code": "10-B",
+   "major": "感覚器系",
+   "mid": "視覚器",
+   "points": [
+    "sensory-2"
+   ]
+  },
+  "19-58": {
+   "code": "10-C",
+   "major": "感覚器系",
+   "mid": "聴覚器・平衡覚器",
+   "points": [
+    "sensory-5"
+   ]
+  },
+  "19-59": {
+   "code": "2-F",
+   "major": "運動器系",
+   "mid": "体幹",
+   "points": [
+    "trunk-4"
+   ]
+  },
+  "19-60": {
+   "code": "11-B",
+   "major": "体表解剖",
+   "mid": "骨格",
+   "points": [
+    "surface-6"
+   ]
+  },
+  "20-1": {
+   "code": "1-B",
+   "major": "人体解剖学概説",
+   "mid": "細胞",
+   "points": [
+    "overview-6"
+   ]
+  },
+  "20-2": {
+   "code": "2-A",
+   "major": "運動器系",
+   "mid": "骨",
+   "points": [
+    "locomotor-general-3"
+   ]
+  },
+  "20-3": {
+   "code": "2-B",
+   "major": "運動器系",
+   "mid": "骨の連結",
+   "points": [
+    "locomotor-general-8"
+   ]
+  },
+  "20-4": {
+   "code": "9-C",
+   "major": "神経系",
+   "mid": "脊髄",
+   "points": [
+    "cns-6"
+   ]
+  },
+  "20-31": {
+   "code": "1-B",
+   "major": "人体解剖学概説",
+   "mid": "細胞",
+   "points": [
+    "overview-10"
+   ]
+  },
+  "20-32": {
+   "code": "2-F",
+   "major": "運動器系",
+   "mid": "体幹",
+   "points": [
+    "trunk-2"
+   ]
+  },
+  "20-33": {
+   "code": "2-B",
+   "major": "運動器系",
+   "mid": "骨の連結",
+   "points": [
+    "locomotor-general-1"
+   ]
+  },
+  "20-34": {
+   "code": "2-H",
+   "major": "運動器系",
+   "mid": "下肢",
+   "points": [
+    "lower-limb-6"
+   ]
+  },
+  "20-35": {
+   "code": "2-C",
+   "major": "運動器系",
+   "mid": "筋",
+   "points": [
+    "locomotor-general-6"
+   ]
+  },
+  "20-36": {
+   "code": "2-H",
+   "major": "運動器系",
+   "mid": "下肢",
+   "points": [
+    "lower-limb-3"
+   ]
+  },
+  "20-37": {
+   "code": "3-B",
+   "major": "脈管系（循環器系）",
+   "mid": "心臓",
+   "points": [
+    "vascular-16"
+   ]
+  },
+  "20-38": {
+   "code": "3-B",
+   "major": "脈管系（循環器系）",
+   "mid": "心臓",
+   "points": [
+    "vascular-1"
+   ]
+  },
+  "20-39": {
+   "code": "3-C",
+   "major": "脈管系（循環器系）",
+   "mid": "動脈",
+   "points": [
+    "vascular-2"
+   ]
+  },
+  "20-40": {
+   "code": "3-C",
+   "major": "脈管系（循環器系）",
+   "mid": "動脈",
+   "points": [
+    "vascular-5"
+   ]
+  },
+  "20-41": {
+   "code": "3-D",
+   "major": "脈管系（循環器系）",
+   "mid": "静脈",
+   "points": [
+    "vascular-3"
+   ]
+  },
+  "20-42": {
+   "code": "4-B",
+   "major": "消化器系",
+   "mid": "口腔",
+   "points": [
+    "digestive-5"
+   ]
+  },
+  "20-43": {
+   "code": "2-F",
+   "major": "運動器系",
+   "mid": "体幹",
+   "points": [
+    "trunk-5"
+   ]
+  },
+  "20-44": {
+   "code": "5-C",
+   "major": "呼吸器系",
+   "mid": "喉頭",
+   "points": [
+    "respiratory-4"
+   ]
+  },
+  "20-45": {
+   "code": "5-E",
+   "major": "呼吸器系",
+   "mid": "肺",
+   "points": [
+    "respiratory-3"
+   ]
+  },
+  "20-46": {
+   "code": "6-B",
+   "major": "泌尿器系",
+   "mid": "腎臓",
+   "points": [
+    "urinary-1"
+   ]
+  },
+  "20-47": {
+   "code": "6-B",
+   "major": "泌尿器系",
+   "mid": "腎臓",
+   "points": [
+    "urinary-1"
+   ]
+  },
+  "20-48": {
+   "code": "1-E",
+   "major": "人体解剖学概説",
+   "mid": "人体の発生",
+   "points": [
+    "overview-9"
+   ]
+  },
+  "20-49": {
+   "code": "7-C",
+   "major": "生殖器系",
+   "mid": "女性生殖器",
+   "points": [
+    "reproductive-1"
+   ]
+  },
+  "20-50": {
+   "code": "8-A",
+   "major": "内分泌器系",
+   "mid": "概説",
+   "points": [
+    "endocrine-1"
+   ]
+  },
+  "20-51": {
+   "code": "8-A",
+   "major": "内分泌器系",
+   "mid": "概説",
+   "points": [
+    "endocrine-1"
+   ]
+  },
+  "20-52": {
+   "code": "9-B",
+   "major": "神経系",
+   "mid": "脳",
+   "points": [
+    "cns-5"
+   ]
+  },
+  "20-53": {
+   "code": "9-E",
+   "major": "神経系",
+   "mid": "脳神経",
+   "points": [
+    "locomotor-general-2",
+    "pns-7"
+   ]
+  },
+  "20-54": {
+   "code": "9-E",
+   "major": "神経系",
+   "mid": "脳神経",
+   "points": [
+    "pns-2"
+   ]
+  },
+  "20-55": {
+   "code": "9-F",
+   "major": "神経系",
+   "mid": "脊髄神経",
+   "points": [
+    "pns-1"
+   ]
+  },
+  "20-56": {
+   "code": "9-E",
+   "major": "神経系",
+   "mid": "脳神経",
+   "points": [
+    "pns-7"
+   ]
+  },
+  "20-57": {
+   "code": "10-A",
+   "major": "感覚器系",
+   "mid": "外皮",
+   "points": [
+    "sensory-3"
+   ]
+  },
+  "20-58": {
+   "code": "10-C",
+   "major": "感覚器系",
+   "mid": "聴覚器・平衡覚器",
+   "points": [
+    "cns-9"
+   ]
+  },
+  "20-59": {
+   "code": "2-H",
+   "major": "運動器系",
+   "mid": "下肢",
+   "points": [
+    "lower-limb-1"
+   ]
+  },
+  "20-60": {
+   "code": "11-E",
+   "major": "体表解剖",
+   "mid": "神経",
+   "points": [
+    "surface-4"
+   ]
+  },
+  "21-1": {
+   "code": "1-B",
+   "major": "人体解剖学概説",
+   "mid": "細胞",
+   "points": [
+    "overview-6"
+   ]
+  },
+  "21-2": {
+   "code": "3-C",
+   "major": "脈管系（循環器系）",
+   "mid": "動脈",
+   "points": [
+    "vascular-2"
+   ]
+  },
+  "21-3": {
+   "code": "2-F",
+   "major": "運動器系",
+   "mid": "体幹",
+   "points": [
+    "trunk-2"
+   ]
+  },
+  "21-4": {
+   "code": "9-F",
+   "major": "神経系",
+   "mid": "脊髄神経",
+   "points": [
+    "locomotor-general-7",
+    "pns-1"
+   ]
+  },
+  "21-31": {
+   "code": "9-B",
+   "major": "神経系",
+   "mid": "脳",
+   "points": [
+    "cns-5"
+   ]
+  },
+  "21-32": {
+   "code": "1-E",
+   "major": "人体解剖学概説",
+   "mid": "人体の発生",
+   "points": [
+    "overview-2"
+   ]
+  },
+  "21-33": {
+   "code": "2-G",
+   "major": "運動器系",
+   "mid": "上肢",
+   "points": [
+    "upper-limb-1"
+   ]
+  },
+  "21-34": {
+   "code": "9-F",
+   "major": "神経系",
+   "mid": "脊髄神経",
+   "points": [
+    "pns-1"
+   ]
+  },
+  "21-35": {
+   "code": "2-H",
+   "major": "運動器系",
+   "mid": "下肢",
+   "points": [
+    "lower-limb-8"
+   ]
+  },
+  "21-36": {
+   "code": "2-H",
+   "major": "運動器系",
+   "mid": "下肢",
+   "points": [
+    "lower-limb-2"
+   ]
+  },
+  "21-37": {
+   "code": "3-B",
+   "major": "脈管系（循環器系）",
+   "mid": "心臓",
+   "points": [
+    "vascular-1"
+   ]
+  },
+  "21-38": {
+   "code": "3-C",
+   "major": "脈管系（循環器系）",
+   "mid": "動脈",
+   "points": [
+    "vascular-4"
+   ]
+  },
+  "21-39": {
+   "code": "3-D",
+   "major": "脈管系（循環器系）",
+   "mid": "静脈",
+   "points": [
+    "vascular-3"
+   ]
+  },
+  "21-40": {
+   "code": "3-E",
+   "major": "脈管系（循環器系）",
+   "mid": "リンパ系",
+   "points": [
+    "vascular-14"
+   ]
+  },
+  "21-41": {
+   "code": "4-F",
+   "major": "消化器系",
+   "mid": "小腸",
+   "points": [
+    "digestive-4"
+   ]
+  },
+  "21-42": {
+   "code": "4-E",
+   "major": "消化器系",
+   "mid": "胃",
+   "points": [
+    "digestive-3"
+   ]
+  },
+  "21-43": {
+   "code": "4-J",
+   "major": "消化器系",
+   "mid": "腹膜",
+   "points": [
+    "digestive-7"
+   ]
+  },
+  "21-44": {
+   "code": "5-D",
+   "major": "呼吸器系",
+   "mid": "気管および気管支",
+   "points": [
+    "respiratory-1"
+   ]
+  },
+  "21-45": {
+   "code": "5-E",
+   "major": "呼吸器系",
+   "mid": "肺",
+   "points": [
+    "respiratory-3"
+   ]
+  },
+  "21-46": {
+   "code": "6-B",
+   "major": "泌尿器系",
+   "mid": "腎臓",
+   "points": [
+    "urinary-1"
+   ]
+  },
+  "21-47": {
+   "code": "6-B",
+   "major": "泌尿器系",
+   "mid": "腎臓",
+   "points": [
+    "urinary-3"
+   ]
+  },
+  "21-48": {
+   "code": "8-G",
+   "major": "内分泌器系",
+   "mid": "精巣",
+   "points": [
+    "reproductive-5",
+    "endocrine-5"
+   ]
+  },
+  "21-49": {
+   "code": "7-C",
+   "major": "生殖器系",
+   "mid": "女性生殖器",
+   "points": [
+    "reproductive-3"
+   ]
+  },
+  "21-50": {
+   "code": "8-A",
+   "major": "内分泌器系",
+   "mid": "概説",
+   "points": [
+    "endocrine-1"
+   ]
+  },
+  "21-51": {
+   "code": "8-F",
+   "major": "内分泌器系",
+   "mid": "膵臓",
+   "points": [
+    "endocrine-6"
+   ]
+  },
+  "21-52": {
+   "code": "9-A",
+   "major": "神経系",
+   "mid": "概説（分類・髄膜）",
+   "points": [
+    "cns-4"
+   ]
+  },
+  "21-53": {
+   "code": "9-B",
+   "major": "神経系",
+   "mid": "脳",
+   "points": [
+    "cns-1"
+   ]
+  },
+  "21-54": {
+   "code": "9-B",
+   "major": "神経系",
+   "mid": "脳",
+   "points": [
+    "cns-2"
+   ]
+  },
+  "21-55": {
+   "code": "9-E",
+   "major": "神経系",
+   "mid": "脳神経",
+   "points": [
+    "pns-5"
+   ]
+  },
+  "21-56": {
+   "code": "9-F",
+   "major": "神経系",
+   "mid": "脊髄神経",
+   "points": [
+    "pns-9"
+   ]
+  },
+  "21-57": {
+   "code": "10-B",
+   "major": "感覚器系",
+   "mid": "視覚器",
+   "points": [
+    "sensory-2"
+   ]
+  },
+  "21-58": {
+   "code": "10-E",
+   "major": "感覚器系",
+   "mid": "嗅覚器",
+   "points": [
+    "sensory-8"
+   ]
+  },
+  "21-59": {
+   "code": "11-D",
+   "major": "体表解剖",
+   "mid": "脈管",
+   "points": [
+    "surface-1"
+   ]
+  },
+  "21-60": {
+   "code": "11-G",
+   "major": "体表解剖",
+   "mid": "外皮",
+   "points": [
+    "surface-3"
+   ]
+  },
+  "22-1": {
+   "code": "2-G",
+   "major": "運動器系",
+   "mid": "上肢",
+   "points": [
+    "upper-limb-2"
+   ]
+  },
+  "22-2": {
+   "code": "1-C",
+   "major": "人体解剖学概説",
+   "mid": "組織",
+   "points": [
+    "overview-5"
+   ]
+  },
+  "22-3": {
+   "code": "3-A",
+   "major": "脈管系（循環器系）",
+   "mid": "概説",
+   "points": [
+    "vascular-9"
+   ]
+  },
+  "22-4": {
+   "code": "1-C",
+   "major": "人体解剖学概説",
+   "mid": "組織",
+   "points": [
+    "overview-8"
+   ]
+  },
+  "22-31": {
+   "code": "1-C",
+   "major": "人体解剖学概説",
+   "mid": "組織",
+   "points": [
+    "overview-5"
+   ]
+  },
+  "22-32": {
+   "code": "1-B",
+   "major": "人体解剖学概説",
+   "mid": "細胞",
+   "points": [
+    "overview-7"
+   ]
+  },
+  "22-33": {
+   "code": "2-F",
+   "major": "運動器系",
+   "mid": "体幹",
+   "points": [
+    "trunk-1"
+   ]
+  },
+  "22-34": {
+   "code": "10-B",
+   "major": "感覚器系",
+   "mid": "視覚器",
+   "points": [
+    "sensory-1"
+   ]
+  },
+  "22-35": {
+   "code": "2-F",
+   "major": "運動器系",
+   "mid": "体幹",
+   "points": [
+    "trunk-4"
+   ]
+  },
+  "22-37": {
+   "code": "3-A",
+   "major": "脈管系（循環器系）",
+   "mid": "概説",
+   "points": [
+    "vascular-9"
+   ]
+  },
+  "22-38": {
+   "code": "3-B",
+   "major": "脈管系（循環器系）",
+   "mid": "心臓",
+   "points": [
+    "vascular-12"
+   ]
+  },
+  "22-39": {
+   "code": "3-C",
+   "major": "脈管系（循環器系）",
+   "mid": "動脈",
+   "points": [
+    "lower-limb-4",
+    "vascular-5"
+   ]
+  },
+  "22-40": {
+   "code": "3-C",
+   "major": "脈管系（循環器系）",
+   "mid": "動脈",
+   "points": [
+    "vascular-5"
+   ]
+  },
+  "22-41": {
+   "code": "4-F",
+   "major": "消化器系",
+   "mid": "小腸",
+   "points": [
+    "digestive-1"
+   ]
+  },
+  "22-42": {
+   "code": "4-H",
+   "major": "消化器系",
+   "mid": "肝臓",
+   "points": [
+    "digestive-8"
+   ]
+  },
+  "22-43": {
+   "code": "5-B",
+   "major": "呼吸器系",
+   "mid": "鼻",
+   "points": [
+    "respiratory-7"
+   ]
+  },
+  "22-44": {
+   "code": "5-C",
+   "major": "呼吸器系",
+   "mid": "喉頭",
+   "points": [
+    "respiratory-6"
+   ]
+  },
+  "22-45": {
+   "code": "6-B",
+   "major": "泌尿器系",
+   "mid": "腎臓",
+   "points": [
+    "urinary-1"
+   ]
+  },
+  "22-46": {
+   "code": "6-B",
+   "major": "泌尿器系",
+   "mid": "腎臓",
+   "points": [
+    "urinary-3"
+   ]
+  },
+  "22-47": {
+   "code": "7-B",
+   "major": "生殖器系",
+   "mid": "男性生殖器",
+   "points": [
+    "reproductive-4"
+   ]
+  },
+  "22-48": {
+   "code": "7-C",
+   "major": "生殖器系",
+   "mid": "女性生殖器",
+   "points": [
+    "reproductive-1"
+   ]
+  },
+  "22-49": {
+   "code": "8-B",
+   "major": "内分泌器系",
+   "mid": "下垂体",
+   "points": [
+    "endocrine-2"
+   ]
+  },
+  "22-50": {
+   "code": "8-E",
+   "major": "内分泌器系",
+   "mid": "副腎",
+   "points": [
+    "endocrine-3"
+   ]
+  },
+  "22-51": {
+   "code": "9-B",
+   "major": "神経系",
+   "mid": "脳",
+   "points": [
+    "cns-2"
+   ]
+  },
+  "22-52": {
+   "code": "9-D",
+   "major": "神経系",
+   "mid": "伝導路",
+   "points": [
+    "cns-7"
+   ]
+  },
+  "22-53": {
+   "code": "9-E",
+   "major": "神経系",
+   "mid": "脳神経",
+   "points": [
+    "pns-4"
+   ]
+  },
+  "22-54": {
+   "code": "2-D",
+   "major": "運動器系",
+   "mid": "頭部",
+   "points": [
+    "locomotor-general-5"
+   ]
+  },
+  "22-55": {
+   "code": "9-E",
+   "major": "神経系",
+   "mid": "脳神経",
+   "points": [
+    "pns-2"
+   ]
+  },
+  "22-56": {
+   "code": "9-F",
+   "major": "神経系",
+   "mid": "脊髄神経",
+   "points": [
+    "pns-8"
+   ]
+  },
+  "22-57": {
+   "code": "10-A",
+   "major": "感覚器系",
+   "mid": "外皮",
+   "points": [
+    "sensory-3"
+   ]
+  },
+  "22-58": {
+   "code": "10-C",
+   "major": "感覚器系",
+   "mid": "聴覚器・平衡覚器",
+   "points": [
+    "sensory-5"
+   ]
+  },
+  "22-59": {
+   "code": "11-A",
+   "major": "体表解剖",
+   "mid": "体表区分",
+   "points": [
+    "surface-6"
+   ]
+  },
+  "22-60": {
+   "code": "11-E",
+   "major": "体表解剖",
+   "mid": "神経",
+   "points": [
+    "surface-4"
+   ]
+  },
+  "23-1": {
+   "code": "2-F",
+   "major": "運動器系",
+   "mid": "体幹",
+   "points": [
+    "trunk-1"
+   ]
+  },
+  "23-2": {
+   "code": "2-B",
+   "major": "運動器系",
+   "mid": "骨の連結",
+   "points": [
+    "locomotor-general-1"
+   ]
+  },
+  "23-3": {
+   "code": "2-H",
+   "major": "運動器系",
+   "mid": "下肢",
+   "points": [
+    "lower-limb-9"
+   ]
+  },
+  "23-4": {
+   "code": "2-G",
+   "major": "運動器系",
+   "mid": "上肢",
+   "points": [
+    "upper-limb-4"
+   ]
+  },
+  "23-31": {
+   "code": "1-E",
+   "major": "人体解剖学概説",
+   "mid": "人体の発生",
+   "points": [
+    "overview-2"
+   ]
+  },
+  "23-32": {
+   "code": "2-H",
+   "major": "運動器系",
+   "mid": "下肢",
+   "points": [
+    "lower-limb-2"
+   ]
+  },
+  "23-33": {
+   "code": "2-D",
+   "major": "運動器系",
+   "mid": "頭部",
+   "points": [
+    "locomotor-general-9"
+   ]
+  },
+  "23-34": {
+   "code": "2-F",
+   "major": "運動器系",
+   "mid": "体幹",
+   "points": [
+    "trunk-4"
+   ]
+  },
+  "23-35": {
+   "code": "2-F",
+   "major": "運動器系",
+   "mid": "体幹",
+   "points": [
+    "trunk-7"
+   ]
+  },
+  "23-37": {
+   "code": "2-A",
+   "major": "運動器系",
+   "mid": "骨",
+   "points": [
+    "locomotor-general-11"
+   ]
+  },
+  "23-38": {
+   "code": "2-H",
+   "major": "運動器系",
+   "mid": "下肢",
+   "points": [
+    "lower-limb-1"
+   ]
+  },
+  "23-39": {
+   "code": "2-H",
+   "major": "運動器系",
+   "mid": "下肢",
+   "points": [
+    "lower-limb-7"
+   ]
+  },
+  "23-40": {
+   "code": "3-B",
+   "major": "脈管系（循環器系）",
+   "mid": "心臓",
+   "points": [
+    "vascular-8"
+   ]
+  },
+  "23-41": {
+   "code": "3-C",
+   "major": "脈管系（循環器系）",
+   "mid": "動脈",
+   "points": [
+    "vascular-2"
+   ]
+  },
+  "23-42": {
+   "code": "3-C",
+   "major": "脈管系（循環器系）",
+   "mid": "動脈",
+   "points": [
+    "lower-limb-8",
+    "vascular-5"
+   ]
+  },
+  "23-43": {
+   "code": "3-D",
+   "major": "脈管系（循環器系）",
+   "mid": "静脈",
+   "points": [
+    "vascular-11"
+   ]
+  },
+  "23-44": {
+   "code": "4-G",
+   "major": "消化器系",
+   "mid": "大腸",
+   "points": [
+    "digestive-2"
+   ]
+  },
+  "23-45": {
+   "code": "4-J",
+   "major": "消化器系",
+   "mid": "腹膜",
+   "points": [
+    "digestive-7"
+   ]
+  },
+  "23-46": {
+   "code": "5-E",
+   "major": "呼吸器系",
+   "mid": "肺",
+   "points": [
+    "respiratory-2"
+   ]
+  },
+  "23-47": {
+   "code": "5-E",
+   "major": "呼吸器系",
+   "mid": "肺",
+   "points": [
+    "respiratory-3"
+   ]
+  },
+  "23-48": {
+   "code": "6-B",
+   "major": "泌尿器系",
+   "mid": "腎臓",
+   "points": [
+    "urinary-2"
+   ]
+  },
+  "23-49": {
+   "code": "7-B",
+   "major": "生殖器系",
+   "mid": "男性生殖器",
+   "points": [
+    "reproductive-4"
+   ]
+  },
+  "23-50": {
+   "code": "7-C",
+   "major": "生殖器系",
+   "mid": "女性生殖器",
+   "points": [
+    "reproductive-3"
+   ]
+  },
+  "23-51": {
+   "code": "8-F",
+   "major": "内分泌器系",
+   "mid": "膵臓",
+   "points": [
+    "endocrine-6"
+   ]
+  },
+  "23-52": {
+   "code": "8-A",
+   "major": "内分泌器系",
+   "mid": "概説",
+   "points": [
+    "endocrine-1"
+   ]
+  },
+  "23-53": {
+   "code": "9-B",
+   "major": "神経系",
+   "mid": "脳",
+   "points": [
+    "cns-1"
+   ]
+  },
+  "23-54": {
+   "code": "9-D",
+   "major": "神経系",
+   "mid": "伝導路",
+   "points": [
+    "cns-8"
+   ]
+  },
+  "23-55": {
+   "code": "9-F",
+   "major": "神経系",
+   "mid": "脊髄神経",
+   "points": [
+    "pns-1"
+   ]
+  },
+  "23-56": {
+   "code": "9-G",
+   "major": "神経系",
+   "mid": "自律神経",
+   "points": [
+    "pns-3",
+    "pns-7"
+   ]
+  },
+  "23-57": {
+   "code": "10-B",
+   "major": "感覚器系",
+   "mid": "視覚器",
+   "points": [
+    "sensory-2"
+   ]
+  },
+  "23-58": {
+   "code": "10-D",
+   "major": "感覚器系",
+   "mid": "味覚器",
+   "points": [
+    "pns-7",
+    "sensory-6"
+   ]
+  },
+  "23-59": {
+   "code": "11-C",
+   "major": "体表解剖",
+   "mid": "筋",
+   "points": [
+    "surface-5"
+   ]
+  },
+  "23-60": {
+   "code": "2-E",
+   "major": "運動器系",
+   "mid": "頸部",
+   "points": [
+    "locomotor-general-7"
+   ]
+  },
+  "24-2": {
+   "code": "2-G",
+   "major": "運動器系",
+   "mid": "上肢",
+   "points": [
+    "upper-limb-3"
+   ]
+  },
+  "24-3": {
+   "code": "2-D",
+   "major": "運動器系",
+   "mid": "頭部",
+   "points": [
+    "locomotor-general-2"
+   ]
+  },
+  "24-4": {
+   "code": "9-G",
+   "major": "神経系",
+   "mid": "自律神経",
+   "points": [
+    "cns-6",
+    "pns-3"
+   ]
+  },
+  "24-31": {
+   "code": "1-C",
+   "major": "人体解剖学概説",
+   "mid": "組織",
+   "points": [
+    "overview-3"
+   ]
+  },
+  "24-32": {
+   "code": "2-A",
+   "major": "運動器系",
+   "mid": "骨",
+   "points": [
+    "locomotor-general-3",
+    "locomotor-general-4"
+   ]
+  },
+  "24-33": {
+   "code": "2-E",
+   "major": "運動器系",
+   "mid": "頸部",
+   "points": [
+    "locomotor-general-10"
+   ]
+  },
+  "24-34": {
+   "code": "2-F",
+   "major": "運動器系",
+   "mid": "体幹",
+   "points": [
+    "trunk-3"
+   ]
+  },
+  "24-36": {
+   "code": "2-H",
+   "major": "運動器系",
+   "mid": "下肢",
+   "points": [
+    "lower-limb-3"
+   ]
+  },
+  "24-37": {
+   "code": "3-B",
+   "major": "脈管系（循環器系）",
+   "mid": "心臓",
+   "points": [
+    "vascular-1"
+   ]
+  },
+  "24-38": {
+   "code": "3-C",
+   "major": "脈管系（循環器系）",
+   "mid": "動脈",
+   "points": [
+    "vascular-8"
+   ]
+  },
+  "24-39": {
+   "code": "3-C",
+   "major": "脈管系（循環器系）",
+   "mid": "動脈",
+   "points": [
+    "vascular-13"
+   ]
+  },
+  "24-40": {
+   "code": "3-E",
+   "major": "脈管系（循環器系）",
+   "mid": "リンパ系",
+   "points": [
+    "vascular-7"
+   ]
+  },
+  "24-41": {
+   "code": "3-F",
+   "major": "脈管系（循環器系）",
+   "mid": "胎児循環",
+   "points": [
+    "vascular-15"
+   ]
+  },
+  "24-42": {
+   "code": "4-D",
+   "major": "消化器系",
+   "mid": "食道",
+   "points": [
+    "digestive-6"
+   ]
+  },
+  "24-43": {
+   "code": "4-F",
+   "major": "消化器系",
+   "mid": "小腸",
+   "points": [
+    "digestive-9"
+   ]
+  },
+  "24-44": {
+   "code": "4-G",
+   "major": "消化器系",
+   "mid": "大腸",
+   "points": [
+    "digestive-2"
+   ]
+  },
+  "24-45": {
+   "code": "4-F",
+   "major": "消化器系",
+   "mid": "小腸",
+   "points": [
+    "digestive-4"
+   ]
+  },
+  "24-46": {
+   "code": "4-C",
+   "major": "消化器系",
+   "mid": "咽頭",
+   "points": [
+    "digestive-10"
+   ]
+  },
+  "24-47": {
+   "code": "2-G",
+   "major": "運動器系",
+   "mid": "上肢",
+   "points": [
+    "upper-limb-8"
+   ]
+  },
+  "24-48": {
+   "code": "5-E",
+   "major": "呼吸器系",
+   "mid": "肺",
+   "points": [
+    "respiratory-3"
+   ]
+  },
+  "24-49": {
+   "code": "6-B",
+   "major": "泌尿器系",
+   "mid": "腎臓",
+   "points": [
+    "urinary-3"
+   ]
+  },
+  "24-50": {
+   "code": "6-B",
+   "major": "泌尿器系",
+   "mid": "腎臓",
+   "points": [
+    "urinary-2"
+   ]
+  },
+  "24-51": {
+   "code": "7-B",
+   "major": "生殖器系",
+   "mid": "男性生殖器",
+   "points": [
+    "reproductive-2"
+   ]
+  },
+  "24-52": {
+   "code": "7-C",
+   "major": "生殖器系",
+   "mid": "女性生殖器",
+   "points": [
+    "reproductive-1"
+   ]
+  },
+  "24-54": {
+   "code": "9-D",
+   "major": "神経系",
+   "mid": "伝導路",
+   "points": [
+    "cns-9"
+   ]
+  },
+  "24-55": {
+   "code": "9-B",
+   "major": "神経系",
+   "mid": "脳",
+   "points": [
+    "cns-2",
+    "cns-7"
+   ]
+  },
+  "24-56": {
+   "code": "9-E",
+   "major": "神経系",
+   "mid": "脳神経",
+   "points": [
+    "pns-2"
+   ]
+  },
+  "24-57": {
+   "code": "9-G",
+   "major": "神経系",
+   "mid": "自律神経",
+   "points": [
+    "pns-3"
+   ]
+  },
+  "24-58": {
+   "code": "10-C",
+   "major": "感覚器系",
+   "mid": "聴覚器・平衡覚器",
+   "points": [
+    "sensory-4"
+   ]
+  },
+  "24-59": {
+   "code": "11-D",
+   "major": "体表解剖",
+   "mid": "脈管",
+   "points": [
+    "surface-1"
+   ]
+  },
+  "24-60": {
+   "code": "11-E",
+   "major": "体表解剖",
+   "mid": "神経",
+   "points": [
+    "pns-1",
+    "surface-4"
+   ]
+  },
+  "25-2": {
+   "code": "2-F",
+   "major": "運動器系",
+   "mid": "体幹",
+   "points": [
+    "trunk-1"
+   ]
+  },
+  "25-3": {
+   "code": "2-A",
+   "major": "運動器系",
+   "mid": "骨",
+   "points": [
+    "locomotor-general-11"
+   ]
+  },
+  "25-4": {
+   "code": "11-D",
+   "major": "体表解剖",
+   "mid": "脈管",
+   "points": [
+    "surface-1"
+   ]
+  },
+  "25-31": {
+   "code": "1-C",
+   "major": "人体解剖学概説",
+   "mid": "組織",
+   "points": [
+    "overview-3"
+   ]
+  },
+  "25-32": {
+   "code": "2-D",
+   "major": "運動器系",
+   "mid": "頭部",
+   "points": [
+    "locomotor-general-9"
+   ]
+  },
+  "25-33": {
+   "code": "2-F",
+   "major": "運動器系",
+   "mid": "体幹",
+   "points": [
+    "trunk-7"
+   ]
+  },
+  "25-35": {
+   "code": "2-G",
+   "major": "運動器系",
+   "mid": "上肢",
+   "points": [
+    "upper-limb-2"
+   ]
+  },
+  "25-36": {
+   "code": "2-G",
+   "major": "運動器系",
+   "mid": "上肢",
+   "points": [
+    "upper-limb-1"
+   ]
+  },
+  "25-37": {
+   "code": "2-C",
+   "major": "運動器系",
+   "mid": "筋",
+   "points": [
+    "locomotor-general-6"
+   ]
+  },
+  "25-38": {
+   "code": "2-H",
+   "major": "運動器系",
+   "mid": "下肢",
+   "points": [
+    "lower-limb-5"
+   ]
+  },
+  "25-40": {
+   "code": "3-C",
+   "major": "脈管系（循環器系）",
+   "mid": "動脈",
+   "points": [
+    "vascular-4"
+   ]
+  },
+  "25-41": {
+   "code": "3-D",
+   "major": "脈管系（循環器系）",
+   "mid": "静脈",
+   "points": [
+    "vascular-3"
+   ]
+  },
+  "25-42": {
+   "code": "4-A",
+   "major": "消化器系",
+   "mid": "概説",
+   "points": [
+    "digestive-2"
+   ]
+  },
+  "25-43": {
+   "code": "4-F",
+   "major": "消化器系",
+   "mid": "小腸",
+   "points": [
+    "digestive-4"
+   ]
+  },
+  "25-44": {
+   "code": "4-F",
+   "major": "消化器系",
+   "mid": "小腸",
+   "points": [
+    "digestive-1"
+   ]
+  },
+  "25-45": {
+   "code": "5-D",
+   "major": "呼吸器系",
+   "mid": "気管および気管支",
+   "points": [
+    "respiratory-1"
+   ]
+  },
+  "25-46": {
+   "code": "5-G",
+   "major": "呼吸器系",
+   "mid": "縦隔",
+   "points": [
+    "respiratory-5"
+   ]
+  },
+  "25-47": {
+   "code": "6-C",
+   "major": "泌尿器系",
+   "mid": "尿管",
+   "points": [
+    "urinary-4"
+   ]
+  },
+  "25-48": {
+   "code": "6-E",
+   "major": "泌尿器系",
+   "mid": "尿道",
+   "points": [
+    "urinary-5"
+   ]
+  },
+  "25-49": {
+   "code": "7-B",
+   "major": "生殖器系",
+   "mid": "男性生殖器",
+   "points": [
+    "reproductive-2"
+   ]
+  },
+  "25-50": {
+   "code": "7-C",
+   "major": "生殖器系",
+   "mid": "女性生殖器",
+   "points": [
+    "reproductive-1"
+   ]
+  },
+  "25-51": {
+   "code": "8-H",
+   "major": "内分泌器系",
+   "mid": "卵巣",
+   "points": [
+    "reproductive-3",
+    "endocrine-5"
+   ]
+  },
+  "25-53": {
+   "code": "9-E",
+   "major": "神経系",
+   "mid": "脳神経",
+   "points": [
+    "pns-4"
+   ]
+  },
+  "25-54": {
+   "code": "9-B",
+   "major": "神経系",
+   "mid": "脳",
+   "points": [
+    "cns-5"
+   ]
+  },
+  "25-55": {
+   "code": "9-E",
+   "major": "神経系",
+   "mid": "脳神経",
+   "points": [
+    "respiratory-6",
+    "pns-5"
+   ]
+  },
+  "25-56": {
+   "code": "9-F",
+   "major": "神経系",
+   "mid": "脊髄神経",
+   "points": [
+    "pns-1"
+   ]
+  },
+  "25-57": {
+   "code": "9-G",
+   "major": "神経系",
+   "mid": "自律神経",
+   "points": [
+    "pns-3"
+   ]
+  },
+  "25-58": {
+   "code": "10-A",
+   "major": "感覚器系",
+   "mid": "外皮",
+   "points": [
+    "sensory-3"
+   ]
+  },
+  "25-59": {
+   "code": "10-C",
+   "major": "感覚器系",
+   "mid": "聴覚器・平衡覚器",
+   "points": [
+    "sensory-5"
+   ]
+  },
+  "25-60": {
+   "code": "11-B",
+   "major": "体表解剖",
+   "mid": "骨格",
+   "points": [
+    "surface-2"
+   ]
+  },
+  "26-1": {
+   "code": "1-E",
+   "major": "人体解剖学概説",
+   "mid": "人体の発生",
+   "points": [
+    "overview-7"
+   ]
+  },
+  "26-2": {
+   "code": "2-F",
+   "major": "運動器系",
+   "mid": "体幹",
+   "points": [
+    "trunk-1"
+   ]
+  },
+  "26-3": {
+   "code": "2-B",
+   "major": "運動器系",
+   "mid": "骨の連結",
+   "points": [
+    "locomotor-general-8"
+   ]
+  },
+  "26-4": {
+   "code": "9-B",
+   "major": "神経系",
+   "mid": "脳",
+   "points": [
+    "cns-2"
+   ]
+  },
+  "26-31": {
+   "code": "1-E",
+   "major": "人体解剖学概説",
+   "mid": "人体の発生",
+   "points": [
+    "overview-9"
+   ]
+  },
+  "26-32": {
+   "code": "2-D",
+   "major": "運動器系",
+   "mid": "頭部",
+   "points": [
+    "locomotor-general-2"
+   ]
+  },
+  "26-33": {
+   "code": "2-F",
+   "major": "運動器系",
+   "mid": "体幹",
+   "points": [
+    "trunk-1"
+   ]
+  },
+  "26-34": {
+   "code": "2-G",
+   "major": "運動器系",
+   "mid": "上肢",
+   "points": [
+    "upper-limb-3"
+   ]
+  },
+  "26-35": {
+   "code": "2-G",
+   "major": "運動器系",
+   "mid": "上肢",
+   "points": [
+    "upper-limb-3"
+   ]
+  },
+  "26-36": {
+   "code": "2-G",
+   "major": "運動器系",
+   "mid": "上肢",
+   "points": [
+    "upper-limb-4"
+   ]
+  },
+  "26-38": {
+   "code": "3-A",
+   "major": "脈管系（循環器系）",
+   "mid": "概説",
+   "points": [
+    "vascular-9"
+   ]
+  },
+  "26-39": {
+   "code": "3-C",
+   "major": "脈管系（循環器系）",
+   "mid": "動脈",
+   "points": [
+    "vascular-4"
+   ]
+  },
+  "26-40": {
+   "code": "4-B",
+   "major": "消化器系",
+   "mid": "口腔",
+   "points": [
+    "digestive-5"
+   ]
+  },
+  "26-41": {
+   "code": "3-C",
+   "major": "脈管系（循環器系）",
+   "mid": "動脈",
+   "points": [
+    "vascular-2"
+   ]
+  },
+  "26-42": {
+   "code": "4-J",
+   "major": "消化器系",
+   "mid": "腹膜",
+   "points": [
+    "digestive-7"
+   ]
+  },
+  "26-43": {
+   "code": "5-B",
+   "major": "呼吸器系",
+   "mid": "鼻",
+   "points": [
+    "respiratory-7"
+   ]
+  },
+  "26-44": {
+   "code": "5-G",
+   "major": "呼吸器系",
+   "mid": "縦隔",
+   "points": [
+    "respiratory-5"
+   ]
+  },
+  "26-45": {
+   "code": "6-B",
+   "major": "泌尿器系",
+   "mid": "腎臓",
+   "points": [
+    "urinary-2"
+   ]
+  },
+  "26-46": {
+   "code": "6-B",
+   "major": "泌尿器系",
+   "mid": "腎臓",
+   "points": [
+    "urinary-1"
+   ]
+  },
+  "26-47": {
+   "code": "7-B",
+   "major": "生殖器系",
+   "mid": "男性生殖器",
+   "points": [
+    "reproductive-5"
+   ]
+  },
+  "26-48": {
+   "code": "7-B",
+   "major": "生殖器系",
+   "mid": "男性生殖器",
+   "points": [
+    "reproductive-2"
+   ]
+  },
+  "26-49": {
+   "code": "7-B",
+   "major": "生殖器系",
+   "mid": "男性生殖器",
+   "points": [
+    "reproductive-4"
+   ]
+  },
+  "26-50": {
+   "code": "8-B",
+   "major": "内分泌器系",
+   "mid": "下垂体",
+   "points": [
+    "endocrine-2"
+   ]
+  },
+  "26-51": {
+   "code": "8-E",
+   "major": "内分泌器系",
+   "mid": "副腎",
+   "points": [
+    "endocrine-3"
+   ]
+  },
+  "26-53": {
+   "code": "9-B",
+   "major": "神経系",
+   "mid": "脳",
+   "points": [
+    "cns-10"
+   ]
+  },
+  "26-54": {
+   "code": "9-D",
+   "major": "神経系",
+   "mid": "伝導路",
+   "points": [
+    "cns-8"
+   ]
+  },
+  "26-55": {
+   "code": "9-E",
+   "major": "神経系",
+   "mid": "脳神経",
+   "points": [
+    "pns-2"
+   ]
+  },
+  "26-56": {
+   "code": "9-F",
+   "major": "神経系",
+   "mid": "脊髄神経",
+   "points": [
+    "pns-1"
+   ]
+  },
+  "26-58": {
+   "code": "10-B",
+   "major": "感覚器系",
+   "mid": "視覚器",
+   "points": [
+    "sensory-2"
+   ]
+  },
+  "26-59": {
+   "code": "10-C",
+   "major": "感覚器系",
+   "mid": "聴覚器・平衡覚器",
+   "points": [
+    "sensory-4"
+   ]
+  },
+  "26-60": {
+   "code": "11-H",
+   "major": "体表解剖",
+   "mid": "生体計測",
+   "points": [
+    "surface-3"
+   ]
+  },
+  "27-1": {
+   "code": "2-B",
+   "major": "運動器系",
+   "mid": "骨の連結",
+   "points": [
+    "locomotor-general-1"
+   ]
+  },
+  "27-2": {
+   "code": "2-B",
+   "major": "運動器系",
+   "mid": "骨の連結",
+   "points": [
+    "locomotor-general-1"
+   ]
+  },
+  "27-3": {
+   "code": "2-B",
+   "major": "運動器系",
+   "mid": "骨の連結",
+   "points": [
+    "locomotor-general-8"
+   ]
+  },
+  "27-4": {
+   "code": "2-H",
+   "major": "運動器系",
+   "mid": "下肢",
+   "points": [
+    "lower-limb-2"
+   ]
+  },
+  "27-31": {
+   "code": "1-C",
+   "major": "人体解剖学概説",
+   "mid": "組織",
+   "points": [
+    "overview-3"
+   ]
+  },
+  "27-32": {
+   "code": "2-A",
+   "major": "運動器系",
+   "mid": "骨",
+   "points": [
+    "locomotor-general-3"
+   ]
+  },
+  "27-33": {
+   "code": "2-H",
+   "major": "運動器系",
+   "mid": "下肢",
+   "points": [
+    "lower-limb-4"
+   ]
+  },
+  "27-34": {
+   "code": "2-D",
+   "major": "運動器系",
+   "mid": "頭部",
+   "points": [
+    "locomotor-general-2"
+   ]
+  },
+  "27-35": {
+   "code": "2-D",
+   "major": "運動器系",
+   "mid": "頭部",
+   "points": [
+    "locomotor-general-10"
+   ]
+  },
+  "27-36": {
+   "code": "2-H",
+   "major": "運動器系",
+   "mid": "下肢",
+   "points": [
+    "lower-limb-3"
+   ]
+  },
+  "27-37": {
+   "code": "2-H",
+   "major": "運動器系",
+   "mid": "下肢",
+   "points": [
+    "lower-limb-11"
+   ]
+  },
+  "27-38": {
+   "code": "2-H",
+   "major": "運動器系",
+   "mid": "下肢",
+   "points": [
+    "lower-limb-4"
+   ]
+  },
+  "27-39": {
+   "code": "3-B",
+   "major": "脈管系（循環器系）",
+   "mid": "心臓",
+   "points": [
+    "vascular-1"
+   ]
+  },
+  "27-40": {
+   "code": "3-C",
+   "major": "脈管系（循環器系）",
+   "mid": "動脈",
+   "points": [
+    "vascular-10",
+    "vascular-13"
+   ]
+  },
+  "27-41": {
+   "code": "3-D",
+   "major": "脈管系（循環器系）",
+   "mid": "静脈",
+   "points": [
+    "vascular-6"
+   ]
+  },
+  "27-42": {
+   "code": "4-G",
+   "major": "消化器系",
+   "mid": "大腸",
+   "points": [
+    "digestive-2"
+   ]
+  },
+  "27-43": {
+   "code": "4-G",
+   "major": "消化器系",
+   "mid": "大腸",
+   "points": [
+    "digestive-2"
+   ]
+  },
+  "27-44": {
+   "code": "4-G",
+   "major": "消化器系",
+   "mid": "大腸",
+   "points": [
+    "digestive-2"
+   ]
+  },
+  "27-45": {
+   "code": "5-C",
+   "major": "呼吸器系",
+   "mid": "喉頭",
+   "points": [
+    "respiratory-4"
+   ]
+  },
+  "27-46": {
+   "code": "5-E",
+   "major": "呼吸器系",
+   "mid": "肺",
+   "points": [
+    "respiratory-2"
+   ]
+  },
+  "27-47": {
+   "code": "2-F",
+   "major": "運動器系",
+   "mid": "体幹",
+   "points": [
+    "trunk-5"
+   ]
+  },
+  "27-48": {
+   "code": "6-B",
+   "major": "泌尿器系",
+   "mid": "腎臓",
+   "points": [
+    "urinary-1"
+   ]
+  },
+  "27-49": {
+   "code": "6-D",
+   "major": "泌尿器系",
+   "mid": "膀胱",
+   "points": [
+    "urinary-6"
+   ]
+  },
+  "27-50": {
+   "code": "7-B",
+   "major": "生殖器系",
+   "mid": "男性生殖器",
+   "points": [
+    "reproductive-2"
+   ]
+  },
+  "27-51": {
+   "code": "7-C",
+   "major": "生殖器系",
+   "mid": "女性生殖器",
+   "points": [
+    "reproductive-6"
+   ]
+  },
+  "27-52": {
+   "code": "8-A",
+   "major": "内分泌器系",
+   "mid": "概説",
+   "points": [
+    "endocrine-1"
+   ]
+  },
+  "27-53": {
+   "code": "9-B",
+   "major": "神経系",
+   "mid": "脳",
+   "points": [
+    "cns-10"
+   ]
+  },
+  "27-54": {
+   "code": "9-D",
+   "major": "神経系",
+   "mid": "伝導路",
+   "points": [
+    "cns-7"
+   ]
+  },
+  "27-55": {
+   "code": "9-E",
+   "major": "神経系",
+   "mid": "脳神経",
+   "points": [
+    "pns-4"
+   ]
+  },
+  "27-56": {
+   "code": "9-F",
+   "major": "神経系",
+   "mid": "脊髄神経",
+   "points": [
+    "pns-1"
+   ]
+  },
+  "27-57": {
+   "code": "9-F",
+   "major": "神経系",
+   "mid": "脊髄神経",
+   "points": [
+    "pns-10"
+   ]
+  },
+  "27-58": {
+   "code": "9-E",
+   "major": "神経系",
+   "mid": "脳神経",
+   "points": [
+    "sensory-1"
+   ]
+  },
+  "27-59": {
+   "code": "10-C",
+   "major": "感覚器系",
+   "mid": "聴覚器・平衡覚器",
+   "points": [
+    "sensory-4"
+   ]
+  },
+  "27-60": {
+   "code": "11-B",
+   "major": "体表解剖",
+   "mid": "骨格",
+   "points": [
+    "surface-2"
+   ]
+  },
+  "28-51": {
+   "code": "1-C",
+   "major": "人体解剖学概説",
+   "mid": "組織",
+   "points": [
+    "overview-1"
+   ]
+  },
+  "28-52": {
+   "code": "1-E",
+   "major": "人体解剖学概説",
+   "mid": "人体の発生",
+   "points": [
+    "overview-2"
+   ]
+  },
+  "28-53": {
+   "code": "2-C",
+   "major": "運動器系",
+   "mid": "筋",
+   "points": [
+    "locomotor-general-6"
+   ]
+  },
+  "28-54": {
+   "code": "2-D",
+   "major": "運動器系",
+   "mid": "頭部",
+   "points": [
+    "locomotor-general-4"
+   ]
+  },
+  "28-56": {
+   "code": "2-F",
+   "major": "運動器系",
+   "mid": "体幹",
+   "points": [
+    "trunk-2"
+   ]
+  },
+  "28-57": {
+   "code": "2-F",
+   "major": "運動器系",
+   "mid": "体幹",
+   "points": [
+    "trunk-6"
+   ]
+  },
+  "28-58": {
+   "code": "2-G",
+   "major": "運動器系",
+   "mid": "上肢",
+   "points": [
+    "upper-limb-2"
+   ]
+  },
+  "28-59": {
+   "code": "2-H",
+   "major": "運動器系",
+   "mid": "下肢",
+   "points": [
+    "lower-limb-8"
+   ]
+  },
+  "28-61": {
+   "code": "3-D",
+   "major": "脈管系（循環器系）",
+   "mid": "静脈",
+   "points": [
+    "vascular-3"
+   ]
+  },
+  "28-62": {
+   "code": "3-E",
+   "major": "脈管系（循環器系）",
+   "mid": "リンパ系",
+   "points": [
+    "vascular-14"
+   ]
+  },
+  "28-63": {
+   "code": "4-B",
+   "major": "消化器系",
+   "mid": "口腔",
+   "points": [
+    "digestive-5"
+   ]
+  },
+  "28-64": {
+   "code": "4-E",
+   "major": "消化器系",
+   "mid": "胃",
+   "points": [
+    "digestive-3"
+   ]
+  },
+  "28-65": {
+   "code": "4-F",
+   "major": "消化器系",
+   "mid": "小腸",
+   "points": [
+    "digestive-9"
+   ]
+  },
+  "28-66": {
+   "code": "5-C",
+   "major": "呼吸器系",
+   "mid": "喉頭",
+   "points": [
+    "respiratory-4"
+   ]
+  },
+  "28-67": {
+   "code": "5-E",
+   "major": "呼吸器系",
+   "mid": "肺",
+   "points": [
+    "respiratory-3",
+    "respiratory-8"
+   ]
+  },
+  "28-68": {
+   "code": "6-B",
+   "major": "泌尿器系",
+   "mid": "腎臓",
+   "points": [
+    "urinary-2"
+   ]
+  },
+  "28-69": {
+   "code": "6-C",
+   "major": "泌尿器系",
+   "mid": "尿管",
+   "points": [
+    "urinary-4"
+   ]
+  },
+  "28-70": {
+   "code": "7-A",
+   "major": "生殖器系",
+   "mid": "概説",
+   "points": [
+    "reproductive-7"
+   ]
+  },
+  "28-71": {
+   "code": "8-H",
+   "major": "内分泌器系",
+   "mid": "卵巣",
+   "points": [
+    "reproductive-3",
+    "endocrine-5"
+   ]
+  },
+  "28-72": {
+   "code": "8-B",
+   "major": "内分泌器系",
+   "mid": "下垂体",
+   "points": [
+    "endocrine-2"
+   ]
+  },
+  "28-73": {
+   "code": "9-B",
+   "major": "神経系",
+   "mid": "脳",
+   "points": [
+    "cns-1"
+   ]
+  },
+  "28-75": {
+   "code": "9-D",
+   "major": "神経系",
+   "mid": "伝導路",
+   "points": [
+    "cns-9"
+   ]
+  },
+  "28-76": {
+   "code": "9-E",
+   "major": "神経系",
+   "mid": "脳神経",
+   "points": [
+    "pns-4"
+   ]
+  },
+  "28-77": {
+   "code": "9-F",
+   "major": "神経系",
+   "mid": "脊髄神経",
+   "points": [
+    "lower-limb-5",
+    "pns-6"
+   ]
+  },
+  "28-78": {
+   "code": "9-F",
+   "major": "神経系",
+   "mid": "脊髄神経",
+   "points": [
+    "upper-limb-7"
+   ]
+  },
+  "28-79": {
+   "code": "10-B",
+   "major": "感覚器系",
+   "mid": "視覚器",
+   "points": [
+    "sensory-2"
+   ]
+  },
+  "28-80": {
+   "code": "11-B",
+   "major": "体表解剖",
+   "mid": "骨格",
+   "points": [
+    "surface-2"
+   ]
+  },
+  "29-51": {
+   "code": "1-B",
+   "major": "人体解剖学概説",
+   "mid": "細胞",
+   "points": [
+    "overview-7"
+   ]
+  },
+  "29-52": {
+   "code": "1-C",
+   "major": "人体解剖学概説",
+   "mid": "組織",
+   "points": [
+    "overview-4"
+   ]
+  },
+  "29-53": {
+   "code": "2-F",
+   "major": "運動器系",
+   "mid": "体幹",
+   "points": [
+    "trunk-6"
+   ]
+  },
+  "29-54": {
+   "code": "2-F",
+   "major": "運動器系",
+   "mid": "体幹",
+   "points": [
+    "trunk-1"
+   ]
+  },
+  "29-55": {
+   "code": "2-G",
+   "major": "運動器系",
+   "mid": "上肢",
+   "points": [
+    "upper-limb-2"
+   ]
+  },
+  "29-57": {
+   "code": "2-H",
+   "major": "運動器系",
+   "mid": "下肢",
+   "points": [
+    "lower-limb-2"
+   ]
+  },
+  "29-58": {
+   "code": "2-H",
+   "major": "運動器系",
+   "mid": "下肢",
+   "points": [
+    "lower-limb-6"
+   ]
+  },
+  "29-59": {
+   "code": "2-H",
+   "major": "運動器系",
+   "mid": "下肢",
+   "points": [
+    "lower-limb-3"
+   ]
+  },
+  "29-60": {
+   "code": "3-D",
+   "major": "脈管系（循環器系）",
+   "mid": "静脈",
+   "points": [
+    "vascular-3"
+   ]
+  },
+  "29-61": {
+   "code": "10-D",
+   "major": "感覚器系",
+   "mid": "味覚器",
+   "points": [
+    "sensory-6"
+   ]
+  },
+  "29-62": {
+   "code": "3-C",
+   "major": "脈管系（循環器系）",
+   "mid": "動脈",
+   "points": [
+    "vascular-2"
+   ]
+  },
+  "29-63": {
+   "code": "4-D",
+   "major": "消化器系",
+   "mid": "食道",
+   "points": [
+    "digestive-6"
+   ]
+  },
+  "29-64": {
+   "code": "5-D",
+   "major": "呼吸器系",
+   "mid": "気管および気管支",
+   "points": [
+    "respiratory-1"
+   ]
+  },
+  "29-65": {
+   "code": "6-B",
+   "major": "泌尿器系",
+   "mid": "腎臓",
+   "points": [
+    "urinary-2"
+   ]
+  },
+  "29-66": {
+   "code": "6-E",
+   "major": "泌尿器系",
+   "mid": "尿道",
+   "points": [
+    "urinary-5"
+   ]
+  },
+  "29-67": {
+   "code": "7-B",
+   "major": "生殖器系",
+   "mid": "男性生殖器",
+   "points": [
+    "reproductive-2"
+   ]
+  },
+  "29-68": {
+   "code": "7-C",
+   "major": "生殖器系",
+   "mid": "女性生殖器",
+   "points": [
+    "reproductive-3"
+   ]
+  },
+  "29-69": {
+   "code": "8-D",
+   "major": "内分泌器系",
+   "mid": "甲状腺",
+   "points": [
+    "endocrine-4"
+   ]
+  },
+  "29-70": {
+   "code": "8-E",
+   "major": "内分泌器系",
+   "mid": "副腎",
+   "points": [
+    "endocrine-3"
+   ]
+  },
+  "29-71": {
+   "code": "9-A",
+   "major": "神経系",
+   "mid": "概説（分類・髄膜）",
+   "points": [
+    "cns-4"
+   ]
+  },
+  "29-72": {
+   "code": "9-D",
+   "major": "神経系",
+   "mid": "伝導路",
+   "points": [
+    "cns-7"
+   ]
+  },
+  "29-73": {
+   "code": "9-E",
+   "major": "神経系",
+   "mid": "脳神経",
+   "points": [
+    "pns-5"
+   ]
+  },
+  "29-74": {
+   "code": "9-E",
+   "major": "神経系",
+   "mid": "脳神経",
+   "points": [
+    "pns-2"
+   ]
+  },
+  "29-75": {
+   "code": "2-E",
+   "major": "運動器系",
+   "mid": "頸部",
+   "points": [
+    "locomotor-general-7",
+    "pns-1"
+   ]
+  },
+  "29-76": {
+   "code": "9-F",
+   "major": "神経系",
+   "mid": "脊髄神経",
+   "points": [
+    "lower-limb-5",
+    "pns-6"
+   ]
+  },
+  "29-77": {
+   "code": "9-F",
+   "major": "神経系",
+   "mid": "脊髄神経",
+   "points": [
+    "pns-9"
+   ]
+  },
+  "29-78": {
+   "code": "9-E",
+   "major": "神経系",
+   "mid": "脳神経",
+   "points": [
+    "sensory-1"
+   ]
+  },
+  "29-79": {
+   "code": "11-B",
+   "major": "体表解剖",
+   "mid": "骨格",
+   "points": [
+    "surface-7"
+   ]
+  },
+  "29-80": {
+   "code": "11-D",
+   "major": "体表解剖",
+   "mid": "脈管",
+   "points": [
+    "surface-1"
+   ]
+  },
+  "30-51": {
+   "code": "1-C",
+   "major": "人体解剖学概説",
+   "mid": "組織",
+   "points": [
+    "overview-1"
+   ]
+  },
+  "30-52": {
+   "code": "10-B",
+   "major": "感覚器系",
+   "mid": "視覚器",
+   "points": [
+    "sensory-1"
+   ]
+  },
+  "30-53": {
+   "code": "2-D",
+   "major": "運動器系",
+   "mid": "頭部",
+   "points": [
+    "locomotor-general-5"
+   ]
+  },
+  "30-54": {
+   "code": "2-F",
+   "major": "運動器系",
+   "mid": "体幹",
+   "points": [
+    "trunk-2"
+   ]
+  },
+  "30-56": {
+   "code": "2-F",
+   "major": "運動器系",
+   "mid": "体幹",
+   "points": [
+    "trunk-3"
+   ]
+  },
+  "30-57": {
+   "code": "2-G",
+   "major": "運動器系",
+   "mid": "上肢",
+   "points": [
+    "upper-limb-1"
+   ]
+  },
+  "30-58": {
+   "code": "2-H",
+   "major": "運動器系",
+   "mid": "下肢",
+   "points": [
+    "lower-limb-5"
+   ]
+  },
+  "30-59": {
+   "code": "3-C",
+   "major": "脈管系（循環器系）",
+   "mid": "動脈",
+   "points": [
+    "vascular-5"
+   ]
+  },
+  "30-60": {
+   "code": "3-E",
+   "major": "脈管系（循環器系）",
+   "mid": "リンパ系",
+   "points": [
+    "vascular-7"
+   ]
+  },
+  "30-61": {
+   "code": "4-B",
+   "major": "消化器系",
+   "mid": "口腔",
+   "points": [
+    "digestive-5"
+   ]
+  },
+  "30-62": {
+   "code": "4-F",
+   "major": "消化器系",
+   "mid": "小腸",
+   "points": [
+    "digestive-1"
+   ]
+  },
+  "30-63": {
+   "code": "5-C",
+   "major": "呼吸器系",
+   "mid": "喉頭",
+   "points": [
+    "respiratory-4"
+   ]
+  },
+  "30-64": {
+   "code": "5-D",
+   "major": "呼吸器系",
+   "mid": "気管および気管支",
+   "points": [
+    "respiratory-1"
+   ]
+  },
+  "30-65": {
+   "code": "6-B",
+   "major": "泌尿器系",
+   "mid": "腎臓",
+   "points": [
+    "urinary-1"
+   ]
+  },
+  "30-66": {
+   "code": "6-E",
+   "major": "泌尿器系",
+   "mid": "尿道",
+   "points": [
+    "urinary-5"
+   ]
+  },
+  "30-67": {
+   "code": "7-B",
+   "major": "生殖器系",
+   "mid": "男性生殖器",
+   "points": [
+    "reproductive-5"
+   ]
+  },
+  "30-68": {
+   "code": "8-B",
+   "major": "内分泌器系",
+   "mid": "下垂体",
+   "points": [
+    "endocrine-2"
+   ]
+  },
+  "30-69": {
+   "code": "9-B",
+   "major": "神経系",
+   "mid": "脳",
+   "points": [
+    "cns-5"
+   ]
+  },
+  "30-70": {
+   "code": "9-D",
+   "major": "神経系",
+   "mid": "伝導路",
+   "points": [
+    "cns-8"
+   ]
+  },
+  "30-71": {
+   "code": "9-D",
+   "major": "神経系",
+   "mid": "伝導路",
+   "points": [
+    "cns-8"
+   ]
+  },
+  "30-72": {
+   "code": "9-E",
+   "major": "神経系",
+   "mid": "脳神経",
+   "points": [
+    "pns-4"
+   ]
+  },
+  "30-73": {
+   "code": "9-E",
+   "major": "神経系",
+   "mid": "脳神経",
+   "points": [
+    "pns-2"
+   ]
+  },
+  "30-74": {
+   "code": "9-E",
+   "major": "神経系",
+   "mid": "脳神経",
+   "points": [
+    "vascular-10",
+    "pns-5"
+   ]
+  },
+  "30-75": {
+   "code": "9-F",
+   "major": "神経系",
+   "mid": "脊髄神経",
+   "points": [
+    "pns-6"
+   ]
+  },
+  "30-76": {
+   "code": "9-F",
+   "major": "神経系",
+   "mid": "脊髄神経",
+   "points": [
+    "pns-6"
+   ]
+  },
+  "30-77": {
+   "code": "10-A",
+   "major": "感覚器系",
+   "mid": "外皮",
+   "points": [
+    "sensory-3"
+   ]
+  },
+  "30-78": {
+   "code": "10-B",
+   "major": "感覚器系",
+   "mid": "視覚器",
+   "points": [
+    "sensory-2"
+   ]
+  },
+  "30-79": {
+   "code": "11-B",
+   "major": "体表解剖",
+   "mid": "骨格",
+   "points": [
+    "surface-2"
+   ]
+  },
+  "30-80": {
+   "code": "11-Z",
+   "major": "体表解剖",
+   "mid": "（出題基準に明記なし：画像）",
+   "points": [
+    "surface-3"
+   ]
+  },
+  "31-51": {
+   "code": "2-A",
+   "major": "運動器系",
+   "mid": "骨",
+   "points": [
+    "locomotor-general-3"
+   ]
+  },
+  "31-52": {
+   "code": "2-D",
+   "major": "運動器系",
+   "mid": "頭部",
+   "points": [
+    "locomotor-general-9"
+   ]
+  },
+  "31-53": {
+   "code": "2-G",
+   "major": "運動器系",
+   "mid": "上肢",
+   "points": [
+    "upper-limb-3"
+   ]
+  },
+  "31-54": {
+   "code": "2-G",
+   "major": "運動器系",
+   "mid": "上肢",
+   "points": [
+    "upper-limb-1"
+   ]
+  },
+  "31-56": {
+   "code": "2-H",
+   "major": "運動器系",
+   "mid": "下肢",
+   "points": [
+    "lower-limb-2"
+   ]
+  },
+  "31-58": {
+   "code": "3-B",
+   "major": "脈管系（循環器系）",
+   "mid": "心臓",
+   "points": [
+    "vascular-12"
+   ]
+  },
+  "31-59": {
+   "code": "3-F",
+   "major": "脈管系（循環器系）",
+   "mid": "胎児循環",
+   "points": [
+    "vascular-15"
+   ]
+  },
+  "31-60": {
+   "code": "4-E",
+   "major": "消化器系",
+   "mid": "胃",
+   "points": [
+    "digestive-3"
+   ]
+  },
+  "31-61": {
+   "code": "4-F",
+   "major": "消化器系",
+   "mid": "小腸",
+   "points": [
+    "digestive-1"
+   ]
+  },
+  "31-62": {
+   "code": "5-B",
+   "major": "呼吸器系",
+   "mid": "鼻",
+   "points": [
+    "respiratory-7"
+   ]
+  },
+  "31-63": {
+   "code": "5-E",
+   "major": "呼吸器系",
+   "mid": "肺",
+   "points": [
+    "respiratory-2"
+   ]
+  },
+  "31-64": {
+   "code": "5-G",
+   "major": "呼吸器系",
+   "mid": "縦隔",
+   "points": [
+    "respiratory-5"
+   ]
+  },
+  "31-65": {
+   "code": "6-B",
+   "major": "泌尿器系",
+   "mid": "腎臓",
+   "points": [
+    "urinary-2"
+   ]
+  },
+  "31-66": {
+   "code": "6-E",
+   "major": "泌尿器系",
+   "mid": "尿道",
+   "points": [
+    "urinary-5"
+   ]
+  },
+  "31-67": {
+   "code": "7-A",
+   "major": "生殖器系",
+   "mid": "概説",
+   "points": [
+    "reproductive-7"
+   ]
+  },
+  "31-68": {
+   "code": "7-C",
+   "major": "生殖器系",
+   "mid": "女性生殖器",
+   "points": [
+    "reproductive-1"
+   ]
+  },
+  "31-69": {
+   "code": "8-A",
+   "major": "内分泌器系",
+   "mid": "概説",
+   "points": [
+    "endocrine-1"
+   ]
+  },
+  "31-70": {
+   "code": "8-E",
+   "major": "内分泌器系",
+   "mid": "副腎",
+   "points": [
+    "endocrine-3"
+   ]
+  },
+  "31-71": {
+   "code": "9-A",
+   "major": "神経系",
+   "mid": "概説（分類・髄膜）",
+   "points": [
+    "cns-4"
+   ]
+  },
+  "31-72": {
+   "code": "9-B",
+   "major": "神経系",
+   "mid": "脳",
+   "points": [
+    "cns-1"
+   ]
+  },
+  "31-73": {
+   "code": "9-B",
+   "major": "神経系",
+   "mid": "脳",
+   "points": [
+    "cns-3"
+   ]
+  },
+  "31-74": {
+   "code": "2-D",
+   "major": "運動器系",
+   "mid": "頭部",
+   "points": [
+    "locomotor-general-5"
+   ]
+  },
+  "31-76": {
+   "code": "9-E",
+   "major": "神経系",
+   "mid": "脳神経",
+   "points": [
+    "pns-5"
+   ]
+  },
+  "31-77": {
+   "code": "10-A",
+   "major": "感覚器系",
+   "mid": "外皮",
+   "points": [
+    "sensory-3"
+   ]
+  },
+  "31-78": {
+   "code": "10-B",
+   "major": "感覚器系",
+   "mid": "視覚器",
+   "points": [
+    "sensory-1"
+   ]
+  },
+  "31-79": {
+   "code": "10-C",
+   "major": "感覚器系",
+   "mid": "聴覚器・平衡覚器",
+   "points": [
+    "sensory-5"
+   ]
+  },
+  "31-80": {
+   "code": "11-B",
+   "major": "体表解剖",
+   "mid": "骨格",
+   "points": [
+    "surface-7"
+   ]
+  },
+  "32-51": {
+   "code": "1-C",
+   "major": "人体解剖学概説",
+   "mid": "組織",
+   "points": [
+    "overview-3"
+   ]
+  },
+  "32-52": {
+   "code": "2-D",
+   "major": "運動器系",
+   "mid": "頭部",
+   "points": [
+    "locomotor-general-4"
+   ]
+  },
+  "32-53": {
+   "code": "2-E",
+   "major": "運動器系",
+   "mid": "頸部",
+   "points": [
+    "locomotor-general-7"
+   ]
+  },
+  "32-54": {
+   "code": "2-G",
+   "major": "運動器系",
+   "mid": "上肢",
+   "points": [
+    "upper-limb-1"
+   ]
+  },
+  "32-55": {
+   "code": "2-B",
+   "major": "運動器系",
+   "mid": "骨の連結",
+   "points": [
+    "locomotor-general-1"
+   ]
+  },
+  "32-56": {
+   "code": "2-F",
+   "major": "運動器系",
+   "mid": "体幹",
+   "points": [
+    "trunk-5"
+   ]
+  },
+  "32-57": {
+   "code": "2-H",
+   "major": "運動器系",
+   "mid": "下肢",
+   "points": [
+    "lower-limb-7"
+   ]
+  },
+  "32-58": {
+   "code": "2-H",
+   "major": "運動器系",
+   "mid": "下肢",
+   "points": [
+    "lower-limb-1"
+   ]
+  },
+  "32-59": {
+   "code": "3-C",
+   "major": "脈管系（循環器系）",
+   "mid": "動脈",
+   "points": [
+    "vascular-4"
+   ]
+  },
+  "32-60": {
+   "code": "2-D",
+   "major": "運動器系",
+   "mid": "頭部",
+   "points": [
+    "locomotor-general-2"
+   ]
+  },
+  "32-61": {
+   "code": "3-B",
+   "major": "脈管系（循環器系）",
+   "mid": "心臓",
+   "points": [
+    "vascular-1"
+   ]
+  },
+  "32-62": {
+   "code": "4-D",
+   "major": "消化器系",
+   "mid": "食道",
+   "points": [
+    "digestive-6"
+   ]
+  },
+  "32-63": {
+   "code": "4-F",
+   "major": "消化器系",
+   "mid": "小腸",
+   "points": [
+    "digestive-4"
+   ]
+  },
+  "32-65": {
+   "code": "4-H",
+   "major": "消化器系",
+   "mid": "肝臓",
+   "points": [
+    "digestive-8"
+   ]
+  },
+  "32-66": {
+   "code": "5-G",
+   "major": "呼吸器系",
+   "mid": "縦隔",
+   "points": [
+    "respiratory-5"
+   ]
+  },
+  "32-67": {
+   "code": "6-B",
+   "major": "泌尿器系",
+   "mid": "腎臓",
+   "points": [
+    "urinary-2"
+   ]
+  },
+  "32-68": {
+   "code": "7-B",
+   "major": "生殖器系",
+   "mid": "男性生殖器",
+   "points": [
+    "reproductive-2"
+   ]
+  },
+  "32-69": {
+   "code": "7-C",
+   "major": "生殖器系",
+   "mid": "女性生殖器",
+   "points": [
+    "reproductive-1"
+   ]
+  },
+  "32-70": {
+   "code": "8-E",
+   "major": "内分泌器系",
+   "mid": "副腎",
+   "points": [
+    "endocrine-3"
+   ]
+  },
+  "32-71": {
+   "code": "9-B",
+   "major": "神経系",
+   "mid": "脳",
+   "points": [
+    "cns-3"
+   ]
+  },
+  "32-73": {
+   "code": "9-B",
+   "major": "神経系",
+   "mid": "脳",
+   "points": [
+    "cns-2"
+   ]
+  },
+  "32-74": {
+   "code": "9-C",
+   "major": "神経系",
+   "mid": "脊髄",
+   "points": [
+    "cns-6"
+   ]
+  },
+  "32-75": {
+   "code": "9-E",
+   "major": "神経系",
+   "mid": "脳神経",
+   "points": [
+    "pns-2"
+   ]
+  },
+  "32-76": {
+   "code": "9-F",
+   "major": "神経系",
+   "mid": "脊髄神経",
+   "points": [
+    "upper-limb-7"
+   ]
+  },
+  "32-77": {
+   "code": "5-B",
+   "major": "呼吸器系",
+   "mid": "鼻",
+   "points": [
+    "respiratory-7",
+    "sensory-7"
+   ]
+  },
+  "32-78": {
+   "code": "10-D",
+   "major": "感覚器系",
+   "mid": "味覚器",
+   "points": [
+    "sensory-6"
+   ]
+  },
+  "33-51": {
+   "code": "1-C",
+   "major": "人体解剖学概説",
+   "mid": "組織",
+   "points": [
+    "overview-1"
+   ]
+  },
+  "33-52": {
+   "code": "1-C",
+   "major": "人体解剖学概説",
+   "mid": "組織",
+   "points": [
+    "overview-4"
+   ]
+  },
+  "33-53": {
+   "code": "1-E",
+   "major": "人体解剖学概説",
+   "mid": "人体の発生",
+   "points": [
+    "overview-2"
+   ]
+  },
+  "33-54": {
+   "code": "2-D",
+   "major": "運動器系",
+   "mid": "頭部",
+   "points": [
+    "locomotor-general-4"
+   ]
+  },
+  "33-55": {
+   "code": "2-B",
+   "major": "運動器系",
+   "mid": "骨の連結",
+   "points": [
+    "locomotor-general-1"
+   ]
+  },
+  "33-56": {
+   "code": "2-F",
+   "major": "運動器系",
+   "mid": "体幹",
+   "points": [
+    "trunk-3"
+   ]
+  },
+  "33-57": {
+   "code": "2-G",
+   "major": "運動器系",
+   "mid": "上肢",
+   "points": [
+    "upper-limb-2"
+   ]
+  },
+  "33-58": {
+   "code": "2-H",
+   "major": "運動器系",
+   "mid": "下肢",
+   "points": [
+    "lower-limb-10"
+   ]
+  },
+  "33-59": {
+   "code": "2-G",
+   "major": "運動器系",
+   "mid": "上肢",
+   "points": [
+    "upper-limb-4"
+   ]
+  },
+  "33-60": {
+   "code": "2-H",
+   "major": "運動器系",
+   "mid": "下肢",
+   "points": [
+    "lower-limb-1"
+   ]
+  },
+  "33-61": {
+   "code": "3-C",
+   "major": "脈管系（循環器系）",
+   "mid": "動脈",
+   "points": [
+    "vascular-10"
+   ]
+  },
+  "33-62": {
+   "code": "4-E",
+   "major": "消化器系",
+   "mid": "胃",
+   "points": [
+    "digestive-3"
+   ]
+  },
+  "33-63": {
+   "code": "4-F",
+   "major": "消化器系",
+   "mid": "小腸",
+   "points": [
+    "digestive-1"
+   ]
+  },
+  "33-64": {
+   "code": "5-C",
+   "major": "呼吸器系",
+   "mid": "喉頭",
+   "points": [
+    "respiratory-6"
+   ]
+  },
+  "33-65": {
+   "code": "5-E",
+   "major": "呼吸器系",
+   "mid": "肺",
+   "points": [
+    "respiratory-2"
+   ]
+  },
+  "33-66": {
+   "code": "5-F",
+   "major": "呼吸器系",
+   "mid": "胸膜",
+   "points": [
+    "respiratory-8"
+   ]
+  },
+  "33-67": {
+   "code": "7-C",
+   "major": "生殖器系",
+   "mid": "女性生殖器",
+   "points": [
+    "reproductive-1"
+   ]
+  },
+  "33-68": {
+   "code": "8-B",
+   "major": "内分泌器系",
+   "mid": "下垂体",
+   "points": [
+    "endocrine-2"
+   ]
+  },
+  "33-69": {
+   "code": "8-C",
+   "major": "内分泌器系",
+   "mid": "上皮小体（副甲状腺）",
+   "points": [
+    "endocrine-4"
+   ]
+  },
+  "33-70": {
+   "code": "9-B",
+   "major": "神経系",
+   "mid": "脳",
+   "points": [
+    "cns-3"
+   ]
+  },
+  "33-71": {
+   "code": "9-B",
+   "major": "神経系",
+   "mid": "脳",
+   "points": [
+    "cns-1"
+   ]
+  },
+  "33-72": {
+   "code": "9-E",
+   "major": "神経系",
+   "mid": "脳神経",
+   "points": [
+    "pns-2"
+   ]
+  },
+  "33-73": {
+   "code": "9-F",
+   "major": "神経系",
+   "mid": "脊髄神経",
+   "points": [
+    "pns-10"
+   ]
+  },
+  "33-74": {
+   "code": "9-F",
+   "major": "神経系",
+   "mid": "脊髄神経",
+   "points": [
+    "lower-limb-7",
+    "pns-6"
+   ]
+  },
+  "33-75": {
+   "code": "9-F",
+   "major": "神経系",
+   "mid": "脊髄神経",
+   "points": [
+    "pns-1"
+   ]
+  },
+  "33-76": {
+   "code": "9-G",
+   "major": "神経系",
+   "mid": "自律神経",
+   "points": [
+    "pns-3",
+    "sensory-1"
+   ]
+  },
+  "33-77": {
+   "code": "11-B",
+   "major": "体表解剖",
+   "mid": "骨格",
+   "points": [
+    "surface-2"
+   ]
+  },
+  "33-78": {
+   "code": "11-C",
+   "major": "体表解剖",
+   "mid": "筋",
+   "points": [
+    "surface-5"
+   ]
+  },
+  "33-79": {
+   "code": "11-D",
+   "major": "体表解剖",
+   "mid": "脈管",
+   "points": [
+    "vascular-6",
+    "surface-5"
+   ]
+  },
+  "33-80": {
+   "code": "11-D",
+   "major": "体表解剖",
+   "mid": "脈管",
+   "points": [
+    "surface-1"
+   ]
+  },
+  "34-51": {
+   "code": "1-B",
+   "major": "人体解剖学概説",
+   "mid": "細胞",
+   "points": [
+    "overview-6"
+   ]
+  },
+  "34-52": {
+   "code": "1-C",
+   "major": "人体解剖学概説",
+   "mid": "組織",
+   "points": [
+    "overview-1"
+   ]
+  },
+  "34-53": {
+   "code": "2-A",
+   "major": "運動器系",
+   "mid": "骨",
+   "points": [
+    "locomotor-general-3"
+   ]
+  },
+  "34-54": {
+   "code": "2-B",
+   "major": "運動器系",
+   "mid": "骨の連結",
+   "points": [
+    "locomotor-general-1"
+   ]
+  },
+  "34-55": {
+   "code": "2-D",
+   "major": "運動器系",
+   "mid": "頭部",
+   "points": [
+    "locomotor-general-5"
+   ]
+  },
+  "34-56": {
+   "code": "2-G",
+   "major": "運動器系",
+   "mid": "上肢",
+   "points": [
+    "upper-limb-3"
+   ]
+  },
+  "34-57": {
+   "code": "2-G",
+   "major": "運動器系",
+   "mid": "上肢",
+   "points": [
+    "upper-limb-1"
+   ]
+  },
+  "34-58": {
+   "code": "2-G",
+   "major": "運動器系",
+   "mid": "上肢",
+   "points": [
+    "upper-limb-5"
+   ]
+  },
+  "34-59": {
+   "code": "3-B",
+   "major": "脈管系（循環器系）",
+   "mid": "心臓",
+   "points": [
+    "vascular-1"
+   ]
+  },
+  "34-60": {
+   "code": "3-D",
+   "major": "脈管系（循環器系）",
+   "mid": "静脈",
+   "points": [
+    "vascular-6",
+    "vascular-11"
+   ]
+  },
+  "34-61": {
+   "code": "4-E",
+   "major": "消化器系",
+   "mid": "胃",
+   "points": [
+    "digestive-3"
+   ]
+  },
+  "34-62": {
+   "code": "4-F",
+   "major": "消化器系",
+   "mid": "小腸",
+   "points": [
+    "digestive-1"
+   ]
+  },
+  "34-63": {
+   "code": "5-D",
+   "major": "呼吸器系",
+   "mid": "気管および気管支",
+   "points": [
+    "respiratory-1"
+   ]
+  },
+  "34-64": {
+   "code": "5-G",
+   "major": "呼吸器系",
+   "mid": "縦隔",
+   "points": [
+    "respiratory-5"
+   ]
+  },
+  "34-65": {
+   "code": "6-A",
+   "major": "泌尿器系",
+   "mid": "概説",
+   "points": [
+    "urinary-1",
+    "urinary-6"
+   ]
+  },
+  "34-66": {
+   "code": "6-B",
+   "major": "泌尿器系",
+   "mid": "腎臓",
+   "points": [
+    "urinary-3"
+   ]
+  },
+  "34-67": {
+   "code": "7-B",
+   "major": "生殖器系",
+   "mid": "男性生殖器",
+   "points": [
+    "reproductive-5"
+   ]
+  },
+  "34-68": {
+   "code": "7-C",
+   "major": "生殖器系",
+   "mid": "女性生殖器",
+   "points": [
+    "reproductive-6"
+   ]
+  },
+  "34-69": {
+   "code": "8-A",
+   "major": "内分泌器系",
+   "mid": "概説",
+   "points": [
+    "endocrine-1"
+   ]
+  },
+  "34-70": {
+   "code": "8-D",
+   "major": "内分泌器系",
+   "mid": "甲状腺",
+   "points": [
+    "endocrine-4"
+   ]
+  },
+  "34-71": {
+   "code": "9-B",
+   "major": "神経系",
+   "mid": "脳",
+   "points": [
+    "cns-2"
+   ]
+  },
+  "34-72": {
+   "code": "9-B",
+   "major": "神経系",
+   "mid": "脳",
+   "points": [
+    "cns-1"
+   ]
+  },
+  "34-73": {
+   "code": "9-E",
+   "major": "神経系",
+   "mid": "脳神経",
+   "points": [
+    "pns-4"
+   ]
+  },
+  "34-74": {
+   "code": "9-F",
+   "major": "神経系",
+   "mid": "脊髄神経",
+   "points": [
+    "pns-6"
+   ]
+  },
+  "34-75": {
+   "code": "9-G",
+   "major": "神経系",
+   "mid": "自律神経",
+   "points": [
+    "pns-3"
+   ]
+  },
+  "34-76": {
+   "code": "10-B",
+   "major": "感覚器系",
+   "mid": "視覚器",
+   "points": [
+    "sensory-7"
+   ]
+  },
+  "34-77": {
+   "code": "10-C",
+   "major": "感覚器系",
+   "mid": "聴覚器・平衡覚器",
+   "points": [
+    "sensory-4"
+   ]
+  },
+  "34-78": {
+   "code": "2-G",
+   "major": "運動器系",
+   "mid": "上肢",
+   "points": [
+    "upper-limb-6"
+   ]
+  },
+  "34-79": {
+   "code": "11-D",
+   "major": "体表解剖",
+   "mid": "脈管",
+   "points": [
+    "surface-1"
+   ]
+  },
+  "34-80": {
+   "code": "11-Z",
+   "major": "体表解剖",
+   "mid": "（出題基準に明記なし：画像）",
+   "points": [
+    "surface-3"
+   ]
+  }
+ }
+}

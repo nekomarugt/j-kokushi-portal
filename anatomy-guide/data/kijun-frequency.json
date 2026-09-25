@@ -1,0 +1,453 @@
+{
+ "source": "https://www.zaijusei.com/doc/syutudai_kijun_2020.pdf",
+ "edition": "柔道整復師国家試験出題基準 2022年版（第30回〜適用、公益財団法人 柔道整復研修試験財団）",
+ "frequency": [
+  {
+   "major": "1",
+   "name": "人体解剖学概説",
+   "count": 32,
+   "mids": [
+    {
+     "code": "1-A",
+     "name": "解剖学用語",
+     "count": 0
+    },
+    {
+     "code": "1-B",
+     "name": "細胞",
+     "count": 6
+    },
+    {
+     "code": "1-C",
+     "name": "組織",
+     "count": 18
+    },
+    {
+     "code": "1-D",
+     "name": "器官系",
+     "count": 0
+    },
+    {
+     "code": "1-E",
+     "name": "人体の発生",
+     "count": 8
+    }
+   ]
+  },
+  {
+   "major": "2",
+   "name": "運動器系",
+   "count": 123,
+   "mids": [
+    {
+     "code": "2-A",
+     "name": "骨",
+     "count": 8
+    },
+    {
+     "code": "2-B",
+     "name": "骨の連結",
+     "count": 10
+    },
+    {
+     "code": "2-C",
+     "name": "筋",
+     "count": 4
+    },
+    {
+     "code": "2-D",
+     "name": "頭部",
+     "count": 17
+    },
+    {
+     "code": "2-E",
+     "name": "頸部",
+     "count": 4
+    },
+    {
+     "code": "2-F",
+     "name": "体幹",
+     "count": 25
+    },
+    {
+     "code": "2-G",
+     "name": "上肢",
+     "count": 24
+    },
+    {
+     "code": "2-H",
+     "name": "下肢",
+     "count": 31
+    }
+   ]
+  },
+  {
+   "major": "3",
+   "name": "脈管系（循環器系）",
+   "count": 56,
+   "mids": [
+    {
+     "code": "3-A",
+     "name": "概説",
+     "count": 4
+    },
+    {
+     "code": "3-B",
+     "name": "心臓",
+     "count": 12
+    },
+    {
+     "code": "3-C",
+     "name": "動脈",
+     "count": 21
+    },
+    {
+     "code": "3-D",
+     "name": "静脈",
+     "count": 11
+    },
+    {
+     "code": "3-E",
+     "name": "リンパ系",
+     "count": 6
+    },
+    {
+     "code": "3-F",
+     "name": "胎児循環",
+     "count": 2
+    }
+   ]
+  },
+  {
+   "major": "4",
+   "name": "消化器系",
+   "count": 39,
+   "mids": [
+    {
+     "code": "4-A",
+     "name": "概説",
+     "count": 1
+    },
+    {
+     "code": "4-B",
+     "name": "口腔",
+     "count": 4
+    },
+    {
+     "code": "4-C",
+     "name": "咽頭",
+     "count": 1
+    },
+    {
+     "code": "4-D",
+     "name": "食道",
+     "count": 3
+    },
+    {
+     "code": "4-E",
+     "name": "胃",
+     "count": 5
+    },
+    {
+     "code": "4-F",
+     "name": "小腸",
+     "count": 14
+    },
+    {
+     "code": "4-G",
+     "name": "大腸",
+     "count": 5
+    },
+    {
+     "code": "4-H",
+     "name": "肝臓",
+     "count": 3
+    },
+    {
+     "code": "4-I",
+     "name": "膵臓",
+     "count": 0
+    },
+    {
+     "code": "4-J",
+     "name": "腹膜",
+     "count": 3
+    }
+   ]
+  },
+  {
+   "major": "5",
+   "name": "呼吸器系",
+   "count": 34,
+   "mids": [
+    {
+     "code": "5-A",
+     "name": "概説",
+     "count": 0
+    },
+    {
+     "code": "5-B",
+     "name": "鼻",
+     "count": 4
+    },
+    {
+     "code": "5-C",
+     "name": "喉頭",
+     "count": 8
+    },
+    {
+     "code": "5-D",
+     "name": "気管および気管支",
+     "count": 6
+    },
+    {
+     "code": "5-E",
+     "name": "肺",
+     "count": 10
+    },
+    {
+     "code": "5-F",
+     "name": "胸膜",
+     "count": 1
+    },
+    {
+     "code": "5-G",
+     "name": "縦隔",
+     "count": 5
+    }
+   ]
+  },
+  {
+   "major": "6",
+   "name": "泌尿器系",
+   "count": 30,
+   "mids": [
+    {
+     "code": "6-A",
+     "name": "概説",
+     "count": 2
+    },
+    {
+     "code": "6-B",
+     "name": "腎臓",
+     "count": 20
+    },
+    {
+     "code": "6-C",
+     "name": "尿管",
+     "count": 3
+    },
+    {
+     "code": "6-D",
+     "name": "膀胱",
+     "count": 1
+    },
+    {
+     "code": "6-E",
+     "name": "尿道",
+     "count": 4
+    }
+   ]
+  },
+  {
+   "major": "7",
+   "name": "生殖器系",
+   "count": 30,
+   "mids": [
+    {
+     "code": "7-A",
+     "name": "概説",
+     "count": 3
+    },
+    {
+     "code": "7-B",
+     "name": "男性生殖器",
+     "count": 13
+    },
+    {
+     "code": "7-C",
+     "name": "女性生殖器",
+     "count": 14
+    }
+   ]
+  },
+  {
+   "major": "8",
+   "name": "内分泌器系",
+   "count": 29,
+   "mids": [
+    {
+     "code": "8-A",
+     "name": "概説",
+     "count": 7
+    },
+    {
+     "code": "8-B",
+     "name": "下垂体",
+     "count": 6
+    },
+    {
+     "code": "8-C",
+     "name": "上皮小体（副甲状腺）",
+     "count": 1
+    },
+    {
+     "code": "8-D",
+     "name": "甲状腺",
+     "count": 3
+    },
+    {
+     "code": "8-E",
+     "name": "副腎",
+     "count": 6
+    },
+    {
+     "code": "8-F",
+     "name": "膵臓",
+     "count": 2
+    },
+    {
+     "code": "8-G",
+     "name": "精巣",
+     "count": 1
+    },
+    {
+     "code": "8-H",
+     "name": "卵巣",
+     "count": 2
+    },
+    {
+     "code": "8-I",
+     "name": "松果体",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "major": "9",
+   "name": "神経系",
+   "count": 96,
+   "mids": [
+    {
+     "code": "9-A",
+     "name": "概説（分類・髄膜）",
+     "count": 5
+    },
+    {
+     "code": "9-B",
+     "name": "脳",
+     "count": 24
+    },
+    {
+     "code": "9-C",
+     "name": "脊髄",
+     "count": 2
+    },
+    {
+     "code": "9-D",
+     "name": "伝導路",
+     "count": 9
+    },
+    {
+     "code": "9-E",
+     "name": "脳神経",
+     "count": 26
+    },
+    {
+     "code": "9-F",
+     "name": "脊髄神経",
+     "count": 22
+    },
+    {
+     "code": "9-G",
+     "name": "自律神経",
+     "count": 8
+    }
+   ]
+  },
+  {
+   "major": "10",
+   "name": "感覚器系",
+   "count": 30,
+   "mids": [
+    {
+     "code": "10-A",
+     "name": "外皮",
+     "count": 6
+    },
+    {
+     "code": "10-B",
+     "name": "視覚器",
+     "count": 10
+    },
+    {
+     "code": "10-C",
+     "name": "聴覚器・平衡覚器",
+     "count": 10
+    },
+    {
+     "code": "10-D",
+     "name": "味覚器",
+     "count": 3
+    },
+    {
+     "code": "10-E",
+     "name": "嗅覚器",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "major": "11",
+   "name": "体表解剖",
+   "count": 27,
+   "mids": [
+    {
+     "code": "11-A",
+     "name": "体表区分",
+     "count": 1
+    },
+    {
+     "code": "11-B",
+     "name": "骨格",
+     "count": 9
+    },
+    {
+     "code": "11-C",
+     "name": "筋",
+     "count": 2
+    },
+    {
+     "code": "11-D",
+     "name": "脈管",
+     "count": 8
+    },
+    {
+     "code": "11-E",
+     "name": "神経",
+     "count": 3
+    },
+    {
+     "code": "11-F",
+     "name": "顔面",
+     "count": 0
+    },
+    {
+     "code": "11-G",
+     "name": "外皮",
+     "count": 1
+    },
+    {
+     "code": "11-H",
+     "name": "生体計測",
+     "count": 1
+    },
+    {
+     "code": "11-Z",
+     "name": "（出題基準に明記なし：画像）",
+     "count": 2
+    }
+   ]
+  }
+ ]
+}

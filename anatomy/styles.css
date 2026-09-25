@@ -284,3 +284,9 @@ button:focus-visible, select:focus-visible { outline: 3px solid rgba(36, 87, 214
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
+
+.guide-link { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 18px; padding: 14px 16px; border: 1px solid var(--line); border-left: 5px solid var(--blue); border-radius: 14px; background: var(--soft); color: var(--ink); text-decoration: none; }
+.guide-link strong { display: block; font-size: 0.95rem; }
+.guide-link small { display: block; margin-top: 3px; color: var(--muted); font-size: 0.78rem; }
+.guide-link:hover { border-color: var(--blue); }
+.guide-link:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
