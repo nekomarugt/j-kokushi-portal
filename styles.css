@@ -240,4 +240,7 @@ footer span::before {
 .basics-section { margin-top: 36px; padding-top: 30px; border-top: 1px solid var(--line); }
 .study-card.basics { border-left-color: var(--navy); background: #eef2f9; }
 .study-card.basics:hover { border-color: var(--navy); }
-.basics-section .study-grid { grid-template-columns: 1fr; max-width: 520px; }
+.basics-section .study-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.study-card.basics.clinical-qa { border-left-color: var(--teal); background: #edf8f4; }
+.study-card.basics.clinical-qa:hover { border-color: var(--teal); }
+@media (max-width: 780px) { .basics-section .study-grid { grid-template-columns: 1fr; } }
