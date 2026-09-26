@@ -4,6 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0b1730" />
+    <!-- PWA -->
+    <link rel="manifest" href="../manifest.webmanifest" />
+    <link rel="icon" href="../icons/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="../icons/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="柔整国試" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <script>if("serviceWorker"in navigator){addEventListener("load",function(){navigator.serviceWorker.register("../sw.js",{scope:"../"}).catch(function(){})})}</script>
+    <!-- /PWA -->
     <meta
       name="description"
       content="柔道整復師向け・生理学の全13分野（細胞・血液・免疫・循環・呼吸・消化・代謝・内分泌・腎・神経・筋・感覚・生殖）の基礎一問一答（無料）。答えと理由を短く確認できるドリル。"

@@ -1,0 +1,26 @@
+{
+  "id": "/j-kokushi-portal/",
+  "name": "柔整国試ポータル｜過去問・学習資料",
+  "short_name": "柔整国試",
+  "description": "柔道整復師国家試験の過去問（解剖学・生理学・一般臨床医学）、一問一答、学習資料をまとめた学習ポータル",
+  "lang": "ja",
+  "dir": "ltr",
+  "start_url": "/j-kokushi-portal/",
+  "scope": "/j-kokushi-portal/",
+  "display": "standalone",
+  "orientation": "any",
+  "theme_color": "#0b1730",
+  "background_color": "#0b1730",
+  "categories": ["education", "medical"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ],
+  "shortcuts": [
+    { "name": "解剖学 過去問", "short_name": "解剖過去問", "url": "/j-kokushi-portal/anatomy/", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" }] },
+    { "name": "生理学 過去問", "short_name": "生理過去問", "url": "/j-kokushi-portal/physiology/", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" }] },
+    { "name": "一般臨床医学 過去問", "short_name": "臨床過去問", "url": "/j-kokushi-portal/clinical/", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" }] }
+  ]
+}

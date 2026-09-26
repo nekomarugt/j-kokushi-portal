@@ -90,3 +90,9 @@ j-kokushi-portal/
   physiology-guide/  content.js / deepdive.js / assets/ ...
   clinical-guide/    content.js / disease-content.js / ...
 ```
+
+## アプリとしてインストール（PWA）
+
+- `manifest.webmanifest`（start_url / scope = `/j-kokushi-portal/`）、`icons/`（自作SVG→PNG）、`sw.js` を配置。
+- 各ページの `<head>` に `<!-- PWA --> … <!-- /PWA -->` ブロック（manifest・apple-touch-icon・SW登録）。学習資料ページはマスター側（`physio-guide-paid/physiology-guide/index.html`・`_build_clinical/index.base.html`・`teasers/*/index.html`）にも入っているので `switch.sh` で消えない。
+- `sw.js`：HTML/JS/CSS/JSON はネットワーク優先（編集はすぐ反映、オフライン時のみキャッシュ）、`?v=` 付き資産はキャッシュ優先、画像は stale-while-revalidate。キャッシュ方式を変えたら `VERSION` を上げる。localStorage には触れない。
