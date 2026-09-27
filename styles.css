@@ -255,3 +255,6 @@ footer span::before {
 .study-card.anatomy { grid-column: 1 / -1; border-left-color: #c2410c; background: #fff5ee; }
 .study-card.anatomy:hover { border-color: #c2410c; }
 .free-badge { display: inline-block; margin-left: 6px; padding: 2px 9px; border-radius: 99px; background: #16764b; color: #fff; font-size: 0.72rem; font-weight: 800; vertical-align: 0.2em; }
+
+.study-card.workbook { grid-column: 1 / -1; border-left-color: #5b6b86; background: #f3f5f9; }
+.study-card.workbook:hover { border-color: #5b6b86; }
