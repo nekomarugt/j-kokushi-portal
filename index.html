@@ -21,6 +21,7 @@
     />
     <title>柔道整復師 学習ポータル｜過去問・学習資料</title>
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./game/game.css" />
   </head>
   <body>
     <main class="portal-shell">
@@ -34,6 +35,10 @@
           <p class="header-note">柔整国試向けに作っていますが、医療系の解剖生理・臨床の基礎の復習にも使えます。</p>
         </div>
       </header>
+
+      <section class="jkg-home" aria-label="わたしのきろくとミニクエスト">
+        <div data-jkg="home"></div>
+      </section>
 
       <section class="portal-surface" aria-labelledby="choose-title">
         <div class="surface-heading">
@@ -160,9 +165,10 @@
 
       <footer>
         <span>教員個人制作</span>
-        <span>学習記録は各アプリ内で端末に保存</span>
+        <span>学習記録（連続日数・レベルなど）は端末内だけに保存</span>
         <span>学校公式ではありません</span>
       </footer>
     </main>
+    <script src="./game/game.js"></script>
   </body>
 </html>
