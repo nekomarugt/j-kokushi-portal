@@ -170,8 +170,14 @@
     if (after.lv > before) ev.levelUp = after;
     S.coins += ev.coins;
     save(); renderAll(); showToasts(ev, bonus);
-    if (window.JKFx && window.JKFx.play) { try { window.JKFx.play(ev); } catch (e) {} }
+    fxPlay(ev);
   }
+
+  function fxPlay(ev) {
+    var go = function () { try { window.JKFx.play(ev); } catch (e) {} };
+    if (window.JKFx) go(); else loadExtra("fx.js", function () { return !!window.JKFx; }, go);
+  }
+  function markShown(key) { if (S.shown[key]) return false; S.shown[key] = 1; save(); return true; }
 
   /* ---------- ガチャ ---------- */
   function A() { return window.JKAvatars || null; }
@@ -397,15 +403,15 @@
     streak: streakNow, level: function () { return levelInfo(S.xp); }, xp: function () { return S.xp; },
     openRecord: openRecord, reset: reset,
     coins: function () { return S.coins; }, owned: function () { return S.own; }, ownedCount: ownedCount, selected: function () { return S.sel; },
-    pull: pull, roll: roll, setAvatar: setAvatar, pulls: function () { return S.pulls; }, pity: function () { return S.pity; }, ECO: ECO, rootUrl: ROOT, isMastered: function (subj, topic) { return !!S.mast[subj + "|" + topic]; },
+    markShown: markShown, pull: pull, roll: roll, setAvatar: setAvatar, pulls: function () { return S.pulls; }, pity: function () { return S.pity; }, ECO: ECO, rootUrl: ROOT, isMastered: function (subj, topic) { return !!S.mast[subj + "|" + topic]; },
     qs: function (src, id) { return S.qs[src + ":" + id] || null; }, _state: function () { return S; },
     constants: { WEAK_OUT: WEAK_OUT, MASTER_RATE: MASTER_RATE, SUBJ: SUBJ, SUBJ_PAGE: SUBJ_PAGE, QS: QS }
   };
   // アバター絵・演出は別ファイル。ページ側の <script> を増やさず、ここで後から読み込む（失敗しても本体は動く）
-  function loadExtra(file, ready) {
-    if (ready()) return;
+  function loadExtra(file, ready, cb) {
+    if (ready()) { if (cb) cb(); return; }
     var el = document.createElement("script"); el.src = ROOT + "game/" + file; el.async = true;
-    el.onload = function () { renderAll(); };
+    el.onload = function () { renderAll(); if (cb) cb(); };
     (document.head || document.documentElement).appendChild(el);
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", mountAll); else mountAll();
