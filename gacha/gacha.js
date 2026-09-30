@@ -1,4 +1,4 @@
-/* ぷにっ子ガチャ画面。抽せんと保存は game/game.js（JKGame.pull）、絵は game/avatars.js。 */
+/* アバターガチャ画面。抽せんと保存は game/game.js（JKGame.pull）、絵は game/avatars.js。 */
 (function () {
   "use strict";
   var G = window.JKGame, AV = window.JKAvatars;
@@ -26,7 +26,7 @@
   function card(r, big) {
     var d = AV.get(r.id), tag = r.isNew ? '<span class="jkc-new">NEW!</span>' : '<span class="jkc-dupe">DUPE +' + r.refund + '</span>';
     return '<div class="jkc-card r-' + d.r.toLowerCase() + (big ? " is-big" : "") + '" data-id="' + r.id + '">' + tag +
-      AV.svg(r.id, big ? 132 : 76) + '<span class="jkc-rar r-' + d.r.toLowerCase() + '">' + d.r + '</span><strong>' + esc(d.n) + '</strong>' +
+      AV.svg(r.id, big ? 150 : 78) + '<span class="jkc-rar r-' + d.r.toLowerCase() + '">' + d.r + '</span><strong>' + esc(d.n) + '</strong>' +
       (big ? '<small>' + esc(d.f) + '</small>' : '') + '</div>';
   }
 
@@ -53,7 +53,7 @@
       ids.forEach(function (id) {
         var d = AV.get(id), has = own[id];
         html += '<button type="button" class="jkc-cell r-' + d.r.toLowerCase() + (has ? "" : " is-locked") + (sel === id ? " is-sel" : "") + '" data-id="' + id + '" aria-label="' + (has ? esc(d.n) : "まだ出ていない子") + '">' +
-          (has ? AV.svg(id, 64) : AV.sil(id, 64)) + '<span>' + (has ? esc(d.n) : "？？？") + '</span>' + (sel === id ? '<i class="jkc-mine">つかってる</i>' : "") + '</button>';
+          (has ? AV.svg(id, 68) : AV.sil(id, 68)) + '<span>' + (has ? esc(d.n) : "？？？") + '</span>' + (sel === id ? '<i class="jkc-mine">つかってる</i>' : "") + '</button>';
       });
       html += "</div>";
     });
@@ -65,7 +65,7 @@
     if (!own[id]) { box.hidden = false; box.innerHTML = '<p class="jkc-locked">まだ出会っていない <b>' + d.r + '</b> の子です。ガチャで探そう。</p>'; return; }
     var sel = G.selected() === id;
     box.hidden = false;
-    box.innerHTML = '<div class="jkc-dwrap">' + AV.svg(id, 96) + '<div><span class="jkc-rar r-' + d.r.toLowerCase() + '">' + d.r + ' ' + RN[d.r] + '</span><strong>' + esc(d.n) + '</strong><small>' + esc(d.f) + '</small>' +
+    box.innerHTML = '<div class="jkc-dwrap">' + AV.svg(id, 84) + '<div><span class="jkc-rar r-' + d.r.toLowerCase() + '">' + d.r + ' ' + RN[d.r] + '</span><strong>' + esc(d.n) + '</strong><small>' + esc(d.f) + '</small>' +
       '<small>あつめた数：' + own[id] + '</small></div></div>' +
       '<button type="button" class="jkq-primary" data-use="' + id + '"' + (sel ? " disabled" : "") + '>' + (sel ? "いま使っています" : "この子をマイアバターにする") + '</button>';
   }

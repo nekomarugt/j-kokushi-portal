@@ -153,10 +153,8 @@
 /* ---- アバター（ぷにっ子）共通 ---- */
 .jka { display: block; flex: none; overflow: visible; }
 .jka-tw { transform-box: fill-box; transform-origin: center; animation: jka-tw 1.8s ease-in-out infinite; }
-.jka-spin { transform-origin: 50px 56px; animation: jka-spin 24s linear infinite; }
+.jka-spin { transform-origin: 50px 80px; animation: jka-spin 24s linear infinite; }
 .jka-sil { filter: brightness(0) opacity(.16); }
-.jka-r { filter: drop-shadow(0 0 3px rgba(91, 141, 239, .55)); }
-.jka-sr { filter: drop-shadow(0 0 5px rgba(255, 190, 40, .8)); }
 @keyframes jka-tw { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(.45); opacity: .45; } }
 @keyframes jka-spin { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { .jka-tw, .jka-spin { animation: none; } }
@@ -193,3 +191,11 @@
 @keyframes jkf-bounce { to { transform: translateY(-4px) scale(1.12); } }
 @media (prefers-reduced-motion: reduce) { .jkf-banner { animation: none; } .s3 .jkf-ico { animation: none; } .jkf-banner.is-out { transition: none; } }
 a.jkq-secondary { text-decoration: none; box-sizing: border-box; }
+/* 縦長の全身アバター */
+.jkg-ava.is-bare { border-radius: 0; margin-right: 4px; }
+.jkg-strip { align-items: flex-end; }
+.jkg-strip .jkg-chip, .jkg-strip .jkg-link { align-self: center; }
+.jkg-noava { width: 40px; height: 60px; }
+.jka-sil { filter: brightness(0) opacity(.2); }
+.is-bare .jka-r { filter: drop-shadow(0 0 3px rgba(91, 141, 239, .7)); }
+.is-bare .jka-sr { filter: drop-shadow(0 0 4px rgba(255, 190, 40, .9)); }

@@ -266,9 +266,9 @@
     if (st.n === 0) return "1問やると「1日目」になります。";
     return st.today ? "今日の分はOK！" : "今日1問やると記録がつづきます。";
   }
-  function avaHtml(size) {
+  function avaHtml(size, bare) { // アバターは縦長（幅:高さ = 2:3）の全身絵。小さい所は枠なし
     var a = A(); if (!a || !S.sel || !a.get(S.sel)) return "";
-    return '<a class="jkg-ava" href="' + ROOT + 'gacha/" aria-label="マイアバター：' + esc(a.get(S.sel).n) + '（ガチャへ）">' + a.svg(S.sel, size) + '</a>';
+    return '<a class="jkg-ava' + (bare ? " is-bare" : "") + '" href="' + ROOT + 'gacha/" aria-label="マイアバター：' + esc(a.get(S.sel).n) + '（ガチャへ）">' + a.svg(S.sel, size, { bare: !!bare }) + '</a>';
   }
   function gachaBtn() { return '<a class="jkg-btn is-gacha" href="' + ROOT + 'gacha/">🎁 ガチャを回す <span class="jkg-coinb">🪙 ' + S.coins + '</span></a>'; }
   function questUrl(subj, extra) { return ROOT + "quest/?s=" + SUBJ_PAGE[subj] + (extra || ""); }
@@ -286,7 +286,7 @@
       '<div class="jkg-card">' +
       '<div class="jkg-top">' +
       '<div class="jkg-streak"><span class="jkg-fire" aria-hidden="true">🔥</span><div><div class="jkg-streak-n">' + streakText(st) + '</div><div class="jkg-sub">' + streakHint(st) + '</div></div></div>' +
-      '<div class="jkg-level' + (S.sel && A() ? " has-ava" : "") + '">' + avaHtml(56) + '<div class="jkg-lvbody"><div class="jkg-lvline"><span class="jkg-lv">Lv' + li.lv + '</span><span class="jkg-lvtitle">' + esc(li.title) + '</span></div>' + barHtml(li) +
+      '<div class="jkg-level' + (S.sel && A() ? " has-ava" : "") + '">' + avaHtml(58) + '<div class="jkg-lvbody"><div class="jkg-lvline"><span class="jkg-lv">Lv' + li.lv + '</span><span class="jkg-lvtitle">' + esc(li.title) + '</span></div>' + barHtml(li) +
       '<div class="jkg-sub">' + (li.max ? "最高レベル！ " + S.xp + " XP" : "あと " + (li.next - S.xp) + " XP で Lv" + (li.lv + 1)) + '</div></div></div>' +
       '</div>' +
       '<p class="jkg-today">' + (n ? "今日は <strong>" + n + "</strong> 問といたよ。" : "今日はまだ0問。まずは1問だけやってみよう。") + '</p>' +
@@ -300,7 +300,7 @@
     var st = streakNow(), li = levelInfo(S.xp), wc = weakCount(subj);
     el.innerHTML =
       '<div class="jkg-card is-compact">' +
-      '<div class="jkg-strip">' + avaHtml(34) + '<span class="jkg-chip">🔥 ' + streakText(st) + '</span><span class="jkg-chip">Lv' + li.lv + ' ' + esc(li.title) + '</span>' +
+      '<div class="jkg-strip">' + avaHtml(30, true) + '<span class="jkg-chip">🔥 ' + streakText(st) + '</span><span class="jkg-chip">Lv' + li.lv + ' ' + esc(li.title) + '</span>' +
       '<span class="jkg-chip is-coin">🪙 ' + S.coins + '</span><button type="button" class="jkg-link" data-jkg-open>きろく</button></div>' +
       '<div class="jkg-actions"><a class="jkg-btn" href="' + questUrl(subj, isQA ? "&src=qa" : "&src=past") + '">10問ミニクエスト</a>' +
       (wc ? '<a class="jkg-btn is-weak" href="' + questUrl(subj, "&mode=weak") + '">まちがえた問題だけ復習（' + wc + '問）</a>'
@@ -377,7 +377,7 @@
     });
     overlay.innerHTML =
       '<div class="jkg-modal"><div class="jkg-mhead"><h3>わたしのきろく</h3><button type="button" class="jkg-x" data-jkg-close aria-label="閉じる">閉じる</button></div>' +
-      '<div class="jkg-me">' + (avaHtml(72) || '<span class="jkg-noava">🎁</span>') + '<div><strong>🪙 ' + S.coins + ' コイン</strong><span class="jkg-sub">ぷにっ子 ' + ownedCount() + '/' + (A() ? A().list.length : 30) + ' 体</span></div><a class="jkg-btn is-gacha" href="' + ROOT + 'gacha/">ガチャへ</a></div>' +
+      '<div class="jkg-me">' + (avaHtml(60) || '<span class="jkg-noava">🎁</span>') + '<div><strong>🪙 ' + S.coins + ' コイン</strong><span class="jkg-sub">キャラ ' + ownedCount() + '/' + (A() ? A().list.length : 30) + ' 体</span></div><a class="jkg-btn is-gacha" href="' + ROOT + 'gacha/">ガチャへ</a></div>' +
       '<div class="jkg-mgrid"><div class="jkg-stat"><small>連続日数</small><strong>' + st.n + '<em>日</em></strong><span>最高 ' + Math.max(S.best, st.n) + '日</span></div>' +
       '<div class="jkg-stat"><small>レベル</small><strong>Lv' + li.lv + '</strong><span>' + esc(li.title) + '</span></div>' +
       '<div class="jkg-stat"><small>正解した数</small><strong>' + S.cor + '<em>問</em></strong><span>挑戦 ' + S.att + '問</span></div></div>' +
