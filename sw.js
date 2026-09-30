@@ -3,7 +3,7 @@
  * - ?v=hash assets : cache-first (immutable); images / fonts / icons : stale-while-revalidate
  * - Only touches Cache Storage entries prefixed "jkp-"; never touches localStorage.
  * Bump VERSION when changing this file's strategy or the precache list. */
-const VERSION = 'v3';
+const VERSION = 'v4';
 const PREFIX = 'jkp-';
 const PAGES = PREFIX + 'pages-' + VERSION;
 const STATIC = PREFIX + 'static-' + VERSION;
@@ -33,6 +33,8 @@ self.addEventListener('activate', (event) => {
   );
 });
 
+// gacha art (gacha/art/*.webp): runtime cache, cache-first (not precached; files never change in place - rename to update)
+const ART = /\/gacha\/art\/[^/]+\.webp$/i;
 const CACHE_FIRST = /\.(png|jpe?g|gif|webp|avif|svg|ico|woff2?|ttf|otf|pdf)$/i;
 
 async function networkFirst(request, isNav) {
@@ -78,6 +80,15 @@ async function cacheFirst(request, versioned) {
   return refresh();
 }
 
+async function artFirst(request) {
+  const cache = await caches.open(STATIC);
+  const hit = await cache.match(request);
+  if (hit) return hit;
+  const res = await fetch(request);
+  if (res && res.ok && res.type === 'basic') cache.put(request, res.clone()).catch(() => {});
+  return res;
+}
+
 self.addEventListener('fetch', (event) => {
   const req = event.request;
   if (req.method !== 'GET') return;
@@ -86,6 +97,10 @@ self.addEventListener('fetch', (event) => {
   if (url.pathname === SCOPE + 'sw.js') return;
   const isNav = req.mode === 'navigate' || (req.headers.get('accept') || '').includes('text/html');
   const versioned = url.searchParams.has('v');
+  if (!isNav && ART.test(url.pathname)) {
+    event.respondWith(artFirst(req));
+    return;
+  }
   if (!isNav && (versioned || CACHE_FIRST.test(url.pathname))) {
     event.respondWith(cacheFirst(req, versioned));
   } else {
