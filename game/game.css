@@ -160,3 +160,20 @@
 @keyframes jka-tw { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(.45); opacity: .45; } }
 @keyframes jka-spin { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { .jka-tw, .jka-spin { animation: none; } }
+
+/* ---- ホーム／ストリップ／きろくのアバター ---- */
+.jkg-ava { flex: none; display: block; line-height: 0; border-radius: 16px; text-decoration: none; }
+.jkg-ava:focus-visible { outline: 3px solid rgba(31, 95, 196, .5); outline-offset: 2px; }
+.jkg-level.has-ava { display: flex; align-items: center; gap: 12px; }
+.jkg-lvbody { flex: 1; min-width: 0; }
+.jkg-strip .jkg-ava { margin-right: 2px; }
+.jkg-chip.is-coin { background: #fff4cf; color: #7a5200; }
+.jkg-gacha { margin-top: 12px; }
+.jkg-btn.is-gacha { background: linear-gradient(180deg, #ff8fb6, #ec5a92); box-shadow: 0 3px 0 #b8386c; gap: 8px; }
+.jkg-btn.is-gacha:hover { background: linear-gradient(180deg, #ff7fae, #e14a85); }
+.jkg-coinb { padding: 1px 10px; border-radius: 99px; background: rgba(255, 255, 255, .95); color: #7a5200; font-size: .88rem; }
+.jkg-me { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; padding: 10px 12px; border-radius: 16px; background: linear-gradient(135deg, #fff6fb, #f1f0ff); }
+.jkg-me > div { flex: 1; display: grid; }
+.jkg-me .jkg-btn { min-height: 44px; padding: 6px 14px; width: auto; }
+.jkg-noava { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 16px; background: #fff; font-size: 1.6rem; }
+@media (max-width: 480px) { .jkg-gacha .jkg-btn { width: 100%; } }
