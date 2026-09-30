@@ -330,3 +330,8 @@ button:focus-visible { outline: 3px solid rgba(36, 87, 214, 0.28); outline-offse
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition-duration: 0.01ms !important; }
 }
+
+/* 自己チェック（ゲーム記録用） */
+.grade-ask { margin: 14px 0 4px; color: var(--muted); font-size: 0.86rem; font-weight: 800; }
+.grade-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.grade-row .compact { width: 100%; margin: 0; min-width: 0; }

@@ -876,6 +876,7 @@ function submitAnswer() {
   }
   history[question.id] = stats;
   saveHistory();
+  if (window.JKGame) JKGame.record("cli", question.id, correct);
 
   [...els.choices.children].forEach((button, index) => {
     button.disabled = true;

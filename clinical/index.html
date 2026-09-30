@@ -21,6 +21,7 @@
     />
     <title>一般臨床医学 国家試験過去問</title>
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="../game/game.css" />
   </head>
   <body>
     <a class="portal-return" href="../" aria-label="学習ポータルへ戻る">← 学習ポータルへ戻る</a>
@@ -49,6 +50,8 @@
           </div>
           <div class="history-summary" id="history-summary"></div>
         </div>
+
+        <div data-jkg="panel" data-subject="cli" data-src="past"></div>
 
         <div class="mode-grid">
           <button class="mode-card" type="button" data-mode="round">
@@ -244,6 +247,7 @@
         <button id="reset-history-button" class="footer-button is-hidden" type="button">学習記録をリセット</button>
       </footer>
     </main>
+    <script src="../game/game.js" defer></script>
     <script src="./app.js" defer></script>
   </body>
 </html>

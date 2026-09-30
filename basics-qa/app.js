@@ -28,6 +28,8 @@
     answerText: document.getElementById("answer-text"),
     whyText: document.getElementById("why-text"),
     nextButton: document.getElementById("next-button"),
+    knowButton: document.getElementById("know-button"),
+    unsureButton: document.getElementById("unsure-button"),
     doneCount: document.getElementById("done-count"),
     restartButton: document.getElementById("restart-button"),
     backSetupButton: document.getElementById("back-setup-button")
@@ -112,7 +114,7 @@
     state.revealed = true;
     els.revealButton.classList.add("is-hidden");
     els.revealPanel.classList.remove("is-hidden");
-    els.nextButton.focus();
+    els.knowButton.focus();
   }
 
   function next() {
@@ -144,6 +146,13 @@
   });
   els.revealButton.addEventListener("click", reveal);
   els.nextButton.addEventListener("click", next);
+  function grade(ok) {
+    var q = state.deck[state.index];
+    if (q && window.JKGame) JKGame.record("phyQ", q.id, ok, q.topic);
+    next();
+  }
+  els.knowButton.addEventListener("click", function () { grade(true); });
+  els.unsureButton.addEventListener("click", function () { grade(false); });
   els.quitButton.addEventListener("click", quitToSetup);
   els.restartButton.addEventListener("click", function () {
     startDrill(state.topic);

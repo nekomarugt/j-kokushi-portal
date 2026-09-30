@@ -22,6 +22,7 @@
     <title>解剖学 一問一答｜骨・筋・内臓・神経</title>
     <link rel="stylesheet" href="../styles.css" />
     <link rel="stylesheet" href="./app.css" />
+    <link rel="stylesheet" href="../game/game.css" />
   </head>
   <body>
     <a class="portal-return" href="../" aria-label="学習ポータルへ戻る">← 学習ポータルへ戻る</a>
@@ -112,6 +113,8 @@
           </div>
         </fieldset>
 
+        <div data-jkg="panel" data-subject="ana" data-src="qa"></div>
+
         <p class="setup-note" id="setup-count">—</p>
 
         <button class="primary-button" id="start-button" type="button">
@@ -148,7 +151,12 @@
               <strong>なぜ</strong>
               <p id="why-text"></p>
             </div>
-            <button class="primary-button compact" id="next-button" type="button">次へ</button>
+            <p class="grade-ask">自分でチェック：</p>
+            <div class="grade-row">
+              <button class="primary-button compact" id="know-button" type="button">わかってた</button>
+              <button class="secondary-button compact" id="unsure-button" type="button">まだあやしい</button>
+            </div>
+            <button class="primary-button compact is-hidden" id="next-button" type="button">次へ</button>
           </div>
         </article>
       </section>
@@ -171,6 +179,7 @@
     </main>
 
     <script src="./questions.js"></script>
+    <script src="../game/game.js"></script>
     <script src="./app.js"></script>
   </body>
 </html>
