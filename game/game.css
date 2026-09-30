@@ -151,13 +151,27 @@
 }
 
 /* ---- アバター（SDキャラ）共通 ---- */
-.jka { display: block; flex: none; overflow: visible; }
-.jka-tw { transform-box: fill-box; transform-origin: center; animation: jka-tw 1.8s ease-in-out infinite; }
-.jka-spin { transform-origin: 50px 80px; animation: jka-spin 24s linear infinite; }
-.jka-sil { filter: brightness(0) opacity(.16); }
+.jka { position: relative; display: block; flex: none; }
+.jka img { display: block; width: 100%; height: 100%; object-fit: contain; pointer-events: none; -webkit-user-select: none; user-select: none; }
+.jka:not(.is-bare) { border-radius: 14%/9.5%; overflow: visible; }
+.jka .jka-in { position: absolute; inset: 0; display: block; overflow: hidden; border-radius: inherit; font-style: normal;
+  background: radial-gradient(circle at 50% 70%, #fff 0, #eef3fb 55%, #dfe7f4 100%); border: 2px solid #c9d3e4; box-sizing: border-box; }
+.jka-r .jka-in { border: 3px solid #5b8def; box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, .9), 0 0 12px rgba(91, 141, 239, .6);
+  background: radial-gradient(circle at 50% 70%, #fff 0, #dfeaff 50%, #b9d0ff 100%); }
+.jka-sr .jka-in { border: 4px solid #f0b400; box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, .95), 0 0 16px rgba(255, 190, 40, .85);
+  background: radial-gradient(circle at 50% 70%, #fff 0, #fff2b8 50%, #ffd76a 100%); }
+.jka-sr .jka-in::before { content: ""; position: absolute; left: 50%; top: 55%; width: 240%; aspect-ratio: 1; margin: -120% 0 0 -120%; border-radius: 50%; opacity: .55; pointer-events: none;
+  background: repeating-conic-gradient(rgba(255, 255, 255, .95) 0 9deg, rgba(255, 255, 255, 0) 9deg 24deg); animation: jka-spin 20s linear infinite; }
+.jka-rays { display: none; }
+.jka .jka-in img { position: relative; }
+.jka-sp { position: absolute; z-index: 2; width: 12%; aspect-ratio: 1; background: #fff; clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%); animation: jka-tw 1.8s ease-in-out infinite; filter: drop-shadow(0 0 2px rgba(255, 255, 255, .9)); }
+.jka-sp.s1 { left: 6%; top: 5%; } .jka-sp.s2 { right: 6%; top: 15%; animation-delay: .5s; } .jka-sp.s3 { left: 8%; bottom: 20%; animation-delay: 1s; } .jka-sp.s4 { right: 8%; bottom: 10%; animation-delay: 1.4s; }
+/* 未入手：中立の枠＋黒いシルエット（レア度の色・名前は出さない） */
+.jka-sil .jka-in { background: #e6e9f1; border: 2px solid #cfd5e2; box-shadow: none; }
+.jka-sil img { filter: brightness(0); opacity: .75; }
 @keyframes jka-tw { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(.45); opacity: .45; } }
 @keyframes jka-spin { to { transform: rotate(360deg); } }
-@media (prefers-reduced-motion: reduce) { .jka-tw, .jka-spin { animation: none; } }
+@media (prefers-reduced-motion: reduce) { .jka-sp, .jka-sr .jka-in::before { animation: none; } }
 
 /* ---- ホーム／ストリップ／きろくのアバター ---- */
 .jkg-ava { flex: none; display: block; line-height: 0; border-radius: 16px; text-decoration: none; }
@@ -196,6 +210,5 @@ a.jkq-secondary { text-decoration: none; box-sizing: border-box; }
 .jkg-strip { align-items: flex-end; }
 .jkg-strip .jkg-chip, .jkg-strip .jkg-link { align-self: center; }
 .jkg-noava { width: 40px; height: 60px; }
-.jka-sil { filter: brightness(0) opacity(.2); }
-.is-bare .jka-r { filter: drop-shadow(0 0 3px rgba(91, 141, 239, .7)); }
-.is-bare .jka-sr { filter: drop-shadow(0 0 4px rgba(255, 190, 40, .9)); }
+.jka.is-bare.jka-r { filter: drop-shadow(0 0 3px rgba(91, 141, 239, .8)); }
+.jka.is-bare.jka-sr { filter: drop-shadow(0 0 4px rgba(255, 190, 40, .95)); }

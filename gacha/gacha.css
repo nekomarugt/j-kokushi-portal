@@ -73,7 +73,7 @@
 .jkc-bh.r-r b { background: #3a64d8; } .jkc-bh.r-sr b { background: #e08a00; } .jkc-bh small { color: #5d6c84; }
 .jkc-bgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
 .jkc-cell { position: relative; display: flex; flex-direction: column; align-items: center; gap: 2px; min-height: 48px; padding: 8px 2px 6px; border: 2px solid #e1e6f0; border-radius: 14px; background: #fff; font: inherit; font-size: .74rem; font-weight: 800; color: #10223e; cursor: pointer; }
-.jkc-cell.is-locked { background: #f2f4f8; color: #8794a8; }
+.jkc-cell.is-locked { background: #f2f4f8; color: #8794a8; border-color: #e1e6f0; }
 .jkc-cell.is-sel { border-color: #e5484d; box-shadow: 0 0 0 2px rgba(229, 72, 77, .25); }
 .jkc-cell:focus-visible { outline: 3px solid rgba(31, 95, 196, .5); }
 .jkc-mine { position: absolute; top: -8px; right: -2px; padding: 0 7px; border-radius: 99px; background: #e5484d; color: #fff; font-style: normal; font-size: .66rem; }
@@ -89,5 +89,4 @@ a.jkq-secondary { text-decoration: none; box-sizing: border-box; }
 .jkc-card .jka { margin: 0 auto; }
 .jkc-cell { padding: 8px 2px 6px; }
 .jkc-cell .jka { margin: 0 auto; }
-.jkc-cell.r-r .jka, .jkc-cell.r-sr .jka { filter: none; }
 .jkc-dwrap .jka { flex: none; }

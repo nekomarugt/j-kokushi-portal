@@ -377,7 +377,7 @@
     });
     overlay.innerHTML =
       '<div class="jkg-modal"><div class="jkg-mhead"><h3>わたしのきろく</h3><button type="button" class="jkg-x" data-jkg-close aria-label="閉じる">閉じる</button></div>' +
-      '<div class="jkg-me">' + (avaHtml(60) || '<span class="jkg-noava">🎁</span>') + '<div><strong>🪙 ' + S.coins + ' コイン</strong><span class="jkg-sub">キャラ ' + ownedCount() + '/' + (A() ? A().list.length : 30) + ' 体</span></div><a class="jkg-btn is-gacha" href="' + ROOT + 'gacha/">ガチャへ</a></div>' +
+      '<div class="jkg-me">' + (avaHtml(60) || '<span class="jkg-noava">🎁</span>') + '<div><strong>🪙 ' + S.coins + ' コイン</strong><span class="jkg-sub">キャラ ' + ownedCount() + '/' + (A() ? A().list.length : 32) + ' 体</span></div><a class="jkg-btn is-gacha" href="' + ROOT + 'gacha/">ガチャへ</a></div>' +
       '<div class="jkg-mgrid"><div class="jkg-stat"><small>連続日数</small><strong>' + st.n + '<em>日</em></strong><span>最高 ' + Math.max(S.best, st.n) + '日</span></div>' +
       '<div class="jkg-stat"><small>レベル</small><strong>Lv' + li.lv + '</strong><span>' + esc(li.title) + '</span></div>' +
       '<div class="jkg-stat"><small>正解した数</small><strong>' + S.cor + '<em>問</em></strong><span>挑戦 ' + S.att + '問</span></div></div>' +

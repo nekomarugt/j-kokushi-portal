@@ -43,26 +43,22 @@
   }
 
   function renderBook() {
-    var own = G.owned(), sel = G.selected(), n = G.ownedCount();
-    $("count").textContent = n + "/" + AV.list.length;
-    $("count-bar").style.width = Math.round(n / AV.list.length * 100) + "%";
-    var html = "";
-    ["N", "R", "SR"].forEach(function (r) {
-      var ids = AV.byRarity[r], have = ids.filter(function (i) { return own[i]; }).length;
-      html += '<h3 class="jkc-bh r-' + r.toLowerCase() + '"><b>' + r + '</b> ' + RN[r] + ' <small>' + have + '/' + ids.length + '</small></h3><div class="jkc-bgrid">';
-      ids.forEach(function (id) {
-        var d = AV.get(id), has = own[id];
-        html += '<button type="button" class="jkc-cell r-' + d.r.toLowerCase() + (has ? "" : " is-locked") + (sel === id ? " is-sel" : "") + '" data-id="' + id + '" aria-label="' + (has ? esc(d.n) : "まだ出ていない子") + '">' +
-          (has ? AV.svg(id, 68) : AV.sil(id, 68)) + '<span>' + (has ? esc(d.n) : "？？？") + '</span>' + (sel === id ? '<i class="jkc-mine">つかってる</i>' : "") + '</button>';
-      });
-      html += "</div>";
+    var own = G.owned(), sel = G.selected(), n = G.ownedCount(), tot = AV.list.length;
+    $("count").textContent = n + "/" + tot;
+    $("count-bar").style.width = Math.round(n / tot * 100) + "%";
+    // 未入手のキャラは、名前・レア度・絵を出さない（固定シャッフル順・黒いシルエット・中立の枠）。レア度ごとの数も出さない。
+    var html = '<div class="jkc-bgrid">';
+    AV.order.forEach(function (id) {
+      var has = own[id], d = has ? AV.get(id) : null;
+      html += '<button type="button" class="jkc-cell' + (has ? " r-" + d.r.toLowerCase() : " is-locked") + (has && sel === id ? " is-sel" : "") + '" data-id="' + id + '" aria-label="' + (has ? esc(d.n) : "？？？") + '">' +
+        (has ? AV.svg(id, 68) : AV.sil(id, 68)) + '<span>' + (has ? esc(d.n) : "？？？") + '</span>' + (has && sel === id ? '<i class="jkc-mine">つかってる</i>' : "") + '</button>';
     });
-    $("book").innerHTML = html;
+    $("book").innerHTML = html + "</div>";
   }
 
   function showDetail(id) {
     var own = G.owned(), d = AV.get(id), box = $("detail");
-    if (!own[id]) { box.hidden = false; box.innerHTML = '<p class="jkc-locked">まだ出会っていない <b>' + d.r + '</b> の子です。ガチャで探そう。</p>'; return; }
+    if (!own[id]) { box.hidden = false; box.innerHTML = '<p class="jkc-locked"><b>？？？</b>　まだ出会っていない子です。ガチャで探そう。</p>'; return; }
     var sel = G.selected() === id;
     box.hidden = false;
     box.innerHTML = '<div class="jkc-dwrap">' + AV.svg(id, 84) + '<div><span class="jkc-rar r-' + d.r.toLowerCase() + '">' + d.r + ' ' + RN[d.r] + '</span><strong>' + esc(d.n) + '</strong><small>' + esc(d.f) + '</small>' +
@@ -106,8 +102,10 @@
     busy = true; hold = before - pr.cost; updateHud();
     $("results").hidden = true;
     var best = pr.results.reduce(function (a, r) { return ORDER[r.r] > ORDER[a] ? r.r : a; }, "N"), st = $("stage");
-    skip = function () { finish(pr); };
-    if (reduce) { $("msg").textContent = "ひらいています…"; later(function () { finish(pr); }, 350); return; }
+    var ids = pr.results.map(function (r) { return r.id; }), ready = AV.preload(ids, 150), done = false;
+    var go = function () { if (done) return; done = true; finish(pr); };
+    skip = function () { ready.then(go, go); };
+    if (reduce) { $("msg").textContent = "ひらいています…"; later(function () { skip(); }, 350); return; }
     $("msg").textContent = "ドキドキ…（タップでスキップ）";
     st.className = "jkc-stage is-" + best.toLowerCase();
     st.innerHTML = '<div class="jkc-wrap">' + capsule("is-shake") + '</div>';
@@ -115,7 +113,7 @@
     later(function () {
       st.innerHTML = '<div class="jkc-flash f-' + best.toLowerCase() + '"></div>' + (best === "SR" ? '<div class="jkc-rays"></div>' : "") + burst(best) +
         '<div class="jkc-pop">' + (best === "N" ? "" : '<b class="jkc-rar r-' + best.toLowerCase() + '">' + best + '</b>') + '</div>';
-      later(function () { finish(pr); }, best === "SR" ? 1500 : best === "R" ? 1000 : 600);
+      later(function () { skip(); }, best === "SR" ? 1500 : best === "R" ? 1000 : 600);
     }, shakeMs);
   }
 
