@@ -13,7 +13,7 @@
     subj: PAGE2S[params.get("s")] || "phy",
     type: params.get("src") === "past" ? "past" : "qa",
     topic: "all",
-    queue: [], pos: 0, score: 0, wrong: [], xp: 0, mode: "quest", sel: new Set(), answered: false
+    queue: [], pos: 0, score: 0, wrong: [], xp: 0, coins: 0, mode: "quest", sel: new Set(), answered: false
   };
   var cache = { past: {}, qa: {} };
 
@@ -86,7 +86,7 @@
         if (st.type === "qa" && st.topic !== "all") pool = pool.filter(function (q) { return q.topic === st.topic; });
       }
       if (!pool.length) { renderSetup(); view("setup"); return; }
-      st.queue = shuffle(pool).slice(0, N); st.pos = 0; st.score = 0; st.wrong = []; st.xp = 0;
+      st.queue = shuffle(pool).slice(0, N); st.pos = 0; st.score = 0; st.wrong = []; st.xp = 0; st.coins = 0;
       view("quiz"); renderQ();
     }).catch(function () { view("error"); });
   }
@@ -124,7 +124,7 @@
   function grade(q, ok) {
     if (ok) st.score++; else st.wrong.push(q);
     var ev = G.record(q.src, q.id, ok);
-    if (ev) st.xp += ev.xp;
+    if (ev) { st.xp += ev.xp; st.coins += ev.coins || 0; }
   }
   function submit() {
     var q = st.queue[st.pos]; if (st.answered || !st.sel.size) return; st.answered = true;
@@ -155,7 +155,7 @@
   function result() {
     var total = st.queue.length, pct = Math.round(st.score / total * 100);
     var bonus = st.mode === "quest" ? G.questDone(total, st.score) : null;
-    if (bonus) st.xp += bonus.xp;
+    if (bonus) { st.xp += bonus.xp; st.coins += bonus.coins || 0; }
     $("r-score").textContent = st.score + " / " + total;
     $("r-ring").style.setProperty("--p", pct + "%"); $("r-pct").textContent = pct + "%";
     var msg = pct === 100 ? "全問正解！ すごい！" : pct >= 80 ? "いい調子！ あと少しで満点。" : pct >= 50 ? "半分以上できた。まちがえた所は、次で取り返そう。" : "ここからが伸びどき。まちがえた問題は「復習リスト」に入れたよ。";
@@ -163,6 +163,7 @@
     $("r-msg").textContent = msg;
     var s = G.streak(), li = G.level();
     $("r-xp").textContent = "+" + st.xp + " XP";
+    $("r-coin").textContent = "+" + st.coins + " コイン（いま " + G.coins() + "）";
     $("r-streak").textContent = s.n ? s.n + "日連続" : "—";
     $("r-lv").textContent = "Lv" + li.lv + " " + li.title;
     $("r-bar").style.width = li.pct + "%";
@@ -188,7 +189,7 @@
   $("quit").addEventListener("click", function () { document.querySelector(".jkq-head h1").textContent = "10問ミニクエスト"; renderSetup(); view("setup"); });
   $("r-again").addEventListener("click", function () { start(st.mode === "quest" ? "quest" : "weak"); });
   $("r-wrong").addEventListener("click", function () {
-    st.queue = shuffle(st.wrong); st.pos = 0; st.score = 0; st.wrong = []; st.xp = 0; st.mode = "weak-round"; view("quiz"); renderQ();
+    st.queue = shuffle(st.wrong); st.pos = 0; st.score = 0; st.wrong = []; st.xp = 0; st.coins = 0; st.mode = "weak-round"; view("quiz"); renderQ();
   });
   $("r-back").addEventListener("click", function () { document.querySelector(".jkq-head h1").textContent = "10問ミニクエスト"; renderSetup(); view("setup"); });
   $("retry-error").addEventListener("click", function () { renderSetup(); view("setup"); });

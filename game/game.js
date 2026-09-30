@@ -21,6 +21,11 @@
   var MASTER_RATE = 0.8; // 分野マスター：一問一答の80%以上に「正解」したことがある
   var PAST_TITLE_N = 100; // 過去問で100問（重複なし）に正解
 
+  /* ---- コイン・ガチャ ---- */
+  var ECO = { START: 30, CORRECT: 1, FIRST: 3, QUEST: 5, PERFECT: 10, BADGE: 5, MILESTONE: 10, PULL: 10, PULL10: 100, PITY: 30,
+    DUPE: { N: 2, R: 5, SR: 15 }, RATE: { N: 75, R: 22, SR: 3 } };
+  var MILESTONES = [3, 7, 14, 30];
+
   var LEVELS = [
     [0, "はじめの一歩"], [50, "かけだし"], [150, "見習い"], [300, "いっぱしの学生"], [500, "実力アップ"],
     [800, "国試に近づいた"], [1200, "頼れる先輩"], [1700, "合格圏"], [2300, "ほぼ先生"], [3000, "国試マスター"]
@@ -47,17 +52,29 @@
   var mem = null;
   function blank() {
     return { v: 1, xp: 0, att: 0, cor: 0, days: [], best: 0, qs: {}, ec: {}, weak: {}, badges: {}, mast: {}, past: {},
-      quests: 0, perfect: 0, grads: 0, perfChap: 0, subjDone: 0, seen: {}, td: { d: "", n: 0 }, maxDay: 0 };
+      quests: 0, perfect: 0, grads: 0, perfChap: 0, subjDone: 0, seen: {}, td: { d: "", n: 0 }, maxDay: 0,
+      coins: 0, own: {}, sel: "", pulls: 0, pity: 0, grant: 0, ms: {}, shown: {} };
   }
   function load() {
     var raw = null;
     try { raw = localStorage.getItem(KEY); } catch (e) { raw = null; }
     var s = blank();
     if (raw) { try { var o = JSON.parse(raw); if (o && o.v === 1) { for (var k in s) if (o[k] !== undefined) s[k] = o[k]; } } catch (e) {} }
+    return sane(s);
+  }
+  // 新しい項目（コイン等）が無い・壊れている古い保存データでも安全に読めるようにする
+  function sane(s) {
+    function num(v) { v = Math.floor(+v); return isFinite(v) && v > 0 ? v : 0; }
+    function obj(v) { return v && typeof v === "object" && !Array.isArray(v) ? v : {}; }
+    s.coins = num(s.coins); s.pulls = num(s.pulls); s.pity = num(s.pity); s.grant = s.grant ? 1 : 0;
+    s.own = obj(s.own); s.ms = obj(s.ms); s.shown = obj(s.shown);
+    s.sel = typeof s.sel === "string" && s.own[s.sel] ? s.sel : "";
     return s;
   }
+  function starter() { if (!S.grant) { S.grant = 1; S.coins += ECO.START; save(); } }
   function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) { /* private mode etc.: keep in memory */ } }
   var S = load();
+  starter();
 
   function pad(n) { return (n < 10 ? "0" : "") + n; }
   function today() { var d = new Date(); return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate()); }
@@ -108,7 +125,7 @@
   /* ---------- record ---------- */
   function record(src, id, ok, topic) {
     if (!SRC_SUBJ[src]) return null;
-    var ev = { xp: 0, badges: [], titles: [], levelUp: null, grad: false };
+    var ev = { xp: 0, coins: 0, badges: [], titles: [], levelUp: null, grad: false, ms: [] };
     var before = levelInfo(S.xp).lv;
     var k = src + ":" + id, r = S.qs[k] || (S.qs[k] = [0, 0, 0]);
     var firstOk = ok && !r[2];
@@ -117,6 +134,7 @@
       r[1]++; S.cor++;
       if (!r[2]) { r[2] = 1; S.ec[src] = (S.ec[src] || 0) + 1; }
       ev.xp = firstOk ? 10 : 5;
+      ev.coins = firstOk ? ECO.FIRST : ECO.CORRECT;
     } else ev.xp = 2;
     S.xp += ev.xp;
     var d = today();
@@ -136,34 +154,80 @@
     return ev;
   }
   function questDone(total, score) {
-    var ev = { xp: 20 + (score === total && total > 0 ? 10 : 0), badges: [], titles: [], levelUp: null };
+    var perfect = score === total && total > 0;
+    var ev = { xp: 20 + (perfect ? 10 : 0), coins: perfect ? ECO.PERFECT : ECO.QUEST, badges: [], titles: [], levelUp: null, ms: [], quest: { total: total, score: score, perfect: perfect } };
     var before = levelInfo(S.xp).lv;
-    S.quests++; if (score === total && total > 0) S.perfect++;
+    S.quests++; if (perfect) S.perfect++;
     S.xp += ev.xp;
     finish(ev, before, true);
     return ev;
   }
   function finish(ev, before, bonus) {
-    BADGES.forEach(function (b) { if (!S.badges[b.id] && b.t(S)) { S.badges[b.id] = today(); ev.badges.push(b.n); } });
+    BADGES.forEach(function (b) { if (!S.badges[b.id] && b.t(S)) { S.badges[b.id] = today(); ev.badges.push(b.n); ev.coins += ECO.BADGE; } });
+    var sn = streakNow().n;
+    MILESTONES.forEach(function (m) { if (sn >= m && !S.ms[m]) { S.ms[m] = today(); ev.ms.push(m); ev.coins += ECO.MILESTONE; } });
     var after = levelInfo(S.xp);
     if (after.lv > before) ev.levelUp = after;
+    S.coins += ev.coins;
     save(); renderAll(); showToasts(ev, bonus);
+    if (window.JKFx && window.JKFx.play) { try { window.JKFx.play(ev); } catch (e) {} }
   }
+
+  /* ---------- ガチャ ---------- */
+  function A() { return window.JKAvatars || null; }
+  function pick(list, rng) { return list[Math.min(list.length - 1, Math.floor(rng() * list.length))]; }
+  function rollRarity(rng, minRare) {
+    var x = rng() * (minRare ? ECO.RATE.R + ECO.RATE.SR : 100);
+    if (x < ECO.RATE.SR) return "SR";
+    if (x < ECO.RATE.SR + ECO.RATE.R) return "R";
+    return "N";
+  }
+  function roll(rng, minRare) { // 1体えらぶ（状態は変えない）
+    var av = A(); if (!av) return null;
+    rng = rng || Math.random;
+    var r = rollRarity(rng, minRare);
+    return pick(av.byRarity[r], rng);
+  }
+  function pull(n, rng) {
+    var av = A();
+    if (!av) return { ok: false, reason: "loading" };
+    n = n === 10 ? 10 : 1;
+    var cost = n === 10 ? ECO.PULL10 : ECO.PULL;
+    if (S.coins < cost) return { ok: false, reason: "coins", need: cost - S.coins };
+    rng = rng || Math.random;
+    S.coins -= cost;
+    var res = [], gotRare = false;
+    for (var i = 0; i < n; i++) {
+      var force = (n === 10 && i === 9 && !gotRare) || S.pity >= ECO.PITY - 1; // 10連の最後／天井
+      var a = roll(rng, force);
+      if (av.get(a).r !== "N") { gotRare = true; S.pity = 0; } else S.pity++;
+      var d = av.get(a), isNew = !S.own[a], refund = 0;
+      if (isNew) S.own[a] = 1; else { S.own[a]++; refund = ECO.DUPE[d.r]; S.coins += refund; }
+      S.pulls++;
+      res.push({ id: a, r: d.r, isNew: isNew, refund: refund });
+    }
+    save(); renderAll();
+    return { ok: true, results: res, coins: S.coins, cost: cost };
+  }
+  function ownedCount() { return Object.keys(S.own).length; }
+  function setAvatar(id) { if (!S.own[id]) return false; S.sel = id; save(); renderAll(); return true; }
 
   function weakIds(src) { return Object.keys(S.weak[src] || {}); }
   function weakCount(subj) { var n = 0; [subj, subj + "Q"].forEach(function (s) { n += weakIds(s).length; }); return n; }
-  function reset() { S = blank(); try { localStorage.removeItem(KEY); } catch (e) {} renderAll(); }
+  function reset() { S = blank(); try { localStorage.removeItem(KEY); } catch (e) {} starter(); renderAll(); } // コイン・アバター・ガチャ履歴も消える（最初のコイン30枚だけ再び付与）
 
   /* ---------- UI helpers ---------- */
   function esc(v) { return String(v).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
   var toastBox = null, toastQ = [], toasting = false;
   function showToasts(ev, bonus) {
     var msgs = [];
-    if (ev.xp) msgs.push({ t: "+" + ev.xp + " XP", k: "xp" });
+    if (ev.xp) msgs.push({ t: "+" + ev.xp + " XP" + (ev.coins && !bonus ? "　+" + ev.coins + " コイン" : ""), k: "xp" });
+    else if (ev.coins) msgs.push({ t: "+" + ev.coins + " コイン", k: "xp" });
     if (ev.grad) msgs.push({ t: "弱点を1つ克服！", k: "up" });
     if (ev.levelUp) msgs.push({ t: "レベルアップ！ Lv" + ev.levelUp.lv + "「" + ev.levelUp.title + "」", k: "up" });
     ev.badges.forEach(function (b) { msgs.push({ t: "バッジ：" + b, k: "up" }); });
     ev.titles.forEach(function (b) { msgs.push({ t: "称号：" + b, k: "up" }); });
+    ev.ms.forEach(function (m) { msgs.push({ t: m + "日連続！ ボーナス +" + ECO.MILESTONE + " コイン", k: "up" }); });
     if (bonus) msgs = msgs.filter(function (m) { return m.k !== "xp"; }); // クエスト結果画面で表示するので省略
     if (!toastBox) {
       toastBox = document.createElement("div"); toastBox.className = "jkg-toasts"; toastBox.setAttribute("aria-live", "polite");
@@ -308,13 +372,14 @@
       '<h4>称号</h4>' + (titles.length ? '<ul class="jkg-titles">' + titles.map(function (t) { return "<li>🎖 " + esc(t) + "</li>"; }).join("") + '</ul>' : '<p class="jkg-sub">まだありません。一問一答の1分野で80%以上に正解すると「〇〇マスター」がもらえます。</p>') +
       (prog ? '<h4>分野ごとの進みぐあい</h4><p class="jkg-sub">正解したことがある問題の数。80%で称号。</p>' + prog : '') +
       '<div class="jkg-rules"><h4>ルール</h4><ul><li>正解 +10 XP（同じ問題の2回目以降は +5）／ まちがい +2 XP ／ ミニクエスト +20 XP（満点で +10）</li>' +
+      '<li>コイン：正解 +1（はじめての正解は +3）／ ミニクエスト +5（満点 +10）／ 新しいバッジ +5 ／ 3・7・14・30日連続 +10。ガチャは1回10コイン、10連は100コイン。</li>' +
       '<li>連続日数：1日1問でも答えれば、その日は数えます（端末の日付で、0時に切り替わります）。</li>' +
       '<li>まちがえた問題は「復習リスト」に入り、2回つづけて正解すると外れます。</li></ul></div>' +
       '<p class="jkg-note">記録は、この端末（このブラウザ）の中だけに保存されます。サーバーには送りません。別の端末とは共有されません。</p>' +
       '<button type="button" class="jkg-reset" data-jkg-reset>記録を消す（ゲームの記録だけ）</button></div>';
     overlay.querySelector("[data-jkg-close]").addEventListener("click", closeRecord);
     overlay.querySelector("[data-jkg-reset]").addEventListener("click", function () {
-      if (window.confirm("ストリーク・バッジ・レベル・復習リストなど、ゲームの記録をすべて消します。よろしいですか？")) reset();
+      if (window.confirm("ストリーク・バッジ・レベル・復習リスト・コイン・アバターなど、ゲームの記録をすべて消します。よろしいですか？")) reset();
     });
   }
 
@@ -322,7 +387,9 @@
   window.JKGame = {
     record: record, questDone: questDone, registerBank: registerBank, weakIds: weakIds, weakCount: weakCount,
     streak: streakNow, level: function () { return levelInfo(S.xp); }, xp: function () { return S.xp; },
-    openRecord: openRecord, reset: reset, rootUrl: ROOT, isMastered: function (subj, topic) { return !!S.mast[subj + "|" + topic]; },
+    openRecord: openRecord, reset: reset,
+    coins: function () { return S.coins; }, owned: function () { return S.own; }, ownedCount: ownedCount, selected: function () { return S.sel; },
+    pull: pull, roll: roll, setAvatar: setAvatar, pulls: function () { return S.pulls; }, pity: function () { return S.pity; }, ECO: ECO, rootUrl: ROOT, isMastered: function (subj, topic) { return !!S.mast[subj + "|" + topic]; },
     qs: function (src, id) { return S.qs[src + ":" + id] || null; }, _state: function () { return S; },
     constants: { WEAK_OUT: WEAK_OUT, MASTER_RATE: MASTER_RATE, SUBJ: SUBJ, SUBJ_PAGE: SUBJ_PAGE, QS: QS }
   };
