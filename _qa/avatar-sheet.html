@@ -1,0 +1,8 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width"><style>body{font-family:sans-serif;margin:8px;background:#f6f3ff}
+.g{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}.c{text-align:center;font-size:12px;background:#fff;border-radius:10px;padding:6px}
+.c b{display:inline-block;padding:0 6px;border-radius:4px;color:#fff;font-size:11px;margin-right:3px}.N b{background:#8a94a6}.R b{background:#2f80ed}.SR b{background:#e0a100}
+.jka-tw{transform-box:fill-box;transform-origin:center;animation:tw 1.6s infinite}@keyframes tw{50%{transform:scale(.5);opacity:.5}}
+.jka-spin{transform-origin:50px 56px;animation:sp 20s linear infinite}@keyframes sp{to{transform:rotate(360deg)}}
+</style><div class=g id=g></div>
+<script src="../game/avatars.js"></script>
+<script>JKAvatars.list.forEach(d=>{g.insertAdjacentHTML('beforeend','<div class="c '+d.r+'">'+JKAvatars.svg(d.id,150)+'<br><b>'+d.r+'</b>'+d.n+'<br><small>'+d.id+'</small></div>')})</script>
