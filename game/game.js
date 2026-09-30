@@ -22,7 +22,7 @@
   var PAST_TITLE_N = 100; // 過去問で100問（重複なし）に正解
 
   /* ---- コイン・ガチャ ---- */
-  var ECO = { START: 30, CORRECT: 1, FIRST: 3, QUEST: 5, PERFECT: 10, BADGE: 5, MILESTONE: 10, PULL: 10, PULL10: 100, PITY: 30,
+  var ECO = { START: 30, CORRECT: 1, FIRST: 3, CAP: 30, FASTMS: 1500, BONUS: { 30: 5, 50: 10 }, BONUS_RATE: 0.6, BADGE: 5, MILESTONE: 10, PULL: 10, PULL10: 100, PITY: 30,
     DUPE: { N: 2, R: 5, SR: 15 }, RATE: { N: 75, R: 22, SR: 3 } };
   var MILESTONES = [3, 7, 14, 30];
 
@@ -39,8 +39,8 @@
     { id: "st7", n: "7日連続", d: "7日つづけて問題をといた", t: function (s) { return s.best >= 7; } },
     { id: "st14", n: "14日連続", d: "14日つづけて問題をといた", t: function (s) { return s.best >= 14; } },
     { id: "st30", n: "30日連続", d: "30日つづけて問題をといた", t: function (s) { return s.best >= 30; } },
-    { id: "q1", n: "ミニクエスト クリア", d: "10問ミニクエストを最後までやった", t: function (s) { return s.quests >= 1; } },
-    { id: "q10", n: "満点クエスト", d: "ミニクエストで10問全問正解", t: function (s) { return s.perfect >= 1; } },
+    { id: "q1", n: "4択クイズ クリア", d: "4択クイズを最後まで解いて60%以上正解", t: function (s) { return s.quests >= 1; } },
+    { id: "q10", n: "満点クイズ", d: "4択クイズで全問正解", t: function (s) { return s.perfect >= 1; } },
     { id: "grad", n: "弱点を1つ克服", d: "まちがえた問題を2回連続で正解した", t: function (s) { return s.grads >= 1; } },
     { id: "chap", n: "分野パーフェクト", d: "一問一答の1分野を全問正解", t: function (s) { return s.perfChap >= 1; } },
     { id: "subj", n: "科目コンプリート", d: "一問一答の1科目で全分野マスター", t: function (s) { return s.subjDone >= 1; } },
@@ -52,7 +52,7 @@
   var mem = null;
   function blank() {
     return { v: 1, xp: 0, att: 0, cor: 0, days: [], best: 0, qs: {}, ec: {}, weak: {}, badges: {}, mast: {}, past: {},
-      quests: 0, perfect: 0, grads: 0, perfChap: 0, subjDone: 0, seen: {}, td: { d: "", n: 0 }, maxDay: 0,
+      quests: 0, perfect: 0, grads: 0, perfChap: 0, subjDone: 0, seen: {}, td: { d: "", n: 0 }, maxDay: 0, qb: { d: "", m: {} },
       coins: 0, own: {}, sel: "", pulls: 0, pity: 0, grant: 0, ms: {}, shown: {} };
   }
   function load() {
@@ -67,6 +67,7 @@
     function num(v) { v = Math.floor(+v); return isFinite(v) && v > 0 ? v : 0; }
     function obj(v) { return v && typeof v === "object" && !Array.isArray(v) ? v : {}; }
     s.coins = num(s.coins); s.pulls = num(s.pulls); s.pity = num(s.pity); s.grant = s.grant ? 1 : 0;
+    s.qb = obj(s.qb); s.qb.m = obj(s.qb.m); s.td = obj(s.td);
     s.own = obj(s.own); s.ms = obj(s.ms); s.shown = obj(s.shown);
     s.sel = typeof s.sel === "string" && s.own[s.sel] ? s.sel : "";
     return s;
@@ -123,24 +124,32 @@
   }
 
   /* ---------- record ---------- */
-  function record(src, id, ok, topic) {
+  function record(src, id, ok, topic, opts) { // opts.ms: 問題を出してから答えるまでのミリ秒（4択クイズのみ。速すぎるとコインなし）
     if (!SRC_SUBJ[src]) return null;
     var ev = { xp: 0, coins: 0, badges: [], titles: [], levelUp: null, grad: false, ms: [] };
     var before = levelInfo(S.xp).lv;
     var k = src + ":" + id, r = S.qs[k] || (S.qs[k] = [0, 0, 0]);
     var firstOk = ok && !r[2];
+    var d = today();
+    if (S.td.d !== d) S.td = { d: d, n: 0, c: 0 };
     r[0]++; S.att++;
     if (ok) {
       r[1]++; S.cor++;
       if (!r[2]) { r[2] = 1; S.ec[src] = (S.ec[src] || 0) + 1; }
       ev.xp = firstOk ? 10 : 5;
-      ev.coins = firstOk ? ECO.FIRST : ECO.CORRECT;
+      // コインの不正稼ぎ対策：①同じ問題のコインは1日1回まで（はじめての正解は +3、2回目以降の日は +1）②速すぎる回答（1.5秒未満）はコインなし ③回答コインは1日 CAP まで
+      var c = firstOk ? ECO.FIRST : ECO.CORRECT;
+      if (r[3] === d) c = 0;
+      if (opts && opts.ms != null && opts.ms < ECO.FASTMS) { c = 0; ev.fast = true; }
+      var room = Math.max(0, ECO.CAP - (S.td.c || 0));
+      if (c > room) c = room;
+      if (c > 0) { r[3] = d; S.td.c = (S.td.c || 0) + c; }
+      if ((S.td.c || 0) >= ECO.CAP && !S.td.cm) { S.td.cm = 1; ev.capHit = true; }
+      ev.coins = c;
     } else ev.xp = 2;
     S.xp += ev.xp;
-    var d = today();
     if (S.days[S.days.length - 1] !== d) { S.days.push(d); if (S.days.length > 400) S.days.splice(0, S.days.length - 400); }
     var sn = streakNow().n; if (sn > S.best) S.best = sn;
-    if (S.td.d !== d) S.td = { d: d, n: 0 };
     S.td.n++; if (S.td.n > S.maxDay) S.maxDay = S.td.n;
     S.seen[SRC_SUBJ[src]] = 1;
     var w = S.weak[src] || (S.weak[src] = {});
@@ -153,11 +162,19 @@
     finish(ev, before);
     return ev;
   }
-  function questDone(total, score) {
-    var perfect = score === total && total > 0;
-    var ev = { xp: 20 + (perfect ? 10 : 0), coins: perfect ? ECO.PERFECT : ECO.QUEST, badges: [], titles: [], levelUp: null, ms: [], quest: { total: total, score: score, perfect: perfect } };
+  // 4択クイズ（30・50問）の完走ボーナス：60%以上正解・1問あたり平均3秒以上かけた場合のみ。コインは1日・1モードにつき1回（30問+5／50問+10）。10問はXPのみ。
+  function quizDone(total, score, secs) {
+    var d = today(), perfect = score === total && total > 0;
+    var good = total > 0 && score / total >= ECO.BONUS_RATE && secs >= total * 3;
+    var ev = { xp: 0, coins: 0, badges: [], titles: [], levelUp: null, ms: [], bonus: false };
+    if (!S.qb || S.qb.d !== d) S.qb = { d: d, m: {} };
+    if (good) {
+      ev.xp = (total >= 50 ? 30 : total >= 30 ? 20 : 10) + (perfect ? 10 : 0);
+      if (ECO.BONUS[total] && !S.qb.m[total]) { S.qb.m[total] = 1; ev.coins = ECO.BONUS[total]; ev.bonus = true; }
+      S.quests++; if (perfect) S.perfect++;
+      ev.quiz = { total: total, score: score, perfect: perfect, coins: ev.coins };
+    }
     var before = levelInfo(S.xp).lv;
-    S.quests++; if (perfect) S.perfect++;
     S.xp += ev.xp;
     finish(ev, before, true);
     return ev;
@@ -234,7 +251,8 @@
     ev.badges.forEach(function (b) { msgs.push({ t: "バッジ：" + b, k: "up" }); });
     ev.titles.forEach(function (b) { msgs.push({ t: "称号：" + b, k: "up" }); });
     ev.ms.forEach(function (m) { msgs.push({ t: m + "日連続！ ボーナス +" + ECO.MILESTONE + " コイン", k: "up" }); });
-    if (bonus) msgs = msgs.filter(function (m) { return m.k !== "xp"; }); // クエスト結果画面で表示するので省略
+    if (bonus) msgs = msgs.filter(function (m) { return m.k !== "xp"; }); // クイズ結果画面で表示するので省略
+    if (ev.capHit) msgs.push({ t: "今日の回答コインは上限（" + ECO.CAP + "）に達しました。XPは引き続きもらえます。", k: "up" });
     if (!toastBox) {
       toastBox = document.createElement("div"); toastBox.className = "jkg-toasts"; toastBox.setAttribute("aria-live", "polite");
       document.body.appendChild(toastBox);
@@ -271,15 +289,16 @@
     return '<a class="jkg-ava' + (bare ? " is-bare" : "") + '" href="' + ROOT + 'gacha/" aria-label="マイアバター：' + esc(a.get(S.sel).n) + '（ガチャへ）">' + a.svg(S.sel, size, { bare: !!bare }) + '</a>';
   }
   function gachaBtn() { return '<a class="jkg-btn is-gacha" href="' + ROOT + 'gacha/">🎁 ガチャを回す <span class="jkg-coinb">🪙 ' + S.coins + '</span></a>'; }
-  function questUrl(subj, extra) { return ROOT + "quest/?s=" + SUBJ_PAGE[subj] + (extra || ""); }
+  function quizUrl(subj, extra) { return ROOT + "quiz/?s=" + SUBJ_PAGE[subj] + (extra || ""); }
 
+  function badgeCount() { return BADGES.filter(function (b) { return S.badges[b.id]; }).length; }
   function renderHome(el) {
     var st = streakNow(), li = levelInfo(S.xp), n = S.td.d === today() ? S.td.n : 0;
     var rows = ["ana", "phy", "cli"].map(function (s) {
-      var wc = weakCount(s);
+      var wc = weakIds(s).length; // 4択クイズの復習は過去問の分だけ
       return '<div class="jkg-subrow"><span class="jkg-subname">' + SUBJ[s] + '</span>' +
-        '<a class="jkg-btn" href="' + questUrl(s) + '">10問ミニクエスト</a>' +
-        (wc ? '<a class="jkg-btn is-weak" href="' + questUrl(s, "&mode=weak") + '">まちがえた問題 ' + wc + '問</a>'
+        '<a class="jkg-btn" href="' + quizUrl(s) + '">4択クイズ（10・30・50問）</a>' +
+        (wc ? '<a class="jkg-btn is-weak" href="' + quizUrl(s, "&mode=weak") + '">まちがえた問題 ' + wc + '問</a>'
             : '<span class="jkg-none">まちがえた問題：なし</span>') + '</div>';
     }).join("");
     el.innerHTML =
@@ -292,18 +311,18 @@
       '<p class="jkg-today">' + (n ? "今日は <strong>" + n + "</strong> 問といたよ。" : "今日はまだ0問。まずは1問だけやってみよう。") + '</p>' +
       '<div class="jkg-subrows">' + rows + '</div>' +
       '<div class="jkg-gacha">' + gachaBtn() + '</div>' +
-      '<div class="jkg-foot"><button type="button" class="jkg-link" data-jkg-open>🏅 バッジ・きろくを見る（' + Object.keys(S.badges).length + '/' + BADGES.length + '）</button>' +
+      '<div class="jkg-foot"><button type="button" class="jkg-link" data-jkg-open>🏅 バッジ・きろくを見る（' + badgeCount() + '/' + BADGES.length + '）</button>' +
       '<span class="jkg-note">記録は、この端末の中だけに保存されます。</span></div></div>';
   }
   function renderPanel(el) {
-    var subj = el.getAttribute("data-subject"), isQA = el.getAttribute("data-src") === "qa";
-    var st = streakNow(), li = levelInfo(S.xp), wc = weakCount(subj);
+    var subj = el.getAttribute("data-subject");
+    var st = streakNow(), li = levelInfo(S.xp), wc = weakIds(subj).length;
     el.innerHTML =
       '<div class="jkg-card is-compact">' +
       '<div class="jkg-strip">' + avaHtml(30, true) + '<span class="jkg-chip">🔥 ' + streakText(st) + '</span><span class="jkg-chip">Lv' + li.lv + ' ' + esc(li.title) + '</span>' +
       '<span class="jkg-chip is-coin">🪙 ' + S.coins + '</span><button type="button" class="jkg-link" data-jkg-open>きろく</button></div>' +
-      '<div class="jkg-actions"><a class="jkg-btn" href="' + questUrl(subj, isQA ? "&src=qa" : "&src=past") + '">10問ミニクエスト</a>' +
-      (wc ? '<a class="jkg-btn is-weak" href="' + questUrl(subj, "&mode=weak") + '">まちがえた問題だけ復習（' + wc + '問）</a>'
+      '<div class="jkg-actions"><a class="jkg-btn" href="' + quizUrl(subj) + '">4択クイズ（10・30・50問）</a>' +
+      (wc ? '<a class="jkg-btn is-weak" href="' + quizUrl(subj, "&mode=weak") + '">まちがえた問題だけ復習（' + wc + '問）</a>'
           : '<span class="jkg-none">まちがえた問題：いまはなし</span>') + '</div>' +
       '<p class="jkg-note">記録は、この端末の中だけに保存されます。</p></div>';
   }
@@ -382,11 +401,12 @@
       '<div class="jkg-stat"><small>レベル</small><strong>Lv' + li.lv + '</strong><span>' + esc(li.title) + '</span></div>' +
       '<div class="jkg-stat"><small>正解した数</small><strong>' + S.cor + '<em>問</em></strong><span>挑戦 ' + S.att + '問</span></div></div>' +
       '<div class="jkg-lvbox">' + barHtml(li) + '<span class="jkg-sub">' + S.xp + ' XP' + (li.max ? "（最高レベル）" : " ／ 次のレベルまで " + (li.next - S.xp) + " XP") + '</span></div>' +
-      '<h4>バッジ（' + Object.keys(S.badges).length + '/' + BADGES.length + '）</h4><ul class="jkg-badges">' + badges + '</ul>' +
+      '<h4>バッジ（' + badgeCount() + '/' + BADGES.length + '）</h4><ul class="jkg-badges">' + badges + '</ul>' +
       '<h4>称号</h4>' + (titles.length ? '<ul class="jkg-titles">' + titles.map(function (t) { return "<li>🎖 " + esc(t) + "</li>"; }).join("") + '</ul>' : '<p class="jkg-sub">まだありません。一問一答の1分野で80%以上に正解すると「〇〇マスター」がもらえます。</p>') +
       (prog ? '<h4>分野ごとの進みぐあい</h4><p class="jkg-sub">正解したことがある問題の数。80%で称号。</p>' + prog : '') +
-      '<div class="jkg-rules"><h4>ルール</h4><ul><li>正解 +10 XP（同じ問題の2回目以降は +5）／ まちがい +2 XP ／ ミニクエスト +20 XP（満点で +10）</li>' +
-      '<li>コイン：正解 +1（はじめての正解は +3）／ ミニクエスト +5（満点 +10）／ 新しいバッジ +5 ／ 3・7・14・30日連続 +10。ガチャは1回10コイン、10連は100コイン。</li>' +
+      '<div class="jkg-rules"><h4>ルール</h4><ul><li>正解 +10 XP（同じ問題の2回目以降は +5）／ まちがい +2 XP ／ 4択クイズを60%以上で完走 +10／20／30 XP（10／30／50問。全問正解でさらに +10）</li>' +
+      '<li>コイン：はじめての正解 +3（同じ問題の2回目以降は +1）。同じ問題のコインは1日1回まで、答えるのが速すぎる（1.5秒未満）とコインなし、回答コインは1日 '+ECO.CAP+' まで。</li>' +
+      '<li>4択クイズの完走ボーナス（60%以上正解・1問3秒以上かけた場合、1日1モードにつき1回）：30問 +5／50問 +10。新しいバッジ +5 ／ 3・7・14・30日連続 +10。ガチャは1回10コイン、10連は100コイン。</li>' +
       '<li>連続日数：1日1問でも答えれば、その日は数えます（端末の日付で、0時に切り替わります）。</li>' +
       '<li>まちがえた問題は「復習リスト」に入り、2回つづけて正解すると外れます。</li></ul></div>' +
       '<p class="jkg-note">記録は、この端末（このブラウザ）の中だけに保存されます。サーバーには送りません。別の端末とは共有されません。</p>' +
@@ -399,7 +419,7 @@
 
   /* ---------- public ---------- */
   window.JKGame = {
-    record: record, questDone: questDone, registerBank: registerBank, weakIds: weakIds, weakCount: weakCount,
+    record: record, quizDone: quizDone, registerBank: registerBank, weakIds: weakIds, weakCount: weakCount,
     streak: streakNow, level: function () { return levelInfo(S.xp); }, xp: function () { return S.xp; },
     openRecord: openRecord, reset: reset,
     coins: function () { return S.coins; }, owned: function () { return S.own; }, ownedCount: ownedCount, selected: function () { return S.sel; },

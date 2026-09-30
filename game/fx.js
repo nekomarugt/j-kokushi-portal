@@ -12,9 +12,10 @@
 
   function items(ev) { // → [{key, icon, title, sub, size}]
     var out = [];
-    if (ev.quest) {
-      if (ev.quest.perfect) out.push({ icon: "🎉", title: "パーフェクト！", sub: "10問ぜんぶ正解！ +" + ev.coins + " コイン", size: 3 });
-      else out.push({ icon: "⚔️", title: "クエストクリア！", sub: ev.quest.score + "/" + ev.quest.total + " 正解　+" + ev.coins + " コイン", size: 2 });
+    if (ev.quiz) {
+      var cs = ev.quiz.coins ? "　+" + ev.quiz.coins + " コイン" : "";
+      if (ev.quiz.perfect) out.push({ icon: "🎉", title: "パーフェクト！", sub: ev.quiz.total + "問ぜんぶ正解！" + cs, size: 3 });
+      else out.push({ icon: "✅", title: "クイズクリア！", sub: ev.quiz.score + "/" + ev.quiz.total + " 正解" + cs, size: 2 });
     }
     if (ev.levelUp) out.push({ key: "lv:" + ev.levelUp.lv, icon: "⬆️", title: "レベルアップ！", sub: "Lv" + ev.levelUp.lv + "「" + ev.levelUp.title + "」", size: 3 });
     (ev.ms || []).forEach(function (m) { out.push({ key: "ms:" + m, icon: "🔥", title: m + "日連続！", sub: "ボーナス +10 コイン", size: m >= 14 ? 3 : 2 }); });

@@ -1,4 +1,4 @@
-/* 学習ゲーム（連続日数・レベル・ミニクエスト）。ポータルの配色に合わせた控えめなデザイン */
+/* 学習ゲーム（連続日数・レベル・4択クイズ）。ポータルの配色に合わせた控えめなデザイン */
 .jkg-card, .jkq-surface, .jkg-modal {
   --jk-ink: #10223e; --jk-muted: #5d6c84; --jk-line: #d9e1ec; --jk-blue: #1f5fc4; --jk-blue-d: #174b9e; --jk-teal: #087866; --jk-warm: #c2570c; --jk-soft: #f2f6fb;
   font-family: "Noto Sans JP", "Yu Gothic UI", "Yu Gothic", Meiryo, sans-serif; color: var(--jk-ink); line-height: 1.6;
@@ -70,7 +70,7 @@
 .jkg-rules li::before { content: "・"; }
 .jkg-reset { display: block; width: 100%; min-height: 48px; margin-top: 14px; border: 1px solid #e0b4b4; border-radius: 12px; background: #fff; color: #a32727; font: inherit; font-weight: 800; cursor: pointer; }
 
-/* ---- ミニクエストページ ---- */
+/* ---- 4択クイズページ ---- */
 .jkq-body { margin: 0; min-width: 320px; min-height: 100vh; padding-bottom: 96px; font-family: "Noto Sans JP", "Yu Gothic UI", "Yu Gothic", Meiryo, sans-serif; font-size: 16px; line-height: 1.7; color: #10223e;
   background: radial-gradient(circle at 8% 4%, rgba(39, 99, 191, .14), transparent 28rem), linear-gradient(180deg, #edf3fb 0%, #fbfcfe 55%, #eef4f9 100%); }
 .jkq-shell { width: min(680px, calc(100% - 28px)); margin: 0 auto; padding: 26px 0 20px; }
