@@ -150,7 +150,7 @@
   .jkg-toast.is-out { transition: none; }
 }
 
-/* ---- アバター（ぷにっ子）共通 ---- */
+/* ---- アバター（SDキャラ）共通 ---- */
 .jka { display: block; flex: none; overflow: visible; }
 .jka-tw { transform-box: fill-box; transform-origin: center; animation: jka-tw 1.8s ease-in-out infinite; }
 .jka-spin { transform-origin: 50px 80px; animation: jka-spin 24s linear infinite; }

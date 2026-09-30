@@ -1,4 +1,4 @@
-/* ぷにっ子ガチャ画面 */
+/* SDキャラガチャ画面 */
 .jkc-body { background: radial-gradient(circle at 12% 2%, rgba(255, 150, 200, .22), transparent 24rem), radial-gradient(circle at 92% 20%, rgba(120, 160, 255, .2), transparent 24rem), linear-gradient(180deg, #f1eeff 0%, #fbfcfe 55%, #eef4f9 100%); }
 .jkc-body .jkq-shell > section { margin-bottom: 16px; }
 .jkc-mark { background: linear-gradient(135deg, #ff7aa8, #7a6cf0); font-size: 1.6rem; }
