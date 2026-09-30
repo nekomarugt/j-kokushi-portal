@@ -149,3 +149,14 @@
   .jkg-toast { animation: none; }
   .jkg-toast.is-out { transition: none; }
 }
+
+/* ---- アバター（ぷにっ子）共通 ---- */
+.jka { display: block; flex: none; overflow: visible; }
+.jka-tw { transform-box: fill-box; transform-origin: center; animation: jka-tw 1.8s ease-in-out infinite; }
+.jka-spin { transform-origin: 50px 56px; animation: jka-spin 24s linear infinite; }
+.jka-sil { filter: brightness(0) opacity(.16); }
+.jka-r { filter: drop-shadow(0 0 3px rgba(91, 141, 239, .55)); }
+.jka-sr { filter: drop-shadow(0 0 5px rgba(255, 190, 40, .8)); }
+@keyframes jka-tw { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(.45); opacity: .45; } }
+@keyframes jka-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .jka-tw, .jka-spin { animation: none; } }

@@ -202,7 +202,7 @@
       var a = roll(rng, force);
       if (av.get(a).r !== "N") { gotRare = true; S.pity = 0; } else S.pity++;
       var d = av.get(a), isNew = !S.own[a], refund = 0;
-      if (isNew) S.own[a] = 1; else { S.own[a]++; refund = ECO.DUPE[d.r]; S.coins += refund; }
+      if (isNew) { S.own[a] = 1; if (!S.sel) S.sel = a; } else { S.own[a]++; refund = ECO.DUPE[d.r]; S.coins += refund; }
       S.pulls++;
       res.push({ id: a, r: d.r, isNew: isNew, refund: refund });
     }
@@ -303,6 +303,7 @@
   function renderAll() {
     mounts.forEach(function (el) { if (el.getAttribute("data-jkg") === "home") renderHome(el); else renderPanel(el); });
     if (overlay && !overlay.hidden) renderRecord();
+    try { document.dispatchEvent(new CustomEvent("jkg-change")); } catch (e) {}
   }
   document.addEventListener("click", function (e) {
     var b = e.target.closest && e.target.closest("[data-jkg-open]");
