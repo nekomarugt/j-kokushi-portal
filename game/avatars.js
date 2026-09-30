@@ -50,7 +50,7 @@
     .map(function (k) { return D[k - 1].id; });
 
   function pad(a) { return (a < 10 ? "0" : "") + a; }
-  function src(d, size) { return ROOT + "a" + pad(d.a) + (size <= 120 ? "_t" : "") + ".webp"; }
+  function src(d, size) { return ROOT + "a" + pad(d.a) + (size <= 120 ? "_t" : "") + ".webp?v=2"; }
   function esc(v) { return String(v).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
 
   /* svg(id,size,{bare:true}) → 枠つき（2:3）か、枠なし（ストリップ用）のHTML。名前は owned 前提で呼ぶこと（未入手は sil を使う）。 */
@@ -66,7 +66,7 @@
   function sil(id, size) {
     var d = BYID[id]; if (!d) return "";
     var w = size || 64, h = Math.round(w * 1.5);
-    return '<span class="jka jka-sil" style="width:' + w + 'px;height:' + h + 'px" aria-hidden="true"><i class="jka-in"><img src="' + ROOT + "a" + pad(d.a) + '_s.webp" alt="" width="' + w + '" height="' + h + '" loading="lazy" decoding="async" draggable="false"></i></span>';
+    return '<span class="jka jka-sil" style="width:' + w + 'px;height:' + h + 'px" aria-hidden="true"><i class="jka-in"><img src="' + ROOT + "a" + pad(d.a) + '_s.webp?v=2" alt="" width="' + w + '" height="' + h + '" loading="lazy" decoding="async" draggable="false"></i></span>';
   }
   function preload(ids, size) { // 引いた直後の結果用に先読み（演出中に読み込む）
     return Promise.all((ids || []).map(function (id) {
