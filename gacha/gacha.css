@@ -82,6 +82,6 @@
 .jkc-locked { margin: 0; color: #5d6c84; }
 .jkc-how { margin: 0 0 4px; padding-left: 1.2em; color: #33435c; font-size: .92rem; }
 .jkc-how li { margin: 3px 0; }
-a.jkq-secondary { text-decoration: none; }
+a.jkq-secondary { text-decoration: none; box-sizing: border-box; }
 @media (min-width: 560px) { .jkc-bgrid { grid-template-columns: repeat(5, 1fr); } .jkc-btns { grid-template-columns: 1fr 1.4fr; } }
 @media (prefers-reduced-motion: reduce) { .jkc-idle .jkc-cap, .jkc-card, .jkc-rays, .jkc-cap.is-shake .jkc-cap-in { animation: none !important; } .jkc-bar i { transition: none; } }
