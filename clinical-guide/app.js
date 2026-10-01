@@ -39,6 +39,80 @@
       .replaceAll("'", "&#039;");
   }
 
+  // ---- 過去問との行き来（../clinical/guidelinks.json）----
+  // 節 = 総論は「１．体位、姿勢」のような番号つき見出し／各論は疾患（見出し）ごと。節ID = 単元ID:節番号
+  const normText = (value) => String(value).normalize("NFKC");
+  const startsCache = new Map();
+  function sectionStarts(unit) {
+    if (startsCache.has(unit.id)) return startsCache.get(unit.id);
+    const blocks = unit.blocks;
+    const heads = [];
+    blocks.forEach((block, index) => { if (block.type === "heading") heads.push(index); });
+    const cand = [];
+    if (unit.id && generalContent.sections.some((item) => item.id === unit.id)) {
+      heads.forEach((index) => {
+        const block = blocks[index];
+        if (block.level >= 2 && /^\d+\s*[.．]/.test(normText(block.text))) cand.push(index);
+      });
+    } else {
+      heads.forEach((index, k) => {
+        const block = blocks[index];
+        const next = k + 1 < heads.length ? blocks[heads[k + 1]] : null;
+        if (block.level === 1) {
+          if (!(next && next.level >= 2)) cand.push(index);
+          else if (blocks.slice(index + 1, heads[k + 1]).some((b) => b.type === "note" || b.type === "table")) cand.push(index);
+        } else if (block.level === 2) {
+          cand.push(index);
+        }
+      });
+    }
+    const starts = cand.filter((index, k) => {
+      const end = k + 1 < cand.length ? cand[k + 1] : blocks.length;
+      return blocks.slice(index + 1, end).some((b) => b.type === "note" || b.type === "table");
+    });
+    const map = new Map(starts.map((index, k) => [blocks[index], k + 1]));
+    startsCache.set(unit.id, map);
+    return map;
+  }
+  let currentStarts = null;
+  let currentUnitId = "";
+  let linkData = null;
+  function xqCounts() {
+    const bySec = {};
+    const byUnit = {};
+    if (!linkData) return { bySec, byUnit };
+    Object.values(linkData.map).forEach((ids) => {
+      const units = new Set();
+      ids.forEach((sid) => {
+        bySec[sid] = (bySec[sid] || 0) + 1;
+        const sec = linkData.sections[sid];
+        if (sec) units.add(sec.c);
+      });
+      units.forEach((unitId) => { byUnit[unitId] = (byUnit[unitId] || 0) + 1; });
+    });
+    return { bySec, byUnit };
+  }
+  function fillXqCounts() {
+    if (!linkData) return;
+    const { bySec, byUnit } = xqCounts();
+    document.querySelectorAll("[data-xq-sec]").forEach((el) => {
+      const n = bySec[el.dataset.xqSec] || 0;
+      el.textContent = "（" + n + "問）";
+      const link = el.closest("a");
+      if (link) link.classList.toggle("is-empty", n === 0);
+    });
+    document.querySelectorAll("[data-xq-ch]").forEach((el) => {
+      const n = byUnit[el.dataset.xqCh] || 0;
+      el.textContent = "（" + n + "問）";
+      const link = el.closest("a");
+      if (link) link.classList.toggle("is-empty", n === 0);
+    });
+  }
+  fetch("../clinical/guidelinks.json")
+    .then((response) => (response.ok ? response.json() : Promise.reject(new Error("guidelinks unavailable"))))
+    .then((data) => { linkData = data; fillXqCounts(); })
+    .catch(() => { linkData = null; });
+
   function sectionById(id) {
     return generalContent.sections.find((section) => section.id === id) || generalContent.sections[0];
   }
@@ -81,6 +155,12 @@
   function renderBlock(block, index, unitId) {
     if (block.type === "heading") {
       const level = Math.min(4, Math.max(2, block.level + 1));
+      const secNo = currentStarts && currentStarts.get(block);
+      if (secNo) {
+        const secId = `${unitId}:${secNo}`;
+        return `<h${level} id="sec-${escapeHtml(unitId)}-${secNo}" class="note-heading level-${block.level}">${escapeHtml(block.text)}</h${level}>` +
+          `<p class="xq"><a class="xq-link" href="../clinical/?sec=${encodeURIComponent(secId)}" data-xq-link="${escapeHtml(secId)}">この節の過去問<span data-xq-sec="${escapeHtml(secId)}"></span> →</a></p>`;
+      }
       return `<h${level} class="note-heading level-${block.level}">${escapeHtml(block.text)}</h${level}>`;
     }
 
@@ -206,6 +286,8 @@
 
   function renderReader({ unit, nav, eyebrow, explanations, sourceIntro, caution }) {
     const q = query.trim().toLowerCase();
+    currentStarts = sectionStarts(unit);
+    currentUnitId = unit.id;
     const blocks = q ? unit.blocks.filter((block) => blockText(block).toLowerCase().includes(q)) : unit.blocks;
     const noteCount = unit.blocks.filter((block) => block.type === "note" || block.type === "table").length;
     const answerCount = unit.blocks.filter((block) => hasAnswer(block)).length;
@@ -218,6 +300,7 @@
             <p class="eyebrow">${escapeHtml(eyebrow)}</p>
             <h1>${escapeHtml(unit.title)}</h1>
             <p>${escapeHtml(unit.summary)}</p>
+            <div class="xq-chapter-row"><a class="xq-chapter" href="../clinical/?ch=${encodeURIComponent(unit.id)}">この章の過去問<span data-xq-ch="${escapeHtml(unit.id)}"></span> →</a></div>
           </div>
           <span class="count-badge">${noteCount}項目</span>
         </div>
@@ -288,7 +371,40 @@
     if (activeCourse === "general") renderGeneral();
     else renderDiseases();
     bindEvents();
+    fillXqCounts();
   }
+
+  // 過去問ページの「関連資料」から来たとき：#sec-単元ID-節番号 → その単元を開いて節へ移動
+  function routeFromHash() {
+    const id = decodeURIComponent(location.hash.replace(/^#/, ""));
+    const m = /^(sec|unit)-(.+?)(?:-(\d+))?$/.exec(id);
+    if (!m) return false;
+    const unitId = m[2];
+    if (generalContent.sections.some((item) => item.id === unitId)) {
+      activeCourse = "general";
+      activeSection = unitId;
+    } else if (availableDiseases.has(unitId)) {
+      activeCourse = "diseases";
+      activeDisease = unitId;
+    } else {
+      return false;
+    }
+    query = "";
+    render();
+    if (m[1] === "sec" && m[3]) {
+      const target = document.getElementById("sec-" + unitId + "-" + m[3]);
+      if (target) {
+        document.querySelectorAll(".is-focus").forEach((el) => el.classList.remove("is-focus"));
+        target.classList.add("is-focus");
+        // 画像の遅延読み込みでレイアウトが動くので、少し後にもう一度合わせる
+        const jump = () => target.scrollIntoView({ block: "start", behavior: "instant" });
+        jump();
+        [250, 700, 1400].forEach((ms) => setTimeout(jump, ms));
+      }
+    }
+    return true;
+  }
+  window.addEventListener("hashchange", routeFromHash);
 
   function bindEvents() {
     document.querySelectorAll("[data-unit]").forEach((button) => {
@@ -367,5 +483,5 @@
     });
   }
 
-  render();
+  if (!routeFromHash()) render();
 })();

@@ -399,13 +399,14 @@ footer {
 .tips-body .illustration-open img { max-width: 720px; margin: 0 auto; }
 .tips-note { display: block; margin-top: 6px; color: #51657a; font-size: .78rem; line-height: 1.55; }
 
-/* ---- 過去問への入口（節・章）。控えめに。印刷では出さない ---- */
-.xq { margin: 14px 0 6px; }
-.xq-link { display: inline-flex; align-items: center; min-height: 44px; padding: 6px 16px; border: 1px solid #9db8c9; border-radius: 999px; background: #fff; color: #0b4f8a; font-size: .9rem; font-weight: 800; text-decoration: none; }
-.xq-link:hover { background: #f2f8fd; }
-.xq-link:focus-visible, .xq-chapter:focus-visible { outline: 3px solid #0b5ea8; outline-offset: 3px; }
-.xq-chapter-row { position: relative; z-index: 1; margin-top: 12px; }
-.xq-chapter { display: inline-flex; align-items: center; min-height: 44px; padding: 6px 16px; border-radius: 999px; background: #fff; color: #0b4f8a; font-size: .9rem; font-weight: 800; text-decoration: none; }
-.chapter-intro p:last-of-type { position: relative; z-index: 1; max-width: 760px; margin: 12px 0 0; color: #e6f5ff; }
+/* ---- 過去問への入口（節・章）。塗りつぶしボタン。印刷では出さない ---- */
+.xq { margin: 12px 0 8px; }
+.xq-link, .xq-chapter { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 8px 20px; border: 0; border-radius: 999px; background: #c2410c; color: #fff; font-size: .94rem; font-weight: 800; letter-spacing: .02em; text-decoration: none; box-shadow: 0 6px 14px rgba(194, 65, 12, .28); }
+.xq-link:hover, .xq-chapter:hover { background: #9a3412; color: #fff; }
+.xq-link:focus-visible, .xq-chapter:focus-visible { outline: 3px solid #fff; box-shadow: 0 0 0 6px #c2410c; }
+.xq-link.is-empty, .xq-chapter.is-empty { background: #c8d0d4; color: #4b5a62; box-shadow: none; }
+.xq-chapter-row { position: relative; z-index: 1; margin-top: 14px; }
+@media (max-width: 520px) { .xq-link, .xq-chapter { width: 100%; } }
 @media print { .xq, .xq-chapter-row { display: none !important; } }
-.lesson-card.is-focus { outline: 3px solid #0b5ea8; outline-offset: 2px; }
+.lesson-card.is-focus { outline: 3px solid #c2410c; outline-offset: 3px; border-radius: 6px; }
+.chapter-intro p:last-of-type { position: relative; z-index: 1; max-width: 760px; margin: 12px 0 0; color: #e6f5ff; }

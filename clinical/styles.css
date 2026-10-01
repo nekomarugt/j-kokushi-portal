@@ -709,3 +709,20 @@ button:focus-visible { outline: 3px solid rgba(8, 120, 102, 0.28); outline-offse
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
+
+/* 関連資料（解答後）：目立つ色のパネル。主な節は塗りつぶし、関連は枠線 */
+.xlink { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin: 0 0 16px; padding: 12px 14px 13px; border: 1px solid #f3c79f; border-left: 6px solid #c2410c; border-radius: 12px; background: #fff4e6; color: #7c2d12; font-size: 0.9rem; line-height: 1.5; }
+.xlink-label { display: inline-flex; align-items: center; flex: 0 0 100%; margin: 0; padding: 0; background: none; color: #9a3412; font-size: 0.86rem; font-weight: 900; letter-spacing: 0.04em; }
+.xlink-label::before { content: "📖"; margin-right: 6px; font-size: 1rem; }
+.xlink-label::after { content: "　学習資料でこの問題の周辺を確認"; color: #8a5a3c; font-size: 0.74rem; font-weight: 700; letter-spacing: 0; }
+.xlink-item { display: inline-flex; align-items: center; min-height: 44px; padding: 6px 14px; border: 2px solid #c2410c; border-radius: 999px; background: #fff; color: #9a3412; font-size: 0.88rem; font-weight: 800; text-decoration: none; }
+.xlink-item.is-main { background: #c2410c; color: #fff; box-shadow: 0 6px 14px rgba(194, 65, 12, 0.25); }
+.xlink-item::after { content: "→"; margin-left: 6px; font-weight: 900; }
+.xlink-item:hover { background: #ffe8d1; }
+.xlink-item.is-main:hover { background: #9a3412; }
+.xlink-item:focus-visible { outline: 3px solid rgba(194, 65, 12, 0.45); outline-offset: 2px; }
+@media (max-width: 520px) {
+  .xlink { padding: 11px 12px 12px; }
+  .xlink-label::after { content: ""; }
+  .xlink-item { width: 100%; justify-content: space-between; }
+}

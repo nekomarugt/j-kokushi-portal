@@ -534,3 +534,15 @@ body { padding-bottom: calc(92px + env(safe-area-inset-bottom, 0px)); }
 @media print {
   .tips-box { border-style: dashed; }
 }
+
+/* ---- 過去問への入口（節・章）。塗りつぶしボタン。印刷では出さない ---- */
+.xq { margin: 12px 0 8px; }
+.xq-link, .xq-chapter { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 8px 20px; border: 0; border-radius: 999px; background: #c2410c; color: #fff; font-size: .94rem; font-weight: 800; letter-spacing: .02em; text-decoration: none; box-shadow: 0 6px 14px rgba(194, 65, 12, .28); }
+.xq-link:hover, .xq-chapter:hover { background: #9a3412; color: #fff; }
+.xq-link:focus-visible, .xq-chapter:focus-visible { outline: 3px solid #fff; box-shadow: 0 0 0 6px #c2410c; }
+.xq-link.is-empty, .xq-chapter.is-empty { background: #c8d0d4; color: #4b5a62; box-shadow: none; }
+.xq-chapter-row { position: relative; z-index: 1; margin-top: 14px; }
+@media (max-width: 520px) { .xq-link, .xq-chapter { width: 100%; } }
+@media print { .xq, .xq-chapter-row { display: none !important; } }
+.lesson-card.is-focus, .note-heading.is-focus { outline: 3px solid #c2410c; outline-offset: 3px; border-radius: 6px; }
+.note-heading { scroll-margin-top: 12px; }
