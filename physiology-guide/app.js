@@ -28,10 +28,56 @@
       .replaceAll("'", '&#039;');
   }
 
+  // 過去問との行き来：../physiology/guidelinks.json が読めれば問題数を表示（読めなくてもリンクは使える）
+  let linkData = null;
+  function xqCounts() {
+    const bySec = {}, byCh = {};
+    if (!linkData) return {bySec, byCh};
+    Object.values(linkData.map).forEach((ids) => {
+      const chs = new Set();
+      ids.forEach((sid) => {
+        bySec[sid] = (bySec[sid] || 0) + 1;
+        const sec = linkData.sections[sid];
+        if (sec) chs.add(sec.c);
+      });
+      chs.forEach((c) => { byCh[c] = (byCh[c] || 0) + 1; });
+    });
+    return {bySec, byCh};
+  }
+  function fillXqCounts() {
+    const {bySec, byCh} = xqCounts();
+    document.querySelectorAll('[data-xq-sec]').forEach((el) => {
+      const n = bySec[el.dataset.xqSec];
+      el.textContent = linkData ? '（' + (n || 0) + '問）' : '';
+    });
+    document.querySelectorAll('[data-xq-ch]').forEach((el) => {
+      const n = byCh[el.dataset.xqCh];
+      el.textContent = linkData ? '（' + (n || 0) + '問）' : '';
+    });
+  }
+  fetch('../physiology/guidelinks.json')
+    .then((response) => (response.ok ? response.json() : Promise.reject(new Error('guidelinks unavailable'))))
+    .then((data) => { linkData = data; fillXqCounts(); })
+    .catch(() => { linkData = null; });
+
   function chapterFromHash() {
     const id = decodeURIComponent(location.hash.replace(/^#/, ''));
-    const index = chapters.findIndex((chapter) => chapter.id === id);
+    let index = chapters.findIndex((chapter) => chapter.id === id);
+    if (index < 0) {
+      // 過去問アプリからの「関連資料」リンク：#lesson-章ID-節番号
+      const m = /^lesson-(.+)-(\d+)$/.exec(id);
+      if (m) index = chapters.findIndex((chapter) => chapter.id === m[1]);
+    }
     return index >= 0 ? index : 0;
+  }
+
+  function focusLessonFromHash() {
+    const id = decodeURIComponent(location.hash.replace(/^#/, ''));
+    if (!/^lesson-.+-\d+$/.test(id)) return;
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.classList.add('is-focus');
+    setTimeout(() => el.scrollIntoView({block: 'start'}), 60);
   }
 
   function renderTabs() {
@@ -55,7 +101,8 @@
     intro.innerHTML =
       '<p class="chapter-kicker">CHAPTER ' + escapeHtml(chapter.number) + '</p>' +
       '<h2>' + escapeHtml(chapter.title) + '</h2>' +
-      '<p>' + escapeHtml(chapter.intro) + '</p>';
+      '<p>' + escapeHtml(chapter.intro) + '</p>' +
+      '<div class="xq-chapter-row"><a class="xq-chapter" href="../physiology/?ch=' + encodeURIComponent(chapter.id) + '">この章の過去問<span data-xq-ch="' + escapeHtml(chapter.id) + '"></span> →</a></div>';
 
     sectionList.innerHTML = chapter.sections.map((section, index) => {
       const image = section.image
@@ -89,6 +136,7 @@
               '</div>' +
             '</details>'
           ).join('') +
+          '<p class="xq"><a class="xq-link" href="../physiology/?sec=' + escapeHtml(chapter.number + '-' + (index + 1)) + '" data-xq-link="' + escapeHtml(chapter.number + '-' + (index + 1)) + '">この節の過去問<span data-xq-sec="' + escapeHtml(chapter.number + '-' + (index + 1)) + '"></span> →</a></p>' +
           '<div class="quick-check">' +
             '<strong>理解度チェック</strong>' +
             '<p>' + escapeHtml(section.question) + '</p>' +
@@ -137,6 +185,7 @@
       ).join('') +
       '</div>';
 
+    fillXqCounts();
     prevButton.disabled = currentIndex === 0;
     nextButton.disabled = currentIndex === chapters.length - 1;
     prevButton.textContent = currentIndex === 0 ? '前の章' : '← ' + chapters[currentIndex - 1].title;
@@ -199,6 +248,7 @@
   window.addEventListener('popstate', () => {
     currentIndex = chapterFromHash();
     renderChapter();
+    focusLessonFromHash();
   });
 
   document.getElementById('closeImageViewer').addEventListener('click', () => imageViewer.close());
@@ -206,4 +256,5 @@
 
   currentIndex = chapterFromHash();
   renderChapter();
+  focusLessonFromHash();
 })();

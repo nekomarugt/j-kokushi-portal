@@ -25,6 +25,7 @@ const els = {
   feedbackLabel: document.getElementById("feedback-label"),
   feedbackAnswer: document.getElementById("feedback-answer"),
   feedbackExplanation: document.getElementById("feedback-explanation"),
+  feedbackXlink: document.getElementById("feedback-xlink"),
   nextButton: document.getElementById("next-button"),
   scoreRing: document.getElementById("score-ring"),
   scorePercent: document.getElementById("score-percent"),
@@ -112,7 +113,7 @@ function updateStartLabel() {
 }
 
 function loadFields() {
-  fetch("./fields.json")
+  return fetch("./fields.json")
     .then((response) => {
       if (!response.ok) throw new Error("fields unavailable");
       return response.json();
@@ -125,6 +126,77 @@ function loadFields() {
     .catch(() => {
       fieldData = null;
     });
+}
+
+/* ---- 学習資料との行き来（physiology/guidelinks.json）---- */
+let linkData = null;
+
+function loadLinks() {
+  return fetch("./guidelinks.json")
+    .then((response) => {
+      if (!response.ok) throw new Error("guidelinks unavailable");
+      return response.json();
+    })
+    .then((data) => {
+      linkData = data;
+    })
+    .catch(() => {
+      linkData = null;
+    });
+}
+
+function renderXlink(question) {
+  const box = els.feedbackXlink;
+  if (!box) return;
+  box.replaceChildren();
+  const ids = linkData && linkData.map[questionId(question)];
+  if (!ids || !ids.length) {
+    box.classList.add("is-hidden");
+    return;
+  }
+  const label = document.createElement("span");
+  label.className = "xlink-label";
+  label.textContent = "関連資料";
+  box.appendChild(label);
+  ids.forEach((sid, index) => {
+    const sec = linkData.sections[sid];
+    if (!sec) return;
+    const link = document.createElement("a");
+    link.className = "xlink-item" + (index === 0 ? " is-main" : "");
+    link.href = `../physiology-guide/#lesson-${sec.c}-${sec.i}`;
+    link.target = "_blank";
+    link.rel = "noopener";
+    link.textContent = `${sid} ${sec.t}`;
+    box.appendChild(link);
+  });
+  box.classList.remove("is-hidden");
+}
+
+// 学習資料から ?sec=02-2（節）／?ch=muscle（章）で来たら、その問題をまとめて出題する（主にその節の問題→関連の問題の順）
+function launchFromGuide() {
+  if (!linkData) return;
+  const params = new URLSearchParams(location.search);
+  const sec = params.get("sec");
+  const ch = params.get("ch");
+  if (!sec && !ch) return;
+  const byId = new Map(questions.map((question) => [questionId(question), question]));
+  const main = [];
+  const related = [];
+  Object.entries(linkData.map).forEach(([qid, ids]) => {
+    const question = byId.get(qid);
+    if (!question) return;
+    if (sec) {
+      if (ids[0] === sec) main.push(question);
+      else if (ids.includes(sec)) related.push(question);
+    } else {
+      const hit = ids.map((sid) => linkData.sections[sid]).filter((s) => s && s.c === ch);
+      if (!hit.length) return;
+      if (linkData.sections[ids[0]] && linkData.sections[ids[0]].c === ch) main.push(question);
+      else related.push(question);
+    }
+  });
+  window.history.replaceState(null, "", location.pathname);
+  startQuiz(shuffled(main).concat(shuffled(related)));
 }
 
 function populateSetup() {
@@ -285,6 +357,7 @@ function submitAnswer() {
   els.feedbackLabel.textContent = correct ? "正解" : "不正解";
   els.feedbackAnswer.textContent = `正解：${question.answers.map((index) => `${index + 1}．${question.choices[index]}`).join("／")}`;
   els.feedbackExplanation.textContent = question.explanation || "正解の選択肢と設問の条件をセットで覚えましょう。";
+  renderXlink(question);
   els.nextButton.textContent = position === queue.length - 1 ? "結果を見る" : "次の問題へ";
   els.feedback.classList.remove("is-hidden");
   els.nextButton.focus({ preventScroll: true });
@@ -344,7 +417,7 @@ fetch("./questions.json")
   .then((data) => {
     questions = data;
     populateSetup();
-    loadFields();
     show(els.setup);
+    Promise.all([loadFields(), loadLinks()]).then(launchFromGuide);
   })
   .catch(() => show(els.error));
