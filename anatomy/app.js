@@ -6,6 +6,8 @@ const els = {
   error: document.getElementById("error-view"),
   headerTotal: document.getElementById("header-total"),
   examSelect: document.getElementById("exam-select"),
+  fieldSelect: document.getElementById("field-select"),
+  fieldWrap: document.getElementById("field-wrap"),
   historySummary: document.getElementById("history-summary"),
   startButton: document.getElementById("start-button"),
   reviewSavedButton: document.getElementById("review-saved-button"),
@@ -75,6 +77,56 @@ function show(view) {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
+let fieldData = null;
+
+function fieldOf(question) {
+  return fieldData ? fieldData.map[questionId(question)] : undefined;
+}
+
+function refreshFieldOptions() {
+  if (!fieldData) return;
+  const exam = els.examSelect.value;
+  const inExam = exam === "all" ? questions : questions.filter((question) => question.exam === Number(exam));
+  const previous = els.fieldSelect.value;
+  els.fieldSelect.innerHTML = "";
+  const all = document.createElement("option");
+  all.value = "all";
+  all.textContent = `すべての分野（${inExam.length}問）`;
+  els.fieldSelect.appendChild(all);
+  fieldData.fields.forEach((field) => {
+    const count = inExam.filter((question) => fieldOf(question) === field.id).length;
+    const option = document.createElement("option");
+    option.value = field.id;
+    option.textContent = `${field.name}（${count}問）`;
+    option.disabled = count === 0;
+    els.fieldSelect.appendChild(option);
+  });
+  const keep = [...els.fieldSelect.options].some((option) => option.value === previous && !option.disabled);
+  els.fieldSelect.value = keep ? previous : "all";
+  updateStartLabel();
+}
+
+function updateStartLabel() {
+  const label = els.startButton.querySelector("span");
+  if (label) label.textContent = els.fieldSelect.value === "all" ? "ランダムに開始" : "この分野で開始";
+}
+
+function loadFields() {
+  fetch("./fields.json")
+    .then((response) => {
+      if (!response.ok) throw new Error("fields unavailable");
+      return response.json();
+    })
+    .then((data) => {
+      fieldData = data;
+      els.fieldWrap.classList.remove("is-hidden");
+      refreshFieldOptions();
+    })
+    .catch(() => {
+      fieldData = null;
+    });
+}
+
 function populateSetup() {
   const exams = [...new Set(questions.map((question) => question.exam))].sort((a, b) => b - a);
   exams.forEach((exam) => {
@@ -109,6 +161,7 @@ function selectedCount() {
 function startFromSetup() {
   const exam = els.examSelect.value;
   let pool = exam === "all" ? questions : questions.filter((question) => question.exam === Number(exam));
+  if (fieldData && els.fieldSelect.value !== "all") pool = pool.filter((question) => fieldOf(question) === els.fieldSelect.value);
   const requested = selectedCount();
   if (requested !== "all") pool = shuffled(pool).slice(0, Number(requested));
   else pool = shuffled(pool);
@@ -142,7 +195,8 @@ function renderQuestion() {
   els.progressCurrent.textContent = String(position + 1);
   els.progressTotal.textContent = String(queue.length);
   els.progressBar.style.width = `${((position + 1) / queue.length) * 100}%`;
-  els.sourceBadge.textContent = `第${question.exam}回・問題${question.number}`;
+  const fieldName = fieldData && fieldData.fields.find((field) => field.id === fieldOf(question));
+  els.sourceBadge.textContent = `第${question.exam}回・問題${question.number}` + (fieldName ? `・${fieldName.name}` : "");
   els.questionText.textContent = question.question;
   els.multiNote.classList.toggle("is-hidden", !isMulti);
   els.submitAnswerButton.classList.remove("is-hidden");
@@ -284,6 +338,8 @@ function showResult() {
 }
 
 els.startButton.addEventListener("click", startFromSetup);
+els.examSelect.addEventListener("change", refreshFieldOptions);
+els.fieldSelect.addEventListener("change", updateStartLabel);
 els.reviewSavedButton.addEventListener("click", startSavedReview);
 els.submitAnswerButton.addEventListener("click", submitAnswer);
 els.nextButton.addEventListener("click", nextQuestion);
@@ -311,6 +367,7 @@ fetch("./questions.json")
   .then((data) => {
     questions = data;
     populateSetup();
+    loadFields();
     show(els.setup);
   })
   .catch(() => show(els.error));

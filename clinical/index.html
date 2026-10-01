@@ -74,6 +74,11 @@
             <span><strong>全問ランダム</strong><small>全範囲から出題</small></span>
             <span class="mode-arrow" aria-hidden="true">→</span>
           </button>
+          <button class="mode-card mode-card-wide" type="button" data-mode="field">
+            <span class="mode-icon">分</span>
+            <span><strong>分野別</strong><small id="field-count">—</small></span>
+            <span class="mode-arrow" aria-hidden="true">→</span>
+          </button>
         </div>
 
         <button class="review-button is-hidden" id="review-saved-button" type="button">
@@ -121,6 +126,7 @@
           <p id="selector-description"></p>
         </div>
         <div id="round-grid" class="round-grid is-hidden"></div>
+        <div id="field-grid" class="round-grid field-grid is-hidden"></div>
         <div id="count-panel" class="count-panel is-hidden">
           <fieldset class="field count-field">
             <legend>出題数</legend>

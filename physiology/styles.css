@@ -279,3 +279,5 @@ button:focus-visible, select:focus-visible { outline: 3px solid rgba(36, 87, 214
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
+
+.field-wide { grid-column: 1 / -1; }

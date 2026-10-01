@@ -22,6 +22,7 @@ const els = {
   selectorTitle: document.getElementById("selector-title"),
   selectorDescription: document.getElementById("selector-description"),
   roundGrid: document.getElementById("round-grid"),
+  fieldGrid: document.getElementById("field-grid"),
   countPanel: document.getElementById("count-panel"),
   startButton: document.getElementById("start-button"),
   quitButton: document.getElementById("quit-button"),
@@ -725,12 +726,52 @@ function populateRounds() {
   });
 }
 
+function fieldCounts() {
+  const counts = new Map();
+  questions.forEach((question) => {
+    const name = question.category || "その他";
+    counts.set(name, (counts.get(name) || 0) + 1);
+  });
+  return [...counts.entries()].sort((x, y) => y[1] - x[1] || x[0].localeCompare(y[0], "ja"));
+}
+
+function populateFields() {
+  const entries = fieldCounts();
+  const fieldCount = document.getElementById("field-count");
+  if (fieldCount) fieldCount.textContent = `${entries.length}分野から選ぶ`;
+  els.fieldGrid.replaceChildren();
+  entries.forEach(([name, count]) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "round-card field-card";
+    button.dataset.field = name;
+    const strong = document.createElement("strong");
+    strong.textContent = name;
+    const small = document.createElement("small");
+    small.textContent = `${count}問`;
+    const arrow = document.createElement("span");
+    arrow.setAttribute("aria-hidden", "true");
+    arrow.textContent = "→";
+    button.append(strong, small, arrow);
+    button.addEventListener("click", () => {
+      startQuiz(shuffled(questions.filter((question) => (question.category || "その他") === name)));
+    });
+    els.fieldGrid.appendChild(button);
+  });
+}
+
 function openSelector(mode) {
   activeMode = mode;
   const roundMode = mode === "round";
+  const fieldMode = mode === "field";
   els.roundGrid.classList.toggle("is-hidden", !roundMode);
-  els.countPanel.classList.toggle("is-hidden", roundMode);
-  if (roundMode) {
+  els.fieldGrid.classList.toggle("is-hidden", !fieldMode);
+  els.countPanel.classList.toggle("is-hidden", roundMode || fieldMode);
+  if (fieldMode) {
+    els.selectorKicker.textContent = "分野別";
+    els.selectorTitle.textContent = "どの分野を解く？";
+    els.selectorDescription.textContent = "分野を選ぶと、その分野の過去問を（回をまたいで）ランダムな順で出題します。問題数は分野ごとに異なります。";
+  } else if (roundMode) {
     els.selectorKicker.textContent = "回数別";
     els.selectorTitle.textContent = "何回を解く？";
     els.selectorDescription.textContent = "選んだ回の問題を、問題番号順に通して解きます。";
@@ -1106,6 +1147,7 @@ fetch("./questions.json")
     questions = data;
     populateHome();
     populateRounds();
+    populateFields();
     populateTopics();
     populateFindings();
     show(els.home);

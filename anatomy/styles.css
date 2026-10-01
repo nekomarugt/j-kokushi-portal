@@ -290,3 +290,5 @@ button:focus-visible, select:focus-visible { outline: 3px solid rgba(36, 87, 214
 .guide-link small { display: block; margin-top: 3px; color: var(--muted); font-size: 0.78rem; }
 .guide-link:hover { border-color: var(--blue); }
 .guide-link:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+
+.field-wide { grid-column: 1 / -1; }
