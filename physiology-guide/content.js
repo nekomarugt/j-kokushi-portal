@@ -107,7 +107,17 @@ window.physiologyChapters = [
         "image": "assets/image16.jpeg",
         "caption": "Ca²⁺による筋収縮の開始",
         "question": "骨格筋の収縮時にCa²⁺が結合するタンパク質は何か。",
-        "answer": "トロポニン"
+        "answer": "トロポニン",
+        "tips": [
+          {
+            "id": "tips-excitation-contraction",
+            "title": "TIPS 自転車の鍵で覚える 興奮収縮連関",
+            "src": "assets/tips-excitation-contraction.webp",
+            "alt": "自転車のリングロックにたとえた4コマ図。活動電位が来ると筋小胞体からCa²⁺（鍵）が出て、Ca²⁺がトロポニンに結合するとトロポミオシンが動いて、アクチンの結合部位が現れる。ミオシンがアクチンに結合して力を出し、収縮する。おまけとして、終わるとCa²⁺は筋小胞体のポンプ（SERCA）で回収され、また鍵がかかる。",
+            "caption": "Ca²⁺が来るまで鍵（トロポニン＋トロポミオシン）がかかっていて、Ca²⁺が来ると鍵が外れてアクチンとミオシンが働き収縮する。",
+            "note": "終わるとCa²⁺は筋小胞体のポンプ（SERCA）で回収され、また鍵がかかる。"
+          }
+        ]
       },
       {
         "title": "神経筋接合部",
@@ -125,7 +135,17 @@ window.physiologyChapters = [
         "image": "assets/image21.png",
         "caption": "遅筋・中間筋・速筋の特徴",
         "question": "疲労しにくく、酸化能力が高い筋線維は何か。",
-        "answer": "遅筋線維（Ⅰ型線維）"
+        "answer": "遅筋線維（Ⅰ型線維）",
+        "tips": [
+          {
+            "id": "tips-fiber-types",
+            "title": "TIPS 魚で覚える 赤筋と白筋",
+            "src": "assets/tips-fiber-types.webp",
+            "alt": "赤身魚と白身魚にたとえた遅筋と速筋の比較図。遅筋（赤筋・Type I）は、ミオグロビンとミトコンドリアが多く、酸化酵素活性が高く、脂質もよく使う持久力型。速筋（白筋・Type II）は、ミオグロビンとミトコンドリアが少なく、解糖系でエネルギーをつくる瞬発力型で、疲れやすい。",
+            "caption": "遅筋(赤筋)＝ミオグロビン・ミトコンドリア多くて持久力型。速筋(白筋)＝解糖系で瞬発力型、疲れやすい。",
+            "note": ""
+          }
+        ]
       },
       {
         "title": "収縮の種類",

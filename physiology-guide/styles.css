@@ -384,3 +384,17 @@ footer {
   .fig figcaption { font-size: 9pt; line-height: 1.55; }
   .fig-zoom { display: none; }
 }
+
+/* ---- TIPS（ざっくり理解用・折りたたみ。本文の主役にしない） ---- */
+.tips-box { margin: 14px 0; border: 1px dashed #9db8c9; border-radius: 12px; background: #fbfdff; }
+.tips-box > summary { display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 8px 12px; list-style: none; cursor: pointer; font-size: .92rem; color: #2f4a5e; }
+.tips-box > summary::-webkit-details-marker { display: none; }
+.tips-box > summary:focus-visible { outline: 3px solid #0b5ea8; outline-offset: 2px; }
+.tips-badge { flex: none; padding: 1px 9px; border-radius: 999px; background: #e3effa; color: #0b4f8a; font-size: .76rem; font-weight: 850; letter-spacing: .04em; }
+.tips-title { flex: 1; min-width: 0; font-weight: 750; line-height: 1.45; }
+.tips-open { flex: none; color: #0b4f8a; font-size: .8rem; font-weight: 800; }
+.tips-box[open] .tips-open { display: none; }
+.tips-body { padding: 2px 12px 12px; }
+.tips-caption { margin: 0 0 8px; font-size: .9rem; line-height: 1.7; color: #1f3346; }
+.tips-body .illustration-open img { max-width: 720px; margin: 0 auto; }
+.tips-note { display: block; margin-top: 6px; color: #51657a; font-size: .78rem; line-height: 1.55; }

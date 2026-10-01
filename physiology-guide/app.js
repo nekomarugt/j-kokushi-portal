@@ -77,6 +77,18 @@
             '<img src="' + escapeHtml(item.src) + '" alt="' + escapeHtml(item.caption) + '" loading="lazy" decoding="async">' +
             '<span>タップで拡大</span></button><figcaption>' + escapeHtml(item.caption) + '</figcaption></figure>'
           ).join('') +
+          (section.tips || []).map((tip) =>
+            '<details class="tips-box">' +
+              '<summary><span class="tips-badge">TIPS</span><span class="tips-title">' + escapeHtml(String(tip.title || '').replace(/^TIPS\s*/, '')) + '</span><span class="tips-open" aria-hidden="true">ひらく</span></summary>' +
+              '<div class="tips-body">' +
+                '<p class="tips-caption">' + escapeHtml(tip.caption || '') + '</p>' +
+                '<button type="button" class="illustration-open" data-src="' + escapeHtml(tip.src) + '" data-caption="' + escapeHtml(String(tip.title || '')) + '" aria-label="' + escapeHtml(String(tip.title || '')) + 'を拡大">' +
+                '<img src="' + escapeHtml(tip.src) + '" alt="' + escapeHtml(tip.alt || tip.title || '') + '" loading="lazy" decoding="async">' +
+                '<span>タップで拡大</span></button>' +
+                (tip.note ? '<small class="tips-note">' + escapeHtml(tip.note) + '</small>' : '') +
+              '</div>' +
+            '</details>'
+          ).join('') +
           '<div class="quick-check">' +
             '<strong>理解度チェック</strong>' +
             '<p>' + escapeHtml(section.question) + '</p>' +
