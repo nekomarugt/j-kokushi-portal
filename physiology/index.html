@@ -51,9 +51,15 @@
 
         <div data-jkg="panel" data-subject="phy" data-src="past"></div>
 
+        <ul class="jk-modes is-sub" aria-label="出題モードの違い">
+          <li><strong>分野別</strong><span>苦手な分野をまとめて</span></li>
+          <li><strong>回数別</strong><span>好きな回を選んで解く</span></li>
+          <li><strong>ランダム</strong><span>全体から抜き打ち</span></li>
+        </ul>
+
         <div class="setup-grid">
           <label class="field">
-            <span>国家試験</span>
+            <span>回数別（回を選ぶ）</span>
             <select id="exam-select">
               <option value="all">第17〜34回・すべて</option>
             </select>
@@ -68,7 +74,7 @@
             </div>
           </fieldset>
           <label class="field field-wide is-hidden" id="field-wrap">
-            <span>分野別（任意）</span>
+            <span>分野別（分野を選ぶ・任意）</span>
             <select id="field-select">
               <option value="all">すべての分野</option>
             </select>

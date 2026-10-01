@@ -212,3 +212,30 @@ a.jkq-secondary { text-decoration: none; box-sizing: border-box; }
 .jkg-noava { width: 40px; height: 60px; }
 .jka.is-bare.jka-r { filter: drop-shadow(0 0 3px rgba(91, 141, 239, .8)); }
 .jka.is-bare.jka-sr { filter: drop-shadow(0 0 4px rgba(255, 190, 40, .95)); }
+
+/* ===== 4択クイズ / 過去問 の見分け（ラベル・一言） ===== */
+.jk-tag { display: inline-block; padding: 3px 12px; border-radius: 99px; font-size: .84rem; font-weight: 800; letter-spacing: .04em; line-height: 1.5; }
+.jk-tag.is-quick { background: #fff1e3; color: #9a4306; border: 1px solid #f0b783; }
+.jk-tag.is-exam { background: #e8f0fc; color: #174b9e; border: 1px solid #a9c4ee; }
+.jkg-card.is-home { border-left: 6px solid #e8872b; }
+.jkg-sec { margin: 0 0 12px; padding-bottom: 10px; border-bottom: 1px dashed #d9e1ec; }
+.jkg-sech { margin: 4px 0 0; font-size: 1.4rem; line-height: 1.35; color: #10223e; }
+.jkg-secp { margin: 2px 0 0; color: #3f4f68; font-size: .92rem; line-height: 1.55; }
+.portal-surface { border-top: 6px solid #2f6fd0; }
+.jk-cap { margin: 4px 0 0; color: #3f4f68; font-size: .92rem; line-height: 1.55; letter-spacing: 0; }
+.surface-heading p.jk-cap { color: #3f4f68; font-weight: 500; letter-spacing: 0; font-size: .92rem; }
+.surface-heading p:has(> .jk-tag) { letter-spacing: 0; margin-bottom: 4px; }
+.jk-modes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 0 0 20px; padding: 0; list-style: none; }
+.jk-modes li { display: flex; flex-direction: column; gap: 1px; padding: 9px 12px; border: 1px solid #d9e1ec; border-left: 5px solid #2f6fd0; border-radius: 12px; background: #f6f9fe; color: #10223e; line-height: 1.45; }
+.jk-modes li:nth-child(2) { border-left-color: #087866; }
+.jk-modes li:nth-child(3) { border-left-color: #c2570c; }
+.jk-modes strong { font-size: 1rem; }
+.jk-modes span { font-size: .88rem; color: #33445e; }
+.jk-modes.is-sub { margin: 0 0 16px; }
+.jkq-hint { margin: 3px 0 0; color: #3f4f68; font-size: .86rem; line-height: 1.5; }
+@media (max-width: 560px) {
+  .jk-modes { grid-template-columns: 1fr; gap: 6px; }
+  .jk-modes li { flex-direction: row; align-items: baseline; gap: 10px; padding: 8px 12px; }
+  .jk-modes strong { flex: 0 0 4.6em; }
+  .jkg-sech { font-size: 1.3rem; }
+}

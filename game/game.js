@@ -302,7 +302,8 @@
             : '<span class="jkg-none">まちがえた問題：なし</span>') + '</div>';
     }).join("");
     el.innerHTML =
-      '<div class="jkg-card">' +
+      '<div class="jkg-card is-home">' +
+      '<div class="jkg-sec"><span class="jk-tag is-quick">サクッとスキマ時間用</span><h2 class="jkg-sech">4択クイズ</h2><p class="jkg-secp">10・30・50問の短い勝負。正解でコイン → ガチャ。</p></div>' +
       '<div class="jkg-top">' +
       '<div class="jkg-streak"><span class="jkg-fire" aria-hidden="true">🔥</span><div><div class="jkg-streak-n">' + streakText(st) + '</div><div class="jkg-sub">' + streakHint(st) + '</div></div></div>' +
       '<div class="jkg-level' + (S.sel && A() ? " has-ava" : "") + '">' + avaHtml(58) + '<div class="jkg-lvbody"><div class="jkg-lvline"><span class="jkg-lv">Lv' + li.lv + '</span><span class="jkg-lvtitle">' + esc(li.title) + '</span></div>' + barHtml(li) +

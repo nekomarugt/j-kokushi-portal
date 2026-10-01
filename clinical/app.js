@@ -738,7 +738,7 @@ function fieldCounts() {
 function populateFields() {
   const entries = fieldCounts();
   const fieldCount = document.getElementById("field-count");
-  if (fieldCount) fieldCount.textContent = `${entries.length}分野から選ぶ`;
+  if (fieldCount) fieldCount.textContent = `苦手な分野をまとめて（${entries.length}分野）`;
   els.fieldGrid.replaceChildren();
   entries.forEach(([name, count]) => {
     const button = document.createElement("button");
