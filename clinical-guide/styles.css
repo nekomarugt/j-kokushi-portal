@@ -517,3 +517,20 @@ body { padding-bottom: calc(92px + env(safe-area-inset-bottom, 0px)); }
 .notes-list { grid-template-columns: minmax(0, 1fr); }
 .notes-list > * { min-width: 0; }
 .study-figure .figure-zoom img { max-width: 100%; }
+
+/* ---- TIPS（ざっくり理解用・折りたたみ。本文の主役にしない） ---- */
+.tips-box { margin: 10px 0; border: 1px dashed #b9c9c4; border-radius: 12px; background: #fbfdfc; }
+.tips-box > summary { display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 8px 12px; list-style: none; cursor: pointer; font-size: 0.9rem; color: #33504a; }
+.tips-box > summary::-webkit-details-marker { display: none; }
+.tips-box > summary:focus-visible { outline: 3px solid rgba(8, 120, 102, 0.3); outline-offset: 2px; }
+.tips-badge { flex: none; padding: 1px 9px; border-radius: 999px; background: #e6f2ef; color: #0f5b52; font-size: 0.74rem; font-weight: 850; letter-spacing: 0.04em; }
+.tips-title { flex: 1; min-width: 0; font-weight: 750; line-height: 1.45; }
+.tips-open { flex: none; color: #0f5b52; font-size: 0.78rem; font-weight: 800; }
+.tips-box[open] .tips-open { display: none; }
+.tips-body { padding: 2px 12px 12px; }
+.tips-caption { margin: 0 0 8px; font-size: 0.88rem; line-height: 1.7; color: #1f2d2b; }
+.tips-body .figure-zoom img { max-width: 720px; margin: 0 auto; }
+.tips-note { display: block; margin-top: 6px; color: #5b6f6a; font-size: 0.76rem; line-height: 1.55; }
+@media print {
+  .tips-box { border-style: dashed; }
+}

@@ -52,6 +52,7 @@
     if (block.type === "note") return block.segments.map((part) => part.text).join("");
     if (block.type === "table") return block.rows.flat(2).map((part) => part.text).join("");
     if (block.type === "figure") return `${block.caption || ""} ${block.alt || ""} ${block.point || ""}`;
+    if (block.type === "tips") return `${block.title || ""} ${block.caption || ""} ${block.note || ""}`;
     return "";
   }
 
@@ -81,6 +82,24 @@
     if (block.type === "heading") {
       const level = Math.min(4, Math.max(2, block.level + 1));
       return `<h${level} class="note-heading level-${block.level}">${escapeHtml(block.text)}</h${level}>`;
+    }
+
+    if (block.type === "tips") {
+      const src = escapeHtml(block.src);
+      const alt = escapeHtml(block.alt || "");
+      const title = escapeHtml(block.title || "TIPS");
+      const note = block.note ? `<small class="tips-note">${escapeHtml(block.note)}</small>` : "";
+      return `<details class="tips-box">
+        <summary><span class="tips-badge">TIPS</span><span class="tips-title">${title.replace(/^TIPS\s*/, "")}</span><span class="tips-open" aria-hidden="true">ひらく</span></summary>
+        <div class="tips-body">
+          <p class="tips-caption">${escapeHtml(block.caption || "")}</p>
+          <button class="figure-zoom" type="button" data-image-src="${src}" data-image-alt="${alt}" data-image-caption="${title}" aria-label="${title}を拡大表示">
+            <img src="${src}" alt="${alt}" loading="lazy" decoding="async" />
+            <span class="zoom-hint" aria-hidden="true">タップで拡大</span>
+          </button>
+          ${note}
+        </div>
+      </details>`;
     }
 
     if (block.type === "figure") {
