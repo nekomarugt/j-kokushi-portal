@@ -1,0 +1,106 @@
+{
+ "endocrine-6": {
+  "main": "",
+  "boxes": [
+   {
+    "kind": "link",
+    "title": "つながりで覚える：血糖（膵臓・インスリン・糖尿病）",
+    "html": "<div class=\"mb\"><p><span class=\"mb-k\">つながり</span>膵島の<span class=\"answer\">B細胞</span>が<span class=\"answer\">インスリン</span>を出す。足りない・効かないと<span class=\"answer\">糖尿病</span>になる。</p><figure class=\"mb-fig\"><a href=\"figures/x_sugar.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/x_sugar.svg\" alt=\"血糖の解剖・生理・臨床のつながり図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a></figure><p><span class=\"mb-k\">なぜ</span>血糖が高いと、尿にもブドウ糖が出る。ブドウ糖は水を引っぱるので尿がふえ（多尿）、のどが渇く（多飲）。</p><p><span class=\"mb-k\">覚え方</span>貯金箱：インスリンは「入れる係」、グルカゴンは「出す係」。1型＝入れる係がいない。2型＝入れる係の力が落ちている。</p><p class=\"mb-go\"><span class=\"mb-k\">ほかの科目</span><a href=\"../physiology-guide/#lesson-endocrine-5\">生理学：膵臓のホルモン</a><a href=\"../clinical-guide/#sec-metabolic-1\">一般臨床：糖尿病</a></p></div>"
+   }
+  ]
+ },
+ "endocrine-4": {
+  "main": "",
+  "boxes": [
+   {
+    "kind": "link",
+    "title": "つながりで覚える：カルシウム（上皮小体・ビタミンD・腎臓）",
+    "html": "<div class=\"mb\"><p><span class=\"mb-k\">つながり</span><span class=\"answer\">上皮小体</span>（副甲状腺）のホルモン<span class=\"answer\">PTH</span>が、血中の<span class=\"answer\">カルシウム</span>を上げる。</p><figure class=\"mb-fig\"><a href=\"figures/x_ca.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/x_ca.svg\" alt=\"カルシウムの解剖・生理・臨床のつながり図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a></figure><p><span class=\"mb-k\">なぜ</span>Caが低いと神経・筋が興奮しやすくなり、<span class=\"answer\">テタニー</span>が出る。腎臓は活性型ビタミンDをつくる所なので、腎臓が弱るとCaを吸えず低くなる。</p><p><span class=\"mb-k\">覚え方</span>家計簿：残高（血中Ca）が減ると、PTHが取り立て屋になる。骨から出す・腎で節約・腸から仕入れる。</p><p class=\"mb-go\"><span class=\"mb-k\">ほかの科目</span><a href=\"../physiology-guide/#lesson-reproduction-bone-4\">生理学：カルシウム代謝</a><a href=\"../clinical-guide/#sec-renal-3\">一般臨床：慢性腎臓病（CKD）</a></p></div>"
+   }
+  ]
+ },
+ "cns-7": {
+  "main": "",
+  "boxes": [
+   {
+    "kind": "link",
+    "title": "つながりで覚える：反射（上位・下位ニューロン）",
+    "html": "<div class=\"mb\"><p><span class=\"mb-k\">つながり</span>脳（上位）が壊れると、反射の<span class=\"answer\">抑え</span>が外れて<span class=\"answer\">腱反射が強く</span>なる。</p><figure class=\"mb-fig\"><a href=\"figures/x_reflex.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/x_reflex.svg\" alt=\"反射の解剖・生理・臨床のつながり図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a></figure><p><span class=\"mb-k\">なぜ</span>脊髄の反射には、上から「やりすぎるな」と抑えがかかっている。下位（前角・末梢神経）が壊れると反射の道が切れて、弱くなる・なくなる。</p><p><span class=\"mb-k\">覚え方</span>社長（脳）が不在だと、現場（反射）が暴走。現場が倒れると、仕事そのものができない。</p><p class=\"mb-go\"><span class=\"mb-k\">ほかの科目</span><a href=\"../physiology-guide/#lesson-motor-4\">生理学：複雑な反射と上位中枢</a><a href=\"../clinical-guide/#sec-reflex-3\">一般臨床：深部反射</a></p></div>"
+   }
+  ]
+ },
+ "digestive-8": {
+  "main": "",
+  "boxes": [
+   {
+    "kind": "link",
+    "title": "つながりで覚える：肝臓・胆汁・黄疸",
+    "html": "<div class=\"mb\"><p><span class=\"mb-k\">つながり</span>古い赤血球のカス（<span class=\"answer\">ビリルビン</span>）を、<span class=\"answer\">肝臓</span>が処理して<span class=\"answer\">胆汁</span>に出す。</p><figure class=\"mb-fig\"><a href=\"figures/x_liver.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/x_liver.svg\" alt=\"肝臓と胆汁の解剖・生理・臨床のつながり図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a></figure><p><span class=\"mb-k\">なぜ</span>肝臓が悪い、または出口の胆道がつまると、ビリルビンが血液にたまり、皮膚や白目が黄色くなる（<span class=\"answer\">黄疸</span>）。</p><p><span class=\"mb-k\">覚え方</span>宅配便：肝臓は荷物を箱詰めして発送する所。出口がつまると、荷物が倉庫（血液）にあふれる。</p><p class=\"mb-go\"><span class=\"mb-k\">ほかの科目</span><a href=\"../physiology-guide/#lesson-digestion-3\">生理学：膵液と胆汁</a><a href=\"../clinical-guide/#sec-digestive-1\">一般臨床：肝炎・胆石（腹痛の部位別）</a></p></div>"
+   }
+  ]
+ },
+ "urinary-3": {
+  "main": "",
+  "boxes": [
+   {
+    "kind": "link",
+    "title": "つながりで覚える：腎臓のふるい（糸球体・ネフローゼ）",
+    "html": "<div class=\"mb\"><p><span class=\"mb-k\">つながり</span><span class=\"answer\">糸球体</span>は「ふるい」。ふるいが破れる病気が<span class=\"answer\">ネフローゼ症候群</span>。</p><figure class=\"mb-fig\"><a href=\"figures/x_kidney.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/x_kidney.svg\" alt=\"腎臓の解剖・生理・臨床のつながり図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a></figure><p><span class=\"mb-k\">なぜ</span>戻す力（再吸収）には上限がある。血糖が高すぎると戻しきれずに尿へ出て、水も一緒に出る。</p><p><span class=\"mb-k\">覚え方</span>洗濯：全部いったん干して（ろ過）、要る服だけ取りこむ（再吸収）。</p><p class=\"mb-go\"><span class=\"mb-k\">ほかの科目</span><a href=\"../physiology-guide/#lesson-urine-1\">生理学：糸球体ろ過</a><a href=\"../clinical-guide/#sec-renal-6\">一般臨床：ネフローゼ症候群</a></p></div>"
+   }
+  ]
+ },
+ "respiratory-1": {
+  "main": "",
+  "boxes": [
+   {
+    "kind": "link",
+    "title": "つながりで覚える：呼吸（1秒率・閉塞性・拘束性）",
+    "html": "<div class=\"mb\"><p><span class=\"mb-k\">つながり</span><span class=\"answer\">1秒率</span>が低い＝息を速くはけない（<span class=\"answer\">閉塞性</span>）。肺活量が低い＝ふくらまない（<span class=\"answer\">拘束性</span>）。</p><figure class=\"mb-fig\"><a href=\"figures/x_resp.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/x_resp.svg\" alt=\"呼吸の解剖・生理・臨床のつながり図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a></figure><p><span class=\"mb-k\">なぜ</span>気道がせまいと空気がはき切れず、肺がふくらんだままになる。だから樽状胸になり、打診で鼓音になる。</p><p><span class=\"mb-k\">覚え方</span>風船：閉塞性＝ふくらんだまま戻らない風船。拘束性＝かたくてふくらまない風船。</p><p class=\"mb-go\"><span class=\"mb-k\">ほかの科目</span><a href=\"../physiology-guide/#lesson-respiration-2\">生理学：肺気量</a><a href=\"../clinical-guide/#sec-respiratory-4\">一般臨床：慢性閉塞性肺疾患（COPD）</a></p></div>"
+   }
+  ]
+ },
+ "cns-8": {
+  "main": "",
+  "boxes": [
+   {
+    "kind": "link",
+    "title": "つながりで覚える：感覚の通り道（深部感覚・ロンベルグ）",
+    "html": "<div class=\"mb\"><p><span class=\"mb-k\">つながり</span><span class=\"answer\">深部感覚</span>の道（後索）が壊れると、<span class=\"answer\">ロンベルグ</span>試験が陽性になる。</p><figure class=\"mb-fig\"><a href=\"figures/x_sens.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/x_sens.svg\" alt=\"感覚の解剖・生理・臨床のつながり図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a></figure><p><span class=\"mb-k\">なぜ</span>深部感覚が壊れても、ふだんは目で足の位置を見て補っている。目を閉じると補えず、ふらつく。</p><p><span class=\"mb-k\">覚え方</span>手紙：感覚の手紙は道が別々。深部の道と温痛の道は、別々に壊れる。</p><p class=\"mb-go\"><span class=\"mb-k\">ほかの科目</span><a href=\"../physiology-guide/#lesson-sensation-2\">生理学：痛覚・温度覚・深部感覚</a><a href=\"../clinical-guide/#sec-sensation-1\">一般臨床：感覚検査の意義</a></p></div>"
+   }
+  ]
+ },
+ "sensory-1": {
+  "main": "<ul class=\"mb-list\"><li><span class=\"answer\">外側直筋</span>＝外転神経、<span class=\"answer\">上斜筋</span>＝滑車神経、残りの眼筋＝<span class=\"answer\">動眼神経</span>。</li><li>上眼瞼挙筋は動眼神経。まぶたに付く筋で、眼球には付かない。</li></ul><figure class=\"fig fig-diagram\"><a href=\"figures/a_eye.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/a_eye.svg\" alt=\"眼球に付く6つの筋と支配神経の図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a><figcaption><strong>ひとことポイント</strong>　外は外転、上斜は滑車、残りは動眼。なぜ上斜筋が滑車神経？ 上斜筋は眼の奥から出て、滑車でUターンしてから眼球に付くから。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
+  "boxes": [
+   {
+    "kind": "link",
+    "title": "つながりで覚える：目を動かす神経（眼筋・瞳孔・眼瞼下垂）",
+    "html": "<div class=\"mb\"><p><span class=\"mb-k\">つながり</span><span class=\"answer\">上斜筋</span>は<span class=\"answer\">滑車神経</span>、<span class=\"answer\">外側直筋</span>は<span class=\"answer\">外転神経</span>、残りは<span class=\"answer\">動眼神経</span>。</p><figure class=\"mb-fig\"><a href=\"figures/x_eye.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/x_eye.svg\" alt=\"目の筋と神経の解剖・生理・臨床のつながり図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a></figure><p><span class=\"mb-k\">なぜ</span>上斜筋は眼の奥から出て、滑車でUターンして付く。だから名前が「滑車神経」。</p><p><span class=\"mb-k\">覚え方</span>「外は外転、上斜は滑車、残りは動眼」と3つに分けて覚える。</p><p class=\"mb-go\"><span class=\"mb-k\">ほかの科目</span><a href=\"../physiology-guide/#lesson-nerve-6\">生理学：自律神経（瞳孔）</a><a href=\"../clinical-guide/#sec-inspection-8\">一般臨床：頭部・顔面の視診</a></p></div>"
+   }
+  ]
+ },
+ "vascular-1": {
+  "main": "",
+  "boxes": [
+   {
+    "kind": "link",
+    "title": "つながりで覚える：心音（弁が閉じる音）",
+    "html": "<div class=\"mb\"><p><span class=\"mb-k\">つながり</span>心音は、弁が閉じる音。<span class=\"answer\">Ⅰ音</span>＝房室弁、<span class=\"answer\">Ⅱ音</span>＝動脈弁。</p><figure class=\"mb-fig\"><a href=\"figures/x_heart.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/x_heart.svg\" alt=\"心音の解剖・生理・臨床のつながり図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a></figure><p><span class=\"mb-k\">なぜ</span>弁が閉じるとき、血液がぶつかって振動し、音になる。弁がせまい・もれると、ふつうと違う音（雑音）が混ざる。</p><p><span class=\"mb-k\">覚え方</span>ドア：Ⅰ音は入口のドア（房室弁）がバタン、Ⅱ音は出口のドア（動脈弁）がバタン。</p><p class=\"mb-go\"><span class=\"mb-k\">ほかの科目</span><a href=\"../physiology-guide/#lesson-circulation-4\">生理学：心周期</a><a href=\"../clinical-guide/#sec-auscultation-3\">一般臨床：心臓の聴診</a></p></div>"
+   }
+  ]
+ },
+ "vascular-7": {
+  "main": "",
+  "boxes": [
+   {
+    "kind": "link",
+    "title": "つながりで覚える：リンパのゆくえ（胸管・リンパ節）",
+    "html": "<div class=\"mb\"><p><span class=\"mb-k\">つながり</span>腹部のリンパは<span class=\"answer\">胸管</span>を通って、<span class=\"answer\">左</span>の首の付け根の静脈（静脈角）に注ぐ。</p><figure class=\"mb-fig\"><a href=\"figures/x_lymph.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/x_lymph.svg\" alt=\"リンパの解剖・生理・臨床のつながり図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a></figure><p><span class=\"mb-k\">なぜ</span>胃癌などがリンパに乗って運ばれると、終点の近くの<span class=\"answer\">左鎖骨上窩リンパ節</span>にあらわれる（ウィルヒョウ転移）。</p><p><span class=\"mb-k\">覚え方</span>ゴミ回収：腹部のゴミ回収トラックの終点は、左の首の付け根。</p><p class=\"mb-go\"><span class=\"mb-k\">ほかの科目</span><a href=\"../physiology-guide/#lesson-circulation-5\">生理学：血管と毛細血管交換</a><a href=\"../clinical-guide/#sec-palpation-1\">一般臨床：触診（リンパ節）</a></p></div>"
+   }
+  ]
+ },
+ "pns-4": {
+  "main": "<ul class=\"mb-list\"><li>神経の番号は、ほぼ上から順に出る（Ⅲ・Ⅳ＝中脳、Ⅴ〜Ⅷ＝橋、Ⅸ〜Ⅻ＝延髄）。</li><li>背側から出るのは<span class=\"answer\">滑車神経</span>だけ。</li></ul><figure class=\"fig fig-diagram\"><a href=\"figures/a_brainstem.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/a_brainstem.svg\" alt=\"脳幹の高さ別に見た脳神経核の位置の図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a><figcaption><strong>ひとことポイント</strong>　番号が小さいほど脳幹の上、大きいほど下。なぜ覚えやすい？ 数字が増えるほど脳幹の下の高さになる、というおおまかな対応があるから。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
+  "boxes": []
+ }
+}

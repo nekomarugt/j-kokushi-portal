@@ -66,6 +66,19 @@ uncovered = [i for i in qmap if i not in qpoints]
 if errors or uncovered:
     print('ERRORS', errors); print('UNCOVERED', uncovered); sys.exit(1)
 pt_by_id = {p['id']: (ch, p) for ch in chapters for p in ch['points']}
+
+# 強化バッチ1：ポイントの本文に図＋短い説明（main）を足し、閉じた補足ボックスを boxes として付ける（見出し・IDは変えない）
+_bm = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'boxmap_anat.json'), encoding='utf-8'))
+_bfig = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'strengthen_figs')
+import shutil
+for _k, _b in _bm.items():
+    if _k not in pt_by_id: print('UNMATCHED BOX KEY', _k); sys.exit(1)
+    _p = pt_by_id[_k][1]
+    if _b.get('main'): _p['anchor'] = _p['anchor'] + _b['main']
+    if _b.get('boxes'): _p['boxes'] = _b['boxes']
+    for _h in [_b.get('main', '')] + [x['html'] for x in _b.get('boxes', [])]:
+        for _n in re.findall(r'figures/([\w-]+)\.svg', _h):
+            shutil.copyfile(os.path.join(_bfig, _n + '.svg'), os.path.join(OUT, 'figures', _n + '.svg'))
 chapter_of_code = {}
 for ch in chapters:
     for s in ch['subs']: chapter_of_code[s] = ch['id']
