@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b5ea8">
+  <!-- PWA -->
+  <link rel="manifest" href="../manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="柔整国試" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <script>if("serviceWorker"in navigator){addEventListener("load",function(){navigator.serviceWorker.register("../sw.js",{scope:"../"}).catch(function(){})})}</script>
+  <!-- /PWA -->
+  <meta name="description" content="解剖学・生理学・一般臨床医学の、どこがよく出るかをひと目で確認。項目ごとに「資料を読む」「過去問を解く」へ進めます。">
+  <title>出題範囲マップ｜どこがよく出る？</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b5ea8'/%3E%3Cpath d='M32 10v44M20 18h24M18 28h28M20 38h24M24 48h16' fill='none' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">地</span>
+      <div>
+        <h1>出題範囲マップ</h1>
+        <p>どこがよく出る？ 読む・解くの入口｜無料</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="notice">
+    本サイトは国家試験対策・授業復習のための補助教材です。医学的エビデンスや診療・臨床判断の根拠として使用するものではありません。
+  </div>
+
+  <main class="map-shell">
+    <nav class="map-subjects" role="tablist" aria-label="科目を選ぶ">
+      <button class="map-tab" type="button" role="tab" data-subj="anatomy" aria-selected="true">解剖学</button>
+      <button class="map-tab" type="button" role="tab" data-subj="physiology" aria-selected="false">生理学</button>
+      <button class="map-tab" type="button" role="tab" data-subj="clinical" aria-selected="false">一般臨床医学</button>
+    </nav>
+    <section class="map-tools" aria-label="表示の切りかえ">
+      <button id="mapSort" class="map-toggle" type="button" aria-pressed="false">頻出順に並べる</button>
+      <button id="mapOpenAll" class="map-toggle" type="button" aria-pressed="false">すべて開く</button>
+    </section>
+    <p id="mapNote" class="map-note"></p>
+    <p class="map-note map-note-sub">分野の名前をタップすると、中の項目が開きます。「頻出」は、過去問でとくによく出ている所のめやすです。「過去問を解く」は、その項目の問題を10問ずつ出します（出す数は過去問のページで変えられます）。</p>
+    <div id="mapBody"></div>
+  </main>
+
+  <a class="portal-dock" href="../" aria-label="学習ポータルへ戻る">← 学習ポータルへ戻る</a>
+
+  <footer>
+    <a href="../anatomy-guide/">解剖学 学習資料</a>
+    <a href="../physiology-guide/">生理学 学習資料</a>
+    <a href="../clinical-guide/">一般臨床医学 学習資料</a>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="map.js"></script>
+</body>
+</html>

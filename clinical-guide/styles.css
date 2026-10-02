@@ -556,6 +556,13 @@ body { padding-bottom: calc(92px + env(safe-area-inset-bottom, 0px)); }
 }
 @media print { .acc-toolbar { display: none !important; } .acc-body[hidden] { display: block !important; } .acc-chev, .acc-badges { display: none !important; } .oral-fold:not([open]) > .explanation-grid { display: grid; } }
 
+/* ---- 出題範囲マップへのリンク ---- */
+.map-strip { width: min(1180px, calc(100% - 32px)); margin: 12px auto 0; }
+.map-strip a { display: flex; align-items: center; justify-content: center; min-height: 46px; padding: 8px 16px; color: var(--teal); background: #fff; border: 1.5px solid #a9d3cc; border-radius: 999px; font-weight: 800; font-size: .92rem; text-decoration: none; }
+.map-strip a:hover { background: var(--teal-soft); }
+@media (max-width: 640px) { .map-strip { width: calc(100% - 20px); margin-top: 10px; } }
+@media print { .map-strip { display: none !important; } }
+
 /* ---- 模式図（_build_clinical/figs.css から追加） ---- */
 .study-figure.fig-diagram { background: #fff; }
 .study-figure.fig-diagram .figure-zoom img { width: 100%; max-width: 560px; margin: 0 auto; }

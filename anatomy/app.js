@@ -138,6 +138,26 @@ function launchFromField() {
   els.startButton.click();
 }
 
+// 出題範囲マップから ?mid=中項目コード（例 2-H）で来たら、その中項目の問題だけで出題を始める（出題数は分野別と同じ既定値）
+function launchFromMid() {
+  const mid = new URLSearchParams(location.search).get("mid");
+  if (!mid) return Promise.resolve(false);
+  window.history.replaceState(null, "", location.pathname);
+  return fetch("../anatomy-guide/data/question-tags.json")
+    .then((response) => (response.ok ? response.json() : Promise.reject(new Error("tags unavailable"))))
+    .then((data) => {
+      const tags = data.tags || {};
+      let pool = questions.filter((question) => tags[questionId(question)] && tags[questionId(question)].code === mid);
+      if (!pool.length) return false;
+      const requested = selectedCount();
+      pool = shuffled(pool);
+      if (requested !== "all") pool = pool.slice(0, Number(requested));
+      startQuiz(pool);
+      return true;
+    })
+    .catch(() => false);
+}
+
 function populateSetup() {
   const exams = [...new Set(questions.map((question) => question.exam))].sort((a, b) => b - a);
   exams.forEach((exam) => {
@@ -378,7 +398,7 @@ fetch("./questions.json")
   .then((data) => {
     questions = data;
     populateSetup();
-    loadFields().then(launchFromField);
+    loadFields().then(() => launchFromMid()).then((started) => { if (!started) launchFromField(); });
     show(els.setup);
   })
   .catch(() => show(els.error));

@@ -417,6 +417,13 @@ footer {
 }
 @media print { .acc-toolbar { display: none !important; } .lesson-body[hidden] { display: block !important; } .lesson-chev, .lesson-badges { display: none !important; } }
 
+/* ---- 出題範囲マップへのリンク ---- */
+.map-strip { width: min(1280px, calc(100% - 32px)); margin: 12px auto 0; }
+.map-strip a { display: flex; align-items: center; justify-content: center; min-height: 46px; padding: 8px 16px; color: var(--blue); background: #fff; border: 1.5px solid #9cc4e6; border-radius: 999px; font-weight: 800; font-size: .92rem; text-decoration: none; }
+.map-strip a:hover { background: var(--blue-pale); }
+@media (max-width: 820px) { .map-strip { width: calc(100% - 24px); margin-top: 10px; } }
+@media print { .map-strip { display: none !important; } }
+
 /* ---- 模式図（_build/figs.css から追加） ---- */
 .fig { margin: 14px 0 6px; padding: 12px 12px 10px; background: #fff; border: 1px solid var(--line); border-radius: 12px; }
 .fig a { display: block; }
