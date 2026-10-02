@@ -254,7 +254,14 @@ window.physiologyChapters = [
           }
         ],
         "question": "汗腺を支配する交感神経節後線維が放出する物質は何か。",
-        "answer": "アセチルコリン"
+        "answer": "アセチルコリン",
+        "boxes": [
+          {
+            "kind": "link",
+            "title": "つながりで覚える：自律神経（交感・副交感・ホルネル症候群）",
+            "html": "<div class=\"mb\"><p><span class=\"mb-k\">つながり</span><span class=\"answer\">交感神経</span>は活動のスイッチ、<span class=\"answer\">副交感神経</span>は休息と消化のスイッチ。</p><figure class=\"mb-fig\"><a href=\"figures/x_auto.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/x_auto.svg\" alt=\"自律神経の解剖・生理・臨床のつながり図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a></figure><p><span class=\"mb-k\">なぜ</span>逃げるときは、心拍を上げて筋に血を回し、瞳孔を広げて、消化は後回しにするほうが有利。だから交感神経は「心拍↑・散瞳・消化↓」になる。</p><p><span class=\"mb-k\">覚え方</span>サバンナ：交感＝逃げるとき、副交感＝食べて休むとき。出どころは、交感＝体の真ん中（胸・腰）、副交感＝上下の端（脳と仙骨）。</p><p class=\"mb-go\"><span class=\"mb-k\">ほかの科目</span><a href=\"../anatomy-guide/#pns-3\">解剖学：自律神経</a><a href=\"../clinical-guide/#sec-inspection-8\">一般臨床：頭部・顔面の視診（ホルネル症候群）</a></p></div>"
+          }
+        ]
       },
       {
         "title": "中枢神経と高次機能",
@@ -399,12 +406,19 @@ window.physiologyChapters = [
       },
       {
         "title": "血球と造血",
-        "anchor": "<p>赤血球、白血球、血小板は<span class=\"answer\">骨髄</span>の造血幹細胞からつくられる。赤血球産生は腎臓から分泌されるエリスロポエチンによって促進される。</p>",
+        "anchor": "<p>赤血球、白血球、血小板は<span class=\"answer\">骨髄</span>の造血幹細胞からつくられる。赤血球産生は腎臓から分泌されるエリスロポエチンによって促進される。</p><ul class=\"mb-list\"><li>赤血球・白血球・血小板は、骨髄の<span class=\"answer\">造血幹細胞</span>からできる。</li><li>赤血球を増やす命令は、腎臓が出す<span class=\"answer\">エリスロポエチン</span>。</li><li>赤血球は核がなく、寿命は約<span class=\"answer\">120日</span>。脾臓などで壊れる。</li></ul><figure class=\"fig fig-diagram\"><a href=\"figures/p05_rbc.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/p05_rbc.svg\" alt=\"赤血球ができる流れ（材料・骨髄・エリスロポエチン・寿命）の図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a><figcaption><strong>ひとことポイント</strong>　材料は鉄とビタミンB12・葉酸。なぜ腎臓が悪いと貧血になる？ 赤血球を増やす命令（エリスロポエチン）が出にくくなるから。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
         "explanation": "赤血球は血球の中で最も数が多く、ヘモグロビンによって酸素を運ぶ。白血球は感染防御、血小板は止血に働く。赤血球は核をもたず、約120日で寿命を迎え、主に脾臓などで処理される。",
         "image": "assets/image89.png",
         "caption": "造血幹細胞から血球がつくられる",
         "question": "赤血球産生を促進する腎由来のホルモンは何か。",
-        "answer": "エリスロポエチン"
+        "answer": "エリスロポエチン",
+        "boxes": [
+          {
+            "kind": "link",
+            "title": "つながりで覚える：貧血と赤血球（鉄・ビタミンB12）",
+            "html": "<div class=\"mb\"><p><span class=\"mb-k\">つながり</span>赤血球の材料の<span class=\"answer\">鉄</span>が足りないと<span class=\"answer\">小球性低色素性貧血</span>。<span class=\"answer\">ビタミンB12・葉酸</span>が足りないと<span class=\"answer\">巨赤芽球性貧血</span>。</p><figure class=\"mb-fig\"><a href=\"figures/x_blood.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/x_blood.svg\" alt=\"貧血と赤血球の解剖・生理・臨床のつながり図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a></figure><p><span class=\"mb-k\">なぜ</span>ヘモグロビンの材料は鉄。B12と葉酸は細胞の核の材料なので、足りないと赤血球が育ち切れず、大きいまま出てくる。B12は胃の<span class=\"answer\">内因子</span>がないと吸収できないので、胃を全部とった後にも起こる。</p><p><span class=\"mb-k\">覚え方</span>赤血球工場：材料（鉄・B12）が足りないと、工場が止まる。</p><p class=\"mb-go\"><span class=\"mb-k\">ほかの科目</span><a href=\"../clinical-guide/#sec-hematology-3\">一般臨床：巨赤芽球性貧血</a></p></div>"
+          }
+        ]
       },
       {
         "title": "自然免疫と獲得免疫",
@@ -530,7 +544,7 @@ window.physiologyChapters = [
       },
       {
         "title": "血管と毛細血管交換",
-        "anchor": "<p>動脈は中膜が厚く、静脈は壁が薄く弁をもつ。毛細血管は内皮細胞1層で、物質交換に適する。</p><p>毛細血管から水を外へ押す力は血圧、血管内へ戻す力は血漿の<span class=\"answer\">膠質浸透圧</span>である。</p><figure class=\"fig fig-diagram\"><a href=\"figures/p06_capillary.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/p06_capillary.svg\" alt=\"毛細血管での水の出入りの模式図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a><figcaption><strong>ひとことポイント</strong>　押し出すのは血圧、引き戻すのは膠質浸透圧。なぜリンパ管が要る？ 毛細血管で戻りきらない組織液を回収して、静脈へ返すため。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
+        "anchor": "<p>動脈は中膜が厚く、静脈は壁が薄く弁をもつ。毛細血管は内皮細胞1層で、物質交換に適する。</p><p>毛細血管から水を外へ押す力は血圧、血管内へ戻す力は血漿の<span class=\"answer\">膠質浸透圧</span>である。</p><figure class=\"fig fig-diagram\"><a href=\"figures/p06_capillary.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/p06_capillary.svg\" alt=\"毛細血管での水の出入りの模式図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a><figcaption><strong>ひとことポイント</strong>　押し出すのは血圧、引き戻すのは膠質浸透圧。なぜリンパ管が要る？ 毛細血管で戻りきらない組織液を回収して、静脈へ返すため。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure><ul class=\"mb-list\"><li>細動脈は血流の「バルブ」＝<span class=\"answer\">抵抗血管</span>。</li><li>毛細血管で物質を交換する。</li><li>静脈は血液をためる<span class=\"answer\">容量血管</span>。圧がいちばん低いのは大静脈。</li></ul><figure class=\"fig fig-diagram\"><a href=\"figures/p06_flow.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/p06_flow.svg\" alt=\"動脈・細動脈・毛細血管・静脈の役割の比較表\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a><figcaption><strong>ひとことポイント</strong>　静脈に血液の多くがたまる。なぜ容量血管？ 壁がうすくのびやすく、たくさんの血液を入れておけるから。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
         "explanation": "動脈は高い圧に耐え、細動脈は平滑筋の収縮で末梢抵抗を調節する。静脈は容量血管として多くの血液を保持する。毛細血管で回収されなかった組織液はリンパ管へ入り、最終的に静脈へ戻る。",
         "image": "assets/image113.png",
         "caption": "動脈・毛細血管・静脈",
@@ -543,6 +557,11 @@ window.physiologyChapters = [
         "question": "血漿の膠質浸透圧を主につくるタンパク質は何か。",
         "answer": "アルブミン",
         "boxes": [
+          {
+            "kind": "deep",
+            "title": "より深く：運動中の血流のふりわけ",
+            "html": "<div class=\"mb\"><ul class=\"mb-list\"><li>運動中は、動く<span class=\"answer\">骨格筋</span>と心臓に血流が多く回る。</li><li>皮膚の血流もふえる（熱を逃がす）。</li><li><span class=\"answer\">消化管</span>や<span class=\"answer\">腎臓</span>の血流は減る。</li><li><span class=\"answer\">脳</span>の血流は、あまり変わらない。</li></ul></div>"
+          },
           {
             "kind": "link",
             "title": "つながりで覚える：リンパのゆくえ（胸管・リンパ節）",
@@ -605,7 +624,7 @@ window.physiologyChapters = [
     "sections": [
       {
         "title": "換気の仕組み",
-        "anchor": "<p>吸気では横隔膜と外肋間筋が収縮し、胸郭が広がる。胸腔内圧が低下し、肺胞内圧が大気圧より低くなることで空気が入る。</p>",
+        "anchor": "<p>吸気では横隔膜と外肋間筋が収縮し、胸郭が広がる。胸腔内圧が低下し、肺胞内圧が大気圧より低くなることで空気が入る。</p><ul class=\"mb-list\"><li>空気は、圧の高い方から低い方へ流れる。</li><li>吸うとき：胸が広がり、肺胞内圧が大気圧より<span class=\"answer\">低く</span>なって空気が入る。</li><li>胸膜腔内圧は、いつも大気圧より<span class=\"answer\">低い（陰圧）</span>。</li></ul><figure class=\"fig fig-diagram\"><a href=\"figures/p07_press.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/p07_press.svg\" alt=\"吸気と呼気での胸郭・肺胞内圧・胸膜腔内圧の変化の比較表\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a><figcaption><strong>ひとことポイント</strong>　胸膜腔の陰圧が、肺を胸郭に引っぱっている。なぜ気胸で肺がしぼむ？ 胸膜腔に空気が入ると陰圧がなくなり、肺が引っぱられなくなるから。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
         "explanation": "安静吸気は筋収縮を必要とする能動的な過程である。安静呼気は呼吸筋が弛緩し、肺と胸郭の弾性によって起こる。努力呼気では内肋間筋や腹筋も働く。",
         "image": "assets/image125.png",
         "caption": "外呼吸・内呼吸と換気",
@@ -775,7 +794,7 @@ window.physiologyChapters = [
     "sections": [
       {
         "title": "栄養素の役割",
-        "anchor": "<p>糖質・脂質・タンパク質はエネルギー源となる。タンパク質は酵素、ホルモン、受容体、筋などの材料にもなる。ビタミンとミネラルは代謝や身体機能を支える。</p>",
+        "anchor": "<p>糖質・脂質・タンパク質はエネルギー源となる。タンパク質は酵素、ホルモン、受容体、筋などの材料にもなる。ビタミンとミネラルは代謝や身体機能を支える。</p><ul class=\"mb-list\"><li>糖質・タンパク質は1gで約<span class=\"answer\">4kcal</span>、脂質は約<span class=\"answer\">9kcal</span>。</li><li>ビタミンは直接のエネルギー源ではない。</li><li>脂溶性＝<span class=\"answer\">A・D・E・K</span>。水溶性＝<span class=\"answer\">B群・C</span>。</li></ul><figure class=\"fig fig-diagram\"><a href=\"figures/p09_nutri.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/p09_nutri.svg\" alt=\"糖質・タンパク質・脂質の1gあたりのエネルギーと、ビタミンの分類の表\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a><figcaption><strong>ひとことポイント</strong>　ビタミンB1が足りないと脚気。なぜ脂質は同じ重さでエネルギーが多い？ 脂質は貯めておくのに向いた、エネルギーの濃い栄養素だから。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
         "explanation": "糖質とタンパク質は1gあたり約4kcal、脂質は約9kcalを生じる。ビタミンは直接のエネルギー源ではないが、代謝反応を進めるために必要である。脂溶性ビタミンはA・D・E・K、水溶性はB群とCであり、ビタミンB1の欠乏では脚気が起こる。",
         "image": "assets/image160.png",
         "caption": "主な栄養素と働き",
@@ -880,7 +899,14 @@ window.physiologyChapters = [
         "image": "assets/image181.png",
         "caption": "外気温が変わっても核心温は一定に保たれる",
         "question": "発熱時に変化する体温調節上の基準を何というか。",
-        "answer": "設定値（セットポイント）"
+        "answer": "設定値（セットポイント）",
+        "boxes": [
+          {
+            "kind": "link",
+            "title": "つながりで覚える：体温と発熱（設定温度・稽留熱・弛張熱）",
+            "html": "<div class=\"mb\"><p><span class=\"mb-k\">つながり</span>発熱は、視床下部の<span class=\"answer\">設定値</span>が上がること。体温を測って熱型（<span class=\"answer\">稽留熱</span>・<span class=\"answer\">弛張熱</span>）を見分ける。</p><figure class=\"mb-fig\"><a href=\"figures/x_temp.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/x_temp.svg\" alt=\"体温の解剖・生理・臨床のつながり図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a></figure><p><span class=\"mb-k\">なぜ</span>熱が上がるときに寒気がするのは、体温がまだ新しい設定値より低いから。体は「寒い」と判断してふるえ、熱をつくる。</p><p><span class=\"mb-k\">覚え方</span>サーモスタット：エアコンの設定温度が上がった部屋。設定に届くまでは「寒い」のでふるえて熱をつくる。</p><p class=\"mb-go\"><span class=\"mb-k\">ほかの科目</span><a href=\"../clinical-guide/#sec-vitals-1\">一般臨床：体温</a></p></div>"
+          }
+        ]
       }
     ],
     "quiz": [
@@ -1002,7 +1028,7 @@ window.physiologyChapters = [
     "sections": [
       {
         "title": "内分泌とホルモン受容体",
-        "anchor": "<p>内分泌ではホルモンが血液中へ放出され、受容体をもつ標的細胞に作用する。ペプチドホルモンは主に細胞膜、ステロイドホルモンは主に<span class=\"answer\">細胞内</span>の受容体へ結合する。</p>",
+        "anchor": "<p>内分泌ではホルモンが血液中へ放出され、受容体をもつ標的細胞に作用する。ペプチドホルモンは主に細胞膜、ステロイドホルモンは主に<span class=\"answer\">細胞内</span>の受容体へ結合する。</p><ul class=\"mb-list\"><li>ホルモンは血液で運ばれ、受容体をもつ細胞（標的細胞）だけに働く。</li><li><span class=\"answer\">ペプチドホルモン</span>（水に溶ける）の受容体は<span class=\"answer\">細胞膜</span>にある。</li><li><span class=\"answer\">ステロイドホルモン</span>（脂に溶ける）は膜を通り抜け、受容体は<span class=\"answer\">細胞内</span>にある。</li></ul><figure class=\"fig fig-diagram\"><a href=\"figures/p12_recept.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/p12_recept.svg\" alt=\"水溶性ホルモンと脂溶性ホルモンの受容体の場所の比較表\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a><figcaption><strong>ひとことポイント</strong>　水に溶けるホルモンは細胞膜を通れないので、表面で受け取る。なぜステロイドは中に入れる？ 脂に溶けて、細胞膜（脂の膜）を通り抜けられるから。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
         "explanation": "ホルモンはごく少量で働き、分泌量は負のフィードバックによって調節されることが多い。水溶性ホルモンは膜受容体を介して細胞内へ信号を伝え、脂溶性ホルモンは細胞内受容体を介して遺伝子発現を変える。",
         "image": "assets/image194.jpeg",
         "caption": "ホルモンが標的細胞へ届く流れ",
@@ -1020,7 +1046,7 @@ window.physiologyChapters = [
       },
       {
         "title": "甲状腺と上皮小体（副甲状腺）",
-        "anchor": "<p>甲状腺濾胞細胞は甲状腺ホルモンを分泌し、代謝と熱産生を高める。傍濾胞細胞はカルシトニンを分泌する。上皮小体ホルモンは血中Ca²⁺濃度を<span class=\"answer\">上昇</span>させる。</p>",
+        "anchor": "<p>甲状腺濾胞細胞は甲状腺ホルモンを分泌し、代謝と熱産生を高める。傍濾胞細胞はカルシトニンを分泌する。上皮小体ホルモンは血中Ca²⁺濃度を<span class=\"answer\">上昇</span>させる。</p><ul class=\"mb-list\"><li><span class=\"answer\">甲状腺ホルモン</span>は代謝と熱産生を高める。材料は<span class=\"answer\">ヨウ素</span>。</li><li><span class=\"answer\">上皮小体ホルモン（PTH）</span>は血中Caを上げる。</li><li><span class=\"answer\">カルシトニン</span>は骨吸収を抑える。</li></ul><figure class=\"fig fig-diagram\"><a href=\"figures/p12_thy.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/p12_thy.svg\" alt=\"甲状腺ホルモン・カルシトニン・上皮小体ホルモンの作用と過不足の症状の表\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a><figcaption><strong>ひとことポイント</strong>　甲状腺ホルモンが多いと「やせる・脈が速い」、少ないと逆。なぜ？ 代謝と熱産生が上がる／下がるから。PTHが足りないとCaが下がり、テタニーになる。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
         "explanation": "甲状腺ホルモンの合成にはヨウ素が必要である。上皮小体ホルモンは骨吸収、腎でのCa²⁺再吸収、活性型ビタミンD産生を促し、血中Ca²⁺を保つ。カルシトニンは骨吸収を抑える方向に働く。",
         "image": "assets/image200.png",
         "caption": "甲状腺と上皮小体の主なホルモン",
@@ -1029,7 +1055,7 @@ window.physiologyChapters = [
       },
       {
         "title": "副腎",
-        "anchor": "<p>副腎皮質は外側から球状層・束状層・網状層。アルドステロン、コルチゾール、アンドロゲンを分泌する。副腎髄質は<span class=\"answer\">カテコールアミン</span>を分泌する。</p>",
+        "anchor": "<p>副腎皮質は外側から球状層・束状層・網状層。アルドステロン、コルチゾール、アンドロゲンを分泌する。副腎髄質は<span class=\"answer\">カテコールアミン</span>を分泌する。</p><ul class=\"mb-list\"><li>副腎皮質は外から「球・束・網」＝<span class=\"answer\">塩・糖・性</span>のホルモン。</li><li><span class=\"answer\">アルドステロン</span>＝Naを保つ。<span class=\"answer\">コルチゾール</span>＝血糖を保つ・炎症を抑える。</li><li>副腎髄質は<span class=\"answer\">アドレナリン</span>など。急なストレスに対応する。</li></ul><figure class=\"fig fig-diagram\"><a href=\"figures/p12_adr.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/p12_adr.svg\" alt=\"副腎皮質の3層と髄質のホルモンの表（塩・糖・性）\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a><figcaption><strong>ひとことポイント</strong>　外から「塩・糖・性」と覚える。なぜ髄質はアドレナリン？ 髄質は交感神経の節後ニューロンにあたり、逃げる・戦うときの命令を出すから。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
         "explanation": "アルドステロンはNa⁺保持、コルチゾールは血糖維持や抗炎症作用に関係する。副腎髄質のクロム親和性細胞は交感神経節後ニューロンに相当し、アドレナリンやノルアドレナリンを血中へ放出して、急性ストレスに対応する。",
         "image": "assets/image202.png",
         "caption": "副腎皮質と副腎髄質",
@@ -1084,7 +1110,7 @@ window.physiologyChapters = [
     "sections": [
       {
         "title": "性分化",
-        "anchor": "<p>遺伝的男性では生殖腺隆起の髄質が発達して精巣へ、遺伝的女性では皮質が発達して卵巣へ分化する。ヒトの性染色体は女性XX、男性XYである。</p>",
+        "anchor": "<p>遺伝的男性では生殖腺隆起の髄質が発達して精巣へ、遺伝的女性では皮質が発達して卵巣へ分化する。ヒトの性染色体は女性XX、男性XYである。</p><ul class=\"mb-list\"><li>性染色体は、女性が<span class=\"answer\">XX</span>、男性が<span class=\"answer\">XY</span>。</li><li>男性：<span class=\"answer\">テストステロン</span>で<span class=\"answer\">ウォルフ管</span>が育ち、<span class=\"answer\">抗ミュラー管ホルモン</span>で<span class=\"answer\">ミュラー管</span>が退縮する。</li><li>女性：その指令がないので、ミュラー管が育つ（卵管・子宮のもと）。</li></ul><figure class=\"fig fig-diagram\"><a href=\"figures/p13_diff.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/p13_diff.svg\" alt=\"男性と女性の性分化（精巣・卵巣と、ウォルフ管・ミュラー管の運命）の比較表\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a><figcaption><strong>ひとことポイント</strong>　精巣があるかどうかで決まる。なぜ女性はミュラー管が育つ？ 抗ミュラー管ホルモンが出ないので、退縮せずに残るから。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
         "explanation": "胎生初期の内生殖器にはウォルフ管とミュラー管がある。精巣から分泌されるテストステロンはウォルフ管の発達、抗ミュラー管ホルモンはミュラー管の退縮に関係する。",
         "question": "遺伝的男性の生殖腺から分化する器官は何か。",
         "answer": "精巣"
@@ -1100,10 +1126,17 @@ window.physiologyChapters = [
       },
       {
         "title": "妊娠と授乳",
-        "anchor": "<p>受精は通常、卵管膨大部で起こる。着床後はhCGが黄体を維持する。プロラクチンは乳汁産生、オキシトシンは<span class=\"answer\">乳汁射出</span>を促す。</p>",
+        "anchor": "<p>受精は通常、卵管膨大部で起こる。着床後はhCGが黄体を維持する。プロラクチンは乳汁産生、オキシトシンは<span class=\"answer\">乳汁射出</span>を促す。</p><ul class=\"mb-list\"><li>受精は卵管膨大部。着床後は<span class=\"answer\">hCG</span>が黄体を維持する。</li><li>妊娠初期はhCGで黄体が続き、そのあと<span class=\"answer\">胎盤</span>がホルモンを出す。</li><li><span class=\"answer\">プロラクチン</span>＝乳汁をつくる。<span class=\"answer\">オキシトシン</span>＝乳汁を出す（射出）。</li></ul><figure class=\"fig fig-diagram\"><a href=\"figures/p13_preg.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/p13_preg.svg\" alt=\"排卵後の黄体、妊娠でのhCG、授乳のホルモンの流れの図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a><figcaption><strong>ひとことポイント</strong>　黄体はふつう妊娠しないと白体になる。なぜhCGが要る？ 黄体を延命して、プロジェステロンを出し続けさせるため。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
         "explanation": "妊娠初期のhCGは黄体からのプロジェステロン分泌を維持し、その後は胎盤がホルモン産生を担う。授乳刺激は視床下部・下垂体を介してプロラクチンとオキシトシンの分泌を促す。",
         "question": "乳汁産生を促進する下垂体前葉ホルモンは何か。",
-        "answer": "プロラクチン"
+        "answer": "プロラクチン",
+        "boxes": [
+          {
+            "kind": "link",
+            "title": "つながりで覚える：排卵・妊娠とホルモン（黄体・hCG）",
+            "html": "<div class=\"mb\"><p><span class=\"mb-k\">つながり</span>妊娠が成立すると、<span class=\"answer\">hCG</span>が<span class=\"answer\">黄体</span>を長持ちさせる。</p><figure class=\"mb-fig\"><a href=\"figures/x_preg.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/x_preg.svg\" alt=\"排卵と妊娠のホルモンの解剖・生理・臨床のつながり図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a></figure><p><span class=\"mb-k\">なぜ</span>黄体が働き続けると、プロジェステロンが出続けて子宮内膜が保たれ、月経が来ない。少しあとには、胎盤がホルモンを出すようになる。</p><p><span class=\"mb-k\">覚え方</span>バトンリレー：黄体（走者）が疲れる前に、hCGが延命する。つぎは胎盤がバトンを受ける。</p><p class=\"mb-go\"><span class=\"mb-k\">ほかの科目</span><a href=\"../anatomy-guide/#reproductive-3\">解剖学：卵胞の成熟・排卵・黄体</a></p></div>"
+          }
+        ]
       },
       {
         "title": "カルシウム代謝",
