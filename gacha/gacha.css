@@ -110,3 +110,39 @@ a.jkq-secondary { text-decoration: none; box-sizing: border-box; }
 .jkc-cell { padding: 8px 2px 6px; }
 .jkc-cell .jka { margin: 0 auto; }
 .jkc-dwrap .jka { flex: none; }
+
+/* ---- キャラのきろく ---- */
+.jkc-lore { margin-top: 12px; padding-top: 10px; border-top: 1px dashed #cfd8e6; }
+.jkc-lore-h { margin: 0 0 6px; font-size: 1rem; } .jkc-lore-h small { color: #5d6c84; font-weight: 700; }
+.jkc-lore-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.jkc-lore-list li { padding: 8px 10px; border-radius: 12px; background: #fff; border: 1px solid #e1e6f0; }
+.jkc-lore-list li.is-open { border-color: #b9c9ee; background: linear-gradient(180deg, #fff, #f4f7ff); }
+.jkc-lore-list b { display: block; font-size: .8rem; color: #3a64d8; margin-bottom: 2px; }
+.jkc-lore-list p { margin: 0; font-size: .92rem; line-height: 1.7; color: #1d2b44; }
+.jkc-lore-list li.is-lock, .jkc-lore-list li.is-soon { background: #f2f4f8; color: #8794a8; }
+.jkc-lore-list li.is-lock b, .jkc-lore-list li.is-soon b { color: #8794a8; }
+.jkc-lore-list li.is-next { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+.jkc-lore-list li.is-next b { margin: 0; }
+.jkc-lbtn { min-height: 44px; padding: 6px 14px; font-size: .9rem; }
+.jkc-lbtn:disabled { opacity: .55; }
+.jkc-lore-wait { margin: 0; color: #5d6c84; font-size: .9rem; }
+.jkc-loren { display: inline-block; margin-top: 2px; padding: 0 8px; border-radius: 99px; background: #fff4cf; color: #7a5200; font-size: .7rem; font-weight: 800; }
+
+/* ---- 合格祈願おみくじ（文字と色だけの絵馬／お守り風カード） ---- */
+.jkc-omi-btn { width: 100%; background: linear-gradient(180deg, #e5484d, #b3262c); box-shadow: 0 5px 0 #7d171c, 0 10px 18px rgba(179, 38, 44, .25); }
+.jkc-omi-btn:active:not(:disabled) { box-shadow: 0 2px 0 #7d171c; }
+#omi-result { margin-top: 12px; }
+.jkc-omicard { --c: #c8202f; --c2: #8e1620; border-radius: 16px; overflow: hidden; border: 3px solid var(--c); background: #fffdf6; box-shadow: 0 4px 14px rgba(11, 23, 48, .12); animation: jkc-omi-in .5s cubic-bezier(.2, 1.3, .4, 1) both; }
+.jkc-omicard.is-still { animation: none; }
+.jkc-omi-top { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; padding: 10px 16px; color: #fff; background: linear-gradient(135deg, var(--c), var(--c2)); }
+.jkc-omi-top small { font-weight: 800; letter-spacing: .2em; opacity: .95; }
+.jkc-omi-k { font-size: 2.6rem; line-height: 1.1; letter-spacing: .12em; font-weight: 900; text-shadow: 0 2px 0 rgba(0, 0, 0, .25); }
+.jkc-omi-msg { margin: 0; padding: 14px 16px 6px; font-size: 1.05rem; font-weight: 800; line-height: 1.7; color: #1d2b44; }
+.jkc-omi-dl { margin: 0; padding: 4px 16px 12px; display: grid; gap: 2px; }
+.jkc-omi-dl dt { margin-top: 6px; font-size: .78rem; font-weight: 800; color: var(--c); }
+.jkc-omi-dl dd { margin: 0; font-size: .95rem; line-height: 1.6; color: #33435c; }
+.jkc-omi-go { display: flex; align-items: center; justify-content: center; margin: 0 16px 16px; min-height: 48px; text-decoration: none; box-sizing: border-box; }
+.jkc-omicard.is-dai { --c: #d4202f; --c2: #8e1620; } .jkc-omicard.is-chu { --c: #e0561f; --c2: #a8380c; } .jkc-omicard.is-sho { --c: #c58a00; --c2: #8a5e00; }
+.jkc-omicard.is-kichi { --c: #2f8f5b; --c2: #1d6340; } .jkc-omicard.is-sue { --c: #3b6fd0; --c2: #23499b; } .jkc-omicard.is-kyo { --c: #4a4f78; --c2: #2e3253; }
+@keyframes jkc-omi-in { from { opacity: 0; transform: translateY(8px) scale(.94); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .jkc-omicard { animation: none; } }

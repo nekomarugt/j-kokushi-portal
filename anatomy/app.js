@@ -112,7 +112,7 @@ function updateStartLabel() {
 }
 
 function loadFields() {
-  fetch("./fields.json")
+  return fetch("./fields.json")
     .then((response) => {
       if (!response.ok) throw new Error("fields unavailable");
       return response.json();
@@ -125,6 +125,17 @@ function loadFields() {
     .catch(() => {
       fieldData = null;
     });
+}
+
+// おみくじなどから ?field=分野ID で来たら、その分野を選んでそのまま出題を始める（分野別モードと同じ出題）
+function launchFromField() {
+  const f = new URLSearchParams(location.search).get("field");
+  if (!f) return;
+  window.history.replaceState(null, "", location.pathname);
+  if (!fieldData || ![...els.fieldSelect.options].some((option) => option.value === f && !option.disabled)) return;
+  els.fieldSelect.value = f;
+  updateStartLabel();
+  els.startButton.click();
 }
 
 function populateSetup() {
@@ -367,7 +378,7 @@ fetch("./questions.json")
   .then((data) => {
     questions = data;
     populateSetup();
-    loadFields();
+    loadFields().then(launchFromField);
     show(els.setup);
   })
   .catch(() => show(els.error));

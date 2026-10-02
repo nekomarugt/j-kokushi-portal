@@ -199,6 +199,17 @@ function launchFromGuide() {
   startQuiz(shuffled(main).concat(shuffled(related)));
 }
 
+// おみくじなどから ?field=分野ID で来たら、その分野を選んでそのまま出題を始める（分野別モードと同じ出題）
+function launchFromField() {
+  const f = new URLSearchParams(location.search).get("field");
+  if (!f) return;
+  window.history.replaceState(null, "", location.pathname);
+  if (!fieldData || ![...els.fieldSelect.options].some((option) => option.value === f && !option.disabled)) return;
+  els.fieldSelect.value = f;
+  updateStartLabel();
+  els.startButton.click();
+}
+
 function populateSetup() {
   const exams = [...new Set(questions.map((question) => question.exam))].sort((a, b) => b - a);
   exams.forEach((exam) => {
@@ -418,6 +429,6 @@ fetch("./questions.json")
     questions = data;
     populateSetup();
     show(els.setup);
-    Promise.all([loadFields(), loadLinks()]).then(launchFromGuide);
+    Promise.all([loadFields(), loadLinks()]).then(launchFromGuide).then(launchFromField);
   })
   .catch(() => show(els.error));

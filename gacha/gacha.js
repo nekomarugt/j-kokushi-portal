@@ -27,6 +27,7 @@
     var d = AV.get(r.id), tag = r.isNew ? '<span class="jkc-new">NEW!</span>' : '<span class="jkc-dupe">DUPE +' + r.refund + '</span>';
     return '<div class="jkc-card r-' + d.r.toLowerCase() + (big ? " is-big" : "") + '" data-id="' + r.id + '">' + tag +
       AV.svg(r.id, big ? 150 : 78) + '<span class="jkc-rar r-' + d.r.toLowerCase() + '">' + d.r + '</span><strong>' + esc(d.n) + '</strong>' +
+      (r.lore ? '<span class="jkc-loren">📖 きろく' + r.lore + 'がひらいた</span>' : '') +
       (big ? '<small>' + esc(d.f) + '</small>' : '') + '</div>';
   }
 
@@ -63,7 +64,24 @@
     box.hidden = false;
     box.innerHTML = '<div class="jkc-dwrap">' + AV.svg(id, 84) + '<div><span class="jkc-rar r-' + d.r.toLowerCase() + '">' + d.r + ' ' + RN[d.r] + '</span><strong>' + esc(d.n) + '</strong><small>' + esc(d.f) + '</small>' +
       '<small>あつめた数：' + own[id] + '</small></div></div>' +
-      '<button type="button" class="jkq-primary" data-use="' + id + '"' + (sel ? " disabled" : "") + '>' + (sel ? "いま使っています" : "この子をマイアバターにする") + '</button>';
+      '<button type="button" class="jkq-primary" data-use="' + id + '"' + (sel ? " disabled" : "") + '>' + (sel ? "いま使っています" : "この子をマイアバターにする") + '</button>' +
+      '<div class="jkc-lore" id="lore" data-id="' + id + '"></div>';
+    renderLore(id);
+  }
+
+  /* きろく：入手済みのキャラだけ。本文は game/lore.js（必要になったときに読み込む）。ひらいていない本の本文は画面にもHTMLにも出さない。 */
+  function renderLore(id) {
+    var box = $("lore"); if (!box || box.getAttribute("data-id") !== id || !G.owned()[id]) return;
+    if (!window.JKLore) { box.innerHTML = '<p class="jkc-lore-wait">きろくを読みこみ中…</p>'; G.loadLore(function () { renderLore(id); }); return; }
+    var d = AV.get(id), texts = window.JKLore[id] || [], n = G.loreCount(id), coins = G.coins(), h = "";
+    for (var k = 1; k <= d.lm; k++) {
+      if (k <= n) h += '<li class="is-open"><b>きろく' + k + '</b><p>' + esc(texts[k - 1] || "") + '</p></li>';
+      else if (k > d.lr) h += '<li class="is-soon"><b>きろく' + k + '</b><span>じゅんびちゅう</span></li>';
+      else if (k === n + 1) { var c = G.loreCost(id); h += '<li class="is-lock is-next"><b>🔒 きろく' + k + '</b>' + (coins >= c ? '<button type="button" class="jkq-secondary jkc-lbtn" data-lore="' + id + '">🪙 ' + c + ' コインでひらく</button>' : '<button type="button" class="jkq-secondary jkc-lbtn" disabled>🪙 ' + c + ' コイン（あと ' + (c - coins) + '）</button>') + '</li>'; }
+      else h += '<li class="is-lock"><b>🔒 きろく' + k + '</b><span>？？？</span></li>';
+    }
+    box.innerHTML = '<h3 class="jkc-lore-h">きろく <small>' + n + '/' + d.lm + '</small></h3><ol class="jkc-lore-list">' + h + '</ol>' +
+      '<p class="jkq-note">かぶりが出ると、次のきろくが1つ無料でひらきます。</p>';
   }
 
   function burst(r) {
@@ -89,7 +107,7 @@
     }
     var best = rs.reduce(function (a, r) { return ORDER[r.r] > ORDER[a] ? r.r : a; }, "N");
     var newN = rs.filter(function (r) { return r.isNew; }).length, back = rs.reduce(function (a, r) { return a + r.refund; }, 0);
-    $("msg").textContent = (best === "SSR" ? "SSR！！！ とくべつな子が来た！ " : best === "SR" ? "スーパーレア！！ " : best === "R" ? "レアが出た！ " : "") + "新しい子 " + newN + " 体" + (back ? "／ かぶり分で +" + back + " コインもどった" : "") + "。";
+    $("msg").textContent = (best === "SSR" ? "SSR！！！ とくべつな子が来た！ " : best === "SR" ? "スーパーレア！！ " : best === "R" ? "レアが出た！ " : "") + "新しい子 " + newN + " 体" + (back ? "／ かぶり分で +" + back + " コインもどった" : "") + (rs.some(function (r) { return r.lore; }) ? "／ きろくが" + rs.filter(function (r) { return r.lore; }).length + "つひらいた" : "") + "。";
     idle(); updateHud(); renderBook();
     try { $("results").scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" }); } catch (e) {}
   }
@@ -130,10 +148,12 @@
       }
       return;
     }
+    var lb = e.target.closest && e.target.closest("[data-lore]");
+    if (lb && !lb.disabled) { var lid = lb.getAttribute("data-lore"), r = G.loreUnlock(lid); renderLore(lid); if (r.ok) { var li = document.querySelectorAll("#lore .is-open"); if (li.length) li[li.length - 1].scrollIntoView({ block: "nearest", behavior: "auto" }); } return; }
     var c = e.target.closest && e.target.closest(".jkc-cell");
     if (c) { showDetail(c.getAttribute("data-id")); $("detail").scrollIntoView({ block: "nearest", behavior: "auto" }); }
   });
-  document.addEventListener("jkg-change", function () { if (!busy) { updateHud(); renderBook(); } });
+  document.addEventListener("jkg-change", function () { if (!busy) { updateHud(); renderBook(); } var lo = $("lore"); if (lo) renderLore(lo.getAttribute("data-id")); });
 
   idle(); updateHud(); renderBook();
 })();

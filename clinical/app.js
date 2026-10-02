@@ -953,6 +953,14 @@ function launchFromGuide() {
   startQuiz(shuffled(main).concat(shuffled(related)));
 }
 
+// おみくじなどから ?field=分野名（例：循環器）で来たら、その分野（分野別モードと同じ）を出題する
+function launchFromField() {
+  const f = new URLSearchParams(location.search).get("field");
+  if (!f) return;
+  window.history.replaceState(null, "", location.pathname);
+  startQuiz(shuffled(questions.filter((question) => (question.category || "その他") === f)));
+}
+
 function renderRelatedTopics(question) {
   const relevant = question.topicIds.map((id) => TOPIC_MAP.get(id)).filter(Boolean);
   els.relatedTopics.replaceChildren();
@@ -1225,6 +1233,6 @@ fetch("./questions.json")
     populateTopics();
     populateFindings();
     show(els.home);
-    loadLinks().then(launchFromGuide);
+    loadLinks().then(launchFromGuide).then(launchFromField);
   })
   .catch(() => show(els.error));

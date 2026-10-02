@@ -23,7 +23,8 @@
 
   /* ---- コイン・ガチャ ---- */
   var ECO = { START: 30, CORRECT: 1, FIRST: 3, CAP: 30, FASTMS: 1500, BONUS: { 30: 5, 50: 10 }, BONUS_RATE: 0.6, BADGE: 5, MILESTONE: 10, PULL: 10, PULL10: 100, PITY: 30,
-    DUPE: { N: 2, R: 5, SR: 15, SSR: 30 }, RATE: { N: 75, R: 22, SR: 2, SSR: 1 } }; // 出現率の合計は100。天井(PITY)は「R以上」だけで、SSR専用の天井はない
+    DUPE: { N: 2, R: 5, SR: 15, SSR: 30 }, RATE: { N: 75, R: 22, SR: 2, SSR: 1 },
+    LORE: [0, 20, 50, 80, 120], OMIKUJI: 5 }; // LORE：きろくN本目をコインでひらく値段（1本目は無料）。OMIKUJI：おみくじ1回（ごほうび・確率への影響なし） // 出現率の合計は100。天井(PITY)は「R以上」だけで、SSR専用の天井はない
   var MILESTONES = [3, 7, 14, 30];
 
   var LEVELS = [
@@ -53,7 +54,7 @@
   function blank() {
     return { v: 1, xp: 0, att: 0, cor: 0, days: [], best: 0, qs: {}, ec: {}, weak: {}, badges: {}, mast: {}, past: {},
       quests: 0, perfect: 0, grads: 0, perfChap: 0, subjDone: 0, seen: {}, td: { d: "", n: 0 }, maxDay: 0, qb: { d: "", m: {} },
-      coins: 0, own: {}, sel: "", pulls: 0, pity: 0, grant: 0, ms: {}, shown: {} };
+      coins: 0, own: {}, sel: "", pulls: 0, pity: 0, grant: 0, ms: {}, shown: {}, lore: {} };
   }
   function load() {
     var raw = null;
@@ -69,6 +70,7 @@
     s.coins = num(s.coins); s.pulls = num(s.pulls); s.pity = num(s.pity); s.grant = s.grant ? 1 : 0;
     s.qb = obj(s.qb); s.qb.m = obj(s.qb.m); s.td = obj(s.td);
     s.own = obj(s.own); s.ms = obj(s.ms); s.shown = obj(s.shown);
+    s.lore = obj(s.lore); Object.keys(s.lore).forEach(function (k) { var v = Math.floor(+s.lore[k]); if (!(v >= 1 && v <= 5) || !s.own[k]) delete s.lore[k]; else s.lore[k] = v; });
     s.sel = typeof s.sel === "string" && s.own[s.sel] ? s.sel : "";
     return s;
   }
@@ -227,13 +229,29 @@
       var a = roll(rng, force);
       if (av.get(a).r !== "N") { gotRare = true; S.pity = 0; } else S.pity++;
       var d = av.get(a), isNew = !S.own[a], refund = 0;
-      if (isNew) { S.own[a] = 1; if (!S.sel) S.sel = a; } else { S.own[a]++; refund = ECO.DUPE[d.r]; S.coins += refund; }
+      var lo = 0;
+      if (isNew) { S.own[a] = 1; if (!S.sel) S.sel = a; } else { S.own[a]++; refund = ECO.DUPE[d.r]; S.coins += refund; if (loreCount(a) < d.lr) { lo = loreCount(a) + 1; S.lore[a] = lo; } } // かぶると、次のきろくが1本ただでひらく
       S.pulls++;
-      res.push({ id: a, r: d.r, isNew: isNew, refund: refund });
+      var item = { id: a, r: d.r, isNew: isNew, refund: refund }; if (lo) item.lore = lo;
+      res.push(item);
     }
     save(); renderAll();
     return { ok: true, results: res, coins: S.coins, cost: cost };
   }
+  /* ---------- キャラのきろく（本文は game/lore.js を後から読む。ここでは「何本ひらいたか」だけ持つ） ---------- */
+  function loreCount(id) { // ひらいている本数（未入手は0。入手したら1本目は最初からひらいている。書き上がっている本数まで）
+    var d = A() && A().get(id); if (!d || !S.own[id]) return 0;
+    return Math.min(d.lr, Math.max(1, S.lore[id] || 0));
+  }
+  function loreCost(id) { var d = A() && A().get(id); if (!d || !S.own[id] || loreCount(id) >= d.lr) return 0; return ECO.LORE[loreCount(id)]; }
+  function loreUnlock(id) { // 次のきろくをコインでひらく
+    var d = A() && A().get(id); if (!d || !S.own[id]) return { ok: false, reason: "locked" };
+    var n = loreCount(id); if (n >= d.lr) return { ok: false, reason: "none" };
+    var cost = ECO.LORE[n]; if (S.coins < cost) return { ok: false, reason: "coins", need: cost - S.coins };
+    S.coins -= cost; S.lore[id] = n + 1; save(); renderAll();
+    return { ok: true, n: n + 1, cost: cost, coins: S.coins };
+  }
+  function spend(n) { n = Math.floor(n); if (!(n > 0 && n <= 100) || S.coins < n) return false; S.coins -= n; save(); renderAll(); return true; } // おみくじなど：コインを使うだけ
   function ownedCount() { return Object.keys(S.own).length; }
   function setAvatar(id) { if (!S.own[id]) return false; S.sel = id; save(); renderAll(); return true; }
 
@@ -409,7 +427,7 @@
       (prog ? '<h4>分野ごとの進みぐあい</h4><p class="jkg-sub">正解したことがある問題の数。80%で称号。</p>' + prog : '') +
       '<div class="jkg-rules"><h4>ルール</h4><ul><li>正解 +10 XP（同じ問題の2回目以降は +5）／ まちがい +2 XP ／ 4択クイズを60%以上で完走 +10／20／30 XP（10／30／50問。全問正解でさらに +10）</li>' +
       '<li>コイン：はじめての正解 +3（同じ問題の2回目以降は +1）。同じ問題のコインは1日1回まで、答えるのが速すぎる（1.5秒未満）とコインなし、回答コインは1日 '+ECO.CAP+' まで。</li>' +
-      '<li>4択クイズの完走ボーナス（60%以上正解・1問3秒以上かけた場合、1日1モードにつき1回）：30問 +5／50問 +10。新しいバッジ +5 ／ 3・7・14・30日連続 +10。ガチャは1回10コイン、10連は100コイン（出る確率：N 75%／R 22%／SR 2%／SSR 1%）。</li>' +
+      '<li>4択クイズの完走ボーナス（60%以上正解・1問3秒以上かけた場合、1日1モードにつき1回）：30問 +5／50問 +10。新しいバッジ +5 ／ 3・7・14・30日連続 +10。ガチャは1回10コイン、10連は100コイン、おみくじは1回5コイン、キャラのきろくは2つ目から20・50・80・120コイン（出る確率：N 75%／R 22%／SR 2%／SSR 1%）。</li>' +
       '<li>連続日数：1日1問でも答えれば、その日は数えます（端末の日付で、0時に切り替わります）。</li>' +
       '<li>まちがえた問題は「復習リスト」に入り、2回つづけて正解すると外れます。</li></ul></div>' +
       '<p class="jkg-note">記録は、この端末（このブラウザ）の中だけに保存されます。サーバーには送りません。別の端末とは共有されません。</p>' +
@@ -425,7 +443,7 @@
     record: record, quizDone: quizDone, registerBank: registerBank, weakIds: weakIds, weakCount: weakCount,
     streak: streakNow, level: function () { return levelInfo(S.xp); }, xp: function () { return S.xp; },
     openRecord: openRecord, reset: reset,
-    coins: function () { return S.coins; }, owned: function () { return S.own; }, ownedCount: ownedCount, selected: function () { return S.sel; },
+    coins: function () { return S.coins; }, owned: function () { return S.own; }, ownedCount: ownedCount, loreCount: loreCount, loreCost: loreCost, loreUnlock: loreUnlock, spend: spend, loadLore: function (cb) { loadExtra("lore.js", function () { return !!window.JKLore; }, cb); }, selected: function () { return S.sel; },
     markShown: markShown, pull: pull, roll: roll, setAvatar: setAvatar, pulls: function () { return S.pulls; }, pity: function () { return S.pity; }, ECO: ECO, rootUrl: ROOT, isMastered: function (subj, topic) { return !!S.mast[subj + "|" + topic]; },
     qs: function (src, id) { return S.qs[src + ":" + id] || null; }, _state: function () { return S; },
     constants: { WEAK_OUT: WEAK_OUT, MASTER_RATE: MASTER_RATE, SUBJ: SUBJ, SUBJ_PAGE: SUBJ_PAGE, QS: QS }

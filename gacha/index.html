@@ -55,8 +55,17 @@
       <section class="jkq-surface" aria-labelledby="book-h">
         <div class="jkc-bookhead"><h2 id="book-h">キャラずかん</h2><strong id="count">0/38</strong></div>
         <div class="jkc-bar"><i id="count-bar"></i></div>
+        <p class="jkq-note">手に入れた子をタップすると「きろく」が読めます。1つ目は無料、2つ目から20・50コイン（SR・SSRは80・120コインまで）でひらけます。かぶりが出ると、次のきろくが1つ無料でひらきます。</p>
         <div class="jkc-book" id="book"></div>
         <div class="jkc-detail" id="detail" hidden></div>
+      </section>
+
+      <section class="jkq-surface jkc-omi" aria-labelledby="omi-h">
+        <h2 id="omi-h">⛩ 合格祈願おみくじ</h2>
+        <p class="jkq-note">1回 5コイン。何回でもひけます。コインやXPはもらえず、ガチャの確率にも関係しません（ただのお楽しみ）。</p>
+        <button type="button" class="jkc-pull jkc-omi-btn" id="omi-draw"><span>おみくじをひく</span><small>5コイン</small></button>
+        <p class="jkq-note" id="omi-short" hidden></p>
+        <div id="omi-result" aria-live="polite"></div>
       </section>
 
       <section class="jkq-surface">
@@ -73,5 +82,6 @@
     <script src="../game/avatars.js"></script>
     <script src="../game/game.js"></script>
     <script src="./gacha.js"></script>
+    <script src="./omikuji.js"></script>
   </body>
 </html>

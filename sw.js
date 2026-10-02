@@ -3,14 +3,14 @@
  * - ?v=hash assets : cache-first (immutable); images / fonts / icons : stale-while-revalidate
  * - Only touches Cache Storage entries prefixed "jkp-"; never touches localStorage.
  * Bump VERSION when changing this file's strategy or the precache list. */
-const VERSION = 'v14';
+const VERSION = 'v15';
 const PREFIX = 'jkp-';
 const PAGES = PREFIX + 'pages-' + VERSION;
 const STATIC = PREFIX + 'static-' + VERSION;
 const SCOPE = new URL('./', self.location).pathname; // "/j-kokushi-portal/"
 const PRECACHE = [
-  './', './styles.css', './game/game.css', './game/game.js', './game/avatars.js', './game/fx.js',
-  './gacha/', './gacha/gacha.js', './gacha/gacha.css', './manifest.webmanifest',
+  './', './styles.css', './game/game.css', './game/game.js', './game/avatars.js', './game/fx.js', './game/lore.js',
+  './gacha/', './gacha/gacha.js', './gacha/omikuji.js', './gacha/gacha.css', './manifest.webmanifest',
   './icons/icon-192.png', './icons/icon-512.png', './icons/apple-touch-icon.png', './icons/favicon.svg'
 ];
 
