@@ -171,6 +171,12 @@
               '</div>' +
             '</details>'
           ).join('') +
+          (section.boxes || []).map((box) =>
+            '<details class="more-box mb-' + (box.kind === 'link' ? 'link' : 'deep') + '">' +
+              '<summary><span class="more-badge">' + (box.kind === 'link' ? 'つながり' : 'より深く') + '</span><span class="more-title">' + escapeHtml(String(box.title || '').replace(/^(つながりで覚える|より深く)：/, '')) + '</span><span class="more-open" aria-hidden="true">ひらく</span></summary>' +
+              '<div class="more-body">' + box.html + '</div>' +
+            '</details>'
+          ).join('') +
           '<p class="xq"><a class="xq-link" href="../physiology/?sec=' + escapeHtml(chapter.number + '-' + (index + 1)) + '" data-xq-link="' + escapeHtml(chapter.number + '-' + (index + 1)) + '">この節の過去問<span data-xq-sec="' + escapeHtml(chapter.number + '-' + (index + 1)) + '"></span> →</a></p>' +
           '<div class="quick-check">' +
             '<strong>理解度チェック</strong>' +

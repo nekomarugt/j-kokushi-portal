@@ -330,12 +330,24 @@ window.physiologyChapters = [
       },
       {
         "title": "複雑な反射と上位中枢",
-        "anchor": "<p>侵害刺激で同側の肢を引く反射を屈曲反射、反対側の肢を伸ばして体を支える反射を<span class=\"answer\">交叉性伸展反射</span>という。</p><p>錐体路は随意運動、錐体外路は姿勢・筋緊張や自動的運動の調節に関与する。</p>",
+        "anchor": "<p>侵害刺激で同側の肢を引く反射を屈曲反射、反対側の肢を伸ばして体を支える反射を<span class=\"answer\">交叉性伸展反射</span>という。</p><p>錐体路は随意運動、錐体外路は姿勢・筋緊張や自動的運動の調節に関与する。</p><ul class=\"mb-list\"><li>上位ニューロン＝大脳皮質から脊髄の前角まで（<span class=\"answer\">錐体路</span>）。下位＝前角から筋まで。</li><li>上位が壊れると、抑えが外れて<span class=\"answer\">腱反射が強く</span>なる。</li><li>錐体路は、脊髄の前角でニューロンをかえて筋へ行く。</li></ul><figure class=\"fig fig-diagram\"><a href=\"figures/p04_umn.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/p04_umn.svg\" alt=\"上位運動ニューロン障害と下位運動ニューロン障害の比較表\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a><figcaption><strong>ひとことポイント</strong>　上位は「つっぱる・反射が強い」、下位は「だらん・反射が弱い」。なぜ？ 上位が壊れると反射へのブレーキが外れ、下位が壊れると反射の道そのものが切れるから。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
         "explanation": "屈曲反射は複数の介在ニューロンを介する多シナプス反射である。脳からの下行路は脊髄反射を調節しており、錐体路障害では上位からの抑制が弱まり、腱反射亢進や病的反射が現れる。",
         "image": "assets/image71.png",
         "caption": "通常の反応と脊髄反射",
         "question": "熱い物に触れて手足を引く反射は何か。",
-        "answer": "屈曲反射"
+        "answer": "屈曲反射",
+        "boxes": [
+          {
+            "kind": "deep",
+            "title": "より深く：運動野・陽性支持反射・除脳固縮",
+            "html": "<div class=\"mb\"><ul class=\"mb-list\"><li>一次運動野は<span class=\"answer\">中心前回</span>にある。<span class=\"answer\">第Ⅴ層</span>が発達している。</li><li><span class=\"answer\">陽性支持反射</span>は脊髄反射。足の裏を押されると肢がのびて、体をささえる。</li><li>除脳固縮：脳幹で上からのつながりが切れると、手足の伸筋が強くつっぱる。</li><li>脊髄で一側の錐体路が切れると、同じ側の随意運動が障害される（交叉より下）。脳の障害は反対側。</li></ul></div>"
+          },
+          {
+            "kind": "link",
+            "title": "つながりで覚える：反射（上位・下位ニューロン）",
+            "html": "<div class=\"mb\"><p><span class=\"mb-k\">つながり</span>脳（上位）が壊れると、反射の<span class=\"answer\">抑え</span>が外れて<span class=\"answer\">腱反射が強く</span>なる。</p><figure class=\"mb-fig\"><a href=\"figures/x_reflex.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/x_reflex.svg\" alt=\"反射の解剖・生理・臨床のつながり図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a></figure><p><span class=\"mb-k\">なぜ</span>脊髄の反射には、上から「やりすぎるな」と抑えがかかっている。下位（前角・末梢神経）が壊れると反射の道が切れて、弱くなる・なくなる。</p><p><span class=\"mb-k\">覚え方</span>社長（脳）が不在だと、現場（反射）が暴走。現場が倒れると、仕事そのものができない。</p><p class=\"mb-go\"><span class=\"mb-k\">ほかの科目</span><a href=\"../anatomy-guide/#cns-7\">解剖学：錐体路</a><a href=\"../clinical-guide/#sec-reflex-3\">一般臨床：深部反射</a></p></div>"
+          }
+        ]
       },
       {
         "title": "誘発筋電図",
@@ -507,7 +519,14 @@ window.physiologyChapters = [
           }
         ],
         "question": "心室内圧が上がるが容積は変わらない時期は何か。",
-        "answer": "等容性収縮期"
+        "answer": "等容性収縮期",
+        "boxes": [
+          {
+            "kind": "link",
+            "title": "つながりで覚える：心音（弁が閉じる音）",
+            "html": "<div class=\"mb\"><p><span class=\"mb-k\">つながり</span>心音は、弁が閉じる音。<span class=\"answer\">Ⅰ音</span>＝房室弁、<span class=\"answer\">Ⅱ音</span>＝動脈弁。</p><figure class=\"mb-fig\"><a href=\"figures/x_heart.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/x_heart.svg\" alt=\"心音の解剖・生理・臨床のつながり図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a></figure><p><span class=\"mb-k\">なぜ</span>弁が閉じるとき、血液がぶつかって振動し、音になる。弁がせまい・もれると、ふつうと違う音（雑音）が混ざる。</p><p><span class=\"mb-k\">覚え方</span>ドア：Ⅰ音は入口のドア（房室弁）がバタン、Ⅱ音は出口のドア（動脈弁）がバタン。</p><p class=\"mb-go\"><span class=\"mb-k\">ほかの科目</span><a href=\"../anatomy-guide/#vascular-1\">解剖学：心臓の部屋と弁</a><a href=\"../clinical-guide/#sec-auscultation-3\">一般臨床：心臓の聴診</a></p></div>"
+          }
+        ]
       },
       {
         "title": "血管と毛細血管交換",
@@ -522,7 +541,14 @@ window.physiologyChapters = [
           }
         ],
         "question": "血漿の膠質浸透圧を主につくるタンパク質は何か。",
-        "answer": "アルブミン"
+        "answer": "アルブミン",
+        "boxes": [
+          {
+            "kind": "link",
+            "title": "つながりで覚える：リンパのゆくえ（胸管・リンパ節）",
+            "html": "<div class=\"mb\"><p><span class=\"mb-k\">つながり</span>腹部のリンパは<span class=\"answer\">胸管</span>を通って、<span class=\"answer\">左</span>の首の付け根の静脈（静脈角）に注ぐ。</p><figure class=\"mb-fig\"><a href=\"figures/x_lymph.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/x_lymph.svg\" alt=\"リンパの解剖・生理・臨床のつながり図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a></figure><p><span class=\"mb-k\">なぜ</span>胃癌などがリンパに乗って運ばれると、終点の近くの<span class=\"answer\">左鎖骨上窩リンパ節</span>にあらわれる（ウィルヒョウ転移）。</p><p><span class=\"mb-k\">覚え方</span>ゴミ回収：腹部のゴミ回収トラックの終点は、左の首の付け根。</p><p class=\"mb-go\"><span class=\"mb-k\">ほかの科目</span><a href=\"../anatomy-guide/#vascular-7\">解剖学：リンパの流れ</a><a href=\"../clinical-guide/#sec-palpation-1\">一般臨床：触診（リンパ節）</a></p></div>"
+          }
+        ]
       },
       {
         "title": "血圧とその調節",
@@ -594,12 +620,19 @@ window.physiologyChapters = [
       },
       {
         "title": "肺気量",
-        "anchor": "<p>1回換気量は約500mL。最大呼気後にも肺に残る量を<span class=\"answer\">残気量</span>という。予備呼気量と残気量の和が機能的残気量である。</p><figure class=\"fig fig-diagram\"><a href=\"figures/p07_volumes.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/p07_volumes.svg\" alt=\"肺気量分画の模式図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a><figcaption><strong>ひとことポイント</strong>　肺活量＝予備吸気量＋1回換気量（約500mL）＋予備呼気量。なぜ残気量は肺活量に入らない？ 吐き切っても肺に残り、出せない量だから。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
+        "anchor": "<p>1回換気量は約500mL。最大呼気後にも肺に残る量を<span class=\"answer\">残気量</span>という。予備呼気量と残気量の和が機能的残気量である。</p><figure class=\"fig fig-diagram\"><a href=\"figures/p07_volumes.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/p07_volumes.svg\" alt=\"肺気量分画の模式図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a><figcaption><strong>ひとことポイント</strong>　肺活量＝予備吸気量＋1回換気量（約500mL）＋予備呼気量。なぜ残気量は肺活量に入らない？ 吐き切っても肺に残り、出せない量だから。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure><ul class=\"mb-list\"><li>力いっぱい一気に吐いて、1秒で吐けた量（1秒量）を見る。</li><li><span class=\"answer\">1秒率</span>＝1秒量 ÷ 努力肺活量 × 100。</li><li><span class=\"answer\">閉塞性</span>（喘息・COPD）では1秒率が下がる。肺活量が下がるのは<span class=\"answer\">拘束性</span>。</li></ul><figure class=\"fig fig-diagram\"><a href=\"figures/p07_fev1.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/p07_fev1.svg\" alt=\"1秒率の考え方と、健常と閉塞性換気障害の呼出曲線の比較図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a><figcaption><strong>ひとことポイント</strong>　気道がせまい閉塞性では、吐き出すのに時間がかかるので1秒率が下がる。なぜ？ せまい管から出す空気は、勢いよく吐いても出る速さが限られるから。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
         "explanation": "肺活量は1回換気量、予備吸気量、予備呼気量の和である。残気量を含む肺気量は通常のスパイロメトリーだけでは直接測定できない。1回換気量のすべてがガス交換に使われるわけではなく、気道内に残る分を死腔量という。",
         "image": "assets/image130.gif",
         "caption": "肺気量分画",
         "question": "最大呼気後にも肺内に残る空気量は何か。",
-        "answer": "残気量"
+        "answer": "残気量",
+        "boxes": [
+          {
+            "kind": "link",
+            "title": "つながりで覚える：呼吸（1秒率・閉塞性・拘束性）",
+            "html": "<div class=\"mb\"><p><span class=\"mb-k\">つながり</span><span class=\"answer\">1秒率</span>が低い＝息を速くはけない（<span class=\"answer\">閉塞性</span>）。肺活量が低い＝ふくらまない（<span class=\"answer\">拘束性</span>）。</p><figure class=\"mb-fig\"><a href=\"figures/x_resp.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/x_resp.svg\" alt=\"呼吸の解剖・生理・臨床のつながり図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a></figure><p><span class=\"mb-k\">なぜ</span>気道がせまいと空気がはき切れず、肺がふくらんだままになる。だから樽状胸になり、打診で鼓音になる。</p><p><span class=\"mb-k\">覚え方</span>風船：閉塞性＝ふくらんだまま戻らない風船。拘束性＝かたくてふくらまない風船。</p><p class=\"mb-go\"><span class=\"mb-k\">ほかの科目</span><a href=\"../anatomy-guide/#respiratory-1\">解剖学：右主気管支</a><a href=\"../clinical-guide/#sec-respiratory-4\">一般臨床：慢性閉塞性肺疾患（COPD）</a></p></div>"
+          }
+        ]
       },
       {
         "title": "ガス交換と分圧",
@@ -678,12 +711,19 @@ window.physiologyChapters = [
       },
       {
         "title": "膵液と胆汁",
-        "anchor": "<p>膵液はアミラーゼ、リパーゼ、タンパク質分解酵素、重炭酸イオンを含む。胆汁は消化酵素を含まず、脂質を<span class=\"answer\">乳化</span>する。</p>",
+        "anchor": "<p>膵液はアミラーゼ、リパーゼ、タンパク質分解酵素、重炭酸イオンを含む。胆汁は消化酵素を含まず、脂質を<span class=\"answer\">乳化</span>する。</p><ul class=\"mb-list\"><li>膵液：消化酵素と<span class=\"answer\">重炭酸</span>（酸を中和）。</li><li>胆汁：消化酵素はなし。脂肪を細かくする（<span class=\"answer\">乳化</span>）。</li><li>胆汁は肝臓でつくり、胆嚢で濃くして貯める。</li></ul><figure class=\"fig fig-diagram\"><a href=\"figures/p08_bile.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/p08_bile.svg\" alt=\"膵液と胆汁の違いの比較図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a><figcaption><strong>ひとことポイント</strong>　膵液は「消化する」、胆汁は「脂肪を細かくして消化を助ける」。なぜ胆汁に酵素がなくてよい？ 胆汁酸が脂肪を小さな粒にすると、膵液のリパーゼが働ける面積がふえるから。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
         "explanation": "膵液中の重炭酸イオンは胃から来た酸性内容物を中和し、小腸の消化酵素が働きやすい環境をつくる。胆汁酸は大きな脂肪滴を細かく分散させ、リパーゼが作用できる面積を増やす。",
         "image": "assets/image142.png",
         "caption": "脂質の乳化と消化",
         "question": "胆汁に消化酵素は含まれるか。",
-        "answer": "含まれない"
+        "answer": "含まれない",
+        "boxes": [
+          {
+            "kind": "deep",
+            "title": "より深く：ビリルビンの流れと腸肝循環",
+            "html": "<div class=\"mb\"><p>古い赤血球のカス（ビリルビン）が、便の色になるまでの流れ。</p><figure class=\"mb-fig\"><a href=\"figures/p08_bili.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/p08_bili.svg\" alt=\"ヘモグロビンの分解産物ビリルビンが肝臓・胆汁・腸を通る流れの図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a></figure><ul class=\"mb-list\"><li><span class=\"answer\">間接ビリルビン</span>を<span class=\"answer\">直接ビリルビン</span>に変えるのは肝臓。</li><li>胆汁酸はほとんど再吸収されて、肝臓へ戻る（腸肝循環）。</li></ul></div>"
+          }
+        ]
       },
       {
         "title": "小腸での吸収",
@@ -874,12 +914,19 @@ window.physiologyChapters = [
     "sections": [
       {
         "title": "糸球体ろ過",
-        "anchor": "<p>血液は輸入細動脈から糸球体へ入り、血圧によって血漿成分がボーマン嚢へろ過される。血球や大きなタンパク質は通常ほとんど通らない。</p>",
+        "anchor": "<p>血液は輸入細動脈から糸球体へ入り、血圧によって血漿成分がボーマン嚢へろ過される。血球や大きなタンパク質は通常ほとんど通らない。</p><ul class=\"mb-list\"><li><span class=\"answer\">イヌリン</span>はろ過されたあと、戻らず足されもしない。だからGFRの物差しになる。</li><li><span class=\"answer\">クレアチニン</span>もほぼ同じ動きで、ふだんの目安に使う。</li><li>大きなタンパク質や血球は、ふつう尿に出ない。</li></ul><figure class=\"fig fig-diagram\"><a href=\"figures/p11_gfr.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/p11_gfr.svg\" alt=\"イヌリン・クレアチニン・グルコース・アルブミンのろ過後のゆくえの比較図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a><figcaption><strong>ひとことポイント</strong>　正常なら、グルコースはろ過されても全部戻り、尿に出ない。なぜ？ 近位尿細管の輸送体がブドウ糖を回収するが、血糖が高すぎると回収が追いつかず尿に出る（糖尿）。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
         "explanation": "腎臓の機能単位をネフロンという。糸球体で1日に約180Lの原尿がつくられるが、その大部分は尿細管で再吸収され、最終的な尿量は約1％程度になる。糸球体ろ過量（GFR）は腎機能をみる重要な指標である。",
         "image": "assets/image185.png",
         "caption": "ネフロンと糸球体ろ過",
         "question": "糸球体からボーマン嚢へつくられる液を何というか。",
-        "answer": "原尿（糸球体ろ液）"
+        "answer": "原尿（糸球体ろ液）",
+        "boxes": [
+          {
+            "kind": "link",
+            "title": "つながりで覚える：腎臓のふるい（糸球体・ネフローゼ）",
+            "html": "<div class=\"mb\"><p><span class=\"mb-k\">つながり</span><span class=\"answer\">糸球体</span>は「ふるい」。ふるいが破れる病気が<span class=\"answer\">ネフローゼ症候群</span>。</p><figure class=\"mb-fig\"><a href=\"figures/x_kidney.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/x_kidney.svg\" alt=\"腎臓の解剖・生理・臨床のつながり図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a></figure><p><span class=\"mb-k\">なぜ</span>戻す力（再吸収）には上限がある。血糖が高すぎると戻しきれずに尿へ出て、水も一緒に出る。</p><p><span class=\"mb-k\">覚え方</span>洗濯：全部いったん干して（ろ過）、要る服だけ取りこむ（再吸収）。</p><p class=\"mb-go\"><span class=\"mb-k\">ほかの科目</span><a href=\"../anatomy-guide/#urinary-3\">解剖学：ネフロンと腎小体</a><a href=\"../clinical-guide/#sec-renal-6\">一般臨床：ネフローゼ症候群</a></p></div>"
+          }
+        ]
       },
       {
         "title": "尿細管での再吸収と分泌",
@@ -991,12 +1038,19 @@ window.physiologyChapters = [
       },
       {
         "title": "膵臓のホルモン",
-        "anchor": "<ul><li>A細胞：グルカゴン</li><li>B細胞：<span class=\"answer\">インスリン</span></li><li>D細胞：ソマトスタチン</li></ul>",
+        "anchor": "<ul><li>A細胞：グルカゴン</li><li>B細胞：<span class=\"answer\">インスリン</span></li><li>D細胞：ソマトスタチン</li></ul><ul class=\"mb-list\"><li>膵臓は、消化液（膵液）とホルモンの両方をつくる。</li><li>血糖が上がると、<span class=\"answer\">インスリン</span>が出る。</li><li>血糖が下がると、<span class=\"answer\">グルカゴン</span>が出る。</li></ul><figure class=\"fig fig-diagram\"><a href=\"figures/p12_islet.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/p12_islet.svg\" alt=\"膵島のA細胞・B細胞・D細胞とホルモンの働きの図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a><figcaption><strong>ひとことポイント</strong>　下げるホルモンは1つ（インスリン）、上げるホルモンは何種類もある。なぜ？ 低血糖は脳のエネルギー切れに直結するので、上げる側を多く用意して守っているから。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
         "explanation": "インスリンは細胞へのグルコース取り込みやグリコーゲン・脂肪・タンパク質合成を促し、血糖を下げる。グルカゴンは肝臓のグリコーゲン分解や糖新生を促し、血糖を上げる。",
         "image": "assets/image203.jpeg",
         "caption": "膵島細胞とホルモン",
         "question": "血糖を低下させる膵ホルモンは何か。",
-        "answer": "インスリン"
+        "answer": "インスリン",
+        "boxes": [
+          {
+            "kind": "link",
+            "title": "つながりで覚える：血糖（膵臓・インスリン・糖尿病）",
+            "html": "<div class=\"mb\"><p><span class=\"mb-k\">つながり</span>膵島の<span class=\"answer\">B細胞</span>が<span class=\"answer\">インスリン</span>を出す。足りない・効かないと<span class=\"answer\">糖尿病</span>になる。</p><figure class=\"mb-fig\"><a href=\"figures/x_sugar.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/x_sugar.svg\" alt=\"血糖の解剖・生理・臨床のつながり図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a></figure><p><span class=\"mb-k\">なぜ</span>血糖が高いと、尿にもブドウ糖が出る。ブドウ糖は水を引っぱるので尿がふえ（多尿）、のどが渇く（多飲）。</p><p><span class=\"mb-k\">覚え方</span>貯金箱：インスリンは「入れる係」、グルカゴンは「出す係」。1型＝入れる係がいない。2型＝入れる係の力が落ちている。</p><p class=\"mb-go\"><span class=\"mb-k\">ほかの科目</span><a href=\"../anatomy-guide/#endocrine-6\">解剖学：膵島</a><a href=\"../clinical-guide/#sec-metabolic-1\">一般臨床：糖尿病</a></p></div>"
+          }
+        ]
       }
     ],
     "quiz": [
@@ -1058,7 +1112,19 @@ window.physiologyChapters = [
         "image": "assets/image206.png",
         "caption": "パラソルモンの主な作用",
         "question": "腸管でのCa²⁺吸収を促進するビタミンは何か。",
-        "answer": "活性型ビタミンD"
+        "answer": "活性型ビタミンD",
+        "boxes": [
+          {
+            "kind": "deep",
+            "title": "より深く：ビタミンDが活性型になるまで",
+            "html": "<div class=\"mb\"><p>ビタミンDは、皮膚・肝臓・腎臓を回ってはじめて「活性型」になる。</p><figure class=\"mb-fig\"><a href=\"figures/p13_vitd.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/p13_vitd.svg\" alt=\"ビタミンDが皮膚・肝臓・腎臓を経て活性型になり小腸でCa吸収を高める図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a></figure><ul class=\"mb-list\"><li>腎臓で活性型にするのを促すのが<span class=\"answer\">PTH</span>。</li><li>活性型ビタミンDは、小腸でのCaの吸収を高める。</li></ul></div>"
+          },
+          {
+            "kind": "link",
+            "title": "つながりで覚える：カルシウム（上皮小体・ビタミンD・腎臓）",
+            "html": "<div class=\"mb\"><p><span class=\"mb-k\">つながり</span><span class=\"answer\">上皮小体</span>（副甲状腺）のホルモン<span class=\"answer\">PTH</span>が、血中の<span class=\"answer\">カルシウム</span>を上げる。</p><figure class=\"mb-fig\"><a href=\"figures/x_ca.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/x_ca.svg\" alt=\"カルシウムの解剖・生理・臨床のつながり図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a></figure><p><span class=\"mb-k\">なぜ</span>Caが低いと神経・筋が興奮しやすくなり、<span class=\"answer\">テタニー</span>が出る。腎臓は活性型ビタミンDをつくる所なので、腎臓が弱るとCaを吸えず低くなる。</p><p><span class=\"mb-k\">覚え方</span>家計簿：残高（血中Ca）が減ると、PTHが取り立て屋になる。骨から出す・腎で節約・腸から仕入れる。</p><p class=\"mb-go\"><span class=\"mb-k\">ほかの科目</span><a href=\"../anatomy-guide/#endocrine-4\">解剖学：甲状腺と上皮小体</a><a href=\"../clinical-guide/#sec-renal-3\">一般臨床：慢性腎臓病（CKD）</a></p></div>"
+          }
+        ]
       },
       {
         "title": "骨形成と骨吸収",
@@ -1110,10 +1176,17 @@ window.physiologyChapters = [
       },
       {
         "title": "痛覚・温度覚・深部感覚",
-        "anchor": "<p>速い痛みは主にAδ線維、遅い痛みはC線維で伝わる。筋紡錘は筋長、ゴルジ腱器官は筋張力を感知し、深部感覚に関与する。</p>",
+        "anchor": "<p>速い痛みは主にAδ線維、遅い痛みはC線維で伝わる。筋紡錘は筋長、ゴルジ腱器官は筋張力を感知し、深部感覚に関与する。</p><ul class=\"mb-list\"><li>痛み・温度は<span class=\"answer\">自由神経終末</span>で感じる。</li><li>温覚と冷覚は、別々の受容器。</li></ul><figure class=\"fig fig-diagram\"><a href=\"figures/p14_pain.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/p14_pain.svg\" alt=\"一次痛(Aδ線維)と二次痛(C線維)の比較図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a><figcaption><strong>ひとことポイント</strong>　速い痛みはAδ、遅い痛みはC。なぜ2種類ある？ 速い痛みで素早く危険を知らせ、遅い痛みで「傷ついている」ことを続けて知らせるから。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
         "explanation": "Aδ線維は有髄で、鋭く局在の明瞭な一次痛を速く伝える。C線維は無髄で、鈍く持続する二次痛を伝える。深部感覚は身体の位置や運動を、視覚に頼らず知るために必要である。",
         "question": "遅く鈍い二次痛を伝える神経線維は何か。",
-        "answer": "C線維"
+        "answer": "C線維",
+        "boxes": [
+          {
+            "kind": "link",
+            "title": "つながりで覚える：感覚の通り道（深部感覚・ロンベルグ）",
+            "html": "<div class=\"mb\"><p><span class=\"mb-k\">つながり</span><span class=\"answer\">深部感覚</span>の道（後索）が壊れると、<span class=\"answer\">ロンベルグ</span>試験が陽性になる。</p><figure class=\"mb-fig\"><a href=\"figures/x_sens.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/x_sens.svg\" alt=\"感覚の解剖・生理・臨床のつながり図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a></figure><p><span class=\"mb-k\">なぜ</span>深部感覚が壊れても、ふだんは目で足の位置を見て補っている。目を閉じると補えず、ふらつく。</p><p><span class=\"mb-k\">覚え方</span>手紙：感覚の手紙は道が別々。深部の道と温痛の道は、別々に壊れる。</p><p class=\"mb-go\"><span class=\"mb-k\">ほかの科目</span><a href=\"../anatomy-guide/#cns-8\">解剖学：感覚の伝導路</a><a href=\"../clinical-guide/#sec-sensation-1\">一般臨床：感覚検査の意義</a></p></div>"
+          }
+        ]
       },
       {
         "title": "味覚と嗅覚",
