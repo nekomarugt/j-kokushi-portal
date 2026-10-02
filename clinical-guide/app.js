@@ -17,6 +17,7 @@
   let activeDisease = diseaseContent.chapters[0] ? diseaseContent.chapters[0].id : "respiratory";
   let query = "";
   const revealed = new Set();
+  const openBoxes = new Set();
   const openItems = new Set(); // 開いている項目（単元ID:項目番号）
   // 頻出＝その節に結び付いた過去問が6問以上（guidelinks.json の対応から数える。全節のうち上位およそ1/5）
   const FREQ_MIN = 6;
@@ -137,6 +138,7 @@
     if (block.type === "table") return block.rows.flat(2).map((part) => part.text).join("");
     if (block.type === "figure") return `${block.caption || ""} ${block.alt || ""} ${block.point || ""}`;
     if (block.type === "tips") return `${block.title || ""} ${block.caption || ""} ${block.note || ""}`;
+    if (block.type === "box") return `${block.title || ""} ${String(block.html || "").replace(/<[^>]*>/g, " ")}`;
     return "";
   }
 
@@ -154,6 +156,7 @@
   function hasAnswer(block) {
     if (block.type === "note") return block.segments.some((part) => part.answer);
     if (block.type === "table") return block.rows.flat(2).some((part) => part.answer);
+    if (block.type === "box") return /class="answer"/.test(block.html || "");
     return false;
   }
 
@@ -190,6 +193,17 @@
           ${note}
         </div>
       </details>`;
+    }
+
+    if (block.type === "box") {
+      const bid = `${unitId}-${block.id || index}`;
+      const shown = revealed.has(bid);
+      const html = String(block.html || "").replace(/<span class="answer">/g, shown ? '<span class="answer is-visible" aria-hidden="false">' : '<span class="answer" aria-hidden="true">');
+      const btn = hasAnswer(block) ? answerButton(bid) : "";
+      if (block.kind === "main") return `<div class="mb-main">${html}${btn}</div>`;
+      const isLink = block.kind === "link";
+      const label = escapeHtml(String(block.title || "").replace(/^(つながりで覚える|より深く)：/, ""));
+      return `<details class="more-box mb-${isLink ? "link" : "deep"}" data-box-id="${escapeHtml(bid)}"${openBoxes.has(bid) ? " open" : ""}><summary><span class="more-badge">${isLink ? "つながり" : "より深く"}</span><span class="more-title">${label}</span><span class="more-open" aria-hidden="true">ひらく</span></summary><div class="more-body">${html}${btn}</div></details>`;
     }
 
     if (block.type === "figure") {
@@ -538,6 +552,10 @@
         items.forEach((item) => setItemOpen(item, !allOpen));
       });
     }
+
+    document.querySelectorAll("details.more-box[data-box-id]").forEach((d) => {
+      d.addEventListener("toggle", () => { if (d.open) openBoxes.add(d.dataset.boxId); else openBoxes.delete(d.dataset.boxId); });
+    });
 
     document.querySelectorAll("[data-answer-id]").forEach((button) => {
       button.addEventListener("click", () => {

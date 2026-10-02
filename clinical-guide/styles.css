@@ -607,3 +607,34 @@ body { padding-bottom: calc(92px + env(safe-area-inset-bottom, 0px)); }
 @media print { .xq, .xq-chapter-row { display: none !important; } }
 .lesson-card.is-focus, .note-heading.is-focus { outline: 3px solid #c2410c; outline-offset: 3px; border-radius: 6px; }
 .note-heading { scroll-margin-top: 12px; }
+/* 強化: より深く／つながりで覚える（閉じた状態の補足ボックス） */
+.more-box { margin: 12px 0; border: 1px dashed #b9c9c4; border-radius: 12px; background: #fbfdfc; }
+.more-box > summary { display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 8px 12px; list-style: none; cursor: pointer; font-size: .92rem; color: #33504a; }
+.more-box > summary::-webkit-details-marker { display: none; }
+.more-box > summary:focus-visible { outline: 3px solid rgba(8,120,102,.3); outline-offset: 2px; }
+.more-badge { flex: none; padding: 1px 9px; border-radius: 999px; background: #e6f2ef; color: #0f5b52; font-size: .76rem; font-weight: 850; letter-spacing: .04em; }
+.more-box.mb-link .more-badge { background: #fff1d6; color: #8a5a00; }
+.more-title { flex: 1; min-width: 0; font-weight: 750; line-height: 1.45; overflow-wrap: anywhere; }
+.more-open { flex: none; color: #0f5b52; font-size: .8rem; font-weight: 800; }
+.more-box[open] .more-open { display: none; }
+.more-body { padding: 2px 12px 12px; font-size: .95rem; line-height: 1.8; overflow-wrap: anywhere; }
+.more-body p { margin: 6px 0; }
+.mb-k { display: inline-block; margin-right: 6px; padding: 0 8px; border-radius: 6px; background: #eef2f6; color: #33475b; font-size: .78rem; font-weight: 800; }
+.mb-list { margin: 6px 0 6px 1.2em; padding: 0; }
+.mb-list li { margin: 3px 0; }
+.mb-fig { margin: 8px 0; }
+.mb-fig a { display: block; }
+.mb-fig img { display: block; width: 100%; max-width: 560px; height: auto; margin: 0 auto; }
+.mb-go { display: flex; flex-wrap: wrap; gap: 6px 8px; align-items: center; }
+.mb-go a { display: inline-flex; align-items: center; max-width: 100%; min-height: 44px; padding: 4px 12px; border: 1px solid #b9c9c4; border-radius: 14px; color: #0f5b52; background: #fff; text-decoration: none; font-size: .88rem; font-weight: 700; line-height: 1.4; }
+@media print { .more-box { break-inside: avoid; } }
+
+.fig { margin: 12px 0 6px; padding: 10px 10px 8px; background: #fff; border: 1px solid var(--line); border-radius: 12px; }
+.fig a { display: block; }
+.fig img { display: block; width: 100%; max-width: 560px; height: auto; margin: 0 auto; }
+.fig figcaption { margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--line); font-size: .92rem; line-height: 1.7; color: var(--ink); }
+.fig figcaption strong { display: inline-block; margin-right: .5em; padding: 1px 8px; border-radius: 999px; background: #e6f2ef; color: #0f5b52; font-size: .8rem; }
+.fig-zoom { display: block; margin-top: 2px; font-size: .78rem; color: var(--muted); }
+.mb-main { margin: 8px 0 12px; }
+.mb-main .mb-list, .mb-main > p { font-size: .95rem; }
+@media print { .fig { break-inside: avoid; padding: 6px; } .fig img { max-width: 110mm; max-height: 105mm; width: auto; } .fig-zoom { display: none; } }
