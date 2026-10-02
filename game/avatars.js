@@ -1,5 +1,5 @@
-/* 柔整国試ポータル：ごほうびアバター（生成イラスト）32体。絵は gacha/art/aNN.webp（320x480）・aNN_t.webp（160x240）・aNN_s.webp（シルエット用の黒い小画像）。
- * ノーマル22／レア8／スーパーレア2。ID（n01…n22／r01…r08／s01…s02）は保存データに使うので、変更しないこと。
+/* 柔整国試ポータル：ごほうびアバター（生成イラスト）35体。絵は gacha/art/aNN.webp（320x480）・aNN_t.webp（160x240）・aNN_s.webp（シルエット用の黒い小画像）。
+ * ノーマル22／レア8／スーパーレア5。ID（n01…n22／r01…r08／s01…s05）は保存データに使うので、変更しないこと。
  * 未入手のキャラは、名前・レア度・本物の絵を画面に出さない（ずかんは固定のシャッフル順・黒いシルエットだけ）。
  * API（旧SVG版と同じ）：list / get(id) / byRarity / svg(id,size,opts) / sil(id,size) / RARITY ／ 追加：img（svgの別名）・order（ずかんの表示順）。 */
 (function () {
@@ -8,7 +8,7 @@
     var s = document.currentScript && document.currentScript.src;
     return s ? s.replace(/game\/avatars\.js(\?.*)?$/, "gacha/art/") : "/j-kokushi-portal/gacha/art/";
   })();
-  // id, 名前, レア度, 一言, 絵の番号（シート1〜4を左上から右へ順に 1〜32）
+  // id, 名前, レア度, 一言, 絵の番号（シート1〜4を左上から右へ順に 1〜32、シート5＝SR3体は 33〜35）
   var D = [
     { id: "n01", n: "カケル", r: "N", f: "坂道は友だち。転んだ数だけ上手くなる。", a: 1 },
     { id: "n02", n: "ホムラ", r: "N", f: "刀の手入れは完ぺき。朝ごはんは、まだ。", a: 2 },
@@ -41,16 +41,19 @@
     { id: "r07", n: "ツキヨ", r: "R", f: "月のみちかけで、明日の運勢を占う。", a: 29 },
     { id: "r08", n: "ギラン", r: "R", f: "槍をかまえた竜の角。ほめられると照れる。", a: 30 },
     { id: "s01", n: "アリエ", r: "SR", f: "竪琴の音色が、空にやさしい光をひろげる。", a: 31 },
-    { id: "s02", n: "ノワール", r: "SR", f: "魔導書をめくれば、夜空もページになる。", a: 32 }
+    { id: "s02", n: "ノワール", r: "SR", f: "魔導書をめくれば、夜空もページになる。", a: 32 },
+    { id: "s03", n: "ライカ", r: "SR", f: "肩の小さな竜と短い槍で、空をひとっ飛び。", a: 33 },
+    { id: "s04", n: "コハク", r: "SR", f: "歯車がカチカチ。懐中時計は、いつも3分進んでいる。", a: 34 },
+    { id: "s05", n: "ライゼン", r: "SR", f: "拳にバチバチ、羽織がひらり。まず準備運動から。", a: 35 }
   ];
   var BYID = {}, BYR = { N: [], R: [], SR: [] };
   D.forEach(function (d) { BYID[d.id] = d; BYR[d.r].push(d.id); });
   // ずかんの表示順：レア度がばれないよう、固定のシャッフル順（ID順・レア度順にしない）
-  var ORDER = [18, 4, 31, 12, 25, 7, 21, 1, 29, 15, 9, 32, 22, 3, 27, 14, 6, 30, 11, 19, 2, 26, 16, 8, 23, 5, 28, 13, 20, 10, 24, 17]
+  var ORDER = [18, 4, 31, 12, 25, 33, 7, 21, 1, 29, 15, 9, 32, 22, 3, 27, 14, 35, 6, 30, 11, 19, 2, 26, 34, 16, 8, 23, 5, 28, 13, 20, 10, 24, 17]
     .map(function (k) { return D[k - 1].id; });
 
   function pad(a) { return (a < 10 ? "0" : "") + a; }
-  function src(d, size) { return ROOT + "a" + pad(d.a) + (size <= 120 ? "_t" : "") + ".webp?v=2"; }
+  function src(d, size) { return ROOT + "a" + pad(d.a) + (size <= 120 ? "_t" : "") + ".webp?v=3"; }
   function esc(v) { return String(v).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
 
   /* svg(id,size,{bare:true}) → 枠つき（2:3）か、枠なし（ストリップ用）のHTML。名前は owned 前提で呼ぶこと（未入手は sil を使う）。 */
@@ -66,7 +69,7 @@
   function sil(id, size) {
     var d = BYID[id]; if (!d) return "";
     var w = size || 64, h = Math.round(w * 1.5);
-    return '<span class="jka jka-sil" style="width:' + w + 'px;height:' + h + 'px" aria-hidden="true"><i class="jka-in"><img src="' + ROOT + "a" + pad(d.a) + '_s.webp?v=2" alt="" width="' + w + '" height="' + h + '" loading="lazy" decoding="async" draggable="false"></i></span>';
+    return '<span class="jka jka-sil" style="width:' + w + 'px;height:' + h + 'px" aria-hidden="true"><i class="jka-in"><img src="' + ROOT + "a" + pad(d.a) + '_s.webp?v=3" alt="" width="' + w + '" height="' + h + '" loading="lazy" decoding="async" draggable="false"></i></span>';
   }
   function preload(ids, size) { // 引いた直後の結果用に先読み（演出中に読み込む）
     return Promise.all((ids || []).map(function (id) {
