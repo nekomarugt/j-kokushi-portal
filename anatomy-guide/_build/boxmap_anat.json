@@ -102,5 +102,53 @@
  "pns-4": {
   "main": "<ul class=\"mb-list\"><li>神経の番号は、ほぼ上から順に出る（Ⅲ・Ⅳ＝中脳、Ⅴ〜Ⅷ＝橋、Ⅸ〜Ⅻ＝延髄）。</li><li>背側から出るのは<span class=\"answer\">滑車神経</span>だけ。</li></ul><figure class=\"fig fig-diagram\"><a href=\"figures/a_brainstem.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/a_brainstem.svg\" alt=\"脳幹の高さ別に見た脳神経核の位置の図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a><figcaption><strong>ひとことポイント</strong>　番号が小さいほど脳幹の上、大きいほど下。なぜ覚えやすい？ 数字が増えるほど脳幹の下の高さになる、というおおまかな対応があるから。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
   "boxes": []
+ },
+ "pns-3": {
+  "main": "",
+  "boxes": [
+   {
+    "kind": "link",
+    "title": "つながりで覚える：自律神経（交感・副交感・ホルネル症候群）",
+    "html": "<div class=\"mb\"><p><span class=\"mb-k\">つながり</span><span class=\"answer\">交感神経</span>は活動のスイッチ、<span class=\"answer\">副交感神経</span>は休息と消化のスイッチ。</p><figure class=\"mb-fig\"><a href=\"figures/x_auto.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/x_auto.svg\" alt=\"自律神経の解剖・生理・臨床のつながり図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a></figure><p><span class=\"mb-k\">なぜ</span>逃げるときは、心拍を上げて筋に血を回し、瞳孔を広げて、消化は後回しにするほうが有利。だから交感神経は「心拍↑・散瞳・消化↓」になる。</p><p><span class=\"mb-k\">覚え方</span>サバンナ：交感＝逃げるとき、副交感＝食べて休むとき。出どころは、交感＝体の真ん中（胸・腰）、副交感＝上下の端（脳と仙骨）。</p><p class=\"mb-go\"><span class=\"mb-k\">ほかの科目</span><a href=\"../physiology-guide/#lesson-nerve-6\">生理学：自律神経</a><a href=\"../clinical-guide/#sec-inspection-8\">一般臨床：頭部・顔面の視診（ホルネル症候群）</a></p></div>"
+   }
+  ]
+ },
+ "reproductive-3": {
+  "main": "",
+  "boxes": [
+   {
+    "kind": "link",
+    "title": "つながりで覚える：排卵・妊娠とホルモン（黄体・hCG）",
+    "html": "<div class=\"mb\"><p><span class=\"mb-k\">つながり</span>妊娠が成立すると、<span class=\"answer\">hCG</span>が<span class=\"answer\">黄体</span>を長持ちさせる。</p><figure class=\"mb-fig\"><a href=\"figures/x_preg.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/x_preg.svg\" alt=\"排卵と妊娠のホルモンの解剖・生理・臨床のつながり図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a></figure><p><span class=\"mb-k\">なぜ</span>黄体が働き続けると、プロジェステロンが出続けて子宮内膜が保たれ、月経が来ない。少しあとには、胎盤がホルモンを出すようになる。</p><p><span class=\"mb-k\">覚え方</span>バトンリレー：黄体（走者）が疲れる前に、hCGが延命する。つぎは胎盤がバトンを受ける。</p><p class=\"mb-go\"><span class=\"mb-k\">ほかの科目</span><a href=\"../physiology-guide/#lesson-reproduction-bone-3\">生理学：妊娠と授乳</a></p></div>"
+   }
+  ]
+ },
+ "pns-1": {
+  "main": "",
+  "boxes": [
+   {
+    "kind": "deep",
+    "title": "より深く：神経が傷つくと出る手の形",
+    "html": "<div class=\"mb\"><ul class=\"mb-list\"><li><span class=\"answer\">橈骨神経</span>の麻痺＝<span class=\"answer\">下垂手</span>（手首が上がらない）。</li><li><span class=\"answer\">尺骨神経</span>の麻痺＝<span class=\"answer\">鷲手</span>（指がかぎ爪のように曲がる）。</li><li><span class=\"answer\">正中神経</span>の麻痺＝<span class=\"answer\">猿手</span>（母指球がやせて、親指が使いにくい）。</li></ul><figure class=\"mb-fig\"><a href=\"figures/a_hand.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/a_hand.svg\" alt=\"橈骨神経・尺骨神経・正中神経・腋窩神経の傷つく場所と麻痺の例の表\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a></figure></div>"
+   }
+  ]
+ },
+ "digestive-1": {
+  "main": "",
+  "boxes": [
+   {
+    "kind": "deep",
+    "title": "より深く：胆汁と膵液の出口（オッディ括約筋）",
+    "html": "<div class=\"mb\"><p>胆汁（総胆管）と膵液（主膵管）は、いっしょに大十二指腸乳頭から出る。</p><figure class=\"mb-fig\"><a href=\"figures/a_ampulla.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/a_ampulla.svg\" alt=\"胆汁と膵液が大十二指腸乳頭から十二指腸へ出る経路の図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a></figure><ul class=\"mb-list\"><li>出口の栓が<span class=\"answer\">オッディ括約筋</span>。場所は十二指腸の<span class=\"answer\">下行部</span>。</li></ul></div>"
+   }
+  ]
+ },
+ "urinary-2": {
+  "main": "<ul class=\"mb-list\"><li>外側の<span class=\"answer\">皮質</span>＝ろ過する所（腎小体）。</li><li>内側の<span class=\"answer\">髄質</span>＝尿を濃くする所（ヘンレのワナ・集合管）。</li><li><span class=\"answer\">腎柱</span>は皮質の一部。</li></ul><figure class=\"fig fig-diagram\"><a href=\"figures/a_kidney.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/a_kidney.svg\" alt=\"腎臓の皮質・髄質・乳頭と腎門に何があるかの表\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a><figcaption><strong>ひとことポイント</strong>　役割で場所が分かれている。なぜ腎柱は皮質？ 皮質が、髄質（腎錐体）の間に入りこんだ部分だから。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
+  "boxes": []
+ },
+ "pns-5": {
+  "main": "<ul class=\"mb-list\"><li><span class=\"answer\">舌咽神経</span>：頸動脈洞・頸動脈小体の感覚、耳下腺の分泌。</li><li><span class=\"answer\">迷走神経</span>：喉頭の運動（反回神経）、大動脈の圧・化学受容器。</li><li>顔面神経は耳下腺を貫くだけ。分泌を命じるのは舌咽神経。</li></ul><figure class=\"fig fig-diagram\"><a href=\"figures/a_ixx.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/a_ixx.svg\" alt=\"舌咽神経と迷走神経が受け持つものの比較表\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a><figcaption><strong>ひとことポイント</strong>　ひっかけは「通るだけの神経」と「支配する神経」。反回神経は、右は右鎖骨下動脈、左は大動脈弓で反回する（左右で違う）。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
+  "boxes": []
  }
 }

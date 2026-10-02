@@ -1554,7 +1554,14 @@ window.anatomyChapters = [
     "check_a": "下行部（大十二指腸乳頭）",
     "id": "digestive-1",
     "no": "07-01",
-    "freq": 8
+    "freq": 8,
+    "boxes": [
+     {
+      "kind": "deep",
+      "title": "より深く：胆汁と膵液の出口（オッディ括約筋）",
+      "html": "<div class=\"mb\"><p>胆汁（総胆管）と膵液（主膵管）は、いっしょに大十二指腸乳頭から出る。</p><figure class=\"mb-fig\"><a href=\"figures/a_ampulla.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/a_ampulla.svg\" alt=\"胆汁と膵液が大十二指腸乳頭から十二指腸へ出る経路の図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a></figure><ul class=\"mb-list\"><li>出口の栓が<span class=\"answer\">オッディ括約筋</span>。場所は十二指腸の<span class=\"answer\">下行部</span>。</li></ul></div>"
+     }
+    ]
    },
    {
     "title": "大腸：結腸ヒモ3本、腹膜垂、外肛門括約筋は横紋筋",
@@ -2089,7 +2096,7 @@ window.anatomyChapters = [
     "items": [
      "6-B"
     ],
-    "anchor": "<ul><li><span class=\"answer\">腎門</span>に出入りするもの：腎動脈・腎静脈・<span class=\"answer\">尿管</span>（腎盂）・神経・リンパ管。</li><li><span class=\"answer\">皮質</span>：腎小体（糸球体）・近位曲尿細管・遠位曲尿細管・<span class=\"answer\">腎柱</span>（皮質が錐体の間に入り込んだ部分）。</li><li><span class=\"answer\">髄質</span>（腎錐体）：<span class=\"answer\">ヘンレのワナ</span>・集合管。先端の腎乳頭の乳頭孔から尿が腎杯へ出る。</li><li>腎区域は<span class=\"answer\">5区域</span>（腎動脈の枝の分布で分ける）。</li></ul>",
+    "anchor": "<ul><li><span class=\"answer\">腎門</span>に出入りするもの：腎動脈・腎静脈・<span class=\"answer\">尿管</span>（腎盂）・神経・リンパ管。</li><li><span class=\"answer\">皮質</span>：腎小体（糸球体）・近位曲尿細管・遠位曲尿細管・<span class=\"answer\">腎柱</span>（皮質が錐体の間に入り込んだ部分）。</li><li><span class=\"answer\">髄質</span>（腎錐体）：<span class=\"answer\">ヘンレのワナ</span>・集合管。先端の腎乳頭の乳頭孔から尿が腎杯へ出る。</li><li>腎区域は<span class=\"answer\">5区域</span>（腎動脈の枝の分布で分ける）。</li></ul><ul class=\"mb-list\"><li>外側の<span class=\"answer\">皮質</span>＝ろ過する所（腎小体）。</li><li>内側の<span class=\"answer\">髄質</span>＝尿を濃くする所（ヘンレのワナ・集合管）。</li><li><span class=\"answer\">腎柱</span>は皮質の一部。</li></ul><figure class=\"fig fig-diagram\"><a href=\"figures/a_kidney.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/a_kidney.svg\" alt=\"腎臓の皮質・髄質・乳頭と腎門に何があるかの表\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a><figcaption><strong>ひとことポイント</strong>　役割で場所が分かれている。なぜ腎柱は皮質？ 皮質が、髄質（腎錐体）の間に入りこんだ部分だから。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
     "why": "なぜ：糸球体でこしとる部分は外側の皮質、尿を濃くするために深く下りるヘンレのワナと集合管は内側の髄質、と役割で場所が分かれる。腎柱は名前に「柱」とあるが皮質の一部。",
     "qs": [
      "23-48",
@@ -2315,7 +2322,14 @@ window.anatomyChapters = [
     "check_a": "黄体（ルテイン細胞）",
     "id": "reproductive-3",
     "no": "10-03",
-    "freq": 6
+    "freq": 6,
+    "boxes": [
+     {
+      "kind": "link",
+      "title": "つながりで覚える：排卵・妊娠とホルモン（黄体・hCG）",
+      "html": "<div class=\"mb\"><p><span class=\"mb-k\">つながり</span>妊娠が成立すると、<span class=\"answer\">hCG</span>が<span class=\"answer\">黄体</span>を長持ちさせる。</p><figure class=\"mb-fig\"><a href=\"figures/x_preg.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/x_preg.svg\" alt=\"排卵と妊娠のホルモンの解剖・生理・臨床のつながり図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a></figure><p><span class=\"mb-k\">なぜ</span>黄体が働き続けると、プロジェステロンが出続けて子宮内膜が保たれ、月経が来ない。少しあとには、胎盤がホルモンを出すようになる。</p><p><span class=\"mb-k\">覚え方</span>バトンリレー：黄体（走者）が疲れる前に、hCGが延命する。つぎは胎盤がバトンを受ける。</p><p class=\"mb-go\"><span class=\"mb-k\">ほかの科目</span><a href=\"../physiology-guide/#lesson-reproduction-bone-3\">生理学：妊娠と授乳</a></p></div>"
+     }
+    ]
    },
    {
     "title": "精路：精管は鼠径管を通る",
@@ -2957,7 +2971,14 @@ window.anatomyChapters = [
     "check_a": "尺骨神経",
     "id": "pns-1",
     "no": "13-01",
-    "freq": 10
+    "freq": 10,
+    "boxes": [
+     {
+      "kind": "deep",
+      "title": "より深く：神経が傷つくと出る手の形",
+      "html": "<div class=\"mb\"><ul class=\"mb-list\"><li><span class=\"answer\">橈骨神経</span>の麻痺＝<span class=\"answer\">下垂手</span>（手首が上がらない）。</li><li><span class=\"answer\">尺骨神経</span>の麻痺＝<span class=\"answer\">鷲手</span>（指がかぎ爪のように曲がる）。</li><li><span class=\"answer\">正中神経</span>の麻痺＝<span class=\"answer\">猿手</span>（母指球がやせて、親指が使いにくい）。</li></ul><figure class=\"mb-fig\"><a href=\"figures/a_hand.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/a_hand.svg\" alt=\"橈骨神経・尺骨神経・正中神経・腋窩神経の傷つく場所と麻痺の例の表\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a></figure></div>"
+     }
+    ]
    },
    {
     "title": "脳神経12対の一覧",
@@ -3003,7 +3024,14 @@ window.anatomyChapters = [
     "check_a": "脳幹と仙髄",
     "id": "pns-3",
     "no": "13-03",
-    "freq": 8
+    "freq": 8,
+    "boxes": [
+     {
+      "kind": "link",
+      "title": "つながりで覚える：自律神経（交感・副交感・ホルネル症候群）",
+      "html": "<div class=\"mb\"><p><span class=\"mb-k\">つながり</span><span class=\"answer\">交感神経</span>は活動のスイッチ、<span class=\"answer\">副交感神経</span>は休息と消化のスイッチ。</p><figure class=\"mb-fig\"><a href=\"figures/x_auto.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/x_auto.svg\" alt=\"自律神経の解剖・生理・臨床のつながり図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a></figure><p><span class=\"mb-k\">なぜ</span>逃げるときは、心拍を上げて筋に血を回し、瞳孔を広げて、消化は後回しにするほうが有利。だから交感神経は「心拍↑・散瞳・消化↓」になる。</p><p><span class=\"mb-k\">覚え方</span>サバンナ：交感＝逃げるとき、副交感＝食べて休むとき。出どころは、交感＝体の真ん中（胸・腰）、副交感＝上下の端（脳と仙骨）。</p><p class=\"mb-go\"><span class=\"mb-k\">ほかの科目</span><a href=\"../physiology-guide/#lesson-nerve-6\">生理学：自律神経</a><a href=\"../clinical-guide/#sec-inspection-8\">一般臨床：頭部・顔面の視診（ホルネル症候群）</a></p></div>"
+     }
+    ]
    },
    {
     "title": "脳神経核の位置と、脳幹の背側から出る神経",
@@ -3032,7 +3060,7 @@ window.anatomyChapters = [
     "items": [
      "9-E"
     ],
-    "anchor": "<ul><li><span class=\"answer\">頸動脈洞・頸動脈小体</span>の感覚＝<span class=\"answer\">舌咽神経</span>（大動脈の圧・化学受容器は迷走神経）。</li><li><span class=\"answer\">耳下腺</span>の分泌＝<span class=\"answer\">舌咽神経</span>（耳神経節を経由）。</li><li>喉頭の運動・声帯筋＝<span class=\"answer\">迷走神経</span>（反回神経）。</li><li>右迷走神経（反回神経）は右鎖骨下動脈で反回する（大動脈弓ではない）。副神経は頸神経ワナを通らない。</li></ul>",
+    "anchor": "<ul><li><span class=\"answer\">頸動脈洞・頸動脈小体</span>の感覚＝<span class=\"answer\">舌咽神経</span>（大動脈の圧・化学受容器は迷走神経）。</li><li><span class=\"answer\">耳下腺</span>の分泌＝<span class=\"answer\">舌咽神経</span>（耳神経節を経由）。</li><li>喉頭の運動・声帯筋＝<span class=\"answer\">迷走神経</span>（反回神経）。</li><li>右迷走神経（反回神経）は右鎖骨下動脈で反回する（大動脈弓ではない）。副神経は頸神経ワナを通らない。</li></ul><ul class=\"mb-list\"><li><span class=\"answer\">舌咽神経</span>：頸動脈洞・頸動脈小体の感覚、耳下腺の分泌。</li><li><span class=\"answer\">迷走神経</span>：喉頭の運動（反回神経）、大動脈の圧・化学受容器。</li><li>顔面神経は耳下腺を貫くだけ。分泌を命じるのは舌咽神経。</li></ul><figure class=\"fig fig-diagram\"><a href=\"figures/a_ixx.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/a_ixx.svg\" alt=\"舌咽神経と迷走神経が受け持つものの比較表\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a><figcaption><strong>ひとことポイント</strong>　ひっかけは「通るだけの神経」と「支配する神経」。反回神経は、右は右鎖骨下動脈、左は大動脈弓で反回する（左右で違う）。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
     "why": "なぜ：耳下腺は顔面神経が中を貫くが、分泌を命じるのは舌咽神経。この「すり抜けるだけの神経」と「支配する神経」の違いがひっかけになる。",
     "qs": [
      "19-56",
