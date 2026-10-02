@@ -23,7 +23,7 @@
 
   /* ---- コイン・ガチャ ---- */
   var ECO = { START: 30, CORRECT: 1, FIRST: 3, CAP: 30, FASTMS: 1500, BONUS: { 30: 5, 50: 10 }, BONUS_RATE: 0.6, BADGE: 5, MILESTONE: 10, PULL: 10, PULL10: 100, PITY: 30,
-    DUPE: { N: 2, R: 5, SR: 15 }, RATE: { N: 75, R: 22, SR: 3 } };
+    DUPE: { N: 2, R: 5, SR: 15, SSR: 30 }, RATE: { N: 75, R: 22, SR: 2, SSR: 1 } }; // 出現率の合計は100。天井(PITY)は「R以上」だけで、SSR専用の天井はない
   var MILESTONES = [3, 7, 14, 30];
 
   var LEVELS = [
@@ -200,9 +200,11 @@
   function A() { return window.JKAvatars || null; }
   function pick(list, rng) { return list[Math.min(list.length - 1, Math.floor(rng() * list.length))]; }
   function rollRarity(rng, minRare) {
-    var x = rng() * (minRare ? ECO.RATE.R + ECO.RATE.SR : 100);
-    if (x < ECO.RATE.SR) return "SR";
-    if (x < ECO.RATE.SR + ECO.RATE.R) return "R";
+    var T = ECO.RATE, top = T.SSR + T.SR + T.R;
+    var x = rng() * (minRare ? top : top + T.N); // R以上確定の抽せんは、R／SR／SSRを元の比率のまま引く（SSR専用の確定はなし）
+    if (x < T.SSR) return "SSR";
+    if (x < T.SSR + T.SR) return "SR";
+    if (x < top) return "R";
     return "N";
   }
   function roll(rng, minRare) { // 1体えらぶ（状態は変えない）
@@ -397,7 +399,7 @@
     });
     overlay.innerHTML =
       '<div class="jkg-modal"><div class="jkg-mhead"><h3>わたしのきろく</h3><button type="button" class="jkg-x" data-jkg-close aria-label="閉じる">閉じる</button></div>' +
-      '<div class="jkg-me">' + (avaHtml(60) || '<span class="jkg-noava">🎁</span>') + '<div><strong>🪙 ' + S.coins + ' コイン</strong><span class="jkg-sub">キャラ ' + ownedCount() + '/' + (A() ? A().list.length : 35) + ' 体</span></div><a class="jkg-btn is-gacha" href="' + ROOT + 'gacha/">ガチャへ</a></div>' +
+      '<div class="jkg-me">' + (avaHtml(60) || '<span class="jkg-noava">🎁</span>') + '<div><strong>🪙 ' + S.coins + ' コイン</strong><span class="jkg-sub">キャラ ' + ownedCount() + '/' + (A() ? A().list.length : 38) + ' 体</span></div><a class="jkg-btn is-gacha" href="' + ROOT + 'gacha/">ガチャへ</a></div>' +
       '<div class="jkg-mgrid"><div class="jkg-stat"><small>連続日数</small><strong>' + st.n + '<em>日</em></strong><span>最高 ' + Math.max(S.best, st.n) + '日</span></div>' +
       '<div class="jkg-stat"><small>レベル</small><strong>Lv' + li.lv + '</strong><span>' + esc(li.title) + '</span></div>' +
       '<div class="jkg-stat"><small>正解した数</small><strong>' + S.cor + '<em>問</em></strong><span>挑戦 ' + S.att + '問</span></div></div>' +
@@ -407,7 +409,7 @@
       (prog ? '<h4>分野ごとの進みぐあい</h4><p class="jkg-sub">正解したことがある問題の数。80%で称号。</p>' + prog : '') +
       '<div class="jkg-rules"><h4>ルール</h4><ul><li>正解 +10 XP（同じ問題の2回目以降は +5）／ まちがい +2 XP ／ 4択クイズを60%以上で完走 +10／20／30 XP（10／30／50問。全問正解でさらに +10）</li>' +
       '<li>コイン：はじめての正解 +3（同じ問題の2回目以降は +1）。同じ問題のコインは1日1回まで、答えるのが速すぎる（1.5秒未満）とコインなし、回答コインは1日 '+ECO.CAP+' まで。</li>' +
-      '<li>4択クイズの完走ボーナス（60%以上正解・1問3秒以上かけた場合、1日1モードにつき1回）：30問 +5／50問 +10。新しいバッジ +5 ／ 3・7・14・30日連続 +10。ガチャは1回10コイン、10連は100コイン。</li>' +
+      '<li>4択クイズの完走ボーナス（60%以上正解・1問3秒以上かけた場合、1日1モードにつき1回）：30問 +5／50問 +10。新しいバッジ +5 ／ 3・7・14・30日連続 +10。ガチャは1回10コイン、10連は100コイン（出る確率：N 75%／R 22%／SR 2%／SSR 1%）。</li>' +
       '<li>連続日数：1日1問でも答えれば、その日は数えます（端末の日付で、0時に切り替わります）。</li>' +
       '<li>まちがえた問題は「復習リスト」に入り、2回つづけて正解すると外れます。</li></ul></div>' +
       '<p class="jkg-note">記録は、この端末（このブラウザ）の中だけに保存されます。サーバーには送りません。別の端末とは共有されません。</p>' +

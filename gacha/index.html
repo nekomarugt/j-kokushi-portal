@@ -15,7 +15,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <script>if("serviceWorker"in navigator){addEventListener("load",function(){navigator.serviceWorker.register("../sw.js",{scope:"../"}).catch(function(){})})}</script>
     <!-- /PWA -->
-    <meta name="description" content="勉強でためたコインで回せる、おまけのガチャ。キャラ35体をあつめよう（無料・端末内のみ）。" />
+    <meta name="description" content="勉強でためたコインで回せる、おまけのガチャ。キャラ38体をあつめよう（無料・端末内のみ）。" />
     <title>アバターガチャ｜柔整国試ポータル</title>
     <link rel="stylesheet" href="../game/game.css" />
     <link rel="stylesheet" href="./gacha.css" />
@@ -41,9 +41,10 @@
         <div class="jkc-rates" aria-label="出現率">
           <div><b class="rn">N</b><span>ノーマル</span><em>75%</em></div>
           <div><b class="rr">R</b><span>レア</span><em>22%</em></div>
-          <div><b class="rs">SR</b><span>スーパーレア</span><em>3%</em></div>
+          <div><b class="rs">SR</b><span>スーパーレア</span><em>2%</em></div>
+          <div><b class="rss">SSR</b><span>スペシャル</span><em>1%</em></div>
         </div>
-        <p class="jkq-note">同じ子が出たら、コインが少しもどります（N +2 ／ R +5 ／ SR +15）。R以上が出ないまま29回すぎると、30回目はR以上がかくてい（いま <span id="pity">0</span>/30）。</p>
+        <p class="jkq-note">同じ子が出たら、コインが少しもどります（N +2 ／ R +5 ／ SR +15 ／ SSR +30）。R以上が出ないまま29回すぎると、30回目はR以上がかくてい（いま <span id="pity">0</span>/30）。SSRだけのかくていはありません（SSRは1%の、とても出にくい最上位です）。</p>
       </section>
 
       <section class="jkq-surface jkc-results" id="results" hidden aria-label="結果" aria-live="polite">
@@ -52,7 +53,7 @@
       </section>
 
       <section class="jkq-surface" aria-labelledby="book-h">
-        <div class="jkc-bookhead"><h2 id="book-h">キャラずかん</h2><strong id="count">0/35</strong></div>
+        <div class="jkc-bookhead"><h2 id="book-h">キャラずかん</h2><strong id="count">0/38</strong></div>
         <div class="jkc-bar"><i id="count-bar"></i></div>
         <div class="jkc-book" id="book"></div>
         <div class="jkc-detail" id="detail" hidden></div>

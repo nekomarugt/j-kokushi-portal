@@ -163,6 +163,16 @@
 .jka-sr .jka-in::before { content: ""; position: absolute; left: 50%; top: 55%; width: 240%; aspect-ratio: 1; margin: -120% 0 0 -120%; border-radius: 50%; opacity: .55; pointer-events: none;
   background: repeating-conic-gradient(rgba(255, 255, 255, .95) 0 9deg, rgba(255, 255, 255, 0) 9deg 24deg); animation: jka-spin 20s linear infinite; }
 .jka-rays { display: none; }
+/* SSR：虹色の枠＋金のかがやき＋ゆっくり回る虹の光線（未入手のシルエットには付かない） */
+.jka-ssr .jka-in { border: 4px solid transparent; box-shadow: 0 0 18px rgba(255, 214, 90, .95), 0 0 30px rgba(255, 122, 217, .55);
+  background: radial-gradient(circle at 50% 70%, #fff 0, #fff0fb 40%, #dfe8ff 72%, #f0dcff 100%) padding-box, linear-gradient(135deg, #ff6ec7, #ffd23f 22%, #6ef0c2 45%, #6ec1ff 68%, #c58bff 85%, #ff6ec7) border-box;
+  animation: jka-glow 2.4s ease-in-out infinite alternate; }
+.jka-ssr .jka-in::before { content: ""; position: absolute; left: 50%; top: 55%; width: 240%; aspect-ratio: 1; margin: -120% 0 0 -120%; border-radius: 50%; opacity: .5; pointer-events: none;
+  background: repeating-conic-gradient(rgba(255, 255, 255, 0) 0 8deg, rgba(255, 150, 230, .8) 8deg 14deg, rgba(255, 255, 255, 0) 14deg 26deg, rgba(120, 220, 255, .8) 26deg 32deg, rgba(255, 255, 255, 0) 32deg 44deg, rgba(255, 220, 90, .85) 44deg 50deg); animation: jka-spin 16s linear infinite; }
+.jka-sp.s5 { right: 22%; top: 3%; animation-delay: .8s; }
+.jka-ssr .jka-sp { background: #fff7c2; }
+@keyframes jka-glow { to { box-shadow: 0 0 26px rgba(255, 214, 90, 1), 0 0 40px rgba(110, 193, 255, .7); } }
+
 .jka .jka-in img { position: relative; }
 .jka-sp { position: absolute; z-index: 2; width: 12%; aspect-ratio: 1; background: #fff; clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%); animation: jka-tw 1.8s ease-in-out infinite; filter: drop-shadow(0 0 2px rgba(255, 255, 255, .9)); }
 .jka-sp.s1 { left: 6%; top: 5%; } .jka-sp.s2 { right: 6%; top: 15%; animation-delay: .5s; } .jka-sp.s3 { left: 8%; bottom: 20%; animation-delay: 1s; } .jka-sp.s4 { right: 8%; bottom: 10%; animation-delay: 1.4s; }
@@ -171,7 +181,7 @@
 .jka-sil img { filter: brightness(0); opacity: .75; }
 @keyframes jka-tw { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(.45); opacity: .45; } }
 @keyframes jka-spin { to { transform: rotate(360deg); } }
-@media (prefers-reduced-motion: reduce) { .jka-sp, .jka-sr .jka-in::before { animation: none; } }
+@media (prefers-reduced-motion: reduce) { .jka-sp, .jka-sr .jka-in::before, .jka-ssr .jka-in, .jka-ssr .jka-in::before { animation: none; } }
 
 /* ---- ホーム／ストリップ／きろくのアバター ---- */
 .jkg-ava { flex: none; display: block; line-height: 0; border-radius: 16px; text-decoration: none; }
@@ -212,6 +222,7 @@ a.jkq-secondary { text-decoration: none; box-sizing: border-box; }
 .jkg-noava { width: 40px; height: 60px; }
 .jka.is-bare.jka-r { filter: drop-shadow(0 0 3px rgba(91, 141, 239, .8)); }
 .jka.is-bare.jka-sr { filter: drop-shadow(0 0 4px rgba(255, 190, 40, .95)); }
+.jka.is-bare.jka-ssr { filter: drop-shadow(0 0 3px rgba(255, 214, 90, 1)) drop-shadow(0 0 5px rgba(255, 110, 199, .85)); }
 
 /* ===== 4択クイズ / 過去問 の見分け（ラベル・一言） ===== */
 .jk-tag { display: inline-block; padding: 3px 12px; border-radius: 99px; font-size: .84rem; font-weight: 800; letter-spacing: .04em; line-height: 1.5; }

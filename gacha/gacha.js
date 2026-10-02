@@ -5,7 +5,7 @@
   var $ = function (id) { return document.getElementById(id); };
   var RN = AV.RARITY, busy = false, hold = null, timers = [], skip = null;
   var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var ORDER = { N: 0, R: 1, SR: 2 };
+  var ORDER = { N: 0, R: 1, SR: 2, SSR: 3 };
 
   function esc(v) { return String(v).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
   function later(fn, ms) { var t = setTimeout(fn, ms); timers.push(t); return t; }
@@ -67,10 +67,10 @@
   }
 
   function burst(r) {
-    var n = r === "SR" ? 26 : r === "R" ? 14 : 6, cols = r === "SR" ? ["#ffd23f", "#fff", "#ff9fc4", "#8fe3ff"] : r === "R" ? ["#5b8def", "#fff", "#9fd2ff"] : ["#fff", "#cfd8e6"];
+    var n = r === "SSR" ? 44 : r === "SR" ? 26 : r === "R" ? 14 : 6, cols = r === "SSR" ? ["#ffd23f", "#fff", "#ff6ec7", "#6ec1ff", "#6ef0c2", "#c58bff"] : r === "SR" ? ["#ffd23f", "#fff", "#ff9fc4", "#8fe3ff"] : r === "R" ? ["#5b8def", "#fff", "#9fd2ff"] : ["#fff", "#cfd8e6"];
     var h = "";
     for (var i = 0; i < n; i++) {
-      var a = (i / n) * 6.283 + Math.random() * .4, dist = (r === "SR" ? 120 : 84) + Math.random() * 60;
+      var a = (i / n) * 6.283 + Math.random() * .4, dist = (r === "SSR" ? 150 : r === "SR" ? 120 : 84) + Math.random() * (r === "SSR" ? 90 : 60);
       h += '<i class="jkc-p" style="--x:' + Math.round(Math.cos(a) * dist) + 'px;--y:' + Math.round(Math.sin(a) * dist) + 'px;background:' + cols[i % cols.length] + ';animation-delay:' + (Math.random() * .12).toFixed(2) + 's"></i>';
     }
     return '<div class="jkc-burst">' + h + '</div>';
@@ -89,7 +89,7 @@
     }
     var best = rs.reduce(function (a, r) { return ORDER[r.r] > ORDER[a] ? r.r : a; }, "N");
     var newN = rs.filter(function (r) { return r.isNew; }).length, back = rs.reduce(function (a, r) { return a + r.refund; }, 0);
-    $("msg").textContent = (best === "SR" ? "スーパーレア！！ " : best === "R" ? "レアが出た！ " : "") + "新しい子 " + newN + " 体" + (back ? "／ かぶり分で +" + back + " コインもどった" : "") + "。";
+    $("msg").textContent = (best === "SSR" ? "SSR！！！ とくべつな子が来た！ " : best === "SR" ? "スーパーレア！！ " : best === "R" ? "レアが出た！ " : "") + "新しい子 " + newN + " 体" + (back ? "／ かぶり分で +" + back + " コインもどった" : "") + "。";
     idle(); updateHud(); renderBook();
     try { $("results").scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" }); } catch (e) {}
   }
@@ -109,11 +109,11 @@
     $("msg").textContent = "ドキドキ…（タップでスキップ）";
     st.className = "jkc-stage is-" + best.toLowerCase();
     st.innerHTML = '<div class="jkc-wrap">' + capsule("is-shake") + '</div>';
-    var shakeMs = best === "SR" ? 1900 : best === "R" ? 1400 : 950;
+    var shakeMs = best === "SSR" ? 2600 : best === "SR" ? 1900 : best === "R" ? 1400 : 950;
     later(function () {
-      st.innerHTML = '<div class="jkc-flash f-' + best.toLowerCase() + '"></div>' + (best === "SR" ? '<div class="jkc-rays"></div>' : "") + burst(best) +
+      st.innerHTML = '<div class="jkc-flash f-' + best.toLowerCase() + '"></div>' + (best === "SSR" ? '<div class="jkc-rays is-ssr"></div><div class="jkc-rays is-ssr is-ssr2"></div><i class="jkc-ring"></i><i class="jkc-ring r2"></i>' : best === "SR" ? '<div class="jkc-rays"></div>' : "") + burst(best) +
         '<div class="jkc-pop">' + (best === "N" ? "" : '<b class="jkc-rar r-' + best.toLowerCase() + '">' + best + '</b>') + '</div>';
-      later(function () { skip(); }, best === "SR" ? 1500 : best === "R" ? 1000 : 600);
+      later(function () { skip(); }, best === "SSR" ? 2300 : best === "SR" ? 1500 : best === "R" ? 1000 : 600);
     }, shakeMs);
   }
 
