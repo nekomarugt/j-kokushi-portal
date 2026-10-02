@@ -40,6 +40,28 @@
     return n >= 6 ? '★★★' : n >= 3 ? '★★' : '★';
   }
 
+  // 頻出＝関連する過去問が6問以上（従来の ★★★ と同じ基準）
+  const FREQ_MIN = 6;
+
+  // ---- ポイントのアコーディオン（見出しをタップで本文を開閉） ----
+  function setCardOpen(card, open) {
+    const head = card.querySelector('.lesson-head');
+    const body = card.querySelector('.lesson-body');
+    if (!head || !body) return;
+    body.hidden = !open;
+    card.classList.toggle('is-open', open);
+    head.setAttribute('aria-expanded', String(open));
+    updateExpandAll();
+  }
+  function updateExpandAll() {
+    const btn = document.getElementById('expandAll');
+    if (!btn) return;
+    const cards = view.querySelectorAll('.lesson-card');
+    const allOpen = cards.length > 0 && [...cards].every((c) => c.classList.contains('is-open'));
+    btn.textContent = allOpen ? 'すべて閉じる' : 'すべて開く';
+    btn.setAttribute('aria-pressed', String(allOpen));
+  }
+
   function parseHash() {
     const h = decodeURIComponent(location.hash.replace(/^#/, ''));
     if (!h) return {page: 0};
@@ -65,13 +87,13 @@
 
   function kijunBars(chapter) {
     const max = Math.max(1, ...chapter.kijun.map((k) => k.count));
-    return '<div class="kijun-box"><p class="kijun-title">出題基準 大項目「' + escapeHtml(chapter.major + '．' + chapter.majorName) +
-      '」の中項目と過去問数</p><ul class="kijun-bars">' +
+    return '<details class="kijun-box kijun-fold"><summary class="kijun-title">出題基準 大項目「' + escapeHtml(chapter.major + '．' + chapter.majorName) +
+      '」の中項目と過去問数<small>タップで開く</small></summary><ul class="kijun-bars">' +
       chapter.kijun.map((k) =>
         '<li><span class="k-name">' + escapeHtml(k.code.split('-')[1] + ' ' + k.name) + '</span>' +
         '<span class="k-bar"><i style="width:' + (k.count / max * 100).toFixed(1) + '%"></i></span>' +
         '<span class="k-count">' + k.count + '</span></li>').join('') +
-      '</ul></div>';
+      '</ul></details>';
   }
 
   function qChips(ids) {
@@ -87,17 +109,20 @@
         '<h2>' + escapeHtml(chapter.title) + '</h2>' +
         '<p>' + escapeHtml(chapter.intro) + '</p>' +
       '</div>' + kijunBars(chapter) +
-      '<p class="order-note">ポイントは、関連する過去問が多い順（＝よく出る順）に並んでいます。</p>' +
+      '<div class="acc-toolbar"><span class="acc-count">' + chapter.points.length + 'ポイント　よく出る順　見出しをタップで開く</span>' +
+        '<button id="expandAll" class="acc-all" type="button" aria-pressed="false">すべて開く</button></div>' +
       '<div class="section-list">';
     html += chapter.points.map((p) =>
       '<article class="lesson-card" id="' + escapeHtml(p.id) + '">' +
-        '<div class="lesson-head">' +
+        '<div class="lesson-head" role="button" tabindex="0" aria-expanded="false" aria-controls="body-' + escapeHtml(p.id) + '">' +
           '<div class="lesson-meta"><span class="lesson-number">' + escapeHtml(p.no) + '</span>' +
+            (p.freq >= FREQ_MIN ? '<span class="badge-freq">頻出</span>' : '') +
             '<span class="freq freq-' + stars(p.freq).length + '" title="関連する過去問の数">' + stars(p.freq) + ' 過去問' + p.freq + '問</span>' +
-            p.items.map((c) => '<span class="kcode">基準 ' + escapeHtml(c) + '</span>').join('') + '</div>' +
+            '<span class="kcodes">' + p.items.map((c) => '<span class="kcode">基準 ' + escapeHtml(c) + '</span>').join('') + '</span></div>' +
           '<h3>' + escapeHtml(p.title) + '</h3>' +
+          '<span class="lesson-chev" aria-hidden="true"></span>' +
         '</div>' +
-        '<div class="lesson-body">' +
+        '<div class="lesson-body" id="body-' + escapeHtml(p.id) + '" hidden>' +
           '<div class="anchor">' + p.anchor + '</div>' +
           '<div class="why"><span class="why-label">なぜ？</span><p>' + escapeHtml(p.why.replace(/^なぜ：/, '')) + '</p></div>' +
           '<div class="from-q"><strong>このポイントが出た過去問</strong>' + qChips(p.qs) + '</div>' +
@@ -107,15 +132,15 @@
         '</div>' +
       '</article>').join('');
     html += '</div>';
-    html += '<div class="chapter-quiz"><h3>章末まとめチェック</h3><p>この章で出てきた内容を、一問一答で確認する。</p><div class="quiz-list">' +
+    html += '<div class="chapter-quiz"><details class="quiz-fold"><summary><span>章末まとめチェック</span><small>' + chapter.quiz.length + '問　タップで開く</small></summary><p>この章で出てきた内容を、一問一答で確認する。</p><div class="quiz-list">' +
       chapter.quiz.map((item, i) =>
         '<div class="quiz-item"><p><strong>問' + (i + 1) + '</strong>　' + escapeHtml(item.q) + '</p>' +
         '<button class="reveal" type="button" aria-expanded="false">解答を見る</button>' +
-        '<p class="quiz-answer" hidden>' + escapeHtml(item.a) + '</p></div>').join('') + '</div></div>';
+        '<p class="quiz-answer" hidden>' + escapeHtml(item.a) + '</p></div>').join('') + '</div></details></div>';
     view.innerHTML = html;
     if (focusPoint) {
       const el = document.getElementById(focusPoint);
-      if (el) { el.classList.add('is-focus'); setTimeout(() => el.scrollIntoView({block: 'start'}), 30); }
+      if (el) { el.classList.add('is-focus'); setCardOpen(el, true); setTimeout(() => el.scrollIntoView({block: 'start'}), 30); }
     }
   }
 
@@ -233,6 +258,18 @@
   }
 
   document.addEventListener('click', (event) => {
+    const head = event.target.closest('.lesson-head');
+    if (head) {
+      const card = head.closest('.lesson-card');
+      setCardOpen(card, !card.classList.contains('is-open'));
+      return;
+    }
+    if (event.target.closest('#expandAll')) {
+      const cards = [...view.querySelectorAll('.lesson-card')];
+      const allOpen = cards.every((c) => c.classList.contains('is-open'));
+      cards.forEach((c) => setCardOpen(c, !allOpen));
+      return;
+    }
     const tab = event.target.closest('.chapter-tab, .ov-row');
     if (tab) { changePage(Number(tab.dataset.index), true); return; }
     const chip = event.target.closest('.q-chip');
@@ -245,6 +282,16 @@
       answer.toggleAttribute('hidden', !isHidden);
       reveal.textContent = isHidden ? '解答を隠す' : '解答を見る';
       reveal.setAttribute('aria-expanded', String(isHidden));
+    }
+  });
+
+  view.addEventListener('keydown', (event) => {
+    const head = event.target.closest && event.target.closest('.lesson-head');
+    if (!head || event.target !== head) return;
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      const card = head.closest('.lesson-card');
+      setCardOpen(card, !card.classList.contains('is-open'));
     }
   });
 
