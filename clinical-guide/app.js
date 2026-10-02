@@ -17,6 +17,9 @@
   let activeDisease = diseaseContent.chapters[0] ? diseaseContent.chapters[0].id : "respiratory";
   let query = "";
   const revealed = new Set();
+  const openItems = new Set(); // 開いている項目（単元ID:項目番号）
+  // 頻出＝その節に結び付いた過去問が6問以上（guidelinks.json の対応から数える。全節のうち上位およそ1/5）
+  const FREQ_MIN = 6;
 
   const diseaseCatalog = [
     { id: "cardiovascular", title: "循環器疾患" },
@@ -100,6 +103,13 @@
       el.textContent = "（" + n + "問）";
       const link = el.closest("a");
       if (link) link.classList.toggle("is-empty", n === 0);
+    });
+    document.querySelectorAll("[data-xq-badge]").forEach((el) => {
+      const n = bySec[el.dataset.xqBadge] || 0;
+      el.textContent = "過去問" + n + "問";
+      el.hidden = false;
+      const fq = el.parentElement.querySelector(".badge-freq");
+      if (fq) fq.hidden = n < FREQ_MIN;
     });
     document.querySelectorAll("[data-xq-ch]").forEach((el) => {
       const n = byUnit[el.dataset.xqCh] || 0;
@@ -284,6 +294,89 @@
     </section>`;
   }
 
+  // ---- 項目のアコーディオン（見出しをタップで本文を開閉） ----
+  // 過去問と結び付いた節（sectionStarts）ごとに項目をつくる。節の手前の見出しだけが並ぶ部分は、その節の見出しの上にまとめる。
+  function buildItems(blocks) {
+    const items = [];
+    let cur = null;
+    blocks.forEach((block) => {
+      if (block.type === "heading" && currentStarts.has(block)) {
+        const pre = [];
+        if (cur) {
+          while (cur.blocks.length && cur.blocks[cur.blocks.length - 1].type === "heading") pre.unshift(cur.blocks.pop());
+          if (!cur.blocks.length && !cur.start) items.pop();
+        }
+        cur = { start: block, pre, blocks: [] };
+        items.push(cur);
+      } else {
+        if (!cur) { cur = { start: null, pre: [], blocks: [] }; items.push(cur); }
+        cur.blocks.push(block);
+      }
+    });
+    return items;
+  }
+
+  function headingTag(block) {
+    const level = Math.min(4, Math.max(2, block.level + 1));
+    return { level, tag: "h" + level };
+  }
+
+  function renderItem(item, index, unit, forceOpen) {
+    const key = unit.id + ":" + index;
+    const open = forceOpen || openItems.has(key);
+    let title = "";
+    let headHtml = "";
+    let xq = "";
+    let badges = "";
+    let blocks = item.blocks;
+    const ctx = item.pre.length ? `<span class="acc-ctx">${item.pre.map((b) => escapeHtml(b.text)).join(" ＞ ")}</span>` : "";
+    if (item.start) {
+      const block = item.start;
+      const secId = `${unit.id}:${currentStarts.get(block)}`;
+      const { tag } = headingTag(block);
+      headHtml = `<${tag} id="sec-${escapeHtml(unit.id)}-${currentStarts.get(block)}" class="note-heading level-${block.level}">${escapeHtml(block.text)}</${tag}>`;
+      xq = `<p class="xq"><a class="xq-link" href="../clinical/?sec=${encodeURIComponent(secId)}" data-xq-link="${escapeHtml(secId)}">この節の過去問<span data-xq-sec="${escapeHtml(secId)}"></span> →</a></p>`;
+      badges = `<span class="acc-badges"><span class="badge-freq" hidden>頻出</span><span class="badge-n" data-xq-badge="${escapeHtml(secId)}" hidden></span></span>`;
+    } else {
+      // 見出しだけで始まる冒頭部分は、その見出しを項目名にする
+      let first = blocks[0] && blocks[0].type === "heading" ? blocks[0] : null;
+      if (first) {
+        blocks = blocks.slice(1);
+        const { tag } = headingTag(first);
+        headHtml = `<${tag} class="note-heading level-${first.level}">${escapeHtml(first.text)}</${tag}>`;
+      } else {
+        headHtml = `<h3 class="note-heading level-2">はじめに</h3>`;
+      }
+    }
+    const bodyId = `acc-body-${escapeHtml(unit.id)}-${index}`;
+    return `<section class="acc-item${open ? " is-open" : ""}" data-acc="${escapeHtml(key)}">
+      <div class="acc-head" role="button" tabindex="0" aria-expanded="${open}" aria-controls="${bodyId}">
+        <div class="acc-title">${ctx}${headHtml}</div>${badges}<span class="acc-chev" aria-hidden="true"></span>
+      </div>
+      <div class="acc-body notes-list" id="${bodyId}"${open ? "" : " hidden"}>${xq}${blocks.map((block, i) => renderBlock(block, i, unit.id)).join("")}</div>
+    </section>`;
+  }
+
+  function setItemOpen(item, open) {
+    const head = item.querySelector(".acc-head");
+    const body = item.querySelector(".acc-body");
+    if (!head || !body) return;
+    body.hidden = !open;
+    item.classList.toggle("is-open", open);
+    head.setAttribute("aria-expanded", String(open));
+    if (open) openItems.add(item.dataset.acc); else openItems.delete(item.dataset.acc);
+    updateExpandAll();
+  }
+
+  function updateExpandAll() {
+    const btn = document.getElementById("expandAll");
+    if (!btn) return;
+    const items = [...document.querySelectorAll(".acc-item")];
+    const allOpen = items.length > 0 && items.every((item) => item.classList.contains("is-open"));
+    btn.textContent = allOpen ? "すべて閉じる" : "すべて開く";
+    btn.setAttribute("aria-pressed", String(allOpen));
+  }
+
   function renderReader({ unit, nav, eyebrow, explanations, sourceIntro, caution }) {
     const q = query.trim().toLowerCase();
     currentStarts = sectionStarts(unit);
@@ -291,6 +384,8 @@
     const blocks = q ? unit.blocks.filter((block) => blockText(block).toLowerCase().includes(q)) : unit.blocks;
     const noteCount = unit.blocks.filter((block) => block.type === "note" || block.type === "table").length;
     const answerCount = unit.blocks.filter((block) => hasAnswer(block)).length;
+    const items = buildItems(blocks);
+    const allRevealed = answerCount > 0 && unit.blocks.every((block, index) => !hasAnswer(block) || revealed.has(`${unit.id}-${block.id || index}`));
 
     app.innerHTML = `
       ${renderNav(nav)}
@@ -316,14 +411,16 @@
             <button class="search-submit" type="submit">検索</button>
             ${q ? `<button id="clear-search" class="search-clear" type="button">解除</button>` : ""}
           </form>
-          ${answerCount ? `<button id="reveal-all" class="secondary-button" type="button">この章の解答をすべて表示</button>` : ""}
+          ${answerCount ? `<button id="reveal-all" class="secondary-button" type="button" data-state="${allRevealed ? "hide" : "show"}">${allRevealed ? "この章の解答をすべて隠す" : "この章の解答をすべて表示"}</button>` : ""}
         </div>
 
         <section class="oral-notes" aria-labelledby="oral-title">
-          <div class="section-label"><span></span><h2 id="oral-title">講義の補足</h2></div>
-          <div class="explanation-grid">
-            ${explanations.map((item) => `<article><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.body)}</p></article>`).join("")}
-          </div>
+          <details class="oral-fold">
+            <summary><span class="section-label"><span></span><h2 id="oral-title">講義の補足</h2></span><small>${explanations.length}件　タップで開く</small></summary>
+            <div class="explanation-grid">
+              ${explanations.map((item) => `<article><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.body)}</p></article>`).join("")}
+            </div>
+          </details>
         </section>
 
         ${renderDeepDive(unit.id, activeCourse)}
@@ -331,8 +428,9 @@
         <section class="source-notes" aria-labelledby="source-title">
           <div class="section-label"><span></span><h2 id="source-title">資料の確認</h2></div>
           <p class="source-intro">${escapeHtml(sourceIntro)}</p>
-          <div class="notes-list">
-            ${blocks.length ? blocks.map((block, index) => renderBlock(block, index, unit.id)).join("") : `<p class="empty">該当する項目はありません。</p>`}
+          ${blocks.length ? `<div class="acc-toolbar"><span class="acc-count">${items.length}項目　${q ? "検索結果" : "見出しをタップで開く"}</span><button id="expandAll" class="acc-all" type="button" aria-pressed="false">すべて開く</button></div>` : ""}
+          <div class="notes-list acc-list">
+            ${blocks.length ? items.map((item, index) => renderItem(item, index, unit, Boolean(q))).join("") : `<p class="empty">該当する項目はありません。</p>`}
           </div>
         </section>
       </section>`;
@@ -372,6 +470,7 @@
     else renderDiseases();
     bindEvents();
     fillXqCounts();
+    updateExpandAll();
   }
 
   // 過去問ページの「関連資料」から来たとき：#sec-単元ID-節番号 → その単元を開いて節へ移動
@@ -396,6 +495,8 @@
       if (target) {
         document.querySelectorAll(".is-focus").forEach((el) => el.classList.remove("is-focus"));
         target.classList.add("is-focus");
+        const accItem = target.closest(".acc-item");
+        if (accItem) setItemOpen(accItem, true);
         // 画像の遅延読み込みでレイアウトが動くので、少し後にもう一度合わせる
         const jump = () => target.scrollIntoView({ block: "start", behavior: "instant" });
         jump();
@@ -416,6 +517,27 @@
         window.scrollTo({ top: 0, behavior: "smooth" });
       });
     });
+
+    document.querySelectorAll(".acc-head").forEach((head) => {
+      const toggle = () => {
+        const item = head.closest(".acc-item");
+        setItemOpen(item, !item.classList.contains("is-open"));
+      };
+      head.addEventListener("click", toggle);
+      head.addEventListener("keydown", (event) => {
+        if (event.target !== head) return;
+        if (event.key === "Enter" || event.key === " ") { event.preventDefault(); toggle(); }
+      });
+    });
+
+    const expandAll = document.getElementById("expandAll");
+    if (expandAll) {
+      expandAll.addEventListener("click", () => {
+        const items = [...document.querySelectorAll(".acc-item")];
+        const allOpen = items.every((item) => item.classList.contains("is-open"));
+        items.forEach((item) => setItemOpen(item, !allOpen));
+      });
+    }
 
     document.querySelectorAll("[data-answer-id]").forEach((button) => {
       button.addEventListener("click", () => {
@@ -460,8 +582,11 @@
     if (revealAll) {
       revealAll.addEventListener("click", () => {
         const unit = activeUnit();
+        const hide = revealAll.dataset.state === "hide";
         unit.blocks.forEach((block, index) => {
-          if (hasAnswer(block)) revealed.add(`${unit.id}-${block.id || index}`);
+          if (!hasAnswer(block)) return;
+          const id = `${unit.id}-${block.id || index}`;
+          if (hide) revealed.delete(id); else revealed.add(id);
         });
         render();
       });

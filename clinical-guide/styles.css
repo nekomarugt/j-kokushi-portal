@@ -502,6 +502,60 @@ body { padding-bottom: calc(92px + env(safe-area-inset-bottom, 0px)); }
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
 
+/* ---- 項目のアコーディオン（コンパクト表示） ---- */
+.acc-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 0 2px 12px; }
+.acc-count { color: var(--muted); font-size: .82rem; font-weight: 700; }
+.acc-all { min-height: 40px; padding: 6px 15px; color: var(--teal); background: #fff; border: 1px solid #a9d3cc; border-radius: 999px; font: inherit; font-size: .88rem; font-weight: 800; cursor: pointer; }
+.acc-all:hover { background: var(--teal-soft); }
+.acc-list { gap: 9px; }
+.acc-item { border: 1px solid var(--line); border-radius: 14px; background: var(--paper); box-shadow: 0 3px 12px rgba(16, 63, 58, .06); }
+.acc-item.is-open { border-color: #a9d3cc; }
+.acc-head { display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 4px 10px; padding: 11px 16px; cursor: pointer; border-radius: 14px; -webkit-tap-highlight-color: transparent; }
+.acc-head:hover { background: #f6fbfa; }
+.acc-head:focus-visible { outline: 3px solid rgba(13, 118, 105, .35); outline-offset: -3px; }
+.acc-item.is-open > .acc-head { background: var(--teal-soft); border-bottom: 1px solid var(--line); border-radius: 14px 14px 0 0; }
+.acc-title { min-width: 0; }
+.acc-ctx { display: block; color: var(--muted); font-size: .72rem; font-weight: 700; line-height: 1.4; }
+.acc-head .note-heading { margin: 0; font-size: 1.02rem; line-height: 1.4; }
+.acc-head .note-heading.level-1 { font-size: 1.08rem; }
+.acc-head .note-heading.level-3 { font-size: .98rem; }
+.acc-badges { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 5px; }
+.badge-freq, .badge-n { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: .74rem; font-weight: 800; white-space: nowrap; line-height: 1.5; }
+.badge-freq { color: #fff; background: #c2410c; }
+.badge-n { color: var(--deep); background: #e3f3f0; border: 1px solid #bfe0da; }
+.acc-badges [hidden] { display: none; }
+.acc-chev { width: 10px; height: 10px; margin-right: 4px; border-right: 3px solid var(--teal); border-bottom: 3px solid var(--teal); transform: rotate(45deg); transition: transform .18s; }
+.acc-item.is-open .acc-chev { transform: rotate(-135deg); }
+.acc-body[hidden] { display: none; }
+.acc-body { padding: 8px 16px 18px; }
+.acc-body > .xq { margin: 4px 0 6px; }
+.acc-body > .note-heading { margin-top: 16px; }
+.oral-fold > summary { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 12px; padding: 10px 14px; cursor: pointer; list-style: none; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
+.oral-fold > summary::-webkit-details-marker { display: none; }
+.oral-fold > summary .section-label { margin: 0; }
+.oral-fold > summary small { color: var(--teal); font-size: .8rem; font-weight: 700; }
+.oral-fold[open] > summary { margin-bottom: 13px; background: var(--teal-soft); }
+.oral-notes { margin-bottom: 22px; }
+@media (max-width: 640px) {
+  .chapter-nav { gap: 7px; padding: 8px; background: transparent; border: 0; box-shadow: none; }
+  .chapter-button { flex: 0 0 auto; min-height: 44px; padding: 6px 14px; border: 1px solid var(--line); border-radius: 999px; background: #fff; white-space: nowrap; align-items: center; gap: 7px; }
+  .chapter-button:last-child { border-right: 1px solid var(--line); }
+  .chapter-button small { display: none; }
+  .chapter-button strong { font-size: .86rem; }
+  .chapter-button.is-active { border-color: var(--deep); }
+  .acc-toolbar { margin: 0 2px 10px; }
+  .acc-list { gap: 8px; }
+  .acc-head { padding: 10px 12px; gap: 4px 8px; }
+  .acc-head .note-heading { font-size: .98rem; }
+  .acc-badges { flex-direction: column; align-items: flex-end; gap: 3px; }
+  .acc-body { padding: 6px 11px 14px; }
+  .reader-tools { margin: 14px 0 16px; }
+  .reader, .disease-view { padding: 16px 12px 22px; }
+  .reader-head h1 { font-size: 1.45rem; }
+  .oral-notes { margin-bottom: 16px; }
+}
+@media print { .acc-toolbar { display: none !important; } .acc-body[hidden] { display: block !important; } .acc-chev, .acc-badges { display: none !important; } .oral-fold:not([open]) > .explanation-grid { display: grid; } }
+
 /* ---- 模式図（_build_clinical/figs.css から追加） ---- */
 .study-figure.fig-diagram { background: #fff; }
 .study-figure.fig-diagram .figure-zoom img { width: 100%; max-width: 560px; margin: 0 auto; }
