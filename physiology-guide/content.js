@@ -1033,7 +1033,14 @@ window.physiologyChapters = [
         "image": "assets/image194.webp",
         "caption": "ホルモンが標的細胞へ届く流れ",
         "question": "ステロイドホルモンの受容体は主にどこにあるか。",
-        "answer": "細胞内"
+        "answer": "細胞内",
+        "boxes": [
+          {
+            "kind": "link",
+            "title": "つながりで覚える：松果体とメラトニン",
+            "html": "<div class=\"mb\" id=\"pineal-melatonin\"><p><span class=\"mb-k\">つながり</span><span class=\"answer\">松果体</span>は間脳（視床上部）にある小さな内分泌腺で、<span class=\"answer\">メラトニン</span>を出す。</p><p><span class=\"mb-k\">なぜ</span>メラトニンは夜（暗いとき）に多く出て、光を浴びると減る。眠りと目覚めのリズム（<span class=\"answer\">概日リズム</span>）を整える。</p></div>"
+          }
+        ]
       },
       {
         "title": "視床下部と下垂体",
