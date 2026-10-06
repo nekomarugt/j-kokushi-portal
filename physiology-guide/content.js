@@ -496,7 +496,14 @@ window.physiologyChapters = [
         "image": "assets/image103.webp",
         "caption": "心臓と血流の方向",
         "question": "肺から左心房へ血液を運ぶ血管は何か。",
-        "answer": "肺静脈"
+        "answer": "肺静脈",
+        "boxes": [
+          {
+            "kind": "link",
+            "title": "つながりで覚える：胎児循環",
+            "html": "<div class=\"mb\" id=\"phys-fetal-circulation\"><p><span class=\"mb-k\">つながり</span>胎児は肺で呼吸しないので、血液は<span class=\"answer\">卵円孔</span>（右心房→左心房）と<span class=\"answer\">動脈管</span>（肺動脈→大動脈）を通って肺を素通りする。</p><p><span class=\"mb-k\">乱れると</span>生まれて肺呼吸が始まると、どちらも閉じる。心臓の壁（中隔）に穴が残る先天性の病気に、<span class=\"answer\">心房中隔欠損</span>・<span class=\"answer\">心室中隔欠損</span>がある。</p></div>"
+          }
+        ]
       },
       {
         "title": "心筋の性質と刺激伝導系",
@@ -505,7 +512,14 @@ window.physiologyChapters = [
         "image": "assets/image105.webp",
         "caption": "心臓の刺激伝導系",
         "question": "正常な心臓のペースメーカーは何か。",
-        "answer": "洞房結節"
+        "answer": "洞房結節",
+        "boxes": [
+          {
+            "kind": "link",
+            "title": "つながりで覚える：心臓を養う冠状動脈",
+            "html": "<div class=\"mb\" id=\"phys-coronary\"><p><span class=\"mb-k\">つながり</span>心筋は休まず働くので、大動脈の根もとから出る<span class=\"answer\">冠状動脈</span>から酸素と栄養をもらう。</p><p><span class=\"mb-k\">乱れると</span>冠状動脈が狭くなり、一時的に酸素が足りない→<span class=\"answer\">狭心症</span>。詰まって心筋が壊死する→<span class=\"answer\">心筋梗塞</span>。</p></div>"
+          }
+        ]
       },
       {
         "title": "心電図",

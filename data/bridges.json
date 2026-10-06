@@ -1,5 +1,5 @@
 {
-  "note": "科目をつなぐ橋（試行：内分泌）。解剖学＝名前・場所 ⇄ 生理学＝仕組みと流れ（ハブ） ⇄ 一般臨床＝仕組みの乱れ。id は各学習資料の実在アンカー（解剖 #点ID、生理 #lesson-章ID-節番号、臨床 #sec-単元ID-節番号）。描画は bridges/bridges.js。add は橋の中だけに出す短い補足。",
+  "note": "科目をつなぐ橋。解剖学＝名前・場所 ⇄ 生理学＝仕組みと流れ（ハブ） ⇄ 一般臨床＝仕組みの乱れ。領域（slices）ごとに器官・テーマの行（rows）を並べる。id は各学習資料の実在アンカー（解剖 #点ID、生理 #lesson-章ID-節番号、臨床 #sec-単元ID-節番号）、t はその見出し（検査で照合）、label はリンクに出す文字（省略時は t）。描画は bridges/bridges.js。hint・add は橋の中だけに出す短い補足。",
   "version": 1,
   "slices": [
     {
@@ -94,6 +94,174 @@
           "physiology": [{"id": "lesson-endocrine-1", "t": "内分泌とホルモン受容体"}],
           "clinical": [],
           "hint": "松果体はメラトニンを出す（夜に多く、眠りと目覚めのリズムを整える）。生理学「内分泌とホルモン受容体」の囲み「松果体とメラトニン」で確認。一般臨床には対応する病気の節はない。"
+        }
+      ]
+    },
+    {
+      "id": "circulation",
+      "title": "循環",
+      "rows": [
+        {
+          "topic": "心臓の部屋と弁",
+          "anatomy": [
+            {"id": "vascular-1", "t": "心臓の部屋と弁：血液の流れ順に覚える"},
+            {"id": "vascular-16", "t": "心臓の壁と心膜"}
+          ],
+          "physiology": [
+            {"id": "lesson-circulation-4", "t": "心周期"},
+            {"id": "lesson-circulation-1", "t": "体循環と肺循環"}
+          ],
+          "clinical": [
+            {"id": "sec-cardiovascular-6", "t": "僧帽弁狭窄"},
+            {"id": "sec-cardiovascular-7", "t": "僧帽弁閉鎖不全"},
+            {"id": "sec-cardiovascular-8", "t": "大動脈弁狭窄"},
+            {"id": "sec-cardiovascular-9", "t": "大動脈弁閉鎖不全"},
+            {"id": "sec-auscultation-3", "t": "心臓の聴診"}
+          ],
+          "hint": "弁が狭い（狭窄）→血液が通りにくい。弁が閉じきらない（閉鎖不全）→血液が逆流する。どちらも心音・心雑音で気づく。"
+        },
+        {
+          "topic": "刺激伝導系と心電図",
+          "anatomy": [{"id": "vascular-12", "t": "刺激伝導系：洞房結節も房室結節も右心房"}],
+          "physiology": [
+            {"id": "lesson-circulation-2", "t": "心筋の性質と刺激伝導系"},
+            {"id": "lesson-circulation-3", "t": "心電図"}
+          ],
+          "clinical": [
+            {"id": "sec-cardiovascular-14", "t": "不整脈"},
+            {"id": "sec-cardiovascular-17", "t": "心房細動"},
+            {"id": "sec-cardiovascular-18", "t": "期外収縮"},
+            {"id": "sec-cardiovascular-21", "t": "WPW症候群"},
+            {"id": "sec-cardiovascular-22", "t": "洞不全症候群"},
+            {"id": "sec-cardiovascular-23", "t": "房室ブロック"}
+          ],
+          "hint": "洞房結節→房室結節→ヒス束→右脚・左脚→プルキンエ線維の順に興奮が伝わる。どこかで乱れる・止まる→不整脈。心電図で見分ける。"
+        },
+        {
+          "topic": "冠状動脈",
+          "anatomy": [
+            {"id": "vascular-8", "t": "冠状動脈：大動脈弁のすぐ上から出る"},
+            {"id": "vascular-9", "t": "終動脈と機能的終動脈"}
+          ],
+          "physiology": [{"id": "lesson-circulation-2", "t": "心筋の性質と刺激伝導系"}],
+          "clinical": [
+            {"id": "sec-cardiovascular-11", "t": "狭心症"},
+            {"id": "sec-cardiovascular-12", "t": "心筋梗塞"}
+          ]
+        },
+        {
+          "topic": "胎児循環",
+          "anatomy": [{"id": "vascular-15", "t": "胎児循環：酸素が最も多いのは臍静脈、最も少ないのは臍動脈"}],
+          "physiology": [{"id": "lesson-circulation-1", "t": "体循環と肺循環"}],
+          "clinical": [
+            {"id": "sec-cardiovascular-2", "t": "心房中隔欠損"},
+            {"id": "sec-cardiovascular-3", "t": "心室中隔欠損"},
+            {"id": "sec-cardiovascular-4", "t": "ファロー四徴症"}
+          ]
+        },
+        {
+          "topic": "心不全",
+          "anatomy": [{"id": "vascular-1", "t": "心臓の部屋と弁：血液の流れ順に覚える"}],
+          "physiology": [
+            {"id": "lesson-circulation-1", "t": "体循環と肺循環"},
+            {"id": "lesson-circulation-4", "t": "心周期"}
+          ],
+          "clinical": [
+            {"id": "sec-cardiovascular-13", "t": "心不全"},
+            {"id": "sec-cardiovascular-30", "t": "NYHA心機能分類"}
+          ],
+          "hint": "左心が弱る→肺に血液がたまる（息切れ）。右心が弱る→体の静脈に血液がたまる（むくみ）。"
+        },
+        {
+          "topic": "血圧と脈拍",
+          "anatomy": [{"id": "surface-1", "t": "拍動を触れる動脈・触れない動脈"}],
+          "physiology": [{"id": "lesson-circulation-6", "t": "血圧とその調節"}],
+          "clinical": [
+            {"id": "sec-cardiovascular-24", "t": "血圧異常"},
+            {"id": "sec-vitals-2", "t": "血圧"},
+            {"id": "sec-vitals-3", "t": "脈拍"}
+          ]
+        },
+        {
+          "topic": "動脈と静脈",
+          "anatomy": [
+            {"id": "vascular-2", "t": "胸大動脈と腹大動脈の枝"},
+            {"id": "vascular-5", "t": "骨盤と下肢の動脈"},
+            {"id": "vascular-3", "t": "奇静脈と腕頭静脈"},
+            {"id": "vascular-6", "t": "皮静脈と硬膜静脈洞"}
+          ],
+          "physiology": [{"id": "lesson-circulation-5", "t": "血管と毛細血管交換"}],
+          "clinical": [
+            {"id": "sec-cardiovascular-25", "t": "大動脈瘤"},
+            {"id": "sec-cardiovascular-26", "t": "急性大動脈解離"},
+            {"id": "sec-cardiovascular-27", "t": "末梢動脈疾患"},
+            {"id": "sec-cardiovascular-28", "t": "上大静脈症候群"},
+            {"id": "sec-cardiovascular-29", "t": "血栓性静脈炎・深部静脈血栓症"}
+          ],
+          "hint": "毛細血管から水が出すぎる・戻りにくい→むくみ（浮腫）。静脈の流れがとどこおる→血栓ができやすい。"
+        }
+      ]
+    },
+    {
+      "id": "respiration",
+      "title": "呼吸",
+      "rows": [
+        {
+          "topic": "気道と肺気量",
+          "anatomy": [
+            {"id": "respiratory-1", "t": "右主気管支は「太く・短く・垂直」→異物は右へ"},
+            {"id": "respiratory-2", "t": "右肺と左肺の違い（葉・裂・区域）"}
+          ],
+          "physiology": [
+            {"id": "lesson-respiration-1", "t": "換気の仕組み"},
+            {"id": "lesson-respiration-2", "t": "肺気量"}
+          ],
+          "clinical": [
+            {"id": "sec-respiratory-3", "t": "気管支喘息"},
+            {"id": "sec-respiratory-4", "t": "慢性閉塞性肺疾患（COPD）"},
+            {"id": "sec-respiratory-5", "t": "肺気腫について"},
+            {"id": "sec-respiratory-6", "t": "慢性気管支炎について"},
+            {"id": "sec-respiratory-7", "t": "肺線維症"}
+          ],
+          "hint": "気道が狭く息を吐きにくい（閉塞性：1秒率が下がる）→喘息・COPD。肺が硬くふくらみにくい（拘束性：肺活量が下がる）→肺線維症。"
+        },
+        {
+          "topic": "胸膜・胸郭と換気",
+          "anatomy": [
+            {"id": "respiratory-8", "t": "胸膜と胸膜腔"},
+            {"id": "trunk-5", "t": "横隔膜の3つの孔"},
+            {"id": "trunk-6", "t": "胸郭：胸椎12・肋骨12対・胸骨1"}
+          ],
+          "physiology": [{"id": "lesson-respiration-1", "t": "換気の仕組み"}],
+          "clinical": [
+            {"id": "sec-respiratory-11", "t": "気胸"},
+            {"id": "sec-respiratory-14", "t": "胸水"},
+            {"id": "sec-respiratory-12", "t": "胸郭の異常"}
+          ],
+          "hint": "胸膜腔はふだん陰圧で、肺をふくらませている。空気が入る（気胸）と肺がしぼむ。"
+        },
+        {
+          "topic": "ガス交換",
+          "anatomy": [{"id": "respiratory-3", "t": "肺の構造と血管：栄養血管は気管支動脈"}],
+          "physiology": [
+            {"id": "lesson-respiration-3", "t": "ガス交換と分圧"},
+            {"id": "lesson-respiration-4", "t": "ヘモグロビンと酸素解離曲線"}
+          ],
+          "clinical": [
+            {"id": "sec-respiratory-1", "t": "肺炎"},
+            {"id": "sec-respiratory-7", "t": "肺線維症"}
+          ],
+          "hint": "肺胞の壁が厚く硬くなる（肺線維症）と、酸素が拡散しにくくなる。"
+        },
+        {
+          "topic": "呼吸の調節",
+          "anatomy": [{"id": "cns-2", "t": "脳幹：中脳・橋・延髄と、中にあるもの"}],
+          "physiology": [{"id": "lesson-respiration-5", "t": "呼吸の調節"}],
+          "clinical": [
+            {"id": "sec-respiratory-13", "t": "異常呼吸"},
+            {"id": "sec-vitals-4", "t": "呼吸"}
+          ],
+          "hint": "呼吸中枢は延髄（脳幹）にある。"
         }
       ]
     }

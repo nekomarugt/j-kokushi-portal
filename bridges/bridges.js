@@ -1,4 +1,4 @@
-/* 科目をつなぐ橋（解剖学 ⇄ 生理学 ⇄ 一般臨床）。
+/* 科目をつなぐ橋（解剖学 ⇄ 生理学 ⇄ 一般臨床）。領域（slices）ごとに、器官・テーマの行（rows）を並べる。
  * データ: ../data/bridges.json（対応表）→ ここで描画するだけ。リンクを HTML に直書きしない。
  * 生理学の節：「つながり」バー（解剖＝名前・場所／臨床＝乱れると）を節の本文の先頭に1つ。
  * 解剖学・一般臨床の節：生理学（ハブ）へ戻る1行リンク。
@@ -10,7 +10,7 @@
   if (!kind || !window.fetch) return;
   var HREF = { anat: '../anatomy-guide/#', phys: '../physiology-guide/#', clin: '../clinical-guide/#' };
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
-  function link(side, item, pre) { return '<a href="' + HREF[side] + esc(item.id) + '" data-bridge-to="' + esc(item.id) + '">' + esc((pre || '') + item.t) + '</a>'; }
+  function link(side, item, pre) { return '<a href="' + HREF[side] + esc(item.id) + '" data-bridge-to="' + esc(item.id) + '">' + esc((pre || '') + (item.label || item.t)) + '</a>'; }
 
   var byPhys = {}, back = {}, order = [];
   function addBack(id, ph) {
@@ -30,13 +30,15 @@
     });
   }
 
+  function name(r) { return r.topic || r.gland; }
   function physBar(id) {
     var rows = byPhys[id];
-    var names = rows.map(function (r) { return r.gland; }).filter(function (g) { return g !== '内分泌の全体像'; });
+    var names = rows.filter(function (r) { return !r.overview && r.gland !== '内分泌の全体像'; }).map(name);
+    var more = names.length > 3; if (more) names = names.slice(0, 3);
     var html = rows.map(function (r) {
       var other = (r.physiology || []).filter(function (x) { return x.id !== id; });
       return '<div class="bridge-row">' +
-        '<p class="bridge-gland"><strong>' + esc(r.gland) + '</strong></p>' +
+        '<p class="bridge-gland"><strong>' + esc(name(r)) + '</strong></p>' +
         (r.anatomy && r.anatomy.length ? '<p class="mb-go"><span class="mb-k">← 解剖（名前・場所）</span>' + r.anatomy.map(function (x) { return link('anat', x); }).join('') + '</p>' : '') +
         (r.clinical && r.clinical.length ? '<p class="mb-go"><span class="mb-k">→ 臨床（乱れると）</span>' + r.clinical.map(function (x) { return link('clin', x); }).join('') + '</p>' : '') +
         (r.hint ? '<p class="bridge-hint">' + esc(r.hint) + '</p>' : '') +
@@ -48,7 +50,7 @@
     d.className = 'bridge';
     d.setAttribute('data-bridge', id);
     d.innerHTML = '<summary><span class="bridge-badge">つながり</span><span class="bridge-title">← 解剖 ｜ → 臨床' +
-      (names.length ? '：' + esc(names.join('・')) : '') + '</span><span class="bridge-open" aria-hidden="true">ひらく</span></summary>' +
+      (names.length ? '：' + esc(names.join('・')) + (more ? ' ほか' : '') : '') + '</span><span class="bridge-open" aria-hidden="true">ひらく</span></summary>' +
       '<div class="bridge-body">' + html + '</div>';
     return d;
   }
