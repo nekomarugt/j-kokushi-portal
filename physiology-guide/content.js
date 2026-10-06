@@ -765,7 +765,14 @@ window.physiologyChapters = [
         "image": "assets/image152.webp",
         "caption": "小腸の構造と吸収面積",
         "question": "小腸で吸収された長鎖脂肪酸の多くが最初に入る管は何か。",
-        "answer": "リンパ管（乳び管）"
+        "answer": "リンパ管（乳び管）",
+        "boxes": [
+          {
+            "kind": "link",
+            "title": "つながりで覚える：大腸の役割",
+            "html": "<div class=\"mb\" id=\"phys-large-intestine\"><p><span class=\"mb-k\">つながり</span>栄養の吸収は、ほとんど小腸で終わる。<span class=\"answer\">大腸</span>は残りの<span class=\"answer\">水分</span>と電解質を吸収して、便をつくる。</p><p><span class=\"mb-k\">乱れると</span>大腸の粘膜に炎症が起こる（潰瘍性大腸炎など）と、水分を吸収しきれず下痢になりやすい。</p></div>"
+          }
+        ]
       },
       {
         "title": "消化管ホルモンと肝臓",
@@ -831,7 +838,14 @@ window.physiologyChapters = [
         "image": "assets/image173.webp",
         "caption": "アミノ酸から尿素がつくられる流れ",
         "question": "アンモニアを尿素へ変える主な臓器はどこか。",
-        "answer": "肝臓"
+        "answer": "肝臓",
+        "boxes": [
+          {
+            "kind": "link",
+            "title": "つながりで覚える：プリン体と尿酸",
+            "html": "<div class=\"mb\" id=\"phys-uric-acid\"><p><span class=\"mb-k\">つながり</span>核酸に含まれる<span class=\"answer\">プリン体</span>は、肝臓で分解されて<span class=\"answer\">尿酸</span>になり、主に尿に出る。</p><p><span class=\"mb-k\">乱れると</span>血液の尿酸が多すぎると、結晶になって関節にたまり炎症を起こす→<span class=\"answer\">痛風</span>。</p></div>"
+          }
+        ]
       },
       {
         "title": "ATP産生",

@@ -264,6 +264,221 @@
           "hint": "呼吸中枢は延髄（脳幹）にある。"
         }
       ]
+    },
+    {
+      "id": "digestion",
+      "title": "消化・吸収（肝胆膵を含む）",
+      "rows": [
+        {
+          "topic": "口腔・咽頭・食道",
+          "anatomy": [
+            {"id": "digestive-5", "t": "口腔：歯・舌乳頭・唾液腺の開口部"},
+            {"id": "digestive-10", "t": "咽頭：空気と食べ物の通り道が交わる"},
+            {"id": "digestive-6", "t": "食道：上は横紋筋、下は平滑筋、漿膜はない"}
+          ],
+          "physiology": [{"id": "lesson-digestion-1", "t": "糖質・タンパク質・脂質の消化"}],
+          "clinical": [
+            {"id": "sec-digestive-3", "t": "食道癌"},
+            {"id": "sec-infection_rheumatology-7", "t": "流行性耳下腺炎"}
+          ],
+          "hint": "唾液のアミラーゼででんぷんの消化が始まる。流行性耳下腺炎は唾液腺（耳下腺）がはれる病気。"
+        },
+        {
+          "topic": "胃",
+          "anatomy": [{"id": "digestive-3", "t": "胃の区分と壁"}],
+          "physiology": [{"id": "lesson-digestion-2", "t": "胃の分泌"}],
+          "clinical": [
+            {"id": "sec-digestive-5", "t": "胃炎"},
+            {"id": "sec-digestive-6", "t": "消化性潰瘍"},
+            {"id": "sec-digestive-7", "t": "胃癌"},
+            {"id": "sec-hematology-3", "t": "巨赤芽球性貧血"}
+          ],
+          "hint": "胃酸（攻撃）と粘液（防御）のバランスがくずれる→消化性潰瘍。胃を切除すると内因子がなくなり、ビタミンB12を吸収できない→巨赤芽球性貧血。"
+        },
+        {
+          "topic": "十二指腸・膵液・胆汁",
+          "anatomy": [
+            {"id": "digestive-1", "t": "十二指腸の区分と大十二指腸乳頭"},
+            {"id": "digestive-4", "t": "十二指腸の位置：膵頭を囲む・腹膜後器官・トライツ靱帯"},
+            {"id": "digestive-8", "t": "肝臓と胆道"}
+          ],
+          "physiology": [{"id": "lesson-digestion-3", "t": "膵液と胆汁"}],
+          "clinical": [
+            {"id": "sec-digestive-1", "t": "部位別", "label": "腹痛（部位別）：胆石・膵炎など"},
+            {"id": "sec-digestive-2", "t": "食事別", "label": "腹痛（食事との関係）"}
+          ],
+          "hint": "胆汁は脂肪を乳化し、膵液は三大栄養素をすべて分解する。胆石・膵炎は「腹痛」の節で、痛む場所と合わせて覚える。"
+        },
+        {
+          "topic": "小腸",
+          "anatomy": [{"id": "digestive-9", "t": "空腸・回腸：パイエル板は回腸、腸腺はリーベルキューン腺"}],
+          "physiology": [{"id": "lesson-digestion-4", "t": "小腸での吸収"}],
+          "clinical": [
+            {"id": "sec-digestive-9", "t": "クローン病"},
+            {"id": "sec-digestive-13", "t": "腸閉塞"}
+          ],
+          "hint": "クローン病は口から肛門までどこにでも起こり、特に小腸の終わり（回腸の末端）に多い。"
+        },
+        {
+          "topic": "大腸",
+          "anatomy": [{"id": "digestive-2", "t": "大腸：結腸ヒモ3本、腹膜垂、外肛門括約筋は横紋筋"}],
+          "physiology": [{"id": "lesson-digestion-4", "t": "小腸での吸収"}],
+          "clinical": [
+            {"id": "sec-digestive-8", "t": "潰瘍性大腸炎"},
+            {"id": "sec-digestive-10", "t": "虚血性大腸炎"},
+            {"id": "sec-digestive-11", "t": "大腸癌"},
+            {"id": "sec-digestive-12", "t": "虫垂炎"}
+          ]
+        },
+        {
+          "topic": "肝臓と門脈",
+          "anatomy": [
+            {"id": "digestive-8", "t": "肝臓と胆道"},
+            {"id": "vascular-11", "t": "門脈と、下大静脈に直接入る静脈"}
+          ],
+          "physiology": [{"id": "lesson-digestion-5", "t": "消化管ホルモンと肝臓"}],
+          "clinical": [
+            {"id": "sec-digestive-4", "t": "食道静脈瘤"},
+            {"id": "sec-inspection-7", "t": "皮膚の状態", "label": "皮膚の状態（黄疸など）"}
+          ],
+          "hint": "肝臓が硬くなる（肝硬変）→門脈の血が流れにくい→食道の静脈がふくれる（食道静脈瘤）。ビリルビンがたまる→黄疸。"
+        }
+      ]
+    },
+    {
+      "id": "urine",
+      "title": "腎・泌尿・体液",
+      "rows": [
+        {
+          "topic": "糸球体",
+          "anatomy": [
+            {"id": "urinary-3", "t": "ネフロンと腎小体"},
+            {"id": "urinary-2", "t": "腎門と腎臓の内部：皮質と髄質にあるもの"}
+          ],
+          "physiology": [{"id": "lesson-urine-1", "t": "糸球体ろ過"}],
+          "clinical": [
+            {"id": "sec-renal-5", "t": "糸球体腎炎"},
+            {"id": "sec-renal-6", "t": "ネフローゼ症候群"}
+          ],
+          "hint": "糸球体のふるいがこわれる→タンパク質が尿にもれる（ネフローゼ症候群）→血液のアルブミンが減ってむくむ。"
+        },
+        {
+          "topic": "腎不全",
+          "anatomy": [{"id": "urinary-1", "t": "腎臓の位置と被膜"}],
+          "physiology": [
+            {"id": "lesson-urine-1", "t": "糸球体ろ過"},
+            {"id": "lesson-urine-4", "t": "腎臓による体液調節"}
+          ],
+          "clinical": [
+            {"id": "sec-renal-2", "t": "急性腎障害（AKI）"},
+            {"id": "sec-renal-3", "t": "慢性腎臓病（CKD）"},
+            {"id": "sec-renal-4", "t": "腎硬化症"},
+            {"id": "sec-renal-11", "t": "尿毒症でみられる主な症状"}
+          ],
+          "hint": "腎臓が働かない→老廃物・水・カリウム・酸がたまる（尿毒症）。エリスロポエチンが減って貧血、ビタミンDの活性化が減って骨が弱くなる。"
+        },
+        {
+          "topic": "尿細管と尿の濃縮",
+          "anatomy": [{"id": "urinary-3", "t": "ネフロンと腎小体"}],
+          "physiology": [
+            {"id": "lesson-urine-2", "t": "尿細管での再吸収と分泌"},
+            {"id": "lesson-urine-3", "t": "尿の濃縮と希釈"}
+          ],
+          "clinical": [{"id": "sec-endocrine-3", "t": "尿崩症"}],
+          "hint": "ADH（バソプレシン）が足りない・効かない→水を再吸収できず、薄い尿が大量に出る（尿崩症）。"
+        },
+        {
+          "topic": "体液と酸塩基平衡",
+          "anatomy": [],
+          "physiology": [
+            {"id": "lesson-basics-4", "t": "体液の区分とイオン"},
+            {"id": "lesson-basics-5", "t": "ホメオスタシスと酸塩基平衡"},
+            {"id": "lesson-urine-4", "t": "腎臓による体液調節"}
+          ],
+          "clinical": [
+            {"id": "sec-endocrine-12", "t": "原発性アルドステロン症（コン症候群）"},
+            {"id": "sec-respiratory-13", "t": "異常呼吸"}
+          ],
+          "hint": "アルドステロンが多すぎる→ナトリウムと水がたまって高血圧、カリウムが減る。代謝性アシドーシス（糖尿病・腎不全など）では深く大きい呼吸（クスマウル呼吸）になる。"
+        },
+        {
+          "topic": "尿路と排尿",
+          "anatomy": [
+            {"id": "urinary-4", "t": "尿管：3か所の生理的狭窄部"},
+            {"id": "urinary-6", "t": "膀胱と膀胱三角"},
+            {"id": "urinary-5", "t": "尿道：女性は約3〜4cm、男性は4部"},
+            {"id": "reproductive-2", "t": "付属生殖腺と精液の成分"}
+          ],
+          "physiology": [{"id": "lesson-urine-5", "t": "蓄尿と排尿"}],
+          "clinical": [
+            {"id": "sec-renal-9", "t": "腎・尿管結石症"},
+            {"id": "sec-renal-7", "t": "膀胱炎"},
+            {"id": "sec-renal-8", "t": "腎盂腎炎"},
+            {"id": "sec-renal-10", "t": "前立腺肥大症"}
+          ],
+          "hint": "尿管の生理的狭窄部に結石がつまりやすい。女性は尿道が短く、膀胱炎になりやすい。前立腺は尿道を囲むので、肥大すると尿が出にくい。"
+        }
+      ]
+    },
+    {
+      "id": "metabolism",
+      "title": "代謝・体温",
+      "rows": [
+        {
+          "topic": "血糖の調節",
+          "anatomy": [{"id": "endocrine-6", "t": "膵島（ランゲルハンス島）"}],
+          "physiology": [{"id": "lesson-metabolism-2", "t": "糖質代謝と血糖調節"}],
+          "clinical": [{"id": "sec-metabolic-1", "t": "糖尿病"}]
+        },
+        {
+          "topic": "脂質・タンパク質・尿酸",
+          "anatomy": [],
+          "physiology": [{"id": "lesson-metabolism-3", "t": "タンパク質と脂質の代謝"}],
+          "clinical": [
+            {"id": "sec-metabolic-2", "t": "高脂血症"},
+            {"id": "sec-metabolic-3", "t": "痛風"},
+            {"id": "sec-metabolic-4", "t": "フェニルケトン尿症"}
+          ],
+          "hint": "フェニルケトン尿症は、アミノ酸のフェニルアラニンを分解する酵素が生まれつき足りない病気。"
+        },
+        {
+          "topic": "ビタミン",
+          "anatomy": [],
+          "physiology": [{"id": "lesson-metabolism-1", "t": "栄養素の役割"}],
+          "clinical": [
+            {"id": "sec-metabolic-5", "t": "ビタミン過剰症"},
+            {"id": "sec-metabolic-6", "t": "ビタミン欠乏症"},
+            {"id": "sec-metabolic-7", "t": "夜盲症"},
+            {"id": "sec-metabolic-8", "t": "脚気"},
+            {"id": "sec-metabolic-9", "t": "壊血症"},
+            {"id": "sec-metabolic-10", "t": "くる病・骨軟化症"}
+          ],
+          "hint": "A不足→夜盲症、B1不足→脚気、C不足→壊血病、D不足→くる病・骨軟化症。"
+        },
+        {
+          "topic": "基礎代謝と甲状腺",
+          "anatomy": [{"id": "endocrine-4", "t": "甲状腺と上皮小体"}],
+          "physiology": [
+            {"id": "lesson-metabolism-5", "t": "基礎代謝とエネルギー消費"},
+            {"id": "lesson-temperature-2", "t": "熱産生"}
+          ],
+          "clinical": [
+            {"id": "sec-endocrine-6", "t": "甲状腺機能亢進症（バセドウ病）"},
+            {"id": "sec-endocrine-7", "t": "甲状腺機能低下症・先天性甲状腺機能低下症"}
+          ],
+          "hint": "甲状腺ホルモンは基礎代謝を上げる。多すぎる→暑がり・やせる・脈が速い。少なすぎる→寒がり・むくみ。"
+        },
+        {
+          "topic": "体温と発熱",
+          "anatomy": [],
+          "physiology": [
+            {"id": "lesson-temperature-1", "t": "体温の生理的変動"},
+            {"id": "lesson-temperature-4", "t": "体温調節中枢と発熱"}
+          ],
+          "clinical": [{"id": "sec-vitals-1", "t": "体温"}],
+          "hint": "体温調節中枢は視床下部。発熱は、体温の設定値（セットポイント）が上がった状態。"
+        }
+      ]
     }
   ]
 }
