@@ -479,6 +479,374 @@
           "hint": "体温調節中枢は視床下部。発熱は、体温の設定値（セットポイント）が上がった状態。"
         }
       ]
+    },
+    {
+      "id": "nerve",
+      "title": "神経（中枢・末梢・自律）",
+      "rows": [
+        {
+          "topic": "ニューロンと髄鞘",
+          "anatomy": [{"id": "overview-8", "t": "神経組織：ニューロンとグリア"}],
+          "physiology": [
+            {"id": "lesson-nerve-1", "t": "ニューロンと髄鞘"},
+            {"id": "lesson-nerve-4", "t": "興奮の伝導と神経線維"}
+          ],
+          "clinical": [
+            {"id": "sec-neurology-11", "t": "多発性硬化症"},
+            {"id": "sec-neurology-13", "t": "ギラン・バレー症候群"}
+          ],
+          "hint": "髄鞘があると跳躍伝導で速く伝わる。中枢の髄鞘がこわれる→多発性硬化症。末梢の髄鞘がこわれる→ギラン・バレー症候群。"
+        },
+        {
+          "topic": "神経筋接合部",
+          "anatomy": [],
+          "physiology": [{"id": "lesson-muscle-3", "t": "神経筋接合部"}],
+          "clinical": [{"id": "sec-neurology-12", "t": "重症筋無力症"}],
+          "hint": "アセチルコリン受容体に対する抗体ができ、刺激が筋に伝わりにくい→重症筋無力症（くり返すと疲れる、まぶたが下がる）。"
+        },
+        {
+          "topic": "錐体路と運動ニューロン",
+          "anatomy": [
+            {"id": "cns-7", "t": "錐体路：大脳脚を通り、延髄下部で交叉"},
+            {"id": "cns-6", "t": "脊髄：前角・側角・後角、前根と後根"}
+          ],
+          "physiology": [
+            {"id": "lesson-motor-1", "t": "運動単位とサイズの原理"},
+            {"id": "lesson-motor-4", "t": "複雑な反射と上位中枢"}
+          ],
+          "clinical": [
+            {"id": "sec-neurology-16", "t": "錐体路障害と錐体外路障害"},
+            {"id": "sec-neurology-17", "t": "上位・下位運動ニューロン症状"},
+            {"id": "sec-neurology-10", "t": "筋萎縮性側索硬化症"},
+            {"id": "sec-inspection-14", "t": "中枢性麻痺と末梢性麻痺"},
+            {"id": "sec-reflex-4", "t": "病的反射"}
+          ],
+          "hint": "上位運動ニューロンの障害→腱反射亢進・病的反射（バビンスキー反射）。下位運動ニューロンの障害→腱反射低下・筋萎縮。ALSは両方がおかされる。"
+        },
+        {
+          "topic": "大脳基底核と小脳",
+          "anatomy": [
+            {"id": "cns-3", "t": "大脳辺縁系・大脳核・大脳白質"},
+            {"id": "cns-2", "t": "脳幹：中脳・橋・延髄と、中にあるもの"},
+            {"id": "cns-10", "t": "小脳：プルキンエ細胞と歯状核"}
+          ],
+          "physiology": [{"id": "lesson-motor-4", "t": "複雑な反射と上位中枢"}],
+          "clinical": [
+            {"id": "sec-neurology-8", "t": "パーキンソン病"},
+            {"id": "sec-neurology-9", "t": "パーキンソン症候群"},
+            {"id": "sec-inspection-5", "t": "異常運動"},
+            {"id": "sec-inspection-6", "t": "歩行"}
+          ],
+          "hint": "小脳がおかされる→運動失調（ふらつき、よろめく歩き方）。"
+        },
+        {
+          "topic": "反射",
+          "anatomy": [{"id": "cns-6", "t": "脊髄：前角・側角・後角、前根と後根"}],
+          "physiology": [
+            {"id": "lesson-motor-2", "t": "伸張反射"},
+            {"id": "lesson-motor-3", "t": "相反抑制と腱反射"}
+          ],
+          "clinical": [
+            {"id": "sec-reflex-1", "t": "反射の種類"},
+            {"id": "sec-reflex-2", "t": "表在反射"},
+            {"id": "sec-reflex-3", "t": "深部反射"}
+          ],
+          "hint": "腱をたたく→筋紡錘が伸びる→Ia線維→脊髄で運動ニューロンへ→筋が縮む（反射弓）。"
+        },
+        {
+          "topic": "感覚の伝導路",
+          "anatomy": [
+            {"id": "cns-8", "t": "感覚の伝導路：温痛覚は脊髄視床路、深部感覚は後索"},
+            {"id": "pns-9", "t": "デルマトーム（皮膚の神経分布）"}
+          ],
+          "physiology": [{"id": "lesson-sensation-2", "t": "痛覚・温度覚・深部感覚"}],
+          "clinical": [
+            {"id": "sec-sensation-1", "t": "感覚検査の意義"},
+            {"id": "sec-infection_rheumatology-10", "t": "水痘・帯状疱疹"}
+          ],
+          "hint": "帯状疱疹は、神経節にひそんでいた水痘のウイルスが再び活動し、そのデルマトームに沿って痛みと発疹が出る。"
+        },
+        {
+          "topic": "大脳皮質と脳の血管",
+          "anatomy": [
+            {"id": "cns-1", "t": "大脳皮質の機能局在"},
+            {"id": "vascular-4", "t": "頭頸部と脳の動脈"}
+          ],
+          "physiology": [{"id": "lesson-nerve-7", "t": "中枢神経と高次機能"}],
+          "clinical": [
+            {"id": "sec-neurology-1", "t": "脳血管障害"},
+            {"id": "sec-neurology-2", "t": "脳血栓"},
+            {"id": "sec-neurology-3", "t": "脳塞栓"},
+            {"id": "sec-neurology-7", "t": "アルツハイマー型認知症"},
+            {"id": "sec-neurology-6", "t": "てんかん"},
+            {"id": "sec-inspection-3", "t": "精神状態"}
+          ],
+          "hint": "こわれた脳の場所で症状が決まる（運動野→反対側の麻痺、ブローカ野→運動性失語など）。"
+        },
+        {
+          "topic": "髄膜と脳脊髄液",
+          "anatomy": [
+            {"id": "cns-4", "t": "髄膜：外から硬膜・クモ膜・軟膜"},
+            {"id": "cns-5", "t": "脳室と脳脊髄液の流れ"}
+          ],
+          "physiology": [{"id": "lesson-nerve-7", "t": "中枢神経と高次機能"}],
+          "clinical": [
+            {"id": "sec-neurology-5", "t": "髄膜炎"},
+            {"id": "sec-symptoms-2", "t": "髄膜刺激症状検査"}
+          ]
+        },
+        {
+          "topic": "自律神経",
+          "anatomy": [
+            {"id": "pns-3", "t": "自律神経：交感は胸腰、副交感は脳幹と仙髄"},
+            {"id": "pns-5", "t": "舌咽神経と迷走神経"}
+          ],
+          "physiology": [{"id": "lesson-nerve-6", "t": "自律神経"}],
+          "clinical": [{"id": "sec-reflex-5", "t": "自律神経反射"}]
+        },
+        {
+          "topic": "末梢神経の麻痺",
+          "anatomy": [
+            {"id": "pns-1", "t": "腕神経叢の枝と、上腕骨との位置関係"},
+            {"id": "upper-limb-7", "t": "手の筋と神経（麻痺の形とつなげる）"},
+            {"id": "pns-6", "t": "腰神経叢・仙骨神経叢・陰部神経"}
+          ],
+          "physiology": [{"id": "lesson-nerve-4", "t": "興奮の伝導と神経線維"}],
+          "clinical": [
+            {"id": "sec-inspection-12", "t": "四肢の視診", "label": "四肢の視診（下垂手・猿手・鷲手など）"},
+            {"id": "sec-inspection-14", "t": "中枢性麻痺と末梢性麻痺"}
+          ],
+          "hint": "橈骨神経麻痺→下垂手、正中神経麻痺→猿手、尺骨神経麻痺→鷲手。"
+        }
+      ]
+    },
+    {
+      "id": "sensation",
+      "title": "感覚器",
+      "rows": [
+        {
+          "topic": "視覚",
+          "anatomy": [
+            {"id": "sensory-2", "t": "眼球の構造と光の通り道"},
+            {"id": "sensory-1", "t": "眼筋と神経支配"},
+            {"id": "cns-9", "t": "膝状体：外側は視覚、内側は聴覚"}
+          ],
+          "physiology": [{"id": "lesson-sensation-5", "t": "視覚"}],
+          "clinical": [{"id": "sec-metabolic-7", "t": "夜盲症"}],
+          "hint": "暗い所では杆体のロドプシンが働く。ビタミンA不足→ロドプシンが足りない→夜盲症。"
+        },
+        {
+          "topic": "聴覚・平衡覚",
+          "anatomy": [
+            {"id": "sensory-4", "t": "耳の構造：外耳・中耳・内耳"},
+            {"id": "sensory-5", "t": "聴覚と平衡覚：音の伝わり方と平衡斑"}
+          ],
+          "physiology": [{"id": "lesson-sensation-4", "t": "聴覚と平衡覚"}],
+          "clinical": []
+        },
+        {
+          "topic": "味覚・嗅覚",
+          "anatomy": [
+            {"id": "sensory-6", "t": "味覚の神経：前2/3は顔面神経、後1/3は舌咽神経"},
+            {"id": "sensory-8", "t": "嗅覚：嗅神経は篩板を通る"}
+          ],
+          "physiology": [{"id": "lesson-sensation-3", "t": "味覚と嗅覚"}],
+          "clinical": []
+        },
+        {
+          "topic": "皮膚の感覚受容器",
+          "anatomy": [{"id": "sensory-3", "t": "皮膚の構造と感覚受容器"}],
+          "physiology": [{"id": "lesson-sensation-1", "t": "感覚受容器"}],
+          "clinical": [
+            {"id": "sec-sensation-1", "t": "感覚検査の意義"},
+            {"id": "sec-palpation-1", "t": "皮膚、皮下組織の触診"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "muscle-bone",
+      "title": "筋・骨格・運動",
+      "rows": [
+        {
+          "topic": "骨格筋の構造と収縮",
+          "anatomy": [
+            {"id": "overview-5", "t": "筋組織3種類：骨格筋・心筋・平滑筋"},
+            {"id": "locomotor-general-6", "t": "筋の総論：起始・停止、一関節筋と二関節筋"}
+          ],
+          "physiology": [
+            {"id": "lesson-muscle-1", "t": "筋節と滑走説"},
+            {"id": "lesson-muscle-2", "t": "興奮収縮連関"},
+            {"id": "lesson-muscle-4", "t": "筋収縮のエネルギーと筋線維"},
+            {"id": "lesson-muscle-5", "t": "収縮の種類"}
+          ],
+          "clinical": [
+            {"id": "sec-neurology-14", "t": "デュシェンヌ型筋ジストロフィー（DMD）"},
+            {"id": "sec-infection_rheumatology-19", "t": "多発性筋炎・皮膚筋炎"},
+            {"id": "sec-palpation-2", "t": "筋肉の触診"}
+          ],
+          "hint": "筋の病気（筋ジストロフィー・多発性筋炎）では、体幹に近い筋から力が落ちやすく、血液のCKが上がる。"
+        },
+        {
+          "topic": "骨の成長と骨代謝",
+          "anatomy": [{"id": "locomotor-general-3", "t": "骨の構造と成長"}],
+          "physiology": [
+            {"id": "lesson-reproduction-bone-5", "t": "骨形成と骨吸収"},
+            {"id": "lesson-reproduction-bone-4", "t": "カルシウム代謝"}
+          ],
+          "clinical": [
+            {"id": "sec-metabolic-12", "t": "骨粗鬆症"},
+            {"id": "sec-metabolic-10", "t": "くる病・骨軟化症"}
+          ],
+          "hint": "骨は骨芽細胞がつくり破骨細胞がこわして、いつも入れかわる。こわす方が上回る→骨粗鬆症。石灰化が足りない→くる病（子ども）・骨軟化症（大人）。"
+        }
+      ]
+    },
+    {
+      "id": "blood",
+      "title": "血液・免疫",
+      "rows": [
+        {
+          "topic": "血漿タンパク質",
+          "anatomy": [{"id": "overview-3", "t": "血液は「支持組織」／血球の基本"}],
+          "physiology": [{"id": "lesson-blood-1", "t": "血液の組成と血漿タンパク質"}],
+          "clinical": [
+            {"id": "sec-hematology-12", "t": "多発性骨髄腫"},
+            {"id": "sec-renal-6", "t": "ネフローゼ症候群"}
+          ],
+          "hint": "形質細胞が腫瘍になり、異常な免疫グロブリン（M蛋白）が増える→多発性骨髄腫。"
+        },
+        {
+          "topic": "赤血球と貧血",
+          "anatomy": [
+            {"id": "overview-3", "t": "血液は「支持組織」／血球の基本"},
+            {"id": "vascular-14", "t": "リンパ器官と脾臓"}
+          ],
+          "physiology": [
+            {"id": "lesson-blood-2", "t": "血球と造血"},
+            {"id": "lesson-respiration-4", "t": "ヘモグロビンと酸素解離曲線"}
+          ],
+          "clinical": [
+            {"id": "sec-hematology-1", "t": "総論"},
+            {"id": "sec-hematology-2", "t": "鉄欠乏性貧血"},
+            {"id": "sec-hematology-3", "t": "巨赤芽球性貧血"},
+            {"id": "sec-hematology-4", "t": "溶血性貧血"},
+            {"id": "sec-hematology-5", "t": "再生不良性貧血"}
+          ],
+          "hint": "鉄不足→ヘモグロビンをつくれない。B12・葉酸不足→巨赤芽球性。赤血球がこわれすぎる→溶血性。骨髄がつくれない→再生不良性。"
+        },
+        {
+          "topic": "白血球と白血病",
+          "anatomy": [{"id": "overview-3", "t": "血液は「支持組織」／血球の基本"}],
+          "physiology": [
+            {"id": "lesson-blood-2", "t": "血球と造血"},
+            {"id": "lesson-blood-3", "t": "自然免疫と獲得免疫"}
+          ],
+          "clinical": [
+            {"id": "sec-hematology-6", "t": "急性白血病"},
+            {"id": "sec-hematology-7", "t": "成人T細胞白血病（ATL）"},
+            {"id": "sec-hematology-8", "t": "慢性骨髄性白血病"},
+            {"id": "sec-hematology-9", "t": "慢性リンパ性白血病"}
+          ]
+        },
+        {
+          "topic": "免疫",
+          "anatomy": [
+            {"id": "vascular-14", "t": "リンパ器官と脾臓"},
+            {"id": "vascular-7", "t": "リンパの流れ：胸管と右リンパ本幹"}
+          ],
+          "physiology": [{"id": "lesson-blood-3", "t": "自然免疫と獲得免疫"}],
+          "clinical": [
+            {"id": "sec-infection_rheumatology-6", "t": "HIV感染症・後天性免疫不全症候群（AIDS）"},
+            {"id": "sec-infection_rheumatology-13", "t": "総論", "label": "リウマチ性・自己免疫疾患の総論"},
+            {"id": "sec-infection_rheumatology-14", "t": "関節リウマチ（RA）"},
+            {"id": "sec-infection_rheumatology-17", "t": "全身性エリテマトーデス（SLE）"}
+          ],
+          "hint": "HIVはヘルパーT細胞（CD4）をこわす→免疫が落ちる（AIDS）。免疫が自分の体を攻撃する→自己免疫疾患。"
+        },
+        {
+          "topic": "止血と凝固",
+          "anatomy": [{"id": "overview-3", "t": "血液は「支持組織」／血球の基本"}],
+          "physiology": [{"id": "lesson-blood-5", "t": "止血・血液凝固・線溶"}],
+          "clinical": [
+            {"id": "sec-symptoms-1", "t": "出血傾向"},
+            {"id": "sec-hematology-10", "t": "免疫性血小板減少症（ITP）"},
+            {"id": "sec-hematology-11", "t": "血友病"},
+            {"id": "sec-cardiovascular-29", "t": "血栓性静脈炎・深部静脈血栓症"}
+          ],
+          "hint": "血小板が足りない→皮膚の点状出血（ITPなど）。凝固因子が足りない→関節や筋肉の深い出血（血友病）。"
+        }
+      ]
+    },
+    {
+      "id": "reproduction",
+      "title": "生殖",
+      "rows": [
+        {
+          "topic": "女性生殖器と月経周期",
+          "anatomy": [
+            {"id": "reproductive-1", "t": "子宮：前傾前屈、内膜は機能層がはがれる"},
+            {"id": "reproductive-3", "t": "卵胞の成熟・排卵・黄体"}
+          ],
+          "physiology": [{"id": "lesson-reproduction-bone-2", "t": "月経周期"}],
+          "clinical": []
+        },
+        {
+          "topic": "受精と妊娠",
+          "anatomy": [
+            {"id": "reproductive-6", "t": "受精は卵管膨大部"},
+            {"id": "overview-9", "t": "受精・着床・胎盤"}
+          ],
+          "physiology": [{"id": "lesson-reproduction-bone-3", "t": "妊娠と授乳"}],
+          "clinical": []
+        },
+        {
+          "topic": "男性生殖器",
+          "anatomy": [
+            {"id": "reproductive-5", "t": "精巣：精子は精細管、テストステロンは間細胞"},
+            {"id": "reproductive-4", "t": "精路：精管は鼠径管を通る"},
+            {"id": "reproductive-2", "t": "付属生殖腺と精液の成分"},
+            {"id": "reproductive-7", "t": "男女の相同器官"}
+          ],
+          "physiology": [{"id": "lesson-reproduction-bone-1", "t": "性分化"}],
+          "clinical": [{"id": "sec-renal-10", "t": "前立腺肥大症"}]
+        }
+      ]
+    },
+    {
+      "id": "skin",
+      "title": "皮膚",
+      "rows": [
+        {
+          "topic": "皮膚と体温調節",
+          "anatomy": [{"id": "sensory-3", "t": "皮膚の構造と感覚受容器"}],
+          "physiology": [{"id": "lesson-temperature-3", "t": "熱放散と発汗"}],
+          "clinical": [
+            {"id": "sec-inspection-7", "t": "皮膚の状態"},
+            {"id": "sec-palpation-1", "t": "皮膚、皮下組織の触診"}
+          ],
+          "hint": "汗が蒸発するときに熱をうばう（気化熱）。皮膚の色やしめり具合は、黄疸・チアノーゼ・脱水などの手がかり。"
+        }
+      ]
+    },
+    {
+      "id": "cell",
+      "title": "細胞と遺伝",
+      "rows": [
+        {
+          "topic": "細胞と遺伝子",
+          "anatomy": [
+            {"id": "overview-6", "t": "細胞小器官：ミトコンドリアは二重膜でATPをつくる"},
+            {"id": "overview-7", "t": "DNA・RNAと染色体の数"},
+            {"id": "overview-10", "t": "細胞分裂（有糸分裂）の流れ"}
+          ],
+          "physiology": [
+            {"id": "lesson-basics-1", "t": "細胞膜と細胞小器官"},
+            {"id": "lesson-basics-2", "t": "核・DNA・RNA"}
+          ],
+          "clinical": []
+        }
+      ]
     }
   ]
 }

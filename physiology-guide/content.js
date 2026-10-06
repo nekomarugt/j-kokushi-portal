@@ -276,7 +276,14 @@ window.physiologyChapters = [
           }
         ],
         "question": "正常成人の安静閉眼時に現れやすい脳波は何か。",
-        "answer": "α波"
+        "answer": "α波",
+        "boxes": [
+          {
+            "kind": "link",
+            "title": "つながりで覚える：髄膜と脳脊髄液",
+            "html": "<div class=\"mb\" id=\"phys-csf\"><p><span class=\"mb-k\">つながり</span>脳と脊髄は<span class=\"answer\">髄膜</span>（外から硬膜・クモ膜・軟膜）に包まれる。<span class=\"answer\">脳脊髄液</span>は脳室の脈絡叢でつくられ、クモ膜下腔を流れて脳を浮かべ、衝撃から守る。</p><p><span class=\"mb-k\">乱れると</span>髄膜に炎症が起こる（髄膜炎）と、頭痛・発熱と、項部硬直などの髄膜刺激症状が出る。</p></div>"
+          }
+        ]
       }
     ],
     "quiz": [
@@ -353,6 +360,11 @@ window.physiologyChapters = [
             "kind": "link",
             "title": "つながりで覚える：反射（上位・下位ニューロン）",
             "html": "<div class=\"mb\"><p><span class=\"mb-k\">つながり</span>脳（上位）が壊れると、反射の<span class=\"answer\">抑え</span>が外れて<span class=\"answer\">腱反射が強く</span>なる。</p><figure class=\"mb-fig\"><a href=\"figures/x_reflex.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/x_reflex.svg\" alt=\"反射の解剖・生理・臨床のつながり図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a></figure><p><span class=\"mb-k\">なぜ</span>脊髄の反射には、上から「やりすぎるな」と抑えがかかっている。下位（前角・末梢神経）が壊れると反射の道が切れて、弱くなる・なくなる。</p><p><span class=\"mb-k\">覚え方</span>社長（脳）が不在だと、現場（反射）が暴走。現場が倒れると、仕事そのものができない。</p><p class=\"mb-go\"><span class=\"mb-k\">ほかの科目</span><a href=\"../anatomy-guide/#cns-7\">解剖学：錐体路</a><a href=\"../clinical-guide/#sec-reflex-3\">一般臨床：深部反射</a></p></div>"
+          },
+          {
+            "kind": "link",
+            "title": "つながりで覚える：大脳基底核と黒質",
+            "html": "<div class=\"mb\" id=\"phys-basal-ganglia\"><p><span class=\"mb-k\">つながり</span><span class=\"answer\">大脳基底核</span>は黒質などと回路をつくり、運動の始まりや動きのなめらかさを調節する（錐体外路系）。</p><p><span class=\"mb-k\">乱れると</span>黒質で<span class=\"answer\">ドパミン</span>をつくる神経細胞が減る→<span class=\"answer\">パーキンソン病</span>（ふるえ・筋固縮・動作が遅く少ない）。</p></div>"
           }
         ]
       },
