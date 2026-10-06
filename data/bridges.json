@@ -1,0 +1,101 @@
+{
+  "note": "科目をつなぐ橋（試行：内分泌）。解剖学＝名前・場所 ⇄ 生理学＝仕組みと流れ（ハブ） ⇄ 一般臨床＝仕組みの乱れ。id は各学習資料の実在アンカー（解剖 #点ID、生理 #lesson-章ID-節番号、臨床 #sec-単元ID-節番号）。描画は bridges/bridges.js。add は橋の中だけに出す短い補足。",
+  "version": 1,
+  "slices": [
+    {
+      "id": "endocrine",
+      "title": "内分泌",
+      "rows": [
+        {
+          "gland": "内分泌の全体像",
+          "anatomy": [{"id": "endocrine-1", "t": "内分泌の概説：下垂体の支配を受けない腺"}],
+          "physiology": [{"id": "lesson-endocrine-1", "t": "内分泌とホルモン受容体"}],
+          "clinical": []
+        },
+        {
+          "gland": "視床下部・下垂体",
+          "anatomy": [{"id": "endocrine-2", "t": "下垂体：前葉と後葉、下垂体門脈"}],
+          "physiology": [{"id": "lesson-endocrine-2", "t": "視床下部と下垂体"}],
+          "clinical": [
+            {"id": "sec-endocrine-1", "t": "先端巨大症、下垂体性巨人症"},
+            {"id": "sec-endocrine-2", "t": "成長ホルモン分泌不全性低身長症"},
+            {"id": "sec-endocrine-3", "t": "尿崩症"},
+            {"id": "sec-endocrine-4", "t": "シモンズ病"},
+            {"id": "sec-endocrine-5", "t": "シーハン症候群"}
+          ],
+          "hint": "成長ホルモンが多すぎ→先端巨大症・巨人症／少なすぎ→低身長症。ADH（バソプレシン）不足→尿崩症。"
+        },
+        {
+          "gland": "甲状腺",
+          "anatomy": [{"id": "endocrine-4", "t": "甲状腺と上皮小体"}],
+          "physiology": [{"id": "lesson-endocrine-3", "t": "甲状腺と上皮小体（副甲状腺）"}],
+          "clinical": [
+            {"id": "sec-endocrine-6", "t": "甲状腺機能亢進症（バセドウ病）"},
+            {"id": "sec-endocrine-7", "t": "甲状腺機能低下症・先天性甲状腺機能低下症"},
+            {"id": "sec-endocrine-8", "t": "慢性甲状腺炎（橋本病）"}
+          ],
+          "hint": "甲状腺ホルモンが多すぎ→バセドウ病／少なすぎ→甲状腺機能低下症（橋本病など）。"
+        },
+        {
+          "gland": "上皮小体（副甲状腺）",
+          "anatomy": [{"id": "endocrine-4", "t": "甲状腺と上皮小体"}],
+          "physiology": [
+            {"id": "lesson-endocrine-3", "t": "甲状腺と上皮小体（副甲状腺）"},
+            {"id": "lesson-reproduction-bone-4", "t": "カルシウム代謝"}
+          ],
+          "clinical": [{"id": "sec-endocrine-9", "t": "副甲状腺機能亢進症"}],
+          "hint": "パラトルモンが多すぎ→副甲状腺機能亢進症（血液のカルシウムが増える）。"
+        },
+        {
+          "gland": "副腎皮質",
+          "anatomy": [{"id": "endocrine-3", "t": "副腎：皮質3層（外から球・束・網）と髄質"}],
+          "physiology": [{"id": "lesson-endocrine-4", "t": "副腎"}],
+          "clinical": [
+            {"id": "sec-endocrine-10", "t": "アジソン病（副腎皮質機能低下症）"},
+            {"id": "sec-endocrine-11", "t": "クッシング症候群"},
+            {"id": "sec-endocrine-12", "t": "原発性アルドステロン症（コン症候群）"}
+          ],
+          "hint": "コルチゾールが多すぎ→クッシング症候群、アルドステロンが多すぎ→原発性アルドステロン症、皮質ホルモン不足→アジソン病。"
+        },
+        {
+          "gland": "副腎髄質",
+          "anatomy": [{"id": "endocrine-3", "t": "副腎：皮質3層（外から球・束・網）と髄質"}],
+          "physiology": [{"id": "lesson-endocrine-4", "t": "副腎"}],
+          "clinical": [{"id": "sec-endocrine-13", "t": "褐色細胞腫"}],
+          "hint": "カテコールアミン（アドレナリンなど）が多すぎ→褐色細胞腫（高血圧）。"
+        },
+        {
+          "gland": "膵島（ランゲルハンス島）",
+          "anatomy": [{"id": "endocrine-6", "t": "膵島（ランゲルハンス島）"}],
+          "physiology": [{"id": "lesson-endocrine-5", "t": "膵臓のホルモン"}],
+          "clinical": [{"id": "sec-metabolic-1", "t": "糖尿病"}],
+          "hint": "インスリンが足りない・効きにくい→糖尿病（血糖が高いまま）。"
+        },
+        {
+          "gland": "性腺（卵巣・精巣）",
+          "anatomy": [
+            {"id": "endocrine-5", "t": "性腺と松果体のホルモン"},
+            {"id": "reproductive-3", "t": "卵胞の成熟・排卵・黄体"},
+            {"id": "reproductive-5", "t": "精巣：精子は精細管、テストステロンは間細胞"}
+          ],
+          "physiology": [
+            {"id": "lesson-reproduction-bone-1", "t": "性分化"},
+            {"id": "lesson-reproduction-bone-2", "t": "月経周期"}
+          ],
+          "clinical": [
+            {"id": "sec-metabolic-12", "t": "骨粗鬆症"},
+            {"id": "sec-inspection-4", "t": "体格"}
+          ],
+          "hint": "閉経でエストロゲンが減る→骨粗鬆症になりやすい。ターナー症候群では性腺が発育せず、低身長になる。"
+        },
+        {
+          "gland": "松果体",
+          "anatomy": [{"id": "endocrine-5", "t": "性腺と松果体のホルモン"}],
+          "physiology": [{"id": "lesson-endocrine-1", "t": "内分泌とホルモン受容体"}],
+          "clinical": [],
+          "add": "松果体はメラトニンを出す。メラトニンは夜に多く出て、眠りと目覚めのリズム（概日リズム）にかかわる。"
+        }
+      ]
+    }
+  ]
+}
