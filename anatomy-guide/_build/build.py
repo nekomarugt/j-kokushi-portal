@@ -123,3 +123,7 @@ json.dump({'source': KIJUN_SRC, 'edition': meta['kijunEdition'], 'frequency': kj
 print('chapters', len(chapters), 'points', total_points, 'questions', len(q), 'all covered')
 for ch in chapters: print(ch['number'], ch['title'], ch['total'], len(ch['points']))
 print('multi-point questions', sum(1 for v in qpoints.values() if len(v) > 1))
+
+# 通るシリーズ（tooru.html 用のデータ）
+import importlib.util as _iu
+_s = _iu.spec_from_file_location("tooru_make", os.path.join(HERE, "tooru", "make.py")); _m = _iu.module_from_spec(_s); _s.loader.exec_module(_m); _m.run()

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b5ea8">
+  <!-- PWA -->
+  <link rel="manifest" href="../manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="柔整国試" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <script>if("serviceWorker"in navigator){addEventListener("load",function(){navigator.serviceWorker.register("../sw.js",{scope:"../"}).catch(function(){})})}</script>
+  <!-- /PWA -->
+  <meta name="description" content="頭蓋の孔・筋を貫く神経・管やすき間を「何が通るか」で一行ずつ整理。図説・語呂つき。">
+  <title>通るシリーズ｜解剖学 学習資料</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b5ea8'/%3E%3Cpath d='M32 10v44M20 18h24M18 28h28M20 38h24M24 48h16' fill='none' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="tooru.css">
+  <script src="../backnav.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">通</span>
+      <div>
+        <h1>通るシリーズ</h1>
+        <p>孔・管・すき間・筋を「何が通るか」で覚える｜無料</p>
+      </div>
+    </div>
+  </header>
+  <nav class="map-strip" aria-label="もどる"><a href="./">← 解剖学 学習資料（章の一覧）へ</a></nav>
+  <main class="tr-wrap"><div id="tooru"><p>読み込んでいます…</p></div></main>
+  <a class="portal-dock" href="../" aria-label="学習ポータルへ戻る">← 学習ポータルへ戻る</a>
+  <script src="tooru-data.js"></script>
+  <script src="tooru.js"></script>
+</body>
+</html>
