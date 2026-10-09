@@ -79,6 +79,17 @@ for _k, _b in _bm.items():
     for _h in [_b.get('main', '')] + [x['html'] for x in _b.get('boxes', [])]:
         for _n in re.findall(r'figures/([\w-]+)\.svg', _h):
             shutil.copyfile(os.path.join(_bfig, _n + '.svg'), os.path.join(OUT, 'figures', _n + '.svg'))
+# 図説（脈管など）：閉じた「図説」ボックスとして末尾に足す（本文・見出し・IDは変えない）
+_zm = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'zumap_anat.json'), encoding='utf-8'))
+_zdir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'zusetsu')
+for _k, _z in _zm.items():
+    if _k not in pt_by_id: print('UNMATCHED ZU KEY', _k); sys.exit(1)
+    _src = 'figures/' + _z['file']
+    shutil.copyfile(os.path.join(_zdir, _z['file']), os.path.join(OUT, 'figures', _z['file']))
+    _h = ('<p class="zu-cap">' + _z['caption'] + '</p><figure class="mb-fig mb-zu-fig"><a href="' + _src + '" target="_blank" rel="noopener">'
+          '<img src="' + _src + '" width="' + str(_z['w']) + '" height="' + str(_z['h']) + '" alt="' + _z['alt'] + '" loading="lazy" decoding="async"></a>'
+          '<small class="fig-zoom">タップで拡大</small></figure>')
+    pt_by_id[_k][1].setdefault('boxes', []).append({'kind': 'zu', 'title': _z['title'], 'html': _h})
 chapter_of_code = {}
 for ch in chapters:
     for s in ch['subs']: chapter_of_code[s] = ch['id']

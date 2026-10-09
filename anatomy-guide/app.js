@@ -126,8 +126,8 @@
           '<div class="anchor">' + p.anchor + '</div>' +
           '<div class="why"><span class="why-label">なぜ？</span><p>' + escapeHtml(p.why.replace(/^なぜ：/, '')) + '</p></div>' +
           (p.boxes || []).map((box) =>
-            '<details class="more-box mb-' + (box.kind === 'link' ? 'link' : 'deep') + '">' +
-              '<summary><span class="more-badge">' + (box.kind === 'link' ? 'つながり' : 'より深く') + '</span><span class="more-title">' + escapeHtml(String(box.title || '').replace(/^(つながりで覚える|より深く)：/, '')) + '</span><span class="more-open" aria-hidden="true">ひらく</span></summary>' +
+            '<details class="more-box mb-' + (box.kind === 'link' ? 'link' : box.kind === 'zu' ? 'zu' : 'deep') + '">' +
+              '<summary><span class="more-badge">' + (box.kind === 'link' ? 'つながり' : box.kind === 'zu' ? '図説' : 'より深く') + '</span><span class="more-title">' + escapeHtml(String(box.title || '').replace(/^(つながりで覚える|より深く)：/, '')) + '</span><span class="more-open" aria-hidden="true">ひらく</span></summary>' +
               '<div class="more-body">' + box.html + '</div>' +
             '</details>'
           ).join('') +

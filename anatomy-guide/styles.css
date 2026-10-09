@@ -540,6 +540,10 @@ footer {
 .mb-fig { margin: 8px 0; }
 .mb-fig a { display: block; }
 .mb-fig img { display: block; width: 100%; max-width: 560px; height: auto; margin: 0 auto; }
+.more-box.mb-zu { border-style: solid; border-color: #f0b4b4; background: #fffafa; }
+.more-box.mb-zu .more-badge { background: #fde2e2; color: #9b1c1c; }
+.mb-zu-fig img { max-width: 760px; border-radius: 8px; }
+.zu-cap { font-weight: 600; }
 .mb-go { display: flex; flex-wrap: wrap; gap: 6px 8px; align-items: center; }
 .mb-go a { display: inline-flex; align-items: center; max-width: 100%; min-height: 44px; padding: 4px 12px; border: 1px solid #9db8c9; border-radius: 14px; color: #0b4f8a; background: #fff; text-decoration: none; font-size: .88rem; font-weight: 700; line-height: 1.4; }
 @media print { .more-box { break-inside: avoid; } }

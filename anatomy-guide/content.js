@@ -1190,7 +1190,14 @@ window.anatomyChapters = [
     "check_a": "腹大動脈",
     "id": "vascular-2",
     "no": "06-02",
-    "freq": 7
+    "freq": 7,
+    "boxes": [
+     {
+      "kind": "zu",
+      "title": "腹腔動脈の3本の枝",
+      "html": "<p class=\"zu-cap\">腹腔動脈は 左胃・総肝・脾 の3本に分かれる。固有肝動脈は総肝動脈の枝。</p><figure class=\"mb-fig mb-zu-fig\"><a href=\"figures/fig-myk-01-celiac.webp\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/fig-myk-01-celiac.webp\" width=\"1200\" height=\"970\" alt=\"腹腔動脈から左胃動脈・総肝動脈・脾動脈が分かれる模式図\" loading=\"lazy\" decoding=\"async\"></a><small class=\"fig-zoom\">タップで拡大</small></figure>"
+     }
+    ]
    },
    {
     "title": "奇静脈と腕頭静脈",
@@ -1212,7 +1219,14 @@ window.anatomyChapters = [
     "check_a": "上大静脈",
     "id": "vascular-3",
     "no": "06-03",
-    "freq": 7
+    "freq": 7,
+    "boxes": [
+     {
+      "kind": "zu",
+      "title": "上大静脈に集まる静脈",
+      "html": "<p class=\"zu-cap\">内頸＋鎖骨下→腕頭静脈→上大静脈。奇静脈も上大静脈へ。</p><figure class=\"mb-fig mb-zu-fig\"><a href=\"figures/fig-myk-07-svc.webp\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/fig-myk-07-svc.webp\" width=\"1200\" height=\"1140\" alt=\"腕頭静脈と奇静脈が上大静脈に集まる模式図\" loading=\"lazy\" decoding=\"async\"></a><small class=\"fig-zoom\">タップで拡大</small></figure>"
+     }
+    ]
    },
    {
     "title": "頭頸部と脳の動脈",
@@ -1232,7 +1246,14 @@ window.anatomyChapters = [
     "check_a": "眼動脈",
     "id": "vascular-4",
     "no": "06-04",
-    "freq": 5
+    "freq": 5,
+    "boxes": [
+     {
+      "kind": "zu",
+      "title": "外頸・内頸動脈と大脳動脈輪",
+      "html": "<p class=\"zu-cap\">外頸は最初が上甲状腺、終枝が浅側頭と顎。大脳動脈輪の5種類の動脈。</p><figure class=\"mb-fig mb-zu-fig\"><a href=\"figures/fig-myk-03-head.webp\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/fig-myk-03-head.webp\" width=\"1200\" height=\"1650\" alt=\"外頸動脈と内頸動脈の枝、大脳動脈輪の模式図\" loading=\"lazy\" decoding=\"async\"></a><small class=\"fig-zoom\">タップで拡大</small></figure>"
+     }
+    ]
    },
    {
     "title": "骨盤と下肢の動脈",
@@ -1252,7 +1273,14 @@ window.anatomyChapters = [
     "check_a": "外腸骨動脈",
     "id": "vascular-5",
     "no": "06-05",
-    "freq": 5
+    "freq": 5,
+    "boxes": [
+     {
+      "kind": "zu",
+      "title": "骨盤と下肢の動脈：名前が変わる目印",
+      "html": "<p class=\"zu-cap\">鼠径靱帯で大腿動脈、内転筋腱裂孔をぬけて膝窩動脈。</p><figure class=\"mb-fig mb-zu-fig\"><a href=\"figures/fig-myk-05-leg.webp\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/fig-myk-05-leg.webp\" width=\"1200\" height=\"1720\" alt=\"骨盤と下肢の動脈の名前が変わる目印の模式図\" loading=\"lazy\" decoding=\"async\"></a><small class=\"fig-zoom\">タップで拡大</small></figure>"
+     }
+    ]
    },
    {
     "title": "皮静脈と硬膜静脈洞",
@@ -1272,7 +1300,14 @@ window.anatomyChapters = [
     "check_a": "大腿静脈",
     "id": "vascular-6",
     "no": "06-06",
-    "freq": 4
+    "freq": 4,
+    "boxes": [
+     {
+      "kind": "zu",
+      "title": "皮静脈の行き先",
+      "html": "<p class=\"zu-cap\">大伏在→大腿静脈、小伏在→膝窩静脈、橈側皮→腋窩静脈、尺側皮→上腕静脈。</p><figure class=\"mb-fig mb-zu-fig\"><a href=\"figures/fig-myk-06-skinvein.webp\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/fig-myk-06-skinvein.webp\" width=\"1200\" height=\"1330\" alt=\"上肢と下肢の皮静脈がどの深い静脈に入るかの模式図\" loading=\"lazy\" decoding=\"async\"></a><small class=\"fig-zoom\">タップで拡大</small></figure>"
+     }
+    ]
    },
    {
     "title": "リンパの流れ：胸管と右リンパ本幹",
@@ -1297,6 +1332,11 @@ window.anatomyChapters = [
       "kind": "link",
       "title": "つながりで覚える：リンパのゆくえ（胸管・リンパ節）",
       "html": "<div class=\"mb\"><p><span class=\"mb-k\">つながり</span>腹部のリンパは<span class=\"answer\">胸管</span>を通って、<span class=\"answer\">左</span>の首の付け根の静脈（静脈角）に注ぐ。</p><figure class=\"mb-fig\"><a href=\"figures/x_lymph.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/x_lymph.svg\" alt=\"リンパの解剖・生理・臨床のつながり図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a></figure><p><span class=\"mb-k\">なぜ</span>胃癌などがリンパに乗って運ばれると、終点の近くの<span class=\"answer\">左鎖骨上窩リンパ節</span>にあらわれる（ウィルヒョウ転移）。</p><p><span class=\"mb-k\">覚え方</span>ゴミ回収：腹部のゴミ回収トラックの終点は、左の首の付け根。</p><p class=\"mb-go\"><span class=\"mb-k\">ほかの科目</span><a href=\"../physiology-guide/#lesson-circulation-5\">生理学：血管と毛細血管交換</a><a href=\"../clinical-guide/#sec-palpation-1\">一般臨床：触診（リンパ節）</a></p></div>"
+     },
+     {
+      "kind": "zu",
+      "title": "胸管と右リンパ本幹",
+      "html": "<p class=\"zu-cap\">右上半身だけ右リンパ本幹→右静脈角。残りは胸管→左静脈角。</p><figure class=\"mb-fig mb-zu-fig\"><a href=\"figures/fig-myk-09-lymph.webp\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/fig-myk-09-lymph.webp\" width=\"1200\" height=\"1250\" alt=\"胸管と右リンパ本幹が集める範囲の模式図\" loading=\"lazy\" decoding=\"async\"></a><small class=\"fig-zoom\">タップで拡大</small></figure>"
      }
     ]
    },
@@ -1318,7 +1358,14 @@ window.anatomyChapters = [
     "check_a": "左冠状動脈（前室間枝）",
     "id": "vascular-8",
     "no": "06-08",
-    "freq": 3
+    "freq": 3,
+    "boxes": [
+     {
+      "kind": "zu",
+      "title": "冠状動脈の枝と冠状静脈洞",
+      "html": "<p class=\"zu-cap\">左は前室間枝と回旋枝、右は後室間枝など。静脈は冠状静脈洞→右心房。</p><figure class=\"mb-fig mb-zu-fig\"><a href=\"figures/fig-myk-10-coronary.webp\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/fig-myk-10-coronary.webp\" width=\"1200\" height=\"1110\" alt=\"冠状動脈の枝と冠状静脈洞の模式図\" loading=\"lazy\" decoding=\"async\"></a><small class=\"fig-zoom\">タップで拡大</small></figure>"
+     }
+    ]
    },
    {
     "title": "終動脈と機能的終動脈",
@@ -1355,7 +1402,14 @@ window.anatomyChapters = [
     "check_a": "右鎖骨下動脈",
     "id": "vascular-10",
     "no": "06-10",
-    "freq": 3
+    "freq": 3,
+    "boxes": [
+     {
+      "kind": "zu",
+      "title": "大動脈弓の枝と反回神経",
+      "html": "<p class=\"zu-cap\">枝は右から 腕頭→左総頸→左鎖骨下。反回神経は右が鎖骨下動脈、左が大動脈弓をくぐる。</p><figure class=\"mb-fig mb-zu-fig\"><a href=\"figures/fig-myk-02-arch.webp\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/fig-myk-02-arch.webp\" width=\"1200\" height=\"1380\" alt=\"大動脈弓の3本の枝と左右の反回神経の走り方の模式図\" loading=\"lazy\" decoding=\"async\"></a><small class=\"fig-zoom\">タップで拡大</small></figure>"
+     }
+    ]
    },
    {
     "title": "門脈と、下大静脈に直接入る静脈",
@@ -1373,7 +1427,14 @@ window.anatomyChapters = [
     "check_a": "脾静脈",
     "id": "vascular-11",
     "no": "06-11",
-    "freq": 3
+    "freq": 3,
+    "boxes": [
+     {
+      "kind": "zu",
+      "title": "門脈に集まる静脈",
+      "html": "<p class=\"zu-cap\">門脈は脾静脈と上腸間膜静脈から。腎・副腎・精巣の静脈は下大静脈へ。</p><figure class=\"mb-fig mb-zu-fig\"><a href=\"figures/fig-myk-08-portal.webp\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/fig-myk-08-portal.webp\" width=\"1200\" height=\"1290\" alt=\"門脈に集まる静脈と下大静脈に直接入る静脈の模式図\" loading=\"lazy\" decoding=\"async\"></a><small class=\"fig-zoom\">タップで拡大</small></figure>"
+     }
+    ]
    },
    {
     "title": "刺激伝導系：洞房結節も房室結節も右心房",
@@ -1407,7 +1468,14 @@ window.anatomyChapters = [
     "check_a": "橈骨神経",
     "id": "vascular-13",
     "no": "06-13",
-    "freq": 2
+    "freq": 2,
+    "boxes": [
+     {
+      "kind": "zu",
+      "title": "上肢の動脈：名前が変わる目印",
+      "html": "<p class=\"zu-cap\">第1肋骨の外側縁で腋窩動脈、大円筋の下縁で上腕動脈。</p><figure class=\"mb-fig mb-zu-fig\"><a href=\"figures/fig-myk-04-arm.webp\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/fig-myk-04-arm.webp\" width=\"1200\" height=\"1290\" alt=\"上肢の動脈の名前が変わる目印と、いっしょに走る神経の模式図\" loading=\"lazy\" decoding=\"async\"></a><small class=\"fig-zoom\">タップで拡大</small></figure>"
+     }
+    ]
    },
    {
     "title": "リンパ器官と脾臓",
