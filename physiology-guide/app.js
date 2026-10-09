@@ -164,9 +164,11 @@
               '<summary><span class="tips-badge">TIPS</span><span class="tips-title">' + escapeHtml(String(tip.title || '').replace(/^TIPS\s*/, '')) + '</span><span class="tips-open" aria-hidden="true">ひらく</span></summary>' +
               '<div class="tips-body">' +
                 '<p class="tips-caption">' + escapeHtml(tip.caption || '') + '</p>' +
-                '<button type="button" class="illustration-open" data-src="' + escapeHtml(tip.src) + '" data-caption="' + escapeHtml(String(tip.title || '')) + '" aria-label="' + escapeHtml(String(tip.title || '')) + 'を拡大">' +
-                '<img src="' + escapeHtml(tip.src) + '" alt="' + escapeHtml(tip.alt || tip.title || '') + '" loading="lazy" decoding="async">' +
-                '<span>タップで拡大</span></button>' +
+                (tip.images || [{src: tip.src, alt: tip.alt}]).map((im) =>
+                  '<button type="button" class="illustration-open" data-src="' + escapeHtml(im.src) + '" data-caption="' + escapeHtml(String(tip.title || '')) + '" aria-label="' + escapeHtml(String(tip.title || '')) + 'を拡大">' +
+                  '<img src="' + escapeHtml(im.src) + '" alt="' + escapeHtml(im.alt || tip.alt || tip.title || '') + '" loading="lazy" decoding="async">' +
+                  '<span>タップで拡大</span></button>'
+                ).join('') +
                 (tip.note ? '<small class="tips-note">' + escapeHtml(tip.note) + '</small>' : '') +
               '</div>' +
             '</details>'

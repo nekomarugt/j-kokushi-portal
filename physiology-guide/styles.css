@@ -450,6 +450,7 @@ footer {
 .tips-body { padding: 2px 12px 12px; }
 .tips-caption { margin: 0 0 8px; font-size: .9rem; line-height: 1.7; color: #1f3346; }
 .tips-body .illustration-open img { max-width: 720px; margin: 0 auto; }
+.tips-body .illustration-open + .illustration-open { margin-top: 10px; }
 .tips-note { display: block; margin-top: 6px; color: #51657a; font-size: .78rem; line-height: 1.55; }
 
 /* ---- 過去問への入口（節・章）。塗りつぶしボタン。印刷では出さない ---- */

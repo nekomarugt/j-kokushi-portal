@@ -692,10 +692,42 @@ window.physiologyChapters = [
         "title": "ヘモグロビンと酸素解離曲線",
         "anchor": "<p>血液中のO₂の大部分はヘモグロビンと結合して運ばれる。CO₂増加、H⁺増加、温度上昇などでは曲線が右方移動し、O₂を<span class=\"answer\">放しやすく</span>なる。</p><figure class=\"fig fig-diagram\"><a href=\"figures/p07_odc.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/p07_odc.svg\" alt=\"酸素解離曲線の右方移動の模式グラフ\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a><figcaption><strong>ひとことポイント</strong>　CO₂・H⁺・温度が上がると右へずれる（ボーア効果）。なぜ都合がよい？ よく働いてCO₂や熱を出している組織ほど、ヘモグロビンがO₂を放しやすくなるから。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
         "explanation": "肺では酸素分圧が高く、ヘモグロビンはO₂と結合しやすい。代謝が盛んな組織ではCO₂、H⁺、温度が上昇し、ヘモグロビンはO₂を解離しやすくなる。この変化をボーア効果という。",
-        "image": "assets/image133.webp",
-        "caption": "酸素解離曲線",
         "question": "体温上昇で酸素解離曲線はどちらへ移動するか。",
-        "answer": "右方"
+        "answer": "右方",
+        "tips": [
+          {
+            "id": "tips-o2-manga",
+            "title": "TIPS 漫画でわかる酸素解離曲線",
+            "images": [
+              {
+                "src": "assets/o2-manga-01.webp",
+                "alt": "マンガ1枚目。マネージャー＝ヘモグロビン（Hb）、おにぎり＝酸素（O₂）、自転車＝赤血球。部室＝肺はO₂が多く（PO₂約100mmHg）、Hbは最大4つのO₂と結合し、ほぼ満タンで出発する。"
+              },
+              {
+                "src": "assets/o2-manga-02.webp",
+                "alt": "マンガ2枚目。疲れた部員＝O₂が少ない組織ほど、HbはO₂をたくさん離して渡す（解離）。休んでいる部員にはあまり渡さない。1つ渡すと残りも渡しやすくなるので曲線はS字になる。"
+              },
+              {
+                "src": "assets/o2-manga-03.webp",
+                "alt": "マンガ3枚目。酸素解離曲線のグラフ。横軸PO₂、縦軸飽和度。肺（PO₂約100）ではほぼ満タン、組織（PO₂約40）では約75%で、その差が組織へ渡した分。P₅₀は約27mmHg。"
+              },
+              {
+                "src": "assets/o2-manga-04.webp",
+                "alt": "マンガ4枚目。試合中・猛練習＝右方移動。体温↑・CO₂↑・H⁺↑（pH↓）・2,3-DPG↑で親和性が下がり、同じPO₂でもO₂を離しやすい。CO₂・H⁺による右方移動をボーア効果という。"
+              },
+              {
+                "src": "assets/o2-manga-05.webp",
+                "alt": "マンガ5枚目。休けい・勉強中＝左方移動。体温↓・CO₂↓・H⁺↓（pH↑）・2,3-DPG↓で親和性が上がり、O₂を離しにくい。おまけ：胎児のHbは左方型、CO（一酸化炭素）はHbに強く結合してO₂を運べなくする。"
+              },
+              {
+                "src": "assets/o2-manga-06.webp",
+                "alt": "マンガ6枚目。応援メッセージとまとめ。肺で結合、組織で解離、曲線はS字。右方移動は離しやすい、左方移動は離しにくい。"
+              }
+            ],
+            "caption": "野球部のマネージャー（ヘモグロビン）が差し入れ（酸素）を配るお話。①→⑥の順に読もう。",
+            "note": "たとえ話なので、正確な数値や用語は本文で確認しよう。"
+          }
+        ]
       },
       {
         "title": "呼吸の調節",
