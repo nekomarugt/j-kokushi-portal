@@ -59,7 +59,16 @@ window.physiologyChapters = [
         "image": "assets/image11.webp",
         "caption": "体液pHと主な酸塩基平衡障害",
         "question": "過換気で起こりやすい酸塩基平衡障害は何か。",
-        "answer": "呼吸性アルカローシス"
+        "answer": "呼吸性アルカローシス",
+        "tips": [
+          {
+            "id": "zu-feedback",
+            "title": "TIPS 図で見る 負と正のフィードバック",
+            "src": "assets/zu-feedback.webp",
+            "alt": "負のフィードバックと正のフィードバックの模式図",
+            "caption": "多くのホメオスタシスは、負のフィードバックで保たれる。"
+          }
+        ]
       }
     ],
     "quiz": [
@@ -255,6 +264,15 @@ window.physiologyChapters = [
         ],
         "question": "汗腺を支配する交感神経節後線維が放出する物質は何か。",
         "answer": "アセチルコリン",
+        "tips": [
+          {
+            "id": "zu-autonomic-route",
+            "title": "TIPS 図で見る 交感神経と副交感神経の経路",
+            "src": "assets/zu-autonomic-route.webp",
+            "alt": "交感神経と副交感神経の経路の図",
+            "caption": "自律神経は、中枢 → 節前線維 → 神経節 → 節後線維 → 効果器の順。"
+          }
+        ],
         "boxes": [
           {
             "kind": "link",
@@ -277,6 +295,29 @@ window.physiologyChapters = [
         ],
         "question": "正常成人の安静閉眼時に現れやすい脳波は何か。",
         "answer": "α波",
+        "tips": [
+          {
+            "id": "zu-brain-regions",
+            "title": "TIPS 図で見る 脳の区分と主な働き",
+            "src": "assets/zu-brain-regions.webp",
+            "alt": "脳の区分と主な働きの模式図",
+            "caption": "脳の区分と主な働き（模式図）。"
+          },
+          {
+            "id": "zu-csf-flow",
+            "title": "TIPS 図で見る 脳脊髄液の流れ",
+            "src": "assets/zu-csf-flow.webp",
+            "alt": "脳脊髄液の流れの模式図",
+            "caption": "脳脊髄液の流れ。つくられるのは脈絡叢、吸収されるのはくも膜顆粒。"
+          },
+          {
+            "id": "zu-language-areas",
+            "title": "TIPS 図で見る 言語中枢の位置",
+            "src": "assets/zu-language-areas.webp",
+            "alt": "言語中枢の位置の模式図",
+            "caption": "ブローカ野は前頭葉、ウェルニッケ野は側頭葉。"
+          }
+        ],
         "boxes": [
           {
             "kind": "link",
@@ -331,7 +372,16 @@ window.physiologyChapters = [
         "image": "assets/image74.webp",
         "caption": "筋紡錘と伸張反射",
         "question": "膝蓋腱反射の受容器は何か。",
-        "answer": "筋紡錘"
+        "answer": "筋紡錘",
+        "tips": [
+          {
+            "id": "zu-spinal-section",
+            "title": "TIPS 図で見る 脊髄の横断面",
+            "src": "assets/zu-spinal-section.webp",
+            "alt": "脊髄の横断面の模式図",
+            "caption": "脊髄の横断面。内側が灰白質、外側が白質。"
+          }
+        ]
       },
       {
         "title": "相反抑制と腱反射",
@@ -439,7 +489,16 @@ window.physiologyChapters = [
         "image": "assets/image96.webp",
         "caption": "自然免疫と獲得免疫",
         "question": "抗体を産生する細胞へ分化するリンパ球は何か。",
-        "answer": "Bリンパ球"
+        "answer": "Bリンパ球",
+        "tips": [
+          {
+            "id": "zu-immune-cells",
+            "title": "TIPS 図で見る 免疫に働く細胞",
+            "src": "assets/zu-immune-cells.webp",
+            "alt": "免疫に働く細胞のつながりの模式図",
+            "caption": "免疫に働く細胞。貪食するもの、リンパ球の種類をたしかめよう。"
+          }
+        ]
       },
       {
         "title": "ABO式血液型",
@@ -582,6 +641,15 @@ window.physiologyChapters = [
         ],
         "question": "血漿の膠質浸透圧を主につくるタンパク質は何か。",
         "answer": "アルブミン",
+        "tips": [
+          {
+            "id": "zu-lymph",
+            "title": "TIPS 図で見る リンパの流れ",
+            "src": "assets/zu-lymph.webp",
+            "alt": "リンパの流れの模式図",
+            "caption": "毛細血管からしみ出た液の一部が、リンパとなって静脈にもどる。"
+          }
+        ],
         "boxes": [
           {
             "kind": "deep",
@@ -616,7 +684,16 @@ window.physiologyChapters = [
           }
         ],
         "question": "カフ圧を下げる途中で最初に音が聞こえたときの圧は何か。",
-        "answer": "収縮期血圧"
+        "answer": "収縮期血圧",
+        "tips": [
+          {
+            "id": "zu-baroreflex",
+            "title": "TIPS 図で見る 圧受容器反射の流れ",
+            "src": "assets/zu-baroreflex.webp",
+            "alt": "圧受容器反射の流れ図",
+            "caption": "血圧が上がると、延髄を通って血圧を下げる向きに働く。"
+          }
+        ]
       }
     ],
     "quiz": [
@@ -1292,6 +1369,15 @@ window.physiologyChapters = [
         "explanation": "Aδ線維は有髄で、鋭く局在の明瞭な一次痛を速く伝える。C線維は無髄で、鈍く持続する二次痛を伝える。深部感覚は身体の位置や運動を、視覚に頼らず知るために必要である。",
         "question": "遅く鈍い二次痛を伝える神経線維は何か。",
         "answer": "C線維",
+        "tips": [
+          {
+            "id": "zu-pain-pathway",
+            "title": "TIPS 図で見る 痛みの伝導路",
+            "src": "assets/zu-pain-pathway.webp",
+            "alt": "痛みの伝導路の模式図",
+            "caption": "痛みの2つの経路。速い痛みと遅い痛みで、線維も行き先も違う。"
+          }
+        ],
         "boxes": [
           {
             "kind": "link",
@@ -1314,7 +1400,16 @@ window.physiologyChapters = [
         "image": "assets/image218.webp",
         "caption": "半規管とクプラ",
         "question": "聴覚の受容器が存在する器官は何か。",
-        "answer": "コルチ器官"
+        "answer": "コルチ器官",
+        "tips": [
+          {
+            "id": "zu-vestibular",
+            "title": "TIPS 図で見る 前庭器官（平衡覚）",
+            "src": "assets/zu-vestibular.webp",
+            "alt": "内耳の前庭器官の模式図",
+            "caption": "平衡感覚の受容器。回転は半規管、直線の動きと傾きは耳石器。"
+          }
+        ]
       },
       {
         "title": "視覚",
@@ -1386,7 +1481,16 @@ window.physiologyChapters = [
           }
         ],
         "question": "高齢者で増えやすい睡眠中の変化は何か。",
-        "answer": "中途覚醒"
+        "answer": "中途覚醒",
+        "tips": [
+          {
+            "id": "zu-circadian",
+            "title": "TIPS 図で見る 1日のリズム（体温・コルチゾール・メラトニン）",
+            "src": "assets/zu-circadian.webp",
+            "alt": "体温・コルチゾール・メラトニンの1日のリズムの模式図",
+            "caption": "1日のリズムの形。数値ではなく、ピークの時刻を覚えよう。"
+          }
+        ]
       },
       {
         "title": "スキャモンの発育曲線",

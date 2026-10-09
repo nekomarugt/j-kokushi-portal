@@ -816,7 +816,14 @@ window.anatomyChapters = [
     "check_a": "長母指伸筋",
     "id": "upper-limb-6",
     "no": "04-06",
-    "freq": 2
+    "freq": 2,
+    "boxes": [
+     {
+      "kind": "zu",
+      "title": "タバチエール：ここを触る",
+      "html": "<p class=\"zu-cap\">親指を反らしてできる2本の腱の間のくぼみ。底に舟状骨と橈骨動脈。</p><figure class=\"mb-fig mb-zu-fig\"><a href=\"figures/fig-zu-taihyo-snuff.webp\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/fig-zu-taihyo-snuff.webp\" width=\"1200\" height=\"1100\" alt=\"右手を母指側から見た模式図。短母指伸筋腱・長母指外転筋腱と長母指伸筋腱の間のくぼみ、底の舟状骨と橈骨動脈\" loading=\"lazy\" decoding=\"async\"></a><small class=\"fig-zoom\">タップで拡大</small></figure>"
+     }
+    ]
    },
    {
     "title": "手の筋と神経（麻痺の形とつなげる）",
@@ -1671,7 +1678,14 @@ window.anatomyChapters = [
     "check_a": "胃底",
     "id": "digestive-3",
     "no": "07-03",
-    "freq": 5
+    "freq": 5,
+    "boxes": [
+     {
+      "kind": "zu",
+      "title": "消化管の壁の4層",
+      "html": "<p class=\"zu-cap\">消化管の壁は内側から4層。層の名前と順番を覚えよう。</p><figure class=\"mb-fig mb-zu-fig\"><a href=\"figures/fig-zu-gut-wall.webp\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/fig-zu-gut-wall.webp\" width=\"1120\" height=\"760\" alt=\"消化管の壁の4層の模式図\" loading=\"lazy\" decoding=\"async\"></a><small class=\"fig-zoom\">タップで拡大</small></figure>"
+     }
+    ]
    },
    {
     "title": "十二指腸の位置：膵頭を囲む・腹膜後器官・トライツ靱帯",
@@ -1770,6 +1784,16 @@ window.anatomyChapters = [
       "kind": "link",
       "title": "つながりで覚える：肝臓・胆汁・黄疸",
       "html": "<div class=\"mb\"><p><span class=\"mb-k\">つながり</span>古い赤血球のカス（<span class=\"answer\">ビリルビン</span>）を、<span class=\"answer\">肝臓</span>が処理して<span class=\"answer\">胆汁</span>に出す。</p><figure class=\"mb-fig\"><a href=\"figures/x_liver.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/x_liver.svg\" alt=\"肝臓と胆汁の解剖・生理・臨床のつながり図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a></figure><p><span class=\"mb-k\">なぜ</span>肝臓が悪い、または出口の胆道がつまると、ビリルビンが血液にたまり、皮膚や白目が黄色くなる（<span class=\"answer\">黄疸</span>）。</p><p><span class=\"mb-k\">覚え方</span>宅配便：肝臓は荷物を箱詰めして発送する所。出口がつまると、荷物が倉庫（血液）にあふれる。</p><p class=\"mb-go\"><span class=\"mb-k\">ほかの科目</span><a href=\"../physiology-guide/#lesson-digestion-3\">生理学：膵液と胆汁</a><a href=\"../clinical-guide/#sec-digestive-1\">一般臨床：肝炎・胆石（腹痛の部位別）</a></p></div>"
+     },
+     {
+      "kind": "zu",
+      "title": "肝小葉",
+      "html": "<p class=\"zu-cap\">小葉の角にグリソン鞘、中心に中心静脈。血液は周辺から中心へ。</p><figure class=\"mb-fig mb-zu-fig\"><a href=\"figures/fig-zu-liver-lobule.webp\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/fig-zu-liver-lobule.webp\" width=\"1120\" height=\"800\" alt=\"肝小葉の模式図\" loading=\"lazy\" decoding=\"async\"></a><small class=\"fig-zoom\">タップで拡大</small></figure>"
+     },
+     {
+      "kind": "zu",
+      "title": "胆汁の通り道",
+      "html": "<p class=\"zu-cap\">肝臓でつくられた胆汁が、十二指腸に出るまでの道すじ。</p><figure class=\"mb-fig mb-zu-fig\"><a href=\"figures/fig-zu-biliary.webp\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/fig-zu-biliary.webp\" width=\"1120\" height=\"900\" alt=\"胆汁の通り道の模式図\" loading=\"lazy\" decoding=\"async\"></a><small class=\"fig-zoom\">タップで拡大</small></figure>"
      }
     ]
    },
@@ -2573,7 +2597,14 @@ window.anatomyChapters = [
     "check_a": "バソプレシンとオキシトシン",
     "id": "endocrine-2",
     "no": "11-02",
-    "freq": 6
+    "freq": 6,
+    "boxes": [
+     {
+      "kind": "zu",
+      "title": "下垂体の構造",
+      "html": "<p class=\"zu-cap\">前葉は上皮性（門脈あり）、後葉は神経組織（門脈なし）。</p><figure class=\"mb-fig mb-zu-fig\"><a href=\"figures/fig-zu-pituitary.webp\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/fig-zu-pituitary.webp\" width=\"1120\" height=\"860\" alt=\"下垂体の構造の模式図\" loading=\"lazy\" decoding=\"async\"></a><small class=\"fig-zoom\">タップで拡大</small></figure>"
+     }
+    ]
    },
    {
     "title": "副腎：皮質3層（外から球・束・網）と髄質",
@@ -2620,6 +2651,11 @@ window.anatomyChapters = [
       "kind": "link",
       "title": "つながりで覚える：カルシウム（上皮小体・ビタミンD・腎臓）",
       "html": "<div class=\"mb\"><p><span class=\"mb-k\">つながり</span><span class=\"answer\">上皮小体</span>（副甲状腺）のホルモン<span class=\"answer\">PTH</span>が、血中の<span class=\"answer\">カルシウム</span>を上げる。</p><figure class=\"mb-fig\"><a href=\"figures/x_ca.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/x_ca.svg\" alt=\"カルシウムの解剖・生理・臨床のつながり図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a></figure><p><span class=\"mb-k\">なぜ</span>Caが低いと神経・筋が興奮しやすくなり、<span class=\"answer\">テタニー</span>が出る。腎臓は活性型ビタミンDをつくる所なので、腎臓が弱るとCaを吸えず低くなる。</p><p><span class=\"mb-k\">覚え方</span>家計簿：残高（血中Ca）が減ると、PTHが取り立て屋になる。骨から出す・腎で節約・腸から仕入れる。</p><p class=\"mb-go\"><span class=\"mb-k\">ほかの科目</span><a href=\"../physiology-guide/#lesson-reproduction-bone-4\">生理学：カルシウム代謝</a><a href=\"../clinical-guide/#sec-renal-3\">一般臨床：慢性腎臓病（CKD）</a></p></div>"
+     },
+     {
+      "kind": "zu",
+      "title": "甲状腺と上皮小体の位置",
+      "html": "<p class=\"zu-cap\">甲状腺は気管の前〜側面。上皮小体は、甲状腺の後ろ側にある。</p><figure class=\"mb-fig mb-zu-fig\"><a href=\"figures/fig-zu-thyroid.webp\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/fig-zu-thyroid.webp\" width=\"1120\" height=\"800\" alt=\"甲状腺と上皮小体の位置の模式図\" loading=\"lazy\" decoding=\"async\"></a><small class=\"fig-zoom\">タップで拡大</small></figure>"
      }
     ]
    },
@@ -3559,7 +3595,24 @@ window.anatomyChapters = [
     "check_a": "坐骨棘",
     "id": "surface-2",
     "no": "15-02",
-    "freq": 6
+    "freq": 6,
+    "boxes": [
+     {
+      "kind": "zu",
+      "title": "「ここを触る」骨盤・下肢の目印",
+      "html": "<p class=\"zu-cap\">上前腸骨棘は前（おへその斜め下・外）。おしり側で触れるのは上後腸骨棘と坐骨結節。</p><figure class=\"mb-fig mb-zu-fig\"><a href=\"figures/fig-zu-taihyo-pelvis.webp\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/fig-zu-taihyo-pelvis.webp\" width=\"1200\" height=\"1500\" alt=\"骨盤と下肢を前と後ろから見た模式図。腸骨稜、上前腸骨棘、恥骨結合、大転子、膝蓋骨、脛骨粗面、腓骨頭、内果、外果、上後腸骨棘、坐骨結節と、棘果長・転子果長\" loading=\"lazy\" decoding=\"async\"></a><small class=\"fig-zoom\">タップで拡大</small></figure>"
+     },
+     {
+      "kind": "zu",
+      "title": "膝周りの触れる目印",
+      "html": "<p class=\"zu-cap\">膝蓋骨・膝蓋靱帯・脛骨粗面・腓骨頭。腓骨頭のすぐ下を総腓骨神経が回る。</p><figure class=\"mb-fig mb-zu-fig\"><a href=\"figures/fig-zu-taihyo-knee.webp\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/fig-zu-taihyo-knee.webp\" width=\"1200\" height=\"1150\" alt=\"右膝を前から見た模式図。大腿骨の内側上顆・外側上顆、膝蓋骨、膝蓋靱帯、脛骨内側顆、脛骨粗面、腓骨頭、総腓骨神経の位置\" loading=\"lazy\" decoding=\"async\"></a><small class=\"fig-zoom\">タップで拡大</small></figure>"
+     },
+     {
+      "kind": "zu",
+      "title": "足関節の触れる目印",
+      "html": "<p class=\"zu-cap\">外果は内果より低い。内果の後ろで後脛骨動脈、外果の前に前距腓靱帯。</p><figure class=\"mb-fig mb-zu-fig\"><a href=\"figures/fig-zu-taihyo-ankle.webp\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/fig-zu-taihyo-ankle.webp\" width=\"1200\" height=\"1430\" alt=\"右足首を内側と外側から見た模式図。内果、外果、アキレス腱、後脛骨動脈、前距腓靱帯の位置\" loading=\"lazy\" decoding=\"async\"></a><small class=\"fig-zoom\">タップで拡大</small></figure>"
+     }
+    ]
    },
    {
     "title": "皮膚線条・生体計測・画像（CT値）",
@@ -3598,7 +3651,14 @@ window.anatomyChapters = [
     "check_a": "眼窩上孔（眼窩下孔・オトガイ孔）",
     "id": "surface-4",
     "no": "15-04",
-    "freq": 3
+    "freq": 3,
+    "boxes": [
+     {
+      "kind": "zu",
+      "title": "手関節前面：触れる腱・動脈と、その奥の神経",
+      "html": "<p class=\"zu-cap\">手首の前：橈骨動脈は橈側手根屈筋腱の外側、正中神経は長掌筋腱の奥、尺骨神経・動脈は豆状骨の橈側。</p><figure class=\"mb-fig mb-zu-fig\"><a href=\"figures/fig-zu-taihyo-wrist.webp\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/fig-zu-taihyo-wrist.webp\" width=\"1200\" height=\"1180\" alt=\"右手首を手のひら側から見た模式図。長母指外転筋腱、橈骨動脈、橈側手根屈筋腱、長掌筋腱、正中神経、尺骨動脈・尺骨神経、尺側手根屈筋腱、豆状骨の位置\" loading=\"lazy\" decoding=\"async\"></a><small class=\"fig-zoom\">タップで拡大</small></figure>"
+     }
+    ]
    },
    {
     "title": "体表から触れる筋と、三角",
@@ -3634,7 +3694,14 @@ window.anatomyChapters = [
     "check_a": "左右の腸骨稜の最高点",
     "id": "surface-6",
     "no": "15-06",
-    "freq": 2
+    "freq": 2,
+    "boxes": [
+     {
+      "kind": "zu",
+      "title": "背部の高さの目印（目安）",
+      "html": "<p class=\"zu-cap\">背部の高さの目安：C7から棘突起を数え、肩甲棘内端≒T3、肩甲骨下角≒T7、ヤコビー線≒L4、上後腸骨棘≒S2。</p><figure class=\"mb-fig mb-zu-fig\"><a href=\"figures/fig-zu-taihyo-back.webp\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/fig-zu-taihyo-back.webp\" width=\"1200\" height=\"1300\" alt=\"背中を後ろから見た模式図。第7頸椎（隆椎）、肩甲棘内端（約T3）、肩甲骨下角（約T7）、ヤコビー線（約L4）、上後腸骨棘（約S2）の位置\" loading=\"lazy\" decoding=\"async\"></a><small class=\"fig-zoom\">タップで拡大</small></figure>"
+     }
+    ]
    },
    {
     "title": "筋肉注射の部位",

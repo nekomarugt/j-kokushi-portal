@@ -82,7 +82,8 @@ for _k, _b in _bm.items():
 # 図説（脈管など）：閉じた「図説」ボックスとして末尾に足す（本文・見出し・IDは変えない）
 _zm = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'zumap_anat.json'), encoding='utf-8'))
 _zdir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'zusetsu')
-for _k, _z in _zm.items():
+for _k, _zv in [(k, z) for k, v in _zm.items() for z in (v if isinstance(v, list) else [v])]:
+    _z = _zv
     if _k not in pt_by_id: print('UNMATCHED ZU KEY', _k); sys.exit(1)
     _src = 'figures/' + _z['file']
     shutil.copyfile(os.path.join(_zdir, _z['file']), os.path.join(OUT, 'figures', _z['file']))
