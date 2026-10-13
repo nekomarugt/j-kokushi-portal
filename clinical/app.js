@@ -1021,6 +1021,7 @@ function paintAnswer(question, correct) {
   els.feedbackExplanation.textContent = question.explanation;
   renderXlink(question);
   renderRelatedTopics(question);
+  if (window.JKWhy) JKWhy.show({ subj: "cli", id: question.id, question, picked: [...selected], correct, feedback: els.feedback, before: els.feedbackExplanation });
   els.nextButton.textContent = position === queue.length - 1 ? "結果を見る" : "次の問題へ";
   els.feedback.classList.remove("is-hidden");
   els.nextButton.focus({ preventScroll: true });

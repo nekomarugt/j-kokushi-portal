@@ -10,6 +10,10 @@
   if (!L.MODELS.some(function (m) { return m.id === conf.model; })) conf.model = L.MODELS[0].id; // 3B などの古い設定は 1.5B に戻す
   function save() { try { localStorage.setItem(KEY, JSON.stringify(conf)); } catch (e) {} }
   var params = new URLSearchParams(location.search);
+  // シンプル表示（既定）：先生えらび・問題モード・おしゃべり・AIモデル選択・外部AIボタンはかくす（コードは残す）。
+  // ぜんぶ出すときは ?full=1（または localStorage の設定 full:true）。
+  var FULL = params.get('full') === '1' || !!conf.full;
+  if (!FULL) document.documentElement.classList.add('ai-simple');
   var urlSubj = '', lastSum = null, engine = null, engineModel = null, loading = null, searcher = null, lastHits = null, lastQ = '', busy = false;
 
   function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
@@ -100,10 +104,10 @@
     row('me', esc(q));
     if (!searcher) { row('bot', '資料を読み込み中…ちょっと待ってね。'); return; }
     if (!router) initTalk();
-    if (quizHook(q)) return;
+    if (FULL && quizHook(q)) return;
     var rt = router ? router.route(q, { lastTurn: lastTurn, lastHits: lastHits, lastQ: lastQ }) : null;
     var r = rt ? rt.r : searcher.search(q, { subj: conf.subj || urlSubj, limit: 6 }), hits, follow = false;
-    if (rt && (rt.kind === 'talk' || rt.kind === 'encourage') && talk) { talkReply(q, rt.kind); return; }
+    if (rt && (rt.kind === 'talk' || rt.kind === 'encourage') && talk) { if (FULL) { talkReply(q, rt.kind); return; } row('bot', esc('ここは「まちがえた問題のなぜ」を調べる場所だよ。わからない用語や問題文を入れてね。')); return; }
     if (rt && rt.kind === 'follow' || !rt && isFollowUp(q, r.kws)) { followUp(q); return; }
     else {
       var big = r.kws.filter(function (k) { return Array.from(k).length >= 2; });
@@ -129,7 +133,7 @@
     return '<div class="sum-box">' + (intro ? '<p class="sum-in">' + esc(intro) + '</p>' : '') + '<p>' + fmt(t) + '</p>' + (outro ? '<p class="sum-out">' + esc(outro.replace(/\{u\}/g, you())) + '</p>' : '') + '</div>';
   }
   function fmt(t) { return esc(t).replace(/\[(\d)\]/g, '<sup class="cite">[$1]</sup>').replace(/【([^】]+)】/g, '<b class="lbl">$1</b> ').replace(/(たとえるなら[:：][^\n]*)/g, '<span class="analogy">$1</span>').replace(/\n/g, '<br>'); }
-  function studyChips(b) { chipsRow(b, [['もっとかみ砕いて', 'もっとかみ砕いて'], ['たとえで', 'たとえで'], ['試験ではどう出る？', '試験ではどう出る？']]); extAsk(b); }
+  function studyChips(b) { if (!FULL) { chipsRow(b, [['もっと噛み砕いて', 'もっとかみ砕いて']]); return; } chipsRow(b, [['もっとかみ砕いて', 'もっとかみ砕いて'], ['たとえで', 'たとえで'], ['試験ではどう出る？', '試験ではどう出る？']]); extAsk(b); }
   function remap(sum, rel, top) { // rel の番号 → top の番号
     if (!sum) return sum;
     var f = function (o) { if (o) o.n = top.indexOf(rel[o.n - 1]) + 1; };
@@ -360,8 +364,8 @@
     var say = mode === 'analogy' ? (CH.analogyIntro || 'たとえも入れて言うね。') : (CH.simpleIntro || 'もっとやさしく言うね。');
     var b = row('bot', esc(say) + srcs + '<div class="ai-area"></div>');
     var area = b.querySelector('.ai-area');
-    var fallback = function (msg) { area.innerHTML = (lastSum ? '<div class="sum-box"><p>' + fmt('【ひとことで】' + lastSum.main.s + '[' + lastSum.main.n + ']') + '</p></div>' : '') + '<p class="hint">' + esc(msg) + '</p>'; studyChips(b); };
-    if (!conf.localAi) { fallback('もっと言いかえてほしいときは、下の「自分のAIで聞く」も使えるよ。'); return; }
+    var fallback = function (msg) { area.innerHTML = (lastSum ? '<div class="sum-box"><p>' + fmt(FULL ? '【ひとことで】' + lastSum.main.s + '[' + lastSum.main.n + ']' : M.toText(lastSum)) + '</p></div>' : '') + '<p class="hint">' + esc(msg) + '</p>'; studyChips(b); };
+    if (!conf.localAi) { fallback(FULL ? 'もっと言いかえてほしいときは、下の「自分のAIで聞く」も使えるよ。' : 'くわしくは資料のリンクから読んでみてね。'); return; }
     if (!navigator.gpu) { fallback('やさしい言いかえ・たとえ話はAI対応の端末（WebGPU）で使えるよ。いまは資料の要点だけ見せるね。'); return; }
     var lq = lastQ + '（' + q + '）';
     var go = function () { explain(area, lq, top, mode, lastSum, function () { studyChips(b); }); };
@@ -447,6 +451,35 @@
   input.addEventListener('keydown', function (e) { if (e.key === 'Enter' && !e.shiftKey && !e.isComposing) { e.preventDefault(); form.requestSubmit(); } });
   $('sample').addEventListener('click', function (e) { var b = e.target.closest('button'); if (b) ask(b.textContent); });
 
+  // ---- まちがえた問題の「なんで違う？」（過去問ページの why-card.js から来る） ----
+  // ?mode=why&s=ana|phy|cli&id=第回-問&pick=えらんだ番号(0始まり,カンマ区切り)
+  var WS = { ana: 'anatomy', phy: 'physiology', cli: 'clinical' };
+  function whyMode(docs) {
+    var s = WS[params.get('s')], id = String(params.get('id') || '').split('-'), pick = String(params.get('pick') || '').split(',').filter(Boolean).map(Number);
+    var qd = s && docs.filter(function (d) { return d.k === 'q' && d.s === s && new RegExp('第' + id[0] + '回 問' + id[1] + '$').test(d.t); })[0];
+    if (!qd) { row('bot', esc('問題が見つからなかったよ。わからない言葉を下に入れてね。')); return; }
+    urlSubj = s;
+    fetch('../data/wrong-links.json').then(function (r) { return r.json(); }).catch(function () { return {}; }).then(function (wl) {
+      var l = (wl[params.get('s')] || {})[params.get('id')], gd = l && docs.filter(function (d) { return d.k === 'g' && d.u === l[0]; })[0];
+      var q = qd.q, wrong = pick.filter(function (i) { return q.answers.indexOf(i) < 0; });
+      var ex = qd.x.slice(qd.x.indexOf('正解：')).split('\n').slice(1).join('\n').trim();
+      var b = row('bot', '<div class="quiz"><div class="quiz-h">' + esc(qd.t.replace(' 過去問', '')) + '</div><p class="stem">' + esc(q.stem) + '</p>' +
+        q.choices.map(function (c, i) { var ok = q.answers.indexOf(i) >= 0, ng = wrong.indexOf(i) >= 0; return '<button type="button" disabled class="qc' + (ok ? ' ok' : ng ? ' ng' : '') + '">' + (i + 1) + '. ' + esc(c) + (ok ? '　← 正解' : ng ? '　← えらんだ' : '') + '</button>'; }).join('') + '</div>' +
+        '<div class="sum-box">' + (wrong.length ? '<p><b class="lbl">えらんだ</b> ' + esc(wrong.map(function (i) { return (i + 1) + '. ' + q.choices[i]; }).join('、')) + '</p>' : '') +
+        '<p><b class="lbl">正解</b> ' + esc(q.answers.map(function (i) { return (i + 1) + '. ' + q.choices[i]; }).join('、')) + '</p>' + (ex ? '<p><b class="lbl">なぜ</b> ' + esc(ex).replace(/\n/g, '<br>') + '</p>' : '') + '</div>' +
+        (l ? '<p><a class="go" href="' + esc(l[0]) + '">📖 資料で確かめる：' + esc(l[1]) + ' →</a></p>' : ''));
+      lastHits = [{ doc: qd, cov: 1, score: 99 }].concat(gd ? [{ doc: gd, cov: 1, score: 98 }] : []);
+      lastQ = '過去問「' + q.stem + '」で' + (wrong.length ? '「' + wrong.map(function (i) { return q.choices[i]; }).join('、') + '」をえらんでまちがえた。なぜ違うのか、正解「' + q.answers.map(function (i) { return q.choices[i]; }).join('、') + '」との違い' : '答えの理由');
+      lastTurn = 'study';
+      // 「ひとことで」はこの問題の解説から。ポイントは、つないだ資料の文のうち正解の言葉を含むものだけ（関係ない文を混ぜない）
+      var akw = S.keywords(q.answers.map(function (i) { return q.choices[i]; }).join(' ')).filter(function (k) { return Array.from(k).length >= 2; });
+      var gs = gd ? M.extract([{ doc: gd, cov: 1, score: 98 }], akw.concat(S.keywords(q.stem)), 'normal') : null;
+      var pts = gs ? [gs.main].concat(gs.points).filter(function (p) { return p && akw.some(function (k) { return S.norm(p.s).indexOf(k) >= 0; }); }).slice(0, 2).map(function (p) { return { s: p.s, n: 2 }; }) : [];
+      lastSum = ex ? { main: { s: ex.split(/(?<=。)/)[0].trim(), n: 1 }, points: pts, exam: null } : M.extract(lastHits, akw, 'normal');
+      studyChips(b);
+    });
+  }
+
   // ---- 起動 ----
   function setChar(id, greet) {
     CH = CHS.filter(function (c) { return c.id === id; })[0] || CHS[0];
@@ -470,7 +503,7 @@
       if (b && (first || b.dataset.id !== CH.id)) { setChar(b.dataset.id, true); if (first) start(); }
     };
   }
-  $('chBtn').onclick = function () { showPicker(false); };
+  $('chBtn').onclick = function () { if (FULL) showPicker(false); };
   $('changeChar').onclick = function () { $('settings').hidden = true; showPicker(false); };
   renderSettings();
   var from = params.get('from'), subj = params.get('subj'), ctxQ = params.get('ctx'), q0 = params.get('q');
@@ -482,10 +515,12 @@
     if (ctxQ && !q0) { input.value = ctxQ.slice(0, 200); }
     if (q0 && searcher) ask(q0.slice(0, 200));
   }
-  if (conf.char && CHS.some(function (c) { return c.id === conf.char; })) { setChar(conf.char, true); start(); }
+  if (!FULL) { setChar(CHS.some(function (c) { return c.id === conf.char; }) ? conf.char : CHS[0].id, !params.get('mode')); start(); }
+  else if (conf.char && CHS.some(function (c) { return c.id === conf.char; })) { setChar(conf.char, true); start(); }
   else showPicker(true);
   fetch('search-index.json').then(function (r) { return r.json(); }).then(function (idx) {
     searcher = S.buildSearch(idx.docs); window.__aiTutorReady = idx.docs.length;
+    if (params.get('mode') === 'why') { whyMode(idx.docs); return; }
     if (q0 && started) ask(q0.slice(0, 200));
   }).catch(function () { row('bot', '資料の読み込みに失敗しちゃった。通信を確認して、もう一度開いてね。'); });
 })();

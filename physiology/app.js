@@ -375,6 +375,7 @@ function paintAnswer(question, correct) {
   els.feedbackAnswer.textContent = `正解：${question.answers.map((index) => `${index + 1}．${question.choices[index]}`).join("／")}`;
   els.feedbackExplanation.textContent = question.explanation || "正解の選択肢と設問の条件をセットで覚えましょう。";
   renderXlink(question);
+  if (window.JKWhy) JKWhy.show({ subj: "phy", id: questionId(question), question, picked: [...selected], correct, feedback: els.feedback, before: els.feedbackExplanation });
   els.nextButton.textContent = position === queue.length - 1 ? "結果を見る" : "次の問題へ";
   els.feedback.classList.remove("is-hidden");
   els.nextButton.focus({ preventScroll: true });

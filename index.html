@@ -22,6 +22,7 @@
     <title>柔道整復師 学習ポータル｜過去問・学習資料</title>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="./game/game.css" />
+    <link rel="stylesheet" href="./home.css" />
     <script src="./backnav.js"></script>
   </head>
   <body>
@@ -37,23 +38,10 @@
         </div>
       </header>
 
-      <section class="jkg-home" aria-label="わたしのきろく">
-        <div data-jkg="home"></div>
-      </section>
-
-      <section class="portal-surface" aria-labelledby="choose-title">
-        <div class="surface-heading">
-          <p><span class="jk-tag is-exam">本番形式の演習</span></p>
-          <h2 id="choose-title">過去問を解く</h2>
-          <p class="jk-cap">ゲーム演出なし。ふつうの過去問を、じっくり解く。（3科目・無料）</p>
-        </div>
-
-        <ul class="jk-modes" aria-label="出題モードの違い">
-          <li><strong>分野別</strong><span>苦手な分野をまとめて</span></li>
-          <li><strong>回数別</strong><span>好きな回を選んで解く</span></li>
-          <li><strong>ランダム</strong><span>全体から抜き打ち</span></li>
-        </ul>
-
+      <section class="home-start" aria-labelledby="choose-title">
+        <p class="home-hint">✏️ 問題を解きたいときに</p>
+        <h2 id="choose-title"><span class="home-star">まずはここから</span>過去問を解く</h2>
+        <p class="jk-cap">科目を押したらすぐ開始（登録・ログイン不要）。分野別／回数別／ランダムが選べます。まちがえたら「なんで違う？」と資料へのリンクが出ます。</p>
         <nav class="subject-grid" aria-label="過去問アプリ一覧">
           <a class="subject-card anatomy" href="./anatomy/">
             <span class="card-number">01</span>
@@ -88,47 +76,28 @@
             <span class="card-arrow" aria-hidden="true">→</span>
           </a>
         </nav>
+      </section>
 
-        <section class="basics-section" aria-labelledby="basics-title">
-          <div class="surface-heading">
-            <p>無料・基礎の確認</p>
-            <h2 id="basics-title">基礎の一問一答</h2>
-          </div>
-          <nav class="study-grid" aria-label="基礎ドリル一覧">
-            <a class="study-card basics anatomy-qa" href="./anatomy-qa/">
-              <div>
-                <h3>解剖学 一問一答</h3>
-                <p>骨・筋から内臓・神経・体表まで15分野を短答で確認（答えと理由）・130問</p>
-              </div>
-              <span aria-hidden="true">→</span>
-            </a>
-            <a class="study-card basics" href="./basics-qa/">
-              <div>
-                <h3>生理学 一問一答</h3>
-                <p>細胞・血液から神経・筋・生殖まで全13分野を短答で確認（答えと理由）・129問</p>
-              </div>
-              <span aria-hidden="true">→</span>
-            </a>
-            <a class="study-card basics clinical-qa" href="./clinical-qa/">
-              <div>
-                <h3>一般臨床 一問一答</h3>
-                <p>所見・検査・疾患を短答で確認（答えと理由）・105問</p>
-              </div>
-              <span aria-hidden="true">→</span>
-            </a>
+      <section class="home-more" aria-label="目的からえらぶ">
+        <h2 class="home-more-title">目的からえらぶ</h2>
+
+        <details class="home-group review">
+          <summary><span class="home-hint">🔁 間違えたとこを復習したいときに</span><b>苦手復習</b></summary>
+          <p class="home-note">各科目の過去問を開いて「苦手復習」を押すと、まちがえた問題だけ出ます。</p>
+          <nav class="home-mini" aria-label="苦手復習">
+            <a href="./anatomy/">解剖学の苦手復習 →</a>
+            <a href="./physiology/">生理学の苦手復習 →</a>
+            <a href="./clinical/">一般臨床の苦手復習 →</a>
           </nav>
-        </section>
+        </details>
 
-        <section class="study-section" aria-labelledby="study-title">
-          <div class="surface-heading">
-            <p>授業の復習・理解の確認</p>
-            <h2 id="study-title">学習資料を読む</h2>
-          </div>
+        <details class="home-group study">
+          <summary><span class="home-hint">📖 資料で調べたいときに</span><b>学習資料・出題範囲マップ・解説AI</b></summary>
           <nav class="study-grid" aria-label="学習資料サイト一覧">
             <a class="study-card ai-tutor" href="./ai/">
               <div>
                 <h3>解説AIに聞く <span class="free-badge">無料</span></h3>
-                <p>わからない言葉や疑問を入れると、学習資料と過去問から関係する所を探して見せます。AIのかんたん説明つき（対応端末のみ）</p>
+                <p>まちがえた問題の「なぜ」や、わからない言葉を、学習資料と過去問から探して見せます</p>
               </div>
               <span aria-hidden="true">→</span>
             </a>
@@ -161,13 +130,42 @@
               <span aria-hidden="true">→</span>
             </a>
           </nav>
-        </section>
+        </details>
 
-        <section class="study-section workbook-section" aria-labelledby="workbook-title">
-          <div class="surface-heading">
-            <p>印刷して使う・初学者の復習／入学前の予習に</p>
-            <h2 id="workbook-title">暗記ワークをダウンロード</h2>
-          </div>
+        <details class="home-group basics">
+          <summary><span class="home-hint">⚡ 基礎をサクッと確認したいときに</span><b>基礎の一問一答</b></summary>
+          <nav class="study-grid" aria-label="基礎ドリル一覧">
+            <a class="study-card basics anatomy-qa" href="./anatomy-qa/">
+              <div>
+                <h3>解剖学 一問一答</h3>
+                <p>骨・筋から内臓・神経・体表まで15分野を短答で確認（答えと理由）・130問</p>
+              </div>
+              <span aria-hidden="true">→</span>
+            </a>
+            <a class="study-card basics" href="./basics-qa/">
+              <div>
+                <h3>生理学 一問一答</h3>
+                <p>細胞・血液から神経・筋・生殖まで全13分野を短答で確認（答えと理由）・129問</p>
+              </div>
+              <span aria-hidden="true">→</span>
+            </a>
+            <a class="study-card basics clinical-qa" href="./clinical-qa/">
+              <div>
+                <h3>一般臨床 一問一答</h3>
+                <p>所見・検査・疾患を短答で確認（答えと理由）・105問</p>
+              </div>
+              <span aria-hidden="true">→</span>
+            </a>
+          </nav>
+        </details>
+
+        <details class="home-group play">
+          <summary><span class="home-hint">🎲 ちょっと遊びたいときに</span><b>4択クイズ・ガチャ・レベル・バッジ</b></summary>
+          <div class="jkg-home" aria-label="わたしのきろく"><div data-jkg="home"></div></div>
+        </details>
+
+        <details class="home-group workbook">
+          <summary><span class="home-hint">🖨 印刷して書きたいときに</span><b>暗記ワークをダウンロード</b></summary>
           <nav class="study-grid" aria-label="暗記ワーク">
             <a class="study-card workbook" href="./workbooks/">
               <div>
@@ -177,12 +175,7 @@
               <span aria-hidden="true">→</span>
             </a>
           </nav>
-        </section>
-
-        <div class="use-note">
-          <strong>過去問は登録・ログイン不要</strong>
-          <span>科目を押したらそのまま開始。学習資料もすべて無料です。</span>
-        </div>
+        </details>
       </section>
 
       <footer>

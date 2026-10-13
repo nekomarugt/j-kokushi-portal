@@ -339,6 +339,7 @@ function submitAnswer() {
   els.feedbackLabel.textContent = correct ? "正解" : "不正解";
   els.feedbackAnswer.textContent = `正解：${question.answers.map((index) => `${index + 1}．${question.choices[index]}`).join("／")}`;
   renderExplanation(question);
+  if (window.JKWhy) JKWhy.show({ subj: "ana", id: questionId(question), question, picked: [...selected], correct, feedback: els.feedback, before: els.feedbackExplanation });
   els.nextButton.textContent = position === queue.length - 1 ? "結果を見る" : "次の問題へ";
   els.feedback.classList.remove("is-hidden");
   els.nextButton.focus({ preventScroll: true });
