@@ -75,7 +75,7 @@
       var hits = res.slice(0, opt.limit || 6).map(function (r) { return { doc: docs[r.i], score: r.score, cov: r.cov }; });
       return { kws: kws, hits: hits };
     }
-    return { search: search };
+    return { search: search, docs: docs };
   }
   G.AITutorSearch = { buildSearch: buildSearch, keywords: keywords, norm: norm };
   if (typeof module !== 'undefined') module.exports = G.AITutorSearch;

@@ -74,3 +74,11 @@ mark { background: #fff1a8; color: inherit; padding: 0 1px; border-radius: 2px; 
 .pick .pt { padding: 0 12px; font-size: .9rem; color: #4f6078; }
 .pick-cancel { border: 0; background: none; color: var(--blue); font-size: .95rem; padding: 8px; }
 body.picking .log, body.picking .ask, body.picking .sample { display: none; }
+.analogy { display: block; margin-top: 4px; padding: 4px 8px; border-radius: 8px; background: #fff7e0; font-size: .92rem; }
+.chips-q { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.chips-q button { border: 1px solid var(--ch); color: var(--ch); background: #fff; border-radius: 999px; padding: 4px 12px; font-size: .85rem; }
+.sum-box { margin-top: 10px; padding: 10px 12px; border-radius: 12px; background: #eef6fb; border: 1px solid var(--ch); }
+.sum-box p { margin: 4px 0; }
+.sum-in, .sum-out { color: var(--ch); font-weight: 700; font-size: .9rem; }
+.lbl { color: var(--ch); }
+.src > summary { font-weight: 700; }

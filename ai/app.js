@@ -1,7 +1,7 @@
 /* 解説AI先生 本体：検索 → 資料カード → （任意）AIのかんたん説明 */
 (function () {
   'use strict';
-  var CHS = window.AI_TUTOR_CHARACTERS, CH = CHS[0], S = window.AITutorSearch, L = window.AITutorLLM;
+  var CHS = window.AI_TUTOR_CHARACTERS, CH = CHS[0], M = window.AITutorSummary, Mx = M, S = window.AITutorSearch, L = window.AITutorLLM;
   var $ = function (id) { return document.getElementById(id); };
   var log = $('log'), form = $('askForm'), input = $('askInput');
   var SUBJ = { anatomy: '解剖学', physiology: '生理学', clinical: '一般臨床' };
@@ -10,7 +10,7 @@
   if (!L.MODELS.some(function (m) { return m.id === conf.model; })) conf.model = L.MODELS[0].id; // 3B などの古い設定は 1.5B に戻す
   function save() { try { localStorage.setItem(KEY, JSON.stringify(conf)); } catch (e) {} }
   var params = new URLSearchParams(location.search);
-  var urlSubj = '', engine = null, engineModel = null, loading = null, searcher = null, lastHits = null, lastQ = '', busy = false;
+  var urlSubj = '', lastSum = null, engine = null, engineModel = null, loading = null, searcher = null, lastHits = null, lastQ = '', busy = false;
 
   function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
   function scroll() { requestAnimationFrame(function () { window.scrollTo(0, document.body.scrollHeight); }); }
@@ -48,34 +48,108 @@
     return html + '</article>';
   }
   // 「もっと詳しく」「なんで？」など中身の語がない質問は、前の検索結果を使う
-  function isFollowUp(q, kws) { return lastHits && !kws.some(function (k) { return Array.from(k).length >= 2; }); }
+  // 「噛み砕いて」「もーちょい詳しく」「試験では？」など：新しい中身の語がなければ前の資料で言い直す
+  function lastText() { return S.norm(lastHits.map(function (h) { return h.doc.t + ' ' + h.doc.x; }).join(' ') + ' ' + lastQ); }
+  function isFollowUp(q, kws) {
+    if (!lastHits) return false;
+    var big = kws.filter(function (k) { return Array.from(k).length >= 2 && !L.FOLLOW.test(k); });
+    if (!big.length) return true;
+    if (L.FOLLOW.test(q) && Array.from(q).length <= 40) { var t = lastText(); return big.every(function (k) { return t.indexOf(k) >= 0; }); }
+    return false;
+  }
+
+  // ---- おしゃべり（休けい） ----
+  var talk = null, talkMem = null, talkTurns = 0, lastTurn = null, router = null;
+  function TK() { return (window.AI_TUTOR_TALK || {})[CH.id]; }
+  function initTalk() {
+    var tk = TK(); if (!tk || !window.TalkEngine) { talk = null; return; }
+    talk = window.TalkEngine.create(tk);
+    try { talkMem = JSON.parse(localStorage.getItem('jkp-ai-talk-' + CH.id) || 'null'); } catch (e) {}
+    if (!talkMem || !Array.isArray(talkMem.likes)) talkMem = { name: '', likes: [] };
+    router = AITutorRouter.create({ search: function (q) { return searcher.search(q, { subj: conf.subj || urlSubj, limit: 6 }); }, norm: S.norm,
+      detect: TalkEngine.detect, talkNorm: function (q) { return TalkEngine.norm(q, { calls: tk.calls }); }, FOLLOW: L.FOLLOW });
+  }
+  function you() { var tk = TK(); return talkMem && talkMem.name ? tk.addr(talkMem.name) : tk.you; }
+  function pickOne(a) { return a[Math.floor(Math.random() * a.length)]; }
+  function topicChip() { // ランダムな学習資料の見出し
+    var g = searcher.docs.filter(function (d) { return d.k === 'g' && /資料 \d+-\d+/.test(d.t); });
+    var t = pickOne(g).t.replace(/^.*?資料 [\d-]+\s*/, '').replace(/（\d+\/\d+）$/, '').replace(/理解度チェック$/, '').split(/[：（]/)[0].trim();
+    return t.slice(0, 18) || '活動電位';
+  }
+  function chipsRow(b, items) {
+    var d = document.createElement('div'); d.className = 'chips-q';
+    items.forEach(function (it) { var cb = document.createElement('button'); cb.type = 'button'; cb.textContent = it[0]; cb.onclick = function () { ask(it[1]); }; d.appendChild(cb); });
+    b.appendChild(d); scroll();
+  }
+  function talkReply(q, kind) {
+    var tk = TK(), text;
+    if (kind === 'encourage') text = pickOne(tk.r.encourage).replace(/\{u\}/g, you());
+    else { var o = talk.reply(q, 'normal', talkMem, new Date()); text = o.text; }
+    try { localStorage.setItem('jkp-ai-talk-' + CH.id, JSON.stringify(talkMem)); } catch (e) {}
+    lastTurn = 'talk'; talkTurns++;
+    var b = row('bot', esc(text).replace(/\n/g, '<br>'));
+    if (kind === 'encourage' || talkTurns >= 3) {
+      var t = topicChip();
+      if (kind !== 'encourage') { b.insertAdjacentHTML('beforeend', '<br>' + esc(pickOne(tk.r.nudge))); talkTurns = 0; }
+      chipsRow(b, [['「' + t + '」を聞く', t], ['1問だけやる', t + 'の過去問']]);
+    }
+  }
 
   function ask(q) {
     q = q.trim(); if (!q || busy) return;
     row('me', esc(q));
     if (!searcher) { row('bot', '資料を読み込み中…ちょっと待ってね。'); return; }
-    var r = searcher.search(q, { subj: conf.subj || urlSubj, limit: 6 }), hits, follow = false;
-    if (isFollowUp(q, r.kws)) { hits = lastHits; follow = true; }
+    if (!router) initTalk();
+    var rt = router ? router.route(q, { lastTurn: lastTurn, lastHits: lastHits, lastQ: lastQ }) : null;
+    var r = rt ? rt.r : searcher.search(q, { subj: conf.subj || urlSubj, limit: 6 }), hits, follow = false;
+    if (rt && (rt.kind === 'talk' || rt.kind === 'encourage') && talk) { talkReply(q, rt.kind); return; }
+    if (rt && rt.kind === 'follow' || !rt && isFollowUp(q, r.kws)) { followUp(q); return; }
     else {
-      // 見つからない判定：中身の語（2文字以上）がどの候補にも入っていない、または一致が少なすぎる
       var big = r.kws.filter(function (k) { return Array.from(k).length >= 2; });
       hits = r.hits.filter(function (h) { return h.cov >= 0.4; });
       var hasKw = !big.length || hits.slice(0, 3).some(function (h) { var t = S.norm(h.doc.t + ' ' + h.doc.x); return big.some(function (k) { return t.indexOf(k) >= 0; }); });
-      if (!hits.length || hits[0].cov < 0.5 || !hasKw) { row('bot', esc(CH.notFound)); return; }
-      lastHits = hits; lastQ = q;
+      if (rt ? rt.kind === 'notfound' : (!hits.length || hits[0].cov < 0.5 || !hasKw)) { row('bot', esc(CH.notFound)); lastTurn = 'study'; return; }
+      lastHits = hits; lastQ = q; lastTurn = 'study'; talkTurns = 0;
     }
-    var kws = follow ? S.keywords(lastQ) : r.kws, top = hits.slice(0, 3), rest = hits.slice(3);
-    var b = row('bot', esc(follow ? 'さっきの資料でいうと…' : CH.found) +
-      top.map(function (h, i) { return card(h, i + 1, kws); }).join('') +
-      (rest.length ? '<details class="rest"><summary>ほかの候補（' + rest.length + '件）</summary>' + rest.map(function (h, i) { return card(h, i + 4, kws); }).join('') + '</details>' : '') +
-      '<div class="ai-area"></div>');
+    var kws = r.kws, top = hits.slice(0, 3), rest = hits.slice(3);
+    lastSum = M.extract(top, kws, 'normal');
+    var b = row('bot', esc(CH.found) + (lastSum ? sumBox(lastSum, pickOne(CH.sumIntro || ['']), pickOne(CH.sumOutro || [''])) : '') +
+      '<details class="rest src" open><summary>資料（' + top.length + '件）</summary>' + top.map(function (h, i) { return card(h, i + 1, kws); }).join('') + '</details>' +
+      (rest.length ? '<details class="rest"><summary>ほかの候補（' + rest.length + '件）</summary>' + rest.map(function (h, i) { return card(h, i + 4, kws); }).join('') + '</details>' : ''));
+    studyChips(b);
+  }
+  // 資料から抜き出した「まとめ」（AIなし・常に表示）
+  function sumBox(sum, intro, outro) {
+    var t = M.toText(sum);
+    return '<div class="sum-box">' + (intro ? '<p class="sum-in">' + esc(intro) + '</p>' : '') + '<p>' + fmt(t) + '</p>' + (outro ? '<p class="sum-out">' + esc(outro.replace(/\{u\}/g, you())) + '</p>' : '') + '</div>';
+  }
+  function fmt(t) { return esc(t).replace(/\[(\d)\]/g, '<sup class="cite">[$1]</sup>').replace(/【([^】]+)】/g, '<b class="lbl">$1</b> ').replace(/(たとえるなら[:：][^\n]*)/g, '<span class="analogy">$1</span>').replace(/\n/g, '<br>'); }
+  function studyChips(b) { chipsRow(b, [['もっとかみ砕いて', 'もっとかみ砕いて'], ['たとえで', 'たとえで'], ['試験ではどう出る？', '試験ではどう出る？']]); }
+  function followUp(q) {
+    lastTurn = 'study'; talkTurns = 0;
+    var mode = L.followMode(q), top = lastHits.slice(0, 3), kws = S.keywords(lastQ);
+    var srcs = '<details class="rest"><summary>さっきの資料（' + top.length + '件）</summary>' + top.map(function (h, i) { return card(h, i + 1, kws); }).join('') + '</details>';
+    if (mode === 'exam' || mode === 'detail') { // 資料から抜き出し（AIなし）
+      var sum = M.extract(lastHits.slice(0, 6), kws, mode === 'detail' ? 'detail' : 'normal');
+      var qs = lastHits.filter(function (h) { return h.doc.k === 'q'; }).slice(0, 3);
+      var html = mode === 'exam'
+        ? esc(CH.examIntro || '試験ではこう出てるよ。') + (sum && sum.exam && !/^第\d+回/.test(sum.exam.s) ? '<div class="sum-box"><p>' + fmt('【試験では】' + sum.exam.s + '[' + sum.exam.n + ']') + '</p></div>' : '') +
+          (qs.length ? '<div class="sum-box"><b class="lbl">過去問</b><br>' + qs.map(function (h) { var a = (h.doc.x.match(/正解：([^\n]*)/) || [])[1] || ''; return esc(h.doc.t.replace(/^.*?過去問\s*/, '') + '：' + h.doc.q.stem + ' → 正解 ' + a); }).join('<br>') + '</div>' : '<p class="hint">この話題の過去問は、さっきの検索には入ってなかったよ。</p>')
+        : esc(CH.detailIntro || 'もう少しくわしく。') + (sum ? sumBox(sum, '', '') : '');
+      var bb = row('bot', html + srcs); studyChips(bb); return;
+    }
+    var say = mode === 'analogy' ? (CH.analogyIntro || 'たとえも入れて言うね。') : (CH.simpleIntro || 'もっとやさしく言うね。');
+    var b = row('bot', esc(say) + srcs + '<div class="ai-area"></div>');
     var area = b.querySelector('.ai-area');
-    if (!navigator.gpu) { area.innerHTML = '<p class="hint">この端末・ブラウザではAI説明が使えないから、資料だけ表示してるよ（検索はふつうに使えるよ）。</p>'; return; }
-    if (conf.auto && engine) explain(area, q, top);
+    var fallback = function (msg) { area.innerHTML = (lastSum ? '<div class="sum-box"><p>' + fmt('【ひとことで】' + lastSum.main.s + '[' + lastSum.main.n + ']') + '</p></div>' : '') + '<p class="hint">' + esc(msg) + '</p>'; studyChips(b); };
+    if (!navigator.gpu) { fallback('やさしい言いかえ・たとえ話はAI対応の端末（WebGPU）で使えるよ。いまは資料の要点だけ見せるね。'); return; }
+    var lq = lastQ + '（' + q + '）';
+    var go = function () { explain(area, lq, top, mode, lastSum, function () { studyChips(b); }); };
+    if (engine || localStorage.getItem(KEY + '-dl')) go();
     else {
       var btn = document.createElement('button'); btn.type = 'button'; btn.className = 'ai-btn';
-      btn.textContent = '✨ ' + CH.name + 'のAI説明' + (engine ? '' : '（初回はモデルを準備）');
-      btn.onclick = function () { btn.remove(); explain(area, q, top); };
+      btn.textContent = '✨ ' + CH.name + 'のAIで言いかえ（初回はモデルを準備）';
+      btn.onclick = function () { btn.remove(); go(); };
       area.appendChild(btn);
     }
   }
@@ -96,7 +170,7 @@
     })();
     return loading;
   }
-  async function explain(area, q, hits) {
+  async function explain(area, q, hits, mode, sum, done) {
     if (!engine && !localStorage.getItem(KEY + '-dl')) {
       if (!confirm('AI説明のために、はじめに一度だけモデル（' + modelInfo().size + '）をダウンロードするよ。Wi-Fiのときがおすすめ。続ける？')) {
         area.innerHTML = '<p class="hint">資料だけ表示してるよ。AI説明は⚙️からいつでも使えるよ。</p>'; return;
@@ -105,35 +179,42 @@
     }
     busy = true; $('send').disabled = true;
     var box = document.createElement('div'); box.className = 'ai-box';
-    box.innerHTML = '<div class="ai-h">✨ ' + esc(CH.name) + 'のAI説明' + '</div><p class="ai-t typing"><span></span><span></span><span></span></p><p class="ai-note">AIはまちがえることがあるよ。かならず上の資料で確かめてね。</p>';
+    box.innerHTML = '<div class="ai-h">✨ ' + esc(CH.name) + 'のAI言いかえ' + '</div><p class="ai-t typing"><span></span><span></span><span></span></p><p class="ai-note">AIはまちがえることがあるよ。かならず上の資料で確かめてね。</p>';
     area.appendChild(box); scroll();
     var out = box.querySelector('.ai-t'), txt = null, why = '';
     try {
       var eng = await loadEngine();
-      var msgs = L.messages(CH, q, hits);
+      var msgs = L.messages(CH, q, hits, mode, sum ? Mx.toText(sum) : '');
       for (var i = 0; i < 2 && !txt; i++) {
         var st = await eng.chat.completions.create(Object.assign({ stream: true, messages: msgs }, L.params, { temperature: i ? 0.2 : L.params.temperature }));
-        var s = '';
-        for await (var c of st) { s += (c.choices[0] && c.choices[0].delta && c.choices[0].delta.content) || ''; out.classList.remove('typing'); out.textContent = s; scroll(); }
-        s = L.clean(s); why = L.problem(s, q, hits);
+        var s = '', cut = false, n = 0;
+        for await (var c of st) {
+          s += (c.choices[0] && c.choices[0].delta && c.choices[0].delta.content) || '';
+          // 生の出力は見せない（チェックを通った文だけ表示する）
+          if ((++n % 4) === 0 && L.looping(s)) { cut = true; try { eng.interruptGenerate(); } catch (e) {} break; } // ループしたら止める
+        }
+        s = L.clean(s, cut, L.ctxOf(q, hits)); why = L.problem(s, q, hits, sum ? Mx.coreText(sum) : '');
+        if (cut && !why) why = null; // 切りつめて十分な長さなら使う
         if (!why || (why === 'keigo' && i === 1)) txt = s; else { out.classList.add('typing'); out.innerHTML = '<span></span><span></span><span></span>'; }
       }
     } catch (e) { why = 'error: ' + String(e && e.message || e).slice(0, 80); }
     busy = false; $('send').disabled = false;
-    if (txt) out.innerHTML = esc(txt).replace(/\[(\d)\]/g, '<sup class="cite">[$1]</sup>').replace(/\n/g, '<br>');
-    else { out.classList.remove('typing'); out.textContent = /^error/.test(why) ? '⚠️ AIが使えなかったよ（' + why.slice(7) + '）。上の資料を読んでみてね。' : 'うまく説明できなかったから、上の資料を読んでみてね。'; }
+    if (txt) {
+      out.innerHTML = fmt(txt);
+      if (/たとえるなら/.test(txt)) box.querySelector('.ai-note').textContent = '「たとえるなら」はイメージだよ。正確な内容は上の資料で確かめてね。';
+    }
+    else { out.classList.remove('typing'); if (sum) box.insertAdjacentHTML('beforebegin', '<div class="sum-box"><p>' + fmt('【ひとことで】' + sum.main.s + '[' + sum.main.n + ']') + '</p></div>'); out.textContent = /^error/.test(why) ? '⚠️ AIが使えなかったよ（' + why.slice(7) + '）。上の資料を読んでみてね。' : 'AIはうまく言いかえられなかったよ（小さいAIなので、まちがいそうな答えは出さないようにしてるの）。'; }
+    if (done) done();
     scroll();
   }
 
   // ---- 設定 ----
   function renderSettings() {
     $('modelSel').innerHTML = L.MODELS.map(function (m) { return '<option value="' + m.id + '"' + (m.id === conf.model ? ' selected' : '') + '>' + esc(m.label) + '</option>'; }).join('');
-    $('autoAi').checked = !!conf.auto;
     $('gpuNote').textContent = navigator.gpu ? 'この端末はAI説明に対応してるよ（WebGPU）。' : 'この端末・ブラウザはWebGPUがないので、AI説明は使えないよ（資料の検索は使えるよ）。';
     document.querySelectorAll('.subj-chip').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.subj === conf.subj)); });
   }
   $('modelSel').onchange = function (e) { conf.model = e.target.value; save(); };
-  $('autoAi').onchange = function (e) { conf.auto = e.target.checked; save(); };
   $('gear').onclick = function () { $('settings').hidden = !$('settings').hidden; };
   document.querySelectorAll('.subj-chip').forEach(function (b) { b.onclick = function () { conf.subj = b.dataset.subj; save(); renderSettings(); }; });
 
@@ -148,6 +229,7 @@
     document.title = CH.name + '｜解説AI｜柔道整復師 学習ポータル';
     $('chName').textContent = CH.name; $('chAv').src = CH.avatar;
     document.documentElement.style.setProperty('--ch', CH.color || '#1676ae');
+    router = null; lastTurn = null; talkTurns = 0;
     if (greet) row('bot', esc(CH.greeting));
   }
   function showPicker(first) {
