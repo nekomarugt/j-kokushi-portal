@@ -3,15 +3,15 @@
  * - ?v=hash assets : cache-first (immutable); images / fonts / icons : stale-while-revalidate
  * - Only touches Cache Storage entries prefixed "jkp-"; never touches localStorage.
  * Bump VERSION when changing this file's strategy or the precache list. */
-const VERSION = 'v35';
+const VERSION = 'v36';
 const PREFIX = 'jkp-';
 const PAGES = PREFIX + 'pages-' + VERSION;
 const STATIC = PREFIX + 'static-' + VERSION;
 const SCOPE = new URL('./', self.location).pathname; // "/j-kokushi-portal/"
 const PRECACHE = [
-  './', './backnav.js', './styles.css', './home.css', './why-card.js', './data/wrong-links.json', './game/game.css', './game/game.js', './game/avatars.js', './game/fx.js', './game/lore.js',
+  './', './backnav.js', './styles.css', './home.css', './why-card.js', './data/wrong-links.json', './data/trap-notes.json', './game/game.css', './game/game.js', './game/avatars.js', './game/fx.js', './game/lore.js',
   './gacha/', './gacha/gacha.js', './gacha/omikuji.js', './gacha/gacha.css', './manifest.webmanifest',
-  './ai/', './ai/ai.css', './ai/app.js', './ai/search.js', './ai/tutor-llm.js', './ai/character.js', './ai/talk-engine.js', './ai/talk-chars.js', './ai/router.js', './ai/summary.js', './ai/quiz.js', './ai/analogies.json', './ai/ask-button.js', './ai/chars/hinata-face.webp', './ai/chars/mio-face.webp',
+  // 解説AI（./ai/）は休止中のため先読みしない（コードは残してある）
   './icons/icon-192.png', './icons/icon-512.png', './icons/apple-touch-icon.png', './icons/favicon.svg'
 ];
 
