@@ -91,7 +91,7 @@
     if (kind === 'encourage' || talkTurns >= 3) {
       var t = topicChip();
       if (kind !== 'encourage') { b.insertAdjacentHTML('beforeend', '<br>' + esc(pickOne(tk.r.nudge))); talkTurns = 0; }
-      chipsRow(b, [['「' + t + '」を聞く', t], ['1問だけやる', t + 'の過去問']]);
+      chipsRow(b, [['1問いく！', '問題だして'], ['「' + t + '」の問題', t + 'の問題'], ['「' + t + '」を聞く', t]]);
     }
   }
 
@@ -100,6 +100,7 @@
     row('me', esc(q));
     if (!searcher) { row('bot', '資料を読み込み中…ちょっと待ってね。'); return; }
     if (!router) initTalk();
+    if (quizHook(q)) return;
     var rt = router ? router.route(q, { lastTurn: lastTurn, lastHits: lastHits, lastQ: lastQ }) : null;
     var r = rt ? rt.r : searcher.search(q, { subj: conf.subj || urlSubj, limit: 6 }), hits, follow = false;
     if (rt && (rt.kind === 'talk' || rt.kind === 'encourage') && talk) { talkReply(q, rt.kind); return; }
@@ -112,7 +113,11 @@
       lastHits = hits; lastQ = q; lastTurn = 'study'; talkTurns = 0;
     }
     var kws = r.kws, top = hits.slice(0, 3), rest = hits.slice(3);
-    lastSum = M.extract(top, kws, 'normal');
+    // 関係のうすい資料はまとめに混ぜない（弱い一致なら一番上だけ）
+    var bigK = kws.filter(function (k) { return Array.from(k).length >= 2; });
+    var rel = top.filter(function (h, i) { return i === 0 || bigK.some(function (k) { return S.norm(h.doc.t + ' ' + h.doc.x).indexOf(k) >= 0; }); });
+    if (top[0].cov < 0.7) rel = [top[0]];
+    lastSum = remap(M.extract(rel, kws, 'normal'), rel, top);
     var b = row('bot', esc(CH.found) + (lastSum ? sumBox(lastSum, pickOne(CH.sumIntro || ['']), pickOne(CH.sumOutro || [''])) : '') +
       '<details class="rest src" open><summary>資料（' + top.length + '件）</summary>' + top.map(function (h, i) { return card(h, i + 1, kws); }).join('') + '</details>' +
       (rest.length ? '<details class="rest"><summary>ほかの候補（' + rest.length + '件）</summary>' + rest.map(function (h, i) { return card(h, i + 4, kws); }).join('') + '</details>' : ''));
@@ -125,6 +130,121 @@
   }
   function fmt(t) { return esc(t).replace(/\[(\d)\]/g, '<sup class="cite">[$1]</sup>').replace(/【([^】]+)】/g, '<b class="lbl">$1</b> ').replace(/(たとえるなら[:：][^\n]*)/g, '<span class="analogy">$1</span>').replace(/\n/g, '<br>'); }
   function studyChips(b) { chipsRow(b, [['もっとかみ砕いて', 'もっとかみ砕いて'], ['たとえで', 'たとえで'], ['試験ではどう出る？', '試験ではどう出る？']]); }
+  function remap(sum, rel, top) { // rel の番号 → top の番号
+    if (!sum) return sum;
+    var f = function (o) { if (o) o.n = top.indexOf(rel[o.n - 1]) + 1; };
+    f(sum.main); sum.points.forEach(f); f(sum.exam); return sum;
+  }
+
+  // ---- 問題モード ----
+  var Qz = window.AITutorQuiz, quiz = null, seen = {}, score = { n: 0, ok: 0, streak: 0 };
+  function QL() { return CH.quiz || {}; }
+  function quizHook(q) {
+    if (!Qz) return false;
+    if (quiz && !quiz.done) {
+      var ai = Qz.answerOf(q, quiz.doc.q.choices);
+      if (ai !== null && ai >= 0) { answerQuiz(ai); return true; }
+      var c0 = Qz.command(q);
+      if (c0 === 'reveal') { answerQuiz(null); return true; }
+      if (c0 === 'hint') { hintQuiz(); return true; }
+      if (c0 === 'again') { showQuiz(quiz.doc, true); return true; }
+    }
+    var p = Qz.parse(q);
+    if (p) { startQuiz(p); return true; }
+    var c = Qz.command(q);
+    if (c && lastHits && lastTurn === 'study') {
+      if (c === 'memo') { memoReply(); return true; }
+      if (c === 'again' && quiz && quiz.done && lastQ === quiz.doc.q.stem) { quiz.done = false; quiz.hinted = []; showQuiz(quiz.doc, true); return true; }
+      if (c === 'summary' || c === 'again') { followUp('くわしく'); return true; }
+      if (c === 'reveal' && quiz && quiz.done) { var bb = row('bot', esc(QL().reveal || '') + quizAnswerHtml(quiz.doc)); quizChips(bb); return true; }
+      if (c === 'hint') { row('bot', esc('いまは問題を出してないよ。「問題だして」って言ってね。')); return true; }
+    }
+    if (c === 'memo' && lastHits) { memoReply(); return true; }
+    return false;
+  }
+  function pickQ(pool) {
+    var fresh = pool.filter(function (d) { return !seen[d.t]; });
+    if (!fresh.length) { fresh = pool; }
+    return fresh.length ? pickOne(fresh) : null;
+  }
+  function startQuiz(p) {
+    lastTurn = 'quiz'; talkTurns = 0;
+    var subj = p.subj || ((p.kind !== 'new' && quiz) ? quiz.subj : '') || conf.subj || urlSubj || '';
+    var qd = function (d) { return d.k === 'q' && d.q && !d.q.img && d.q.choices.length >= 2; }, pool, doc = null;
+    if (p.topic) {
+      var r = searcher.search(p.topic, { limit: 40 }), big = r.kws.filter(function (k) { return Array.from(k).length >= 2; });
+      pool = r.hits.map(function (h) { return h.doc; }).filter(function (d) { return qd(d) && (!subj || d.s === subj) && big.every(function (k) { return S.norm(d.x).indexOf(k) >= 0; }); });
+      var inStem = pool.filter(function (d) { return big.some(function (k) { return S.norm(d.q.stem).indexOf(k) >= 0; }); });
+      if (inStem.length) pool = inStem; // 問題文に出てくるものを優先
+    } else if (p.kind === 'same' && quiz) {
+      pool = searcher.search(quiz.doc.q.stem + ' ' + quiz.doc.q.choices.join(' '), { limit: 30 }).hits.map(function (h) { return h.doc; }).filter(function (d) { return qd(d) && d.s === quiz.doc.s && d !== quiz.doc; }).slice(0, 8);
+    } else pool = searcher.docs.filter(function (d) { return qd(d) && (!subj || d.s === subj); });
+    doc = pickQ(pool || []);
+    if (!doc) { row('bot', esc(QL().none || '問題が見つからなかったよ。')); return; }
+    seen[doc.t] = 1;
+    quiz = { doc: doc, subj: p.topic ? subj : (subj || ''), done: false, hinted: [] };
+    showQuiz(doc, false);
+  }
+  function showQuiz(doc, again) {
+    var b = row('bot', esc(again ? 'もう一回どうぞ。' : pickOne(QL().intro || ['1問どうぞ。'])) +
+      '<div class="quiz"><div class="quiz-h">' + esc(doc.t.replace(' 過去問', '')) + (score.streak >= 2 ? ' <span class="streak">🔥' + score.streak + '連続中</span>' : '') + '</div><p class="stem">' + esc(doc.q.stem) + '</p>' +
+      doc.q.choices.map(function (c, i) { return '<button type="button" class="qc" data-i="' + i + '">' + (i + 1) + '. ' + esc(c) + '</button>'; }).join('') +
+      '<p class="hint">番号をタップするか、「2」みたいに送ってね。「ヒント」「答え教えて」もOK。</p></div>');
+    quiz.el = b;
+    b.querySelectorAll('.qc').forEach(function (btn) { btn.onclick = function () { if (quiz && quiz.doc === doc && !quiz.done) { row('me', esc(btn.textContent)); answerQuiz(+btn.dataset.i); } }; });
+  }
+  function quizAnswerHtml(doc) {
+    var ans = doc.q.answers.map(function (i) { return (i + 1) + '. ' + doc.q.choices[i]; }).join('、');
+    var ex = doc.x.slice(doc.x.indexOf('正解：')).split('\n').slice(1).join('\n').trim();
+    var g = searcher.search(doc.q.stem + ' ' + doc.q.answers.map(function (i) { return doc.q.choices[i]; }).join(' '), { limit: 8 }).hits.filter(function (h) { return h.doc.k === 'g'; })[0];
+    return '<div class="sum-box"><p><b class="lbl">正解</b> ' + esc(ans) + '</p>' + (ex ? '<p>' + esc(ex).replace(/\n/g, '<br>') + '</p>' : '') +
+      (g ? '<p><a class="go" href="' + esc(g.doc.u) + '">📖 ' + esc(g.doc.t) + ' を読む →</a></p>' : '') + '</div>';
+  }
+  function quizChips(b) { chipsRow(b, [['次の問題', '次の問題'], ['もっとかみ砕いて', 'もっとかみ砕いて'], ['同じ分野でもう一問', '同じ分野でもう一問']]); }
+  function answerQuiz(i) {
+    var doc = quiz.doc, L2 = QL(), ok = i !== null && doc.q.answers.indexOf(i) >= 0, msg;
+    quiz.done = true; score.n++;
+    if (ok) { score.ok++; score.streak++; } else score.streak = 0;
+    if (quiz.el) quiz.el.querySelectorAll('.qc').forEach(function (btn) { var k = +btn.dataset.i; btn.disabled = true; if (doc.q.answers.indexOf(k) >= 0) btn.classList.add('ok'); else if (k === i) btn.classList.add('ng'); });
+    if (i === null) msg = L2.reveal || '答えはこれ。';
+    else if (ok) {
+      var st = score.streak;
+      msg = st >= 10 && st % 5 === 0 ? pickOne(L2.streak10) : st === 5 ? pickOne(L2.streak5) : st === 3 ? pickOne(L2.streak3) : pickOne(L2.right);
+    } else msg = pickOne(L2.wrong);
+    var b = row('bot', '<p class="verdict ' + (ok ? 'ok' : 'ng') + '">' + (ok ? '⭕ ' : i === null ? '📘 ' : '❌ ') + esc(msg) + (ok && score.streak >= 2 ? ' <span class="streak">🔥' + score.streak + '連続！</span>' : '') + '</p>' +
+      quizAnswerHtml(doc) + '<p class="score">' + esc((L2.score || '{n}問中{ok}問正解').replace('{n}', score.n).replace('{ok}', score.ok)) + '</p>');
+    if (ok) celebrate(score.streak);
+    // 「もっとかみ砕いて」用に、この問題と関連資料を「さっきの資料」にする
+    var r = searcher.search(doc.q.stem + ' ' + doc.q.answers.map(function (k) { return doc.q.choices[k]; }).join(' '), { limit: 6 });
+    lastHits = [{ doc: doc, cov: 1, score: 99 }].concat(r.hits.filter(function (h) { return h.doc !== doc; }).slice(0, 2));
+    lastQ = doc.q.stem; lastTurn = 'study'; lastSum = M.extract(lastHits, r.kws, 'normal');
+    quizChips(b);
+  }
+  function hintQuiz() {
+    var doc = quiz.doc, wrongs = doc.q.choices.map(function (c, i) { return i; }).filter(function (i) { return doc.q.answers.indexOf(i) < 0 && quiz.hinted.indexOf(i) < 0; });
+    if (wrongs.length <= 1) { row('bot', esc('もうヒントは出しきったよ。答えてみて！')); return; }
+    var x = pickOne(wrongs); quiz.hinted.push(x);
+    if (quiz.el) { var bt = quiz.el.querySelector('.qc[data-i="' + x + '"]'); if (bt) bt.classList.add('out'); }
+    row('bot', esc((QL().hint || '{x}番はちがうよ。').replace('{x}', x + 1)));
+  }
+  function celebrate(streak) {
+    var n = streak >= 3 ? 40 + Math.min(streak, 10) * 4 : 14, box = document.createElement('div'); box.className = 'confetti' + (streak >= 3 ? ' big' : '');
+    var cols = ['#f6c344', '#e46f6f', '#5ab0e8', '#6cc28a', '#b48ae6', CH.color || '#1676ae'];
+    for (var i = 0; i < n; i++) { var sp = document.createElement('i'); sp.textContent = streak >= 3 ? '' : '✦'; sp.style.left = (Math.random() * 100) + 'vw'; sp.style.background = streak >= 3 ? cols[i % cols.length] : 'none'; sp.style.color = cols[i % cols.length]; sp.style.animationDelay = (Math.random() * 0.4) + 's'; sp.style.setProperty('--dx', (Math.random() * 80 - 40) + 'px'); box.appendChild(sp); }
+    document.body.appendChild(box); setTimeout(function () { box.remove(); }, 2200);
+  }
+  function memoReply() {
+    lastTurn = 'study';
+    var r = searcher.search(lastQ + ' 覚え方', { limit: 12 }), out = [], kws = S.keywords(lastQ);
+    lastHits.concat(r.hits).forEach(function (h) {
+      if (!kws.some(function (k) { return Array.from(k).length < 2 || S.norm(h.doc.t + h.doc.x).indexOf(k) >= 0; })) return;
+      String(h.doc.x).split(/\n|(?<=。)/).forEach(function (sen) { if (/覚え|ゴロ|語呂|イメージ|コツ|つなげ|たとえ/.test(sen) && sen.length > 8 && out.length < 3 && out.indexOf(sen) < 0) out.push({ s: sen.replace(/^[■・\s]+/, ''), d: h.doc }); });
+    });
+    var html = out.length ? esc('資料にある覚え方だよ。') + '<div class="sum-box">' + out.map(function (o) { return '<p>・' + esc(o.s) + ' <a class="go" href="' + esc(o.d.u) + '">→</a></p>'; }).join('') + '</div>'
+      : esc('資料に語呂合わせは載ってないみたい。まずは要点をおさえよう。') + (lastSum ? sumBox(lastSum, '', '') : '');
+    var b = row('bot', html); studyChips(b);
+  }
+
   function followUp(q) {
     lastTurn = 'study'; talkTurns = 0;
     var mode = L.followMode(q), top = lastHits.slice(0, 3), kws = S.keywords(lastQ);
