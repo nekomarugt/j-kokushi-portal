@@ -14,6 +14,7 @@ ChatGPT Sites 上で公開していた学習ポータル一式を、手元で静
 | `/anatomy-guide/` | 解剖学 学習資料（**無料**・出題基準別15章／過去問526問から逆引き／印刷用 `print.html`） |
 | `/physiology-guide/` | 生理学 学習資料（**無料**・章別15章／図解34点／理解度チェック） |
 | `/clinical-guide/` | 一般臨床医学 学習資料（**無料**・総論・各論・疾患／図解37点） |
+| `/ai/` | 解説AI（ひなた先生／白石ミオから選ぶ）。質問を学習資料・過去問から検索（文字バイグラム＋BM25）して該当箇所をカードで表示し、WebGPU 対応端末ではブラウザ内AI（WebLLM・Qwen2.5 1.5B／0.5B）が資料だけをもとに短く説明。非対応端末は検索のみ |
 | `/map/` | 出題範囲マップ（解剖学は出題基準2022年版の大項目・中項目、生理学・一般臨床は資料の章・節ごとに、過去問数・頻出・「資料を読む」「過去問を解く」。データは `map/data.js`） |
 
 学習記録（正誤・苦手）は各過去問アプリが `localStorage` に保存します。過去問は登録・ログイン不要です。学習資料の全文は note（有料）で公開しています。
@@ -97,3 +98,15 @@ j-kokushi-portal/
 - `manifest.webmanifest`（start_url / scope = `/j-kokushi-portal/`）、`icons/`（自作SVG→PNG）、`sw.js` を配置。
 - 各ページの `<head>` に `<!-- PWA --> … <!-- /PWA -->` ブロック（manifest・apple-touch-icon・SW登録）。学習資料ページはマスター側（`physio-guide-paid/physiology-guide/index.html`・`_build_clinical/index.base.html`・`teasers/*/index.html`）にも入っているので `switch.sh` で消えない。
 - `sw.js`：HTML/JS/CSS/JSON はネットワーク優先（編集はすぐ反映、オフライン時のみキャッシュ）、`?v=` 付き資産はキャッシュ優先、画像は stale-while-revalidate。キャッシュ方式を変えたら `VERSION` を上げる。localStorage には触れない。
+
+## 解説AI（/ai/）
+
+- 検索インデックス `ai/search-index.json` は生成物です。**過去問・解説・学習資料を直したら再生成してコミット**してください：
+  ```bash
+  node tools/build-search-index.js
+  ```
+  対象：`*/questions.json` ×3、`anatomy/explanations.js`、3つの学習資料（本文・解説・深掘り）。`_` で始まるフォルダは読みません。
+  一般臨床の穴埋め語は、答えを見せた状態（「（問診）」のように括弧つき）で入れています。
+- キャラは `ai/character.js`（名前・顔アイコン・絵・話し方・あいさつ）。画像は `ai/chars/`。
+- 各学習資料・過去問ページ右下の「聞いてみる」ボタンは `ai/ask-button.js`（選択中の文字や表示中の問題文を渡します）。
+- `ai/` のファイルを変えたら `sw.js` の `VERSION` を上げてください。

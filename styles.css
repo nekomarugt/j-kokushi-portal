@@ -258,3 +258,6 @@ footer span::before {
 
 .study-card.workbook { grid-column: 1 / -1; border-left-color: #5b6b86; background: #f3f5f9; }
 .study-card.workbook:hover { border-color: #5b6b86; }
+
+.study-card.ai-tutor { border-left-color: #6a4bc4; background: #f3f0fb; }
+.study-card.ai-tutor:hover { border-color: #6a4bc4; }
