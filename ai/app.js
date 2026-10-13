@@ -6,7 +6,7 @@
   var log = $('log'), form = $('askForm'), input = $('askInput');
   var SUBJ = { anatomy: '解剖学', physiology: '生理学', clinical: '一般臨床' };
   var KEY = 'jkp-ai-tutor';
-  var conf = (function () { try { return Object.assign({ model: L.MODELS[0].id, auto: false, subj: '', char: '' }, JSON.parse(localStorage.getItem(KEY) || '{}')); } catch (e) { return { model: L.MODELS[0].id, auto: false, subj: '' }; } })();
+  var conf = (function () { try { return Object.assign({ model: L.MODELS[0].id, auto: false, subj: '', char: '', localAi: false, ext: 'grok' }, JSON.parse(localStorage.getItem(KEY) || '{}')); } catch (e) { return { model: L.MODELS[0].id, auto: false, subj: '' }; } })();
   if (!L.MODELS.some(function (m) { return m.id === conf.model; })) conf.model = L.MODELS[0].id; // 3B などの古い設定は 1.5B に戻す
   function save() { try { localStorage.setItem(KEY, JSON.stringify(conf)); } catch (e) {} }
   var params = new URLSearchParams(location.search);
@@ -129,7 +129,7 @@
     return '<div class="sum-box">' + (intro ? '<p class="sum-in">' + esc(intro) + '</p>' : '') + '<p>' + fmt(t) + '</p>' + (outro ? '<p class="sum-out">' + esc(outro.replace(/\{u\}/g, you())) + '</p>' : '') + '</div>';
   }
   function fmt(t) { return esc(t).replace(/\[(\d)\]/g, '<sup class="cite">[$1]</sup>').replace(/【([^】]+)】/g, '<b class="lbl">$1</b> ').replace(/(たとえるなら[:：][^\n]*)/g, '<span class="analogy">$1</span>').replace(/\n/g, '<br>'); }
-  function studyChips(b) { chipsRow(b, [['もっとかみ砕いて', 'もっとかみ砕いて'], ['たとえで', 'たとえで'], ['試験ではどう出る？', '試験ではどう出る？']]); }
+  function studyChips(b) { chipsRow(b, [['もっとかみ砕いて', 'もっとかみ砕いて'], ['たとえで', 'たとえで'], ['試験ではどう出る？', '試験ではどう出る？']]); extAsk(b); }
   function remap(sum, rel, top) { // rel の番号 → top の番号
     if (!sum) return sum;
     var f = function (o) { if (o) o.n = top.indexOf(rel[o.n - 1]) + 1; };
@@ -200,7 +200,7 @@
     return '<div class="sum-box"><p><b class="lbl">正解</b> ' + esc(ans) + '</p>' + (ex ? '<p>' + esc(ex).replace(/\n/g, '<br>') + '</p>' : '') +
       (g ? '<p><a class="go" href="' + esc(g.doc.u) + '">📖 ' + esc(g.doc.t) + ' を読む →</a></p>' : '') + '</div>';
   }
-  function quizChips(b) { chipsRow(b, [['次の問題', '次の問題'], ['もっとかみ砕いて', 'もっとかみ砕いて'], ['同じ分野でもう一問', '同じ分野でもう一問']]); }
+  function quizChips(b) { chipsRow(b, [['次の問題', '次の問題'], ['もっとかみ砕いて', 'もっとかみ砕いて'], ['同じ分野でもう一問', '同じ分野でもう一問']]); extAsk(b); }
   function answerQuiz(i) {
     var doc = quiz.doc, L2 = QL(), ok = i !== null && doc.q.answers.indexOf(i) >= 0, msg;
     quiz.done = true; score.n++;
@@ -243,6 +243,68 @@
     var html = out.length ? esc('資料にある覚え方だよ。') + '<div class="sum-box">' + out.map(function (o) { return '<p>・' + esc(o.s) + ' <a class="go" href="' + esc(o.d.u) + '">→</a></p>'; }).join('') + '</div>'
       : esc('資料に語呂合わせは載ってないみたい。まずは要点をおさえよう。') + (lastSum ? sumBox(lastSum, '', '') : '');
     var b = row('bot', html); studyChips(b);
+  }
+
+  // ---- 自分のAIで聞く（外部AI・ブラウザ内蔵AI） ----
+  var EXT = [
+    { id: 'grok', name: 'Grok', url: 'https://grok.com/?q=' },
+    { id: 'chatgpt', name: 'ChatGPT', url: 'https://chatgpt.com/?q=' },
+    { id: 'gemini', name: 'Gemini', open: 'https://gemini.google.com/app' },
+    { id: 'claude', name: 'Claude', open: 'https://claude.ai/new' },
+    { id: 'other', name: 'ほかのAI（コピー）' }
+  ];
+  function abs(u) { try { return new URL(u, location.href).href; } catch (e) { return u; } }
+  function buildPrompt(max) {
+    var hits = (lastHits || []).slice(0, 3), per = max ? Math.floor(max / Math.max(hits.length, 1)) : 1e9;
+    var src = hits.map(function (h, i) { var x = String(h.doc.x).replace(/\s+/g, ' ').trim(); if (x.length > per) x = x.slice(0, per) + '…'; return '[' + (i + 1) + '] ' + h.doc.t + '\n' + abs(h.doc.u) + '\n' + x; }).join('\n\n');
+    var q = lastQ || '';
+    if (quiz && quiz.doc && lastQ === quiz.doc.q.stem) q = '過去問「' + quiz.doc.q.stem + '」（選択肢：' + quiz.doc.q.choices.map(function (c, i) { return (i + 1) + '. ' + c; }).join(' ') + '）の答えと理由';
+    return 'あなたは柔道整復師国家試験の勉強を手伝う「' + CH.name + '」。' + (CH.persona || '').slice(0, 200) + '\n' +
+      '話し方：くだけたタメ口（敬語なし）。やさしく、短く。\n\n' +
+      '学生の質問：' + q + '\n\n' +
+      '参考資料（学習ポータルより）：\n' + src + '\n\n' +
+      'お願い：\n- 上の資料をもとに、中学生にもわかるくらいやさしく説明して。\n- 資料に書いてあることを優先して、使った資料は[1]のように番号で示して。\n- たとえ話を使うときは「たとえるなら：」と書いて、たとえだとわかるようにして。どこがたとえと違うかもひとこと添えて。\n- 自信がないことや資料にないことは「たぶん」「資料にはない」とはっきり言って。\n- 最後に試験で出やすいポイントを1行で。';
+  }
+  function toast(t) { var el = document.createElement('div'); el.className = 'toast'; el.textContent = t; document.body.appendChild(el); setTimeout(function () { el.remove(); }, 2600); }
+  function copyText(t) {
+    if (navigator.clipboard && navigator.clipboard.writeText) return navigator.clipboard.writeText(t).catch(function () { return legacyCopy(t); });
+    return Promise.resolve(legacyCopy(t));
+  }
+  function legacyCopy(t) { var ta = document.createElement('textarea'); ta.value = t; ta.style.position = 'fixed'; ta.style.opacity = '0'; document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); } catch (e) {} ta.remove(); }
+  function goExt(id) {
+    var s = EXT.filter(function (e) { return e.id === id; })[0] || EXT[0];
+    conf.ext = s.id; save();
+    var full = buildPrompt(0);
+    if (s.url) { var u = s.url + encodeURIComponent(buildPrompt(1500)); window.open(u, '_blank', 'noopener'); copyText(full); return u; }
+    copyText(full).then(function () { toast('質問をコピーしたよ。' + (s.open ? s.name + 'に' : '') + '貼り付けてね'); });
+    if (s.open) window.open(s.open, '_blank', 'noopener');
+    return s.id;
+  }
+  function hasBuiltin() { return typeof window.LanguageModel !== 'undefined' && !/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent); }
+  async function builtinAsk(area) {
+    area.innerHTML = '<div class="ai-box"><div class="ai-h">🧩 ブラウザ内蔵AI</div><p class="ai-t typing"><span></span><span></span><span></span></p><p class="ai-note">AIはまちがえることがあるよ。資料で確かめてね。</p></div>';
+    var out = area.querySelector('.ai-t');
+    try {
+      var av = await LanguageModel.availability();
+      if (av === 'unavailable') throw new Error('この端末では使えないみたい');
+      var ses = await LanguageModel.create();
+      var txt = '', st = ses.promptStreaming(buildPrompt(3000));
+      out.classList.remove('typing'); out.textContent = '';
+      for await (var c of st) { txt = c.length > txt.length && c.indexOf(txt) === 0 ? c : txt + c; out.innerHTML = fmt(txt); scroll(); }
+    } catch (e) { area.innerHTML = '<p class="ai-fail">' + esc('内蔵AIが使えなかったよ（' + String(e && e.message || e).slice(0, 60) + '）。') + '</p>'; }
+  }
+  function extAsk(b) {
+    if (!lastHits || !lastHits.length) return;
+    var order = EXT.slice().sort(function (x, y) { return (y.id === conf.ext) - (x.id === conf.ext); });
+    var d = document.createElement('details'); d.className = 'ext';
+    d.innerHTML = '<summary>🤖 自分のAIで聞く</summary><div class="ext-btns">' +
+      (hasBuiltin() ? '<button type="button" class="ext-b" data-id="builtin">🧩 ブラウザ内蔵AI（この画面で）</button>' : '') +
+      order.map(function (e) { return '<button type="button" class="ext-b' + (e.id === conf.ext ? ' last' : '') + '" data-id="' + e.id + '">' + esc(e.name) + (e.id === conf.ext ? ' ★' : '') + '</button>'; }).join('') +
+      '</div><div class="ext-area"></div><p class="ext-note">外部AIは各自の判断で使ってね（入力内容は各サービスに送られるよ）。資料の抜き出しと質問をいっしょに送るよ。</p>';
+    d.querySelectorAll('.ext-b').forEach(function (btn) {
+      btn.onclick = function () { if (btn.dataset.id === 'builtin') builtinAsk(d.querySelector('.ext-area')); else goExt(btn.dataset.id); };
+    });
+    b.appendChild(d);
   }
 
   // ---- たとえ（手書きのたとえ集から。AIには作らせない） ----
@@ -299,6 +361,7 @@
     var b = row('bot', esc(say) + srcs + '<div class="ai-area"></div>');
     var area = b.querySelector('.ai-area');
     var fallback = function (msg) { area.innerHTML = (lastSum ? '<div class="sum-box"><p>' + fmt('【ひとことで】' + lastSum.main.s + '[' + lastSum.main.n + ']') + '</p></div>' : '') + '<p class="hint">' + esc(msg) + '</p>'; studyChips(b); };
+    if (!conf.localAi) { fallback('もっと言いかえてほしいときは、下の「自分のAIで聞く」も使えるよ。'); return; }
     if (!navigator.gpu) { fallback('やさしい言いかえ・たとえ話はAI対応の端末（WebGPU）で使えるよ。いまは資料の要点だけ見せるね。'); return; }
     var lq = lastQ + '（' + q + '）';
     var go = function () { explain(area, lq, top, mode, lastSum, function () { studyChips(b); }); };
@@ -375,6 +438,7 @@
     $('gpuNote').textContent = navigator.gpu ? 'この端末はAI説明に対応してるよ（WebGPU）。' : 'この端末・ブラウザはWebGPUがないので、AI説明は使えないよ（資料の検索は使えるよ）。';
     document.querySelectorAll('.subj-chip').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.subj === conf.subj)); });
   }
+  $('localAi').checked = !!conf.localAi; $('localAi').onchange = function (e) { conf.localAi = e.target.checked; save(); };
   $('modelSel').onchange = function (e) { conf.model = e.target.value; save(); };
   $('gear').onclick = function () { $('settings').hidden = !$('settings').hidden; };
   document.querySelectorAll('.subj-chip').forEach(function (b) { b.onclick = function () { conf.subj = b.dataset.subj; save(); renderSettings(); }; });
