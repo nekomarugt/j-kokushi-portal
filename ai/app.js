@@ -245,6 +245,42 @@
     var b = row('bot', html); studyChips(b);
   }
 
+  // ---- たとえ（手書きのたとえ集から。AIには作らせない） ----
+  var analogies = null;
+  function loadAnalogies() { return analogies ? Promise.resolve(analogies) : fetch('analogies.json').then(function (r) { return r.json(); }).then(function (j) { return (analogies = j.items); }); }
+  function findAnalogy(items) {
+    var N = S.norm, q = N(lastQ || ''), h0 = lastHits && lastHits[0] ? N(lastHits[0].doc.t) : '', main = lastSum && lastSum.main ? N(lastSum.main.s) : '';
+    var rest = (lastHits || []).slice(0, 2).map(function (h) { return N(h.doc.x); }).join(' ');
+    var best = null, bs = 0;
+    items.forEach(function (it) {
+      var sc = 0, strong = false;
+      it.k.forEach(function (k) {
+        var kk = N(k), w = Array.from(kk).length;
+        if (q.indexOf(kk) >= 0) { sc += 6 + w; strong = true; }
+        if (h0.indexOf(kk) >= 0) { sc += 4 + w; strong = true; }
+        if (main.indexOf(kk) >= 0) sc += 3;
+        if (rest.indexOf(kk) >= 0) sc += 1;
+      });
+      if (strong && sc > bs) { bs = sc; best = it; }
+    });
+    return best;
+  }
+  function analogyReply(srcs) {
+    var A = CH.analogy || {};
+    loadAnalogies().then(function (items) {
+      var it = findAnalogy(items), b;
+      if (!it) {
+        b = row('bot', esc(A.none || 'これはいいたとえがないよ。'));
+        chipsRow(b, [['もっとかみ砕いて', 'もっとかみ砕いて'], ['試験ではどう出る？', '試験ではどう出る？']]); return;
+      }
+      b = row('bot', esc(A.intro || 'イメージで言うと：') +
+        '<div class="ana-box"><div class="ana-h">💡 たとえるなら（イメージだよ）</div><p class="ana-t">' + esc(it.t) + '</p>' +
+        '<p class="ana-c"><b>⚠️ ' + esc(A.caveat || 'たとえと違う所') + '</b><br>' + esc(it.c) + '</p></div>' +
+        (lastSum ? '<div class="sum-box"><p>' + fmt('【正確には】' + lastSum.main.s + '[' + lastSum.main.n + ']') + '</p></div>' : '') + srcs);
+      studyChips(b);
+    }).catch(function () { var b = row('bot', esc(A.none || 'たとえが読みこめなかったよ。')); studyChips(b); });
+  }
+
   function followUp(q) {
     lastTurn = 'study'; talkTurns = 0;
     var mode = L.followMode(q), top = lastHits.slice(0, 3), kws = S.keywords(lastQ);
@@ -258,6 +294,7 @@
         : esc(CH.detailIntro || 'もう少しくわしく。') + (sum ? sumBox(sum, '', '') : '');
       var bb = row('bot', html + srcs); studyChips(bb); return;
     }
+    if (mode === 'analogy') { analogyReply(srcs); return; }
     var say = mode === 'analogy' ? (CH.analogyIntro || 'たとえも入れて言うね。') : (CH.simpleIntro || 'もっとやさしく言うね。');
     var b = row('bot', esc(say) + srcs + '<div class="ai-area"></div>');
     var area = b.querySelector('.ai-area');
@@ -320,10 +357,14 @@
     } catch (e) { why = 'error: ' + String(e && e.message || e).slice(0, 80); }
     busy = false; $('send').disabled = false;
     if (txt) {
-      out.innerHTML = fmt(txt);
+      out.classList.remove('typing'); out.innerHTML = fmt(txt);
       if (/たとえるなら/.test(txt)) box.querySelector('.ai-note').textContent = '「たとえるなら」はイメージだよ。正確な内容は上の資料で確かめてね。';
     }
-    else { out.classList.remove('typing'); if (sum) box.insertAdjacentHTML('beforebegin', '<div class="sum-box"><p>' + fmt('【ひとことで】' + sum.main.s + '[' + sum.main.n + ']') + '</p></div>'); out.textContent = /^error/.test(why) ? '⚠️ AIが使えなかったよ（' + why.slice(7) + '）。上の資料を読んでみてね。' : 'AIはうまく言いかえられなかったよ（小さいAIなので、まちがいそうな答えは出さないようにしてるの）。'; }
+    else {
+      if (/^error/.test(why) && window.console) console.warn('AI言いかえ', why);
+      box.outerHTML = (sum ? '<div class="sum-box"><p>' + fmt('【ひとことで】' + sum.main.s + '[' + sum.main.n + ']') + '</p></div>' : '') +
+        '<p class="ai-fail">' + esc(/^error/.test(why) ? 'いまはAIが使えないみたい。要点はこれだよ。' : 'うまく言いかえられなかったから、資料の要点で見てね。') + '</p>';
+    }
     if (done) done();
     scroll();
   }

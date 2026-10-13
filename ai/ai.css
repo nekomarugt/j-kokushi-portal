@@ -101,3 +101,11 @@ body.picking .log, body.picking .ask, body.picking .sample { display: none; }
 @keyframes fall { to { transform: translate(var(--dx), 105vh) rotate(540deg); opacity: .9; } }
 @keyframes spark { 0% { transform: scale(.2); opacity: 0; } 30% { opacity: 1; } 100% { transform: translate(var(--dx), -30vh) scale(1.2); opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .confetti { display: none; } }
+
+.ai-t { display: block; word-break: normal; overflow-wrap: anywhere; }
+.ana-box { margin-top: 10px; padding: 10px 12px; border-radius: 12px; background: #fff7e0; border: 1px dashed #e0a526; }
+.ana-h { font-weight: 700; font-size: .88rem; color: #b07a0c; }
+.ana-t { margin: 4px 0; }
+.ana-c { margin: 6px 0 0; font-size: .85rem; color: #6b5a3a; }
+.ai-fail { margin: 6px 0 0; font-size: .78rem; color: #8a96a8; }
+.analogy { display: block; width: 100%; }
