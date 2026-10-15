@@ -1787,6 +1787,11 @@ window.anatomyChapters = [
      },
      {
       "kind": "zu",
+      "title": "肝臓の外から見た形（前・上・下）",
+      "html": "<p class=\"zu-cap\">前・上・下の3方向。無漿膜野・H字の溝・カントリー線（機能的な右葉/左葉の境界）を確認しよう。</p><figure class=\"mb-fig mb-zu-fig\"><a href=\"figures/liver_surface.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/liver_surface.svg\" width=\"560\" height=\"1124\" alt=\"肝臓の外表面：前面・上後面・臓側面の模式図\" loading=\"lazy\" decoding=\"async\"></a><small class=\"fig-zoom\">タップで拡大</small></figure>"
+     },
+     {
+      "kind": "zu",
       "title": "肝小葉",
       "html": "<p class=\"zu-cap\">小葉の角にグリソン鞘、中心に中心静脈。血液は周辺から中心へ。</p><figure class=\"mb-fig mb-zu-fig\"><a href=\"figures/fig-zu-liver-lobule.webp\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/fig-zu-liver-lobule.webp\" width=\"1120\" height=\"800\" alt=\"肝小葉の模式図\" loading=\"lazy\" decoding=\"async\"></a><small class=\"fig-zoom\">タップで拡大</small></figure>"
      },
