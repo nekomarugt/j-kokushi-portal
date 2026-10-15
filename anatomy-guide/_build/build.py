@@ -90,6 +90,8 @@ for _k, _zv in [(k, z) for k, v in _zm.items() for z in (v if isinstance(v, list
     _h = ('<p class="zu-cap">' + _z['caption'] + '</p><figure class="mb-fig mb-zu-fig"><a href="' + _src + '" target="_blank" rel="noopener">'
           '<img src="' + _src + '" width="' + str(_z['w']) + '" height="' + str(_z['h']) + '" alt="' + _z['alt'] + '" loading="lazy" decoding="async"></a>'
           '<small class="fig-zoom">タップで拡大</small></figure>')
+    if _z.get('go'):
+        _h += '<p class="mb-go"><span class="mb-k">つながり</span>' + ''.join('<a href="' + g[0] + '">' + g[1] + '</a>' for g in _z['go']) + '</p>'
     pt_by_id[_k][1].setdefault('boxes', []).append({'kind': 'zu', 'title': _z['title'], 'html': _h})
 chapter_of_code = {}
 for ch in chapters:

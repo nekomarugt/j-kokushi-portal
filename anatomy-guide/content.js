@@ -1439,7 +1439,7 @@ window.anatomyChapters = [
      {
       "kind": "zu",
       "title": "門脈に集まる静脈",
-      "html": "<p class=\"zu-cap\">門脈は脾静脈と上腸間膜静脈から。腎・副腎・精巣の静脈は下大静脈へ。</p><figure class=\"mb-fig mb-zu-fig\"><a href=\"figures/fig-myk-08-portal.webp\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/fig-myk-08-portal.webp\" width=\"1200\" height=\"1290\" alt=\"門脈に集まる静脈と下大静脈に直接入る静脈の模式図\" loading=\"lazy\" decoding=\"async\"></a><small class=\"fig-zoom\">タップで拡大</small></figure>"
+      "html": "<p class=\"zu-cap\">門脈は脾静脈と上腸間膜静脈から。腎・副腎・精巣の静脈は下大静脈へ。</p><figure class=\"mb-fig mb-zu-fig\"><a href=\"figures/fig-myk-08-portal.webp\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/fig-myk-08-portal.webp\" width=\"1200\" height=\"1290\" alt=\"門脈に集まる静脈と下大静脈に直接入る静脈の模式図\" loading=\"lazy\" decoding=\"async\"></a><small class=\"fig-zoom\">タップで拡大</small></figure><p class=\"mb-go\"><span class=\"mb-k\">つながり</span><a href=\"#digestive-8\">消化器：肝臓の外から見た形（肝門の位置）</a></p>"
      }
     ]
    },
@@ -1788,7 +1788,7 @@ window.anatomyChapters = [
      {
       "kind": "zu",
       "title": "肝臓の外から見た形（前・上・下）",
-      "html": "<p class=\"zu-cap\">前・上・下の3方向。無漿膜野・H字の溝・カントリー線（機能的な右葉/左葉の境界）を確認しよう。</p><figure class=\"mb-fig mb-zu-fig\"><a href=\"figures/liver_surface.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/liver_surface.svg\" width=\"560\" height=\"1124\" alt=\"肝臓の外表面：前面・上後面・臓側面の模式図\" loading=\"lazy\" decoding=\"async\"></a><small class=\"fig-zoom\">タップで拡大</small></figure>"
+      "html": "<p class=\"zu-cap\">前・上・下の3方向。無漿膜野・H字の溝・カントリー線（機能的な右葉/左葉の境界）を確認しよう。</p><figure class=\"mb-fig mb-zu-fig\"><a href=\"figures/liver_surface.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/liver_surface.svg\" width=\"560\" height=\"1124\" alt=\"肝臓の外表面：前面・上後面・臓側面の模式図\" loading=\"lazy\" decoding=\"async\"></a><small class=\"fig-zoom\">タップで拡大</small></figure><p class=\"mb-go\"><span class=\"mb-k\">つながり</span><a href=\"#vascular-11\">脈管：門脈に集まる静脈（肝門から入る血管）</a><a href=\"../physiology-guide/#lesson-digestion-3\">生理学：胆汁と腸肝循環</a></p>"
      },
      {
       "kind": "zu",
