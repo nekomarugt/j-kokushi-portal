@@ -3,14 +3,14 @@
  * - ?v=hash assets : cache-first (immutable); images / fonts / icons : stale-while-revalidate
  * - Only touches Cache Storage entries prefixed "jkp-"; never touches localStorage.
  * Bump VERSION when changing this file's strategy or the precache list. */
-const VERSION = 'v41';
+const VERSION = 'v42';
 const PREFIX = 'jkp-';
 const PAGES = PREFIX + 'pages-' + VERSION;
 const STATIC = PREFIX + 'static-' + VERSION;
 const SCOPE = new URL('./', self.location).pathname; // "/j-kokushi-portal/"
 const PRECACHE = [
   './', './backnav.js', './styles.css', './home.css', './why-card.js', './data/wrong-links.json', './data/trap-notes.json', './game/game.css', './game/game.js', './game/avatars.js', './game/fx.js', './game/lore.js',
-  './jitsuryoku/', './jitsuryoku/app.js', './jitsuryoku/gen.js', './jitsuryoku/kakera.json',
+  './jitsuryoku/', './jitsuryoku/app.js', './jitsuryoku/gen.js', './jitsuryoku/kakera.json', './stats/', './stats/stats.js',
   './gacha/', './gacha/gacha.js', './gacha/omikuji.js', './gacha/gacha.css', './manifest.webmanifest',
   // 解説AI（./ai/）は休止中のため先読みしない（コードは残してある）
   './icons/icon-192.png', './icons/icon-512.png', './icons/apple-touch-icon.png', './icons/favicon.svg'
