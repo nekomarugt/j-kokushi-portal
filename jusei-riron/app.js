@@ -787,7 +787,7 @@ function openSelector(mode) {
   } else {
     els.selectorKicker.textContent = "全問ランダム";
     els.selectorTitle.textContent = "必修も一般も混ぜる";
-    els.selectorDescription.textContent = "第18〜34回の全1140問からランダムに出題します。";
+    els.selectorDescription.textContent = "第18〜34回の全1144問からランダムに出題します。";
   }
   show(els.selector);
 }
