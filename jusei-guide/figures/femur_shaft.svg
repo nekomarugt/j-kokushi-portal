@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="sans-serif" font-size="13"><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="#c0392b"/></marker></defs><rect width="480" height="300" fill="#fff"/><text x="20" y="24" font-weight="bold" font-size="14">大腿骨骨幹部骨折（上部）：骨片を引く筋（正面・模式図）</text>
+<circle cx="120" cy="65" r="20" fill="#ecf0f1" stroke="#2c3e50" stroke-width="2"/><path d="M135,75 L160,95 L170,140" fill="none" stroke="#2c3e50" stroke-width="16" stroke-linecap="round"/>
+<line x1="168" y1="148" x2="148" y2="270" stroke="#2c3e50" stroke-width="16" stroke-linecap="round"/>
+<line x1="150" y1="150" x2="190" y2="146" stroke="#c0392b" stroke-width="3" stroke-dasharray="5 3"/>
+<line x1="175" y1="110" x2="215" y2="95" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/><text x="222" y="92">近位骨片：外転（中殿筋・小殿筋）</text>
+<line x1="165" y1="120" x2="180" y2="88" stroke="#d68910" stroke-width="3" marker-end="url(#a)"/><text x="222" y="115">　　　　　屈曲（腸腰筋）・外旋</text>
+<line x1="155" y1="210" x2="125" y2="175" stroke="#2980b9" stroke-width="3" marker-end="url(#a)"/><text x="222" y="200" fill="#2980b9">遠位骨片：内転筋群に引かれて</text><text x="222" y="218" fill="#2980b9">　　　　　内上方へ（短縮）</text>
+<text x="20" y="292" font-size="12">出血が多くショックや脂肪塞栓に注意。</text></svg>
