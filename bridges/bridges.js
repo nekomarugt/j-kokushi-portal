@@ -6,13 +6,14 @@
 (function () {
   'use strict';
   var p = location.pathname;
-  var kind = /\/physiology-guide\//.test(p) ? 'phys' : /\/anatomy-guide\//.test(p) ? 'anat' : /\/clinical-guide\//.test(p) ? 'clin' : '';
+  var kind = /\/physiology-guide\//.test(p) ? 'phys' : /\/anatomy-guide\//.test(p) ? 'anat' : /\/clinical-guide\//.test(p) ? 'clin' : /\/jusei-guide\//.test(p) ? 'jusei' : '';
   if (!kind || !window.fetch) return;
-  var HREF = { anat: '../anatomy-guide/#', phys: '../physiology-guide/#', clin: '../clinical-guide/#' };
+  var HREF = { anat: '../anatomy-guide/#', phys: '../physiology-guide/#', clin: '../clinical-guide/#', jusei: '../jusei-guide/#' };
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
   function link(side, item, pre) { return '<a href="' + HREF[side] + esc(item.id) + '" data-bridge-to="' + esc(item.id) + '">' + esc((pre || '') + (item.label || item.t)) + '</a>'; }
 
   var byPhys = {}, back = {}, order = [];
+  var byJusei = {}, backJ = {}; // 柔整理論 ⇄ 解剖（rows に jusei を持つ行）
   function addBack(id, ph) {
     var list = back[id] || (back[id] = []);
     if (!list.some(function (x) { return x.id === ph.id; })) list.push(ph);
@@ -26,6 +27,10 @@
         });
         (row.anatomy || []).forEach(function (a) { (row.physiology || []).forEach(function (ph) { addBack('a:' + a.id, ph); }); });
         (row.clinical || []).forEach(function (c) { (row.physiology || []).forEach(function (ph) { addBack('c:' + c.id, ph); }); });
+        (row.jusei || []).forEach(function (j) {
+          (byJusei[j.id] || (byJusei[j.id] = [])).push(row);
+          (row.anatomy || []).forEach(function (a) { var l = backJ[a.id] || (backJ[a.id] = []); if (!l.some(function (x) { return x.id === j.id; })) l.push(j); });
+        });
       });
     });
   }
@@ -62,7 +67,40 @@
     return el;
   }
 
+  function juseiBar(id) {
+    var rows = byJusei[id];
+    var html = rows.map(function (r) {
+      return '<div class="bridge-row"><p class="bridge-gland"><strong>' + esc(r.topic) + '</strong></p>' +
+        (r.anatomy && r.anatomy.length ? '<p class="mb-go"><span class="mb-k">← 解剖（骨・筋・神経）</span>' + r.anatomy.map(function (x) { return link('anat', x); }).join('') + '</p>' : '') +
+        (r.hint ? '<p class="bridge-hint">' + esc(r.hint) + '</p>' : '') + '</div>';
+    }).join('');
+    var d = document.createElement('details');
+    d.className = 'bridge';
+    d.setAttribute('data-bridge', id);
+    d.innerHTML = '<summary><span class="bridge-badge">つながり</span><span class="bridge-title">← 解剖：' + esc(rows[0].anatomy.map(function (x) { return x.label || x.t; }).slice(0, 3).join('・')) + '</span><span class="bridge-open" aria-hidden="true">ひらく</span></summary>' +
+      '<div class="bridge-body">' + html + '</div>';
+    return d;
+  }
   function apply() {
+    if (kind === 'jusei') {
+      Object.keys(byJusei).forEach(function (id) {
+        var card = document.getElementById(id);
+        var body = card && card.querySelector('.lesson-body');
+        if (body && !body.querySelector('[data-bridge]')) body.insertBefore(juseiBar(id), body.firstChild);
+      });
+      return;
+    }
+    if (kind === 'anat') {
+      Object.keys(backJ).forEach(function (aid) {
+        var t = document.getElementById(aid), body = t && t.querySelector('.lesson-body');
+        if (!body || body.querySelector('[data-bridge-j]')) return;
+        var el = document.createElement('p');
+        el.className = 'mb-go bridge-back';
+        el.setAttribute('data-bridge-j', aid);
+        el.innerHTML = '<span class="mb-k">ケガ・骨折では柔整理論へ</span>' + backJ[aid].map(function (x) { return link('jusei', x, '柔整理論：'); }).join('');
+        body.insertBefore(el, body.firstChild);
+      });
+    }
     if (kind === 'phys') {
       order.forEach(function (id) {
         var card = document.getElementById(id);
