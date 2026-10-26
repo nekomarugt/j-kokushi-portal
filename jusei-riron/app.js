@@ -961,6 +961,15 @@ function launchFromField() {
   startQuiz(shuffled(questions.filter((question) => (question.category || "その他") === f)));
 }
 
+// 学習資料・頻出MAPから ?topic=fx_up:clav（項目）や ?qid=20-78（1問）で来たら、それを出題する
+function launchFromTopic() {
+  const p = new URLSearchParams(location.search), t = p.get("topic"), id = p.get("qid");
+  if (!t && !id) return;
+  window.history.replaceState(null, "", location.pathname);
+  const items = id ? questions.filter((q) => q.id === id) : shuffled(questions.filter((q) => q.topic === t));
+  if (items.length) startQuiz(items);
+}
+
 function renderRelatedTopics(question) {
   const relevant = question.topicIds.map((id) => TOPIC_MAP.get(id)).filter(Boolean);
   els.relatedTopics.replaceChildren();
@@ -1021,7 +1030,7 @@ function paintAnswer(question, correct) {
   els.feedbackExplanation.textContent = question.explanation;
   renderXlink(question);
   renderRelatedTopics(question);
-  if (false && window.JKWhy) JKWhy.show({ subj: "jri", id: question.id, question, picked: [...selected], correct, feedback: els.feedback, before: els.feedbackExplanation });
+  if (window.JKWhy) JKWhy.show({ subj: "jri", id: question.id, question, picked: [...selected], correct, feedback: els.feedback, before: els.feedbackExplanation });
   els.nextButton.textContent = position === queue.length - 1 ? "結果を見る" : "次の問題へ";
   els.feedback.classList.remove("is-hidden");
   els.nextButton.focus({ preventScroll: true });
@@ -1297,6 +1306,7 @@ fetch("./questions.json")
       if (resumeQuiz()) return;
       launchFromGuide();
       launchFromField();
+      launchFromTopic();
     });
   })
   .catch(() => show(els.error));

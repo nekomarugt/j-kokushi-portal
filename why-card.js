@@ -4,7 +4,7 @@
 (function () {
   'use strict';
   var me = document.currentScript, ROOT = new URL('./', (me && me.src) || location.href).href;
-  var GUIDE = { ana: ['anatomy-guide/', '解剖学'], phy: ['physiology-guide/', '生理学'], cli: ['clinical-guide/', '一般臨床'] };
+  var GUIDE = { ana: ['anatomy-guide/', '解剖学'], phy: ['physiology-guide/', '生理学'], cli: ['clinical-guide/', '一般臨床'], jri: ['jusei-guide/', '柔道整復理論'] };
   var links = null, traps = null;
   var get = function (f) { return fetch(ROOT + 'data/' + f).then(function (r) { return r.json(); }).catch(function () { return {}; }); };
   var wait = Promise.all([get('wrong-links.json'), get('trap-notes.json')]).then(function (a) { links = a[0]; traps = a[1]; });

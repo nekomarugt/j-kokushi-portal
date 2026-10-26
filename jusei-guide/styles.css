@@ -1,0 +1,19 @@
+body{margin:0;font-family:system-ui,"Hiragino Sans","Noto Sans JP",sans-serif;background:#f4f7f6;color:#10213e;line-height:1.7}
+.hd{background:#103f3a;color:#fff;padding:18px 16px}.hd h1{margin:0;font-size:1.35rem}.hd p{margin:4px 0 0;font-size:.85rem;opacity:.9}
+.notice{background:#fff6e5;padding:8px 16px;font-size:.8rem}
+.map-strip{display:flex;flex-wrap:wrap;gap:10px;padding:10px 16px}.map-strip a{color:#1676ae;font-weight:700}
+main{max-width:860px;margin:0 auto;padding:0 12px 80px}
+.toc{display:flex;flex-wrap:wrap;gap:6px;background:#fff;border-radius:12px;padding:12px;margin-bottom:14px}.toc b{width:100%;font-size:.85rem}
+.toc a{font-size:.82rem;padding:3px 9px;border-radius:999px;background:#e6f0ee;color:#103f3a;text-decoration:none}
+.sec{background:#fff;border-radius:14px;padding:14px 16px;margin:14px 0;scroll-margin-top:10px}
+.sh{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px}.sh h2{margin:0;font-size:1.15rem;color:#103f3a}.cnt{font-size:.78rem;background:#fde2e2;color:#8f2d2d;border-radius:999px;padding:1px 8px;font-weight:700}
+.lead{font-weight:700;margin:8px 0}
+.conn{display:flex;flex-wrap:wrap;gap:8px;align-items:center;background:#eef5fb;border-radius:10px;padding:6px 10px;font-size:.85rem}.conn .cl{font-weight:800;color:#1676ae}.conn a{color:#1676ae}
+.pts li{margin:4px 0}
+.fig{margin:10px 0;text-align:center}.fig img{max-width:100%;border:1px solid #dde;border-radius:10px}.fig figcaption{font-size:.78rem;color:#555}
+.why{background:#f0faf4;border-left:4px solid #27ae60;border-radius:8px;padding:6px 12px;margin:10px 0}.why h3{margin:2px 0;font-size:.95rem;color:#105b3a}.why p{margin:4px 0}
+.old{font-size:.85rem;background:#f5f5f5;border-radius:8px;padding:6px 10px}
+.deep{border:1px solid #cfd8dc;border-radius:10px;padding:6px 12px;margin:8px 0}.deep summary{cursor:pointer;font-weight:700;color:#4a5872}
+.qs h3{font-size:.95rem;margin:12px 0 4px}.qs ul{padding-left:18px;font-size:.85rem}.qs a{color:#1676ae}
+.go{display:inline-block;background:#1676ae;color:#fff!important;padding:6px 14px;border-radius:999px;text-decoration:none;font-weight:800}
+.portal-dock{position:fixed;left:12px;bottom:12px;background:#103f3a;color:#fff;padding:8px 14px;border-radius:999px;text-decoration:none;font-size:.85rem}

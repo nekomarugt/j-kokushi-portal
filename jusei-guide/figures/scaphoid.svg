@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 260" font-family="sans-serif" font-size="14"><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="#c0392b"/></marker></defs><rect width="480" height="260" fill="#fff"/><text x="20" y="24" font-weight="bold">手の舟状骨：血流の向き（模式図）</text>
+<ellipse cx="240" cy="135" rx="150" ry="55" fill="#ecf0f1" stroke="#2c3e50" stroke-width="3"/>
+<line x1="235" y1="75" x2="245" y2="195" stroke="#c0392b" stroke-width="4" stroke-dasharray="8 5"/><text x="205" y="225" fill="#c0392b">腰部の骨折</text>
+<text x="105" y="140">近位骨片</text><text x="300" y="140">遠位骨片</text>
+<line x1="430" y1="135" x2="395" y2="135" stroke="#2980b9" stroke-width="4" marker-end="url(#a)"/><line x1="300" y1="160" x2="160" y2="160" stroke="#2980b9" stroke-width="2" stroke-dasharray="4 4"/>
+<text x="330" y="70" fill="#2980b9" font-size="12">血管は遠位側から入る</text><text x="60" y="200" font-size="12">→近位骨片は血流が途絶えやすい</text></svg>

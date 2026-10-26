@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 260" font-family="sans-serif" font-size="14"><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="#c0392b"/></marker></defs><rect width="480" height="260" fill="#fff"/><text x="20" y="24" font-weight="bold">鎖骨骨折の定型的転位（模式図）</text>
+<text x="30" y="240" fill="#555">胸骨側（近位）</text><text x="350" y="240" fill="#555">肩峰側（遠位）</text>
+<path d="M40,150 Q120,120 230,135" stroke="#2c3e50" stroke-width="16" fill="none" stroke-linecap="round" transform="rotate(-8 230 135)"/>
+<path d="M255,175 Q340,185 430,160" stroke="#7f8c8d" stroke-width="16" fill="none" stroke-linecap="round"/>
+<line x1="215" y1="110" x2="215" y2="55" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/><text x="105" y="60">胸鎖乳突筋</text><text x="105" y="78" font-size="12">→近位骨片は上方へ</text>
+<line x1="330" y1="195" x2="330" y2="230" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/><text x="345" y="215" font-size="12">上肢の重さ→下方</text>
+<line x1="275" y1="170" x2="235" y2="200" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/><text x="120" y="215" font-size="12">大胸筋など→前内方・短縮</text>
+<text x="228" y="160" font-size="12" fill="#2980b9">中央・遠位1/3境界部</text></svg>

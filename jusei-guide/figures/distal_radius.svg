@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 260" font-family="sans-serif" font-size="14"><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="#c0392b"/></marker></defs><rect width="480" height="260" fill="#fff"/><text x="20" y="24" font-weight="bold">橈骨遠位端部骨折（側面の模式図）</text>
+<text x="40" y="55">コーレス骨折（伸展型）</text><rect x="40" y="110" width="140" height="30" fill="#ecf0f1" stroke="#2c3e50" stroke-width="3"/>
+<rect x="185" y="90" width="40" height="30" fill="#bdc3c7" stroke="#2c3e50" stroke-width="3" transform="rotate(-12 205 105)"/>
+<line x1="205" y1="85" x2="205" y2="60" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/><text x="40" y="170" font-size="12">遠位骨片：背側へ（フォーク状変形）</text>
+<text x="270" y="55">スミス骨折（屈曲型）</text><rect x="270" y="90" width="140" height="30" fill="#ecf0f1" stroke="#2c3e50" stroke-width="3"/>
+<rect x="415" y="112" width="40" height="30" fill="#bdc3c7" stroke="#2c3e50" stroke-width="3" transform="rotate(12 435 127)"/>
+<line x1="435" y1="148" x2="435" y2="175" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/><text x="270" y="200" font-size="12">遠位骨片：掌側へ</text>
+<text x="20" y="245" font-size="11" fill="#555">上＝手背側／下＝手掌側、右端が手首側</text></svg>

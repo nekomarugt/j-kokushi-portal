@@ -2,7 +2,7 @@
 (function () {
   "use strict";
   var D = window.JKMap || {};
-  var SUBJ = ["anatomy", "physiology", "clinical"];
+  var SUBJ = ["anatomy", "physiology", "clinical", "jusei"];
   var subj = SUBJ.indexOf(location.hash.replace("#", "")) >= 0 ? location.hash.replace("#", "") : "anatomy";
   var sortFreq = false, openState = {};
   var body = document.getElementById("mapBody");
@@ -58,7 +58,7 @@
         top.appendChild(b2); row.appendChild(top);
         if (r.t) row.appendChild(h("p", "map-pt", "よく出る所：" + r.t));
         var act = h("div", "map-act");
-        var a1 = h("a", "map-btn", "資料を読む"); a1.href = r.r; act.appendChild(a1);
+        if (r.r) { var a1 = h("a", "map-btn", "資料を読む"); a1.href = r.r; act.appendChild(a1); }
         if (r.s) { var a2 = h("a", "map-btn map-btn2", "過去問を解く"); a2.href = r.s; act.appendChild(a2); }
         else act.appendChild(h("span", "map-none", "この項目の過去問はまだありません"));
         row.appendChild(act); bd.appendChild(row);
