@@ -886,7 +886,7 @@ function setsMatch(a, b) {
 let linkData = null;
 
 function loadLinks() {
-  return fetch("./guidelinks-none.json")
+  return fetch("./guidelinks.json")
     .then((response) => {
       if (!response.ok) throw new Error("guidelinks unavailable");
       return response.json();
@@ -917,7 +917,7 @@ function renderXlink(question) {
     if (!sec) return;
     const link = document.createElement("a");
     link.className = "xlink-item" + (index === 0 ? " is-main" : "");
-    link.href = `../clinical-guide/#sec-${sec.c}-${sec.i}`;
+    link.href = `../jusei-guide/#lesson-${sec.c}-${sec.i}`;
     link.target = "_blank";
     link.rel = "noopener";
     link.textContent = `${sec.cn}：${sec.t}`;

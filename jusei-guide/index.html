@@ -1,18 +1,73 @@
 <!doctype html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="theme-color" content="#103f3a" />
-<meta name="description" content="柔道整復理論の国家試験対策・授業復習用の個人制作補助教材。" />
-<title>柔道整復理論 学習資料</title>
-<link rel="stylesheet" href="./styles.css?v=1" />
-<script>if("serviceWorker"in navigator){addEventListener("load",function(){navigator.serviceWorker.register("../sw.js",{scope:"../"}).catch(function(){})})}</script>
-<script src="../backnav.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b5ea8">
+  <!-- PWA -->
+  <link rel="manifest" href="../manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="柔整国試" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <script>if("serviceWorker"in navigator){addEventListener("load",function(){navigator.serviceWorker.register("../sw.js",{scope:"../"}).catch(function(){})})}</script>
+  <!-- /PWA -->
+  <meta name="description" content="柔道整復理論を章別に整理した国家試験対策・授業復習用の学習資料です。">
+  <title>柔道整復理論 学習資料</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b5ea8'/%3E%3Cpath d='M9 34h10l5-13 9 27 7-18 5 10h10' fill='none' stroke='white' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="../backnav.js"></script>
 </head>
 <body>
-<header class="hd"><h1>柔道整復理論 学習資料</h1><p>各論・上肢の骨折（パイロット版）｜教科書の要点を自分の言葉でまとめた補助教材</p></header>
-<div class="notice">本サイトは国家試験対策・授業復習のための補助教材です。診療・臨床判断の根拠として使用するものではありません。数値（固定期間・角度など）は必ず教科書で確認してください。</div>
-<nav class="map-strip"><a href="../map/#jusei">出題範囲マップ：どこがよく出る？ →</a><a href="../jusei-riron/">柔道整復理論の過去問へ →</a></nav>
-<main><nav id="toc" class="toc" aria-label="目次"></nav><div id="body"></div></main>
-<a class="portal-dock" href="../">← 学習ポータルへ戻る</a>
-<script src="./app.js?v=1"></script>
-</body></html>
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">柔</span>
+      <div>
+        <h1>柔道整復理論 学習資料</h1>
+        <p>国家試験対策・授業復習用（パイロット版：各論・上肢の骨折）</p>
+      </div>
+    </div>
+    <button id="answerToggle" class="answer-toggle" type="button" aria-pressed="true">赤字を隠す</button>
+  </header>
+
+  <div class="notice">
+    本サイトは国家試験対策・授業復習のための補助教材です。医学的エビデンスや診療・臨床判断の根拠として使用するものではありません。固定期間・角度などの数値は必ず教科書で確認してください。
+  </div>
+
+  <nav class="map-strip" aria-label="出題範囲マップ"><a href="../map/#jusei">出題範囲マップ：どこがよく出る？ →</a></nav>
+  <main class="app-shell">
+    <nav class="chapter-nav" aria-label="章を選ぶ">
+      <div id="chapterTabs" class="chapter-tabs" role="tablist"></div>
+    </nav>
+
+    <section class="chapter-stage">
+      <div id="chapterIntro" class="chapter-intro"></div>
+      <div id="accToolbar" class="acc-toolbar"></div>
+      <div id="sectionList" class="section-list"></div>
+      <div id="chapterDeepDive"></div>
+      <div id="chapterQuiz" class="chapter-quiz"></div>
+      <div class="chapter-pager">
+        <button id="prevChapter" type="button">前の章</button>
+        <button id="nextChapter" type="button">次の章</button>
+      </div>
+    </section>
+  </main>
+
+  <a class="portal-dock" href="../" aria-label="学習ポータルへ戻る">← 学習ポータルへ戻る</a>
+
+  <footer>
+    <a href="../jusei-riron/">柔道整復理論 国家試験過去問へ</a>
+    <button id="toTop" type="button">ページ上部へ</button>
+  </footer>
+
+  <dialog id="imageViewer" class="image-viewer" aria-labelledby="viewerCaption">
+    <div class="viewer-toolbar"><p id="viewerCaption"></p><button id="closeImageViewer" type="button" autofocus>閉じる</button></div>
+    <div class="viewer-scroll"><img id="viewerImage" alt=""></div>
+  </dialog>
+  <script src="content.js"></script>
+  <script src="deepdive.js"></script>
+  <script src="app.js"></script>
+  <script src="../bridges/bridges.js" defer></script>
+</body>
+</html>
