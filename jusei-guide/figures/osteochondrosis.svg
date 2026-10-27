@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 260" font-family="sans-serif" font-size="14"><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="#c0392b"/></marker></defs><rect width="480" height="260" fill="#fff"/><text x="20" y="24" font-weight="bold">主な骨端症の部位と、この資料での扱い（模式図）</text>
+<g font-size="12">
+<rect x="20" y="40" width="14" height="14" fill="#c0392b"/><text x="40" y="52">柔整理論でしっかり</text>
+<rect x="170" y="40" width="14" height="14" fill="#e67e22"/><text x="190" y="52">要点のみ（詳細は整形外科学）</text>
+<rect x="20" y="62" width="14" height="14" fill="#2980b9"/><text x="40" y="74">概念（部位と年齢）だけ</text>
+<path d="M200,130 L200,245" stroke="#bdc3c7" stroke-width="18" stroke-linecap="round"/>
+<text x="20" y="104" fill="#e67e22">ペルテス病＝大腿骨頭</text>
+<text x="20" y="122" fill="#e67e22">すべり症＝骨頭の骨端線</text>
+<text x="220" y="160" fill="#c0392b">オスグッド＝脛骨粗面</text>
+<text x="220" y="142" fill="#555">シンディング・L・ヨハンソン＝膝蓋骨下端（軽く）</text>
+<text x="220" y="178" fill="#c0392b">離断性骨軟骨炎＝大腿骨内側顆</text>
+<text x="220" y="214" fill="#2980b9">第1ケーラー＝足の舟状骨</text><text x="220" y="250" fill="#2980b9">フライバーグ（第2ケーラー）＝第2中足骨頭</text>
+<text x="220" y="232" fill="#2980b9">セーバー＝踵骨の骨端</text>
+<text x="260" y="104" fill="#c0392b">上肢：パナー病＝上腕骨小頭</text>
+<text x="260" y="122" fill="#555">（キーンベック病＝月状骨・成人）</text>
+</g></svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 260" font-family="sans-serif" font-size="14"><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="#c0392b"/></marker></defs><rect width="480" height="260" fill="#fff"/><text x="20" y="24" font-weight="bold">膝関節前方脱臼（側面・模式図）</text>
+<text x="20" y="46" font-size="12" fill="#555">左が前・右が後ろ</text>
+<path d="M190,40 L215,40 L222,128 Q205,150 180,140 L185,40z" fill="#ecf0f1" stroke="#2c3e50" stroke-width="2"/>
+<text x="120" y="80" font-size="12">大腿骨</text>
+<path d="M120,150 L200,150 L192,250 L140,250z" fill="#d5dbdb" stroke="#2c3e50" stroke-width="2"/>
+<text x="70" y="210" font-size="12">脛骨</text>
+<line x1="210" y1="200" x2="150" y2="200" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/><text x="20" y="240" font-size="12" fill="#c0392b">脛骨が前へずれる（過伸展）</text>
+<path d="M245,40 L245,120 Q240,150 205,165 L200,250" stroke="#c0392b" stroke-width="5" fill="none"/>
+<circle cx="245" cy="70" r="5" fill="#2c3e50"/><circle cx="203" cy="215" r="5" fill="#2c3e50"/>
+<text x="258" y="74" font-size="12">固定点（内転筋腱裂孔の付近）</text>
+<text x="258" y="140" font-size="12" fill="#c0392b">膝窩動脈：上下を固定され</text>
+<text x="258" y="156" font-size="12" fill="#c0392b">引き伸ばされる → 足背動脈の拍動を確認</text>
+<path d="M290,40 L290,170" stroke="#e67e22" stroke-width="3" stroke-dasharray="6 4" fill="none"/>
+<text x="300" y="192" font-size="12" fill="#e67e22">総腓骨神経も確認</text>
+<text x="215" y="230" font-size="12">固定点（ヒラメ筋腱弓の付近）</text></svg>
