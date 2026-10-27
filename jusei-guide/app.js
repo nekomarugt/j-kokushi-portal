@@ -78,11 +78,24 @@
       const m = /^lesson-(.+)-(\d+)$/.exec(id);
       if (m) index = chapters.findIndex((chapter) => chapter.id === m[1]);
     }
+    if (index < 0 && /^fig-/.test(id)) {
+      // 図への直接リンク（例：#fig-bend）：その図を持つ章を開く
+      index = chapters.findIndex((chapter) => chapter.sections.some((sec) => (sec.illustrations || []).some((it) => it.id === id)));
+    }
     return index >= 0 ? index : 0;
   }
 
   function focusLessonFromHash() {
     const id = decodeURIComponent(location.hash.replace(/^#/, ''));
+    if (/^fig-/.test(id)) {
+      const fig = document.getElementById(id);
+      const card = fig && fig.closest('.lesson-card');
+      if (!card) return;
+      card.classList.add('is-focus');
+      setCardOpen(card, true);
+      setTimeout(() => fig.scrollIntoView({block: 'start'}), 60);
+      return;
+    }
     if (!/^lesson-.+-\d+$/.test(id)) return;
     const el = document.getElementById(id);
     if (!el) return;
@@ -154,8 +167,9 @@
         '<div class="lesson-body" id="lesson-body-' + chapter.id + '-' + (index + 1) + '" hidden>' +
           '<div class="anchor">' + section.anchor + '</div>' +
           '<p class="explanation">' + escapeHtml(section.explanation) + '</p>' +
+          (section.whyLink ? '<p class="why-link"><a href="' + escapeHtml(section.whyLink.href) + '">' + escapeHtml(section.whyLink.label) + ' →</a></p>' : '') +
           image + (section.illustrations || []).map((item) =>
-            '<figure class="illustration"><button type="button" class="illustration-open" data-src="' + escapeHtml(item.src) + '" data-caption="' + escapeHtml(item.caption) + '" aria-label="' + escapeHtml(item.caption) + 'を拡大">' +
+            '<figure class="illustration"' + (item.id ? ' id="' + escapeHtml(item.id) + '"' : '') + '><button type="button" class="illustration-open" data-src="' + escapeHtml(item.src) + '" data-caption="' + escapeHtml(item.caption) + '" aria-label="' + escapeHtml(item.caption) + 'を拡大">' +
             '<img src="' + escapeHtml(item.src) + '" alt="' + escapeHtml(item.caption) + '" loading="lazy" decoding="async">' +
             '<span>タップで拡大</span></button><figcaption>' + escapeHtml(item.caption) + '</figcaption></figure>'
           ).join('') +

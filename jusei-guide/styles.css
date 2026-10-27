@@ -159,6 +159,9 @@ body.answers-hidden .answer {
   user-select: none;
 }
 .explanation { margin: 0; color: #263d51; }
+.why-link { margin: 6px 0 0; font-size: .92em; }
+.why-link a { color: #b9471f; font-weight: 600; text-decoration: none; border-bottom: 1px dashed currentColor; }
+.illustration { scroll-margin-top: 126px; }
 .lesson-image {
   display: block;
   width: auto;

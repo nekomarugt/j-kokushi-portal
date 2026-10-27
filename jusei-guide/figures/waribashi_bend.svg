@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 330" font-family="sans-serif" font-size="13"><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="#c0392b"/></marker></defs><rect width="600" height="330" fill="#fff"/>
+<text x="16" y="24" font-weight="bold" font-size="15">割り箸で考える：屈曲骨折（曲げて折る）</text>
+<text x="16" y="44" font-size="12" fill="#555">骨は「押し縮め」より「引き伸ばし」に弱い → 引き伸ばされる凸側から割れ始める</text>
+<line x1="200" y1="56" x2="200" y2="318" stroke="#ddd"/><line x1="400" y1="56" x2="400" y2="318" stroke="#ddd"/>
+<!-- Ⅰ型 -->
+<text x="16" y="74" font-weight="bold">Ⅰ型：真ん中に支点</text>
+<text x="16" y="91" font-size="11" fill="#555">ひざに当てて両端を引き下げる</text>
+<path d="M22,170 Q100,118 178,170" stroke="#d4a373" stroke-width="14" fill="none" stroke-linecap="round"/>
+<line x1="30" y1="140" x2="30" y2="178" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/>
+<line x1="170" y1="140" x2="170" y2="178" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/>
+<path d="M82,190 Q100,166 118,190z" fill="#7f8c8d"/><text x="84" y="206" font-size="11">支点</text>
+<line x1="100" y1="196" x2="100" y2="160" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/>
+<text x="104" y="118" font-size="11" fill="#2980b9">凸側（引き伸ばし）</text>
+<path d="M100,138 L100,148 L90,156 M100,148 L110,156" stroke="#2c3e50" stroke-width="2.5" fill="none"/>
+<text x="16" y="234" font-size="11">凸側から横に入った割れ目が、</text>
+<text x="16" y="250" font-size="11">凹側の手前で2つに分かれる</text>
+<path d="M56,272 L96,272 L76,292z" fill="#f5cba7" stroke="#2c3e50" transform="rotate(180 76 282)"/>
+<text x="106" y="280" font-size="11">凹側に底辺をもつ</text><text x="106" y="295" font-size="11">三角の骨片</text><text x="106" y="310" font-size="11">（第3骨片）</text>
+<!-- Ⅱ型 -->
+<text x="216" y="74" font-weight="bold">Ⅱ型：片方の端を固定</text>
+<text x="216" y="91" font-size="11" fill="#555">端を押さえて、反対の端を曲げる</text>
+<rect x="214" y="138" width="56" height="44" fill="#95a5a6"/><text x="216" y="200" font-size="11">固定された側</text>
+<path d="M244,158 L300,158 Q350,160 386,196" stroke="#d4a373" stroke-width="14" fill="none" stroke-linecap="round"/>
+<line x1="372" y1="160" x2="384" y2="196" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/><text x="316" y="128" font-size="11" fill="#c0392b">曲げる力（体重など）</text>
+<text x="282" y="140" font-size="11" fill="#2980b9">凸側</text>
+<line x1="296" y1="150" x2="282" y2="166" stroke="#2c3e50" stroke-width="2.5"/>
+<text x="216" y="234" font-size="11">割れ目は凸側から始まり、</text>
+<text x="216" y="250" font-size="11">固定された側へ斜めに走る</text>
+<text x="216" y="266" font-size="11">→ 斜骨折</text>
+<text x="216" y="290" font-size="11" fill="#555">例：上腕骨顆上骨折、</text><text x="216" y="306" font-size="11" fill="#555">橈骨遠位端部骨折</text>
+<!-- Ⅲ型 -->
+<text x="416" y="74" font-weight="bold">Ⅲ型：輪っかを押す</text>
+<text x="416" y="91" font-size="11" fill="#555">割り箸ではなく輪ゴム・針金の輪</text>
+<ellipse cx="500" cy="168" rx="52" ry="48" fill="none" stroke="#d4a373" stroke-width="10"/>
+<line x1="420" y1="168" x2="444" y2="168" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/>
+<line x1="580" y1="168" x2="556" y2="168" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/>
+<text x="418" y="190" font-size="11" fill="#c0392b">押す</text><text x="560" y="190" font-size="11" fill="#c0392b">押す</text>
+<path d="M494,112 L502,124 L496,130" stroke="#2c3e50" stroke-width="2.5" fill="none"/>
+<path d="M498,208 L506,218 L500,226" stroke="#2c3e50" stroke-width="2.5" fill="none"/>
+<text x="512" y="112" font-size="11">折れる</text><text x="512" y="232" font-size="11">折れる</text>
+<text x="416" y="256" font-size="11">押した向きと直角の側（輪の上下）が</text>
+<text x="416" y="272" font-size="11">外へ曲げられ、1か所か2か所で折れる</text>
+<text x="416" y="292" font-size="11" fill="#555">例：骨盤・胸郭など輪になった骨</text>
+</svg>

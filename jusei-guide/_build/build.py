@@ -13,6 +13,7 @@ CH=[('general','総論（骨折・脱臼・軟部組織損傷・治療）','す�
     ,('lower','下肢の骨折','大腿骨近位部・骨幹部・遠位部と膝蓋骨、下腿骨、果部、足部。高齢者の転倒と、スポーツの疲労骨折。',['fprox','fshaft','fdist','ftib','fankle','ffoot','fptib'])
     ,('trunk','頭部・体幹の損傷','頭部・顔面の骨折、肋骨・胸骨骨折、脊椎・骨盤骨折、頚部・腰部の軟部組織損傷。命に関わる合併損傷を見逃さない。',['tskull','trib','tspine','tneck'])
     ,('soft2','スポーツ障害・骨端症・神経の障害','投球障害肩、神経の絞扼、手指の変形、小児の股関節、膝と足のスポーツ障害・骨端症。「どこが・何に引っ張られる（挟まれる）か」で覚える。',['ssh2','snerve','shand','ship','skneeov','sfootov'])]
+WL={'phum':('fig-bend','屈曲骨折Ⅱ型で考える'),'hshaft':('fig-bend','屈曲骨折Ⅱ型・捻転で考える'),'supra':('fig-bend','屈曲骨折Ⅱ型で考える'),'drad':('fig-bend','屈曲骨折Ⅱ型で考える'),'fdist':('fig-bend','屈曲骨折Ⅱ型で考える'),'trib':('fig-bend','屈曲骨折Ⅲ型（輪っか）で考える'),'tspine':('fig-force','割り箸で考える（圧迫）'),'ffoot':('fig-force','割り箸で考える（圧迫・裂離）')}
 KEY={'gcx':['5P','肥大軟骨層','急性塑性変形','MRI','passive stretch test'],'gexam':['意識障害','5年間','中間評価','放射線を使わない','女性アスリートの三主徴'],'dknee':['前方脱臼','ダッシュボード損傷','膝窩動脈','足背動脈'],'dfoot':['第5中足骨の基部','Z字型','禁忌','骨壊死'],'fptib':['前十字靱帯','前方引き出しテスト','膝蓋腱','総腓骨神経'],'ssh2':['サルカス徴候','上方の関節唇','ソルター・ハリスⅠ型','拘縮期'],'snerve':['運動枝だけ','フローマン徴候','ファーレンテスト','有鉤骨鉤','下垂指','下垂手'],'shand':['MP関節の掌側','DIP関節','中央索（正中索）','外転強制','月状骨'],'ship':['片側','ドレーマン徴候','膝の痛み','詳細は整形外科学','トーマステスト'],'skneeov':['脛骨粗面','膝蓋骨の下端','外上方','摩擦','滑膜ヒダ','遊離体'],'sfootov':['後脛骨筋腱','底屈','背屈','過回内','第1中足骨頭の内側','概念のみ'],'clav':['中央・遠位1/3境界部','胸鎖乳突筋','腕神経叢損傷'],'phum':['外科頚骨折','前内方凸','前外方凸','腋窩神経損傷','骨頭壊死'],'hshaft':['前外方凸','橈骨神経麻痺','偽関節'],
  'supra':['伸展型','後上方','阻血性拘縮','内反肘'],'lcond':['回転転位','外反肘','遅発性尺骨神経麻痺'],'mepi':['前腕屈筋群','尺骨神経'],'elbowfx':['上腕三頭筋','橈骨頚部'],
  'forearm':['橈骨頭の脱臼','後骨間神経','遠位橈尺関節の脱臼','円回内筋付着部'],'drad':['背側・橈側','フォーク状変形','銃剣状変形','掌側','長母指伸筋腱の断裂'],
@@ -47,7 +48,10 @@ for ci,(cid,ct,cin,ids) in enumerate(CH):
         boxes.append(dict(kind='link',title='つながりで覚える：解剖・頻出MAP・過去問',html=link))
         for t,b in s['deep']: boxes.append(dict(kind='deep',title='より深く：'+t,html='<p>'+e(b)+'</p>'))
         sec=dict(title=s['title'],anchor=anchor,explanation=expl,question=s['why'][0][0],answer=s['why'][0][1],boxes=boxes)
-        if s['fig']: sec['illustrations']=[dict(src='figures/'+s['fig'][0],caption=s['fig'][1])]
+        if s['fig']:
+            fl=s['fig'] if isinstance(s['fig'],list) else [s['fig']]
+            sec['illustrations']=[dict(src='figures/'+f[0],caption=f[1],**({'id':f[2]} if len(f)>2 else {})) for f in fl]
+        if sid in WL: sec['whyLink']=dict(href='#'+WL[sid][0],label=WL[sid][1])
         sl.append(sec); quiz+= [dict(q=w[0],a=w[1]) for w in s['why'][1:]]
     chapters.append(dict(id=cid,number=num,title=ct,intro=cin,sections=sl,quiz=quiz))
 hdr='// 生成ファイル：_build/build.py が _build/content_src.py から作る。直接編集しない。\n'
