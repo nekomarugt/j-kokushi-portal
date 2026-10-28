@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 438" font-family="sans-serif" font-size="13"><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="#c0392b"/></marker></defs><rect width="600" height="438" fill="#fff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" font-family="sans-serif" font-size="13"><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="#c0392b"/></marker></defs><rect width="600" height="480" fill="#fff"/>
 <text x="16" y="24" font-size="15" fill="#000" font-weight="bold">棒とヒモで考える：橈骨骨幹部骨折の回旋</text>
 <rect x="470" y="10" width="118" height="24" rx="12" fill="#7f8c8d"/><text x="488" y="27" font-size="10" fill="#fff" font-weight="bold">転位前（折れた直後）</text>
 <text x="16" y="44" font-size="12" fill="#555">右前腕を正面から（左＝橈骨＝外側）。ねじれは左の「断面マーク」の●の位置で見る</text>
@@ -14,8 +14,10 @@
 <line x1="130" y1="118" x2="130" y2="164" stroke="#d4a373" stroke-width="14" stroke-linecap="round"/>
 <circle cx="130" cy="164" r="3" fill="#2c3e50"/><line x1="130" y1="330" x2="130" y2="176" stroke="#d4a373" stroke-width="14" stroke-linecap="round"/>
 <circle cx="130" cy="176" r="3" fill="#2c3e50"/><circle cx="129" cy="132" r="4" fill="#8e44ad"/>
-<polyline points="129,132 192,124" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
-<text x="212" y="126" font-size="10" fill="#8e44ad">回外筋</text>
+<polyline points="129,132 94,112" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
+<text x="60" y="182" font-size="10" fill="#8e44ad">回外筋</text>
+<text x="8" y="360" font-size="9" fill="#888">← 外側</text>
+<text x="254" y="360" font-size="9" fill="#888">内側 →</text>
 <circle cx="132" cy="205" r="4" fill="#8e44ad"/>
 <polyline points="132,205 192,150" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
 <text x="212" y="154" font-size="10" fill="#8e44ad">円回内筋</text>
@@ -35,8 +37,10 @@
 <line x1="430" y1="118" x2="430" y2="244" stroke="#d4a373" stroke-width="14" stroke-linecap="round"/>
 <circle cx="430" cy="244" r="3" fill="#2c3e50"/><line x1="430" y1="330" x2="430" y2="256" stroke="#d4a373" stroke-width="14" stroke-linecap="round"/>
 <circle cx="430" cy="256" r="3" fill="#2c3e50"/><circle cx="429" cy="132" r="4" fill="#8e44ad"/>
-<polyline points="429,132 492,124" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
-<text x="512" y="126" font-size="10" fill="#8e44ad">回外筋</text>
+<polyline points="429,132 394,112" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
+<text x="360" y="182" font-size="10" fill="#8e44ad">回外筋</text>
+<text x="308" y="360" font-size="9" fill="#888">← 外側</text>
+<text x="554" y="360" font-size="9" fill="#888">内側 →</text>
 <circle cx="432" cy="205" r="4" fill="#8e44ad"/>
 <polyline points="432,205 492,150" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
 <text x="512" y="154" font-size="10" fill="#8e44ad">円回内筋</text>
@@ -51,4 +55,6 @@
 <text x="470" y="372" font-size="10" fill="#c0392b">遠位骨片：回内</text>
 <text x="470" y="386" font-size="10" fill="#555">（方形回内筋）</text>
 <text x="16" y="428" font-size="10" fill="#555">断面マーク：●が真上＝中間位、外へ回る＝回外、内へ回る＝回内（模式）。尺骨は折れていない想定。</text>
+<rect x="476" y="434" width="118" height="40" rx="6" fill="#f8f9fa" stroke="#ccc"/><text x="482" y="449" font-size="9" fill="#555">↑近位(上) ↓遠位(下)</text>
+<text x="482" y="466" font-size="9" fill="#555">←外側(橈側) 内側(尺側)→</text>
 </svg>
