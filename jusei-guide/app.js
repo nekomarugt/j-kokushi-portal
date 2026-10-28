@@ -173,6 +173,7 @@
             '<img src="' + escapeHtml(item.src) + '" alt="' + escapeHtml(item.caption) + '" loading="lazy" decoding="async">' +
             '<span>タップで拡大</span></button>' + (item.before ? '<button type="button" class="fig-toggle" data-after="' + escapeHtml(item.src) + '" data-before="' + escapeHtml(item.before) + '" aria-pressed="false">転位前 ⇄ 転位後（いま：転位後）</button>' : '') + '<figcaption>' + escapeHtml(item.caption) + '</figcaption></figure>'
           ).join('') +
+          (section.fixNote ? '<div class="fix-note"><b>整復・固定</b>' + section.fixNote.map((l) => '<p>' + escapeHtml(l) + '</p>').join('') + '</div>' : '') +
           (section.tips || []).map((tip) =>
             '<details class="tips-box">' +
               '<summary><span class="tips-badge">TIPS</span><span class="tips-title">' + escapeHtml(String(tip.title || '').replace(/^TIPS\s*/, '')) + '</span><span class="tips-open" aria-hidden="true">ひらく</span></summary>' +

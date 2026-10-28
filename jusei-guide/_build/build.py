@@ -51,6 +51,7 @@ for ci,(cid,ct,cin,ids) in enumerate(CH):
         if s['fig']:
             fl=s['fig'] if isinstance(s['fig'],list) else [s['fig']]
             sec['illustrations']=[dict(src='figures/'+f[0],caption=f[1],**({'id':f[2]} if len(f)>2 and f[2] else {}),**({'before':'figures/'+f[3]} if len(f)>3 else {})) for f in fl]
+        if s.get('fix'): sec['fixNote']=s['fix']
         if sid in WL: sec['whyLink']=dict(href='#'+WL[sid][0],label=WL[sid][1])
         sl.append(sec); quiz+= [dict(q=w[0],a=w[1]) for w in s['why'][1:]]
     chapters.append(dict(id=cid,number=num,title=ct,intro=cin,sections=sl,quiz=quiz))

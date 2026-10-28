@@ -495,3 +495,7 @@ footer {
 .illustration img { transition: opacity .18s ease; }
 .illustration img.is-fading { opacity: 0; }
 @media (prefers-reduced-motion: reduce) { .illustration img { transition: none; } }
+
+.fix-note{margin:.2rem 0 1rem;padding:.55rem .8rem;border-left:4px solid #2e7d5b;background:#f1f8f4;border-radius:6px;font-size:.92rem}
+.fix-note b{display:block;color:#2e7d5b;font-size:.85rem;margin-bottom:.15rem}
+.fix-note p{margin:.15rem 0}
