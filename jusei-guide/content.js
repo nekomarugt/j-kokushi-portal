@@ -283,7 +283,8 @@ window.juseiChapters = [
     "illustrations": [
      {
       "src": "figures/bh_humerus.svg",
-      "caption": "棒とヒモで考える：三角筋付着部の上か下かで変わる骨片の転位（オリジナル模式図）"
+      "caption": "棒とヒモで考える：三角筋付着部の上か下かで変わる骨片の転位（オリジナル模式図）",
+      "before": "figures/bh_humerus_before.svg"
      }
     ],
     "whyLink": {
@@ -461,7 +462,8 @@ window.juseiChapters = [
     "illustrations": [
      {
       "src": "figures/bh_forearm.svg",
-      "caption": "棒とヒモで考える：円回内筋付着部の上か下かで変わる骨片の回旋（オリジナル模式図）"
+      "caption": "棒とヒモで考える：円回内筋付着部の上か下かで変わる骨片の回旋（オリジナル模式図）",
+      "before": "figures/bh_forearm_before.svg"
      }
     ]
    },
@@ -950,7 +952,8 @@ window.juseiChapters = [
     "illustrations": [
      {
       "src": "figures/bh_femur.svg",
-      "caption": "棒とヒモで考える：近位・中央・遠位1/3で変わる骨片の転位（オリジナル模式図）"
+      "caption": "棒とヒモで考える：近位・中央・遠位1/3で変わる骨片の転位（オリジナル模式図）",
+      "before": "figures/bh_femur_before.svg"
      },
      {
       "src": "figures/femur_shaft.svg",

@@ -1,59 +1,61 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 390" font-family="sans-serif" font-size="13"><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="#c0392b"/></marker></defs><rect width="600" height="390" fill="#fff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 446" font-family="sans-serif" font-size="13"><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="#c0392b"/></marker></defs><rect width="600" height="446" fill="#fff"/>
 <text x="16" y="24" font-size="15" fill="#000" font-weight="bold">棒とヒモで考える：大腿骨骨幹部骨折</text>
-<text x="16" y="44" font-size="12" fill="#555">近位1/3・中央1/3・遠位1/3で、骨片を引くヒモが変わる（向きは文字で読む）</text>
+<rect x="470" y="10" width="118" height="24" rx="12" fill="#c0392b"/><text x="488" y="27" font-size="11" fill="#fff" font-weight="bold">転位後</text>
+<text x="16" y="44" font-size="12" fill="#555">右大腿を正面から（左が外側）。屈曲・後方・外旋は正面図に出ないので文字で示す</text>
 <line x1="16" y1="64" x2="46" y2="64" stroke="#d4a373" stroke-width="10" stroke-linecap="round"/><text x="52" y="68" font-size="11" fill="#000">骨＝棒</text>
 <line x1="110" y1="64" x2="140" y2="64" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3"/><text x="146" y="68" font-size="11" fill="#000">筋＝ヒモ（●が付く所）</text>
 <line x1="290" y1="64" x2="318" y2="64" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/><text x="324" y="68" font-size="11" fill="#000">骨片が引かれる向き</text>
 
-<line x1="200" y1="80" x2="200" y2="380" stroke="#ddd"/><line x1="400" y1="80" x2="400" y2="380" stroke="#ddd"/><text x="16" y="96" font-size="12" fill="#000" font-weight="bold">a. 近位1/3</text>
-<circle cx="46" cy="122" r="13" fill="#f5cba7" stroke="#d4a373"/><line x1="60" y1="130" x2="60" y2="207" stroke="#d4a373" stroke-width="14" stroke-linecap="round"/>
-<line x1="60" y1="223" x2="60" y2="340" stroke="#d4a373" stroke-width="14" stroke-linecap="round"/>
-<path d="M51,217 l6,-5 l6,5 l6,-5" stroke="#2c3e50" stroke-width="2.5" fill="none"/>
-<circle cx="60" cy="348" r="10" fill="#f5cba7" stroke="#d4a373"/><circle cx="66" cy="195" r="4" fill="#8e44ad"/>
-<polyline points="66,195 100,155" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
-<circle cx="66" cy="245" r="4" fill="#8e44ad"/>
-<polyline points="66,245 100,210" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
-<text x="92" y="140" font-size="10" fill="#c0392b">近位骨片：</text>
-<text x="92" y="154" font-size="10" fill="#000">屈曲（腸腰筋）</text>
-<text x="92" y="168" font-size="10" fill="#000">外転（中・小殿筋）</text>
-<text x="92" y="182" font-size="10" fill="#000">外旋（大殿筋・外旋筋群）</text>
-<circle cx="54" cy="152" r="4" fill="#8e44ad"/>
-<polyline points="54,152 20,108" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
-<text x="4" y="112" font-size="10" fill="#000"></text>
-<text x="5" y="170" font-size="9" fill="#8e44ad">大転子</text>
-<text x="74" y="198" font-size="9" fill="#8e44ad">小転子</text>
-<text x="92" y="262" font-size="10" fill="#c0392b">遠位骨片：</text>
-<text x="92" y="276" font-size="10" fill="#000">内上方へ短縮</text>
-<text x="92" y="290" font-size="10" fill="#000">（内転筋群）</text>
-<text x="92" y="304" font-size="10" fill="#000">近位骨片の後ろへ</text>
+<line x1="470" y1="64" x2="500" y2="64" stroke="#e6e6e6" stroke-width="10" stroke-dasharray="4 4"/><text x="506" y="68" font-size="11" fill="#000">元の位置</text>
+
+<line x1="200" y1="80" x2="200" y2="420" stroke="#ddd"/><line x1="400" y1="80" x2="400" y2="420" stroke="#ddd"/><text x="16" y="96" font-size="12" fill="#000" font-weight="bold">a. 近位1/3</text>
+<circle cx="66" cy="122" r="13" fill="#f5cba7" stroke="#d4a373"/><line x1="80" y1="132" x2="80" y2="340" stroke="#e6e6e6" stroke-width="14" stroke-linecap="round" stroke-dasharray="4 4"/>
+<line x1="80" y1="132" x2="50" y2="205" stroke="#d4a373" stroke-width="14" stroke-linecap="round"/>
+<circle cx="50" cy="205" r="3" fill="#2c3e50"/><line x1="84" y1="340" x2="98" y2="170" stroke="#d4a373" stroke-width="14" stroke-linecap="round"/>
+<circle cx="98" cy="170" r="3" fill="#2c3e50"/><circle cx="72" cy="150" r="4" fill="#8e44ad"/>
+<polyline points="72,150 20,110" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
+<line x1="72" y1="150" x2="54" y2="136" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/>
+<circle cx="62" cy="175" r="4" fill="#8e44ad"/>
+<polyline points="62,175 120,120" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
+<line x1="62" y1="175" x2="81" y2="156" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/>
+<circle cx="91" cy="246" r="4" fill="#8e44ad"/>
+<polyline points="91,246 130,105" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
+<line x1="91" y1="246" x2="103" y2="199" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/>
+<text x="8" y="175" font-size="9" fill="#8e44ad">中・小殿筋</text>
+<text x="124" y="135" font-size="9" fill="#8e44ad">腸腰筋</text>
+<text x="110" y="250" font-size="9" fill="#8e44ad">内転筋群</text>
+<text x="16" y="365" font-size="10" fill="#c0392b">近位骨片：外転（外へ傾く）</text>
+<text x="16" y="379" font-size="10" fill="#555">＋屈曲・外旋（文字で）</text>
+<text x="16" y="398" font-size="10" fill="#c0392b">遠位骨片：内上方へ短縮</text>
+<text x="16" y="412" font-size="10" fill="#555">近位骨片の後ろに重なる</text>
 <text x="216" y="96" font-size="12" fill="#000" font-weight="bold">b. 中央1/3（最多）</text>
-<circle cx="246" cy="122" r="13" fill="#f5cba7" stroke="#d4a373"/><line x1="260" y1="130" x2="260" y2="202" stroke="#d4a373" stroke-width="14" stroke-linecap="round"/>
-<line x1="260" y1="218" x2="260" y2="340" stroke="#d4a373" stroke-width="14" stroke-linecap="round"/>
-<path d="M251,212 l6,-5 l6,5 l6,-5" stroke="#2c3e50" stroke-width="2.5" fill="none"/>
-<circle cx="260" cy="348" r="10" fill="#f5cba7" stroke="#d4a373"/><circle cx="266" cy="190" r="4" fill="#8e44ad"/>
-<polyline points="266,190 300,150" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
-<circle cx="266" cy="240" r="4" fill="#8e44ad"/>
-<polyline points="266,240 300,205" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
-<text x="292" y="140" font-size="10" fill="#c0392b">近位骨片：</text>
-<text x="292" y="154" font-size="10" fill="#000">屈曲（腸腰筋）</text>
-<text x="292" y="168" font-size="10" fill="#000">内転（内転筋）</text>
-<text x="292" y="182" font-size="10" fill="#000">※つり合えば中間位</text>
-<text x="292" y="250" font-size="10" fill="#c0392b">遠位骨片：</text>
-<text x="292" y="264" font-size="10" fill="#000">後上方へ</text>
-<text x="292" y="278" font-size="10" fill="#000">（ハムストリングスなど）</text>
+<circle cx="266" cy="122" r="13" fill="#f5cba7" stroke="#d4a373"/><line x1="280" y1="132" x2="280" y2="340" stroke="#e6e6e6" stroke-width="14" stroke-linecap="round" stroke-dasharray="4 4"/>
+<line x1="280" y1="132" x2="302" y2="232" stroke="#d4a373" stroke-width="14" stroke-linecap="round"/>
+<circle cx="302" cy="232" r="3" fill="#2c3e50"/><line x1="280" y1="340" x2="278" y2="210" stroke="#d4a373" stroke-width="14" stroke-linecap="round"/>
+<circle cx="278" cy="210" r="3" fill="#2c3e50"/><circle cx="295" cy="202" r="4" fill="#8e44ad"/>
+<polyline points="295,202 340,120" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
+<line x1="295" y1="202" x2="309" y2="174" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/>
+<circle cx="278" cy="249" r="4" fill="#8e44ad"/>
+<polyline points="278,249 230,150" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
+<line x1="278" y1="249" x2="262" y2="216" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/>
+<text x="310" y="115" font-size="9" fill="#8e44ad">腸腰筋・内転筋</text>
+<text x="205" y="140" font-size="9" fill="#8e44ad">ハムストリングス</text>
+<text x="216" y="365" font-size="10" fill="#c0392b">近位骨片：内転（内へ傾く）</text>
+<text x="216" y="379" font-size="10" fill="#555">＋屈曲（つり合えば中間位）</text>
+<text x="216" y="398" font-size="10" fill="#c0392b">遠位骨片：後上方へ</text>
+<text x="216" y="412" font-size="10" fill="#555">（上へ重なり短縮）</text>
 <text x="416" y="96" font-size="12" fill="#000" font-weight="bold">c. 遠位1/3</text>
-<circle cx="446" cy="122" r="13" fill="#f5cba7" stroke="#d4a373"/><line x1="460" y1="130" x2="460" y2="267" stroke="#d4a373" stroke-width="14" stroke-linecap="round"/>
-<line x1="460" y1="283" x2="460" y2="340" stroke="#d4a373" stroke-width="14" stroke-linecap="round"/>
-<path d="M451,277 l6,-5 l6,5 l6,-5" stroke="#2c3e50" stroke-width="2.5" fill="none"/>
-<circle cx="460" cy="348" r="10" fill="#f5cba7" stroke="#d4a373"/><circle cx="466" cy="255" r="4" fill="#8e44ad"/>
-<polyline points="466,255 500,215" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
-<circle cx="466" cy="330" r="4" fill="#8e44ad"/>
-<polyline points="466,330 500,265" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
-<text x="492" y="140" font-size="10" fill="#c0392b">近位骨片：</text>
-<text x="492" y="154" font-size="10" fill="#000">ほぼ中間位</text>
-<text x="492" y="300" font-size="10" fill="#c0392b">遠位骨片：</text>
-<text x="492" y="314" font-size="10" fill="#000">後方へ（腓腹筋）</text>
-<text x="492" y="328" font-size="10" fill="#000">短縮（ハムストリングス</text>
-<text x="492" y="342" font-size="10" fill="#000">など）</text>
-<text x="16" y="378" font-size="10" fill="#555">右大腿を正面から見た模式図。ヒモ（筋）は代表だけ描いてある。</text>
+<circle cx="466" cy="122" r="13" fill="#f5cba7" stroke="#d4a373"/><line x1="480" y1="132" x2="480" y2="325" stroke="#e6e6e6" stroke-width="14" stroke-linecap="round" stroke-dasharray="4 4"/>
+<line x1="480" y1="132" x2="480" y2="262" stroke="#d4a373" stroke-width="14" stroke-linecap="round"/>
+<circle cx="480" cy="262" r="3" fill="#2c3e50"/><line x1="488" y1="325" x2="488" y2="238" stroke="#d4a373" stroke-width="14" stroke-linecap="round"/>
+<circle cx="488" cy="238" r="3" fill="#2c3e50"/><circle cx="488" cy="298" r="4" fill="#8e44ad"/>
+<polyline points="488,298 550,180" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
+<line x1="488" y1="298" x2="508" y2="259" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/>
+<circle cx="488" cy="333" r="10" fill="#f5cba7" stroke="#d4a373"/><text x="520" y="175" font-size="9" fill="#8e44ad">腓腹筋・</text>
+<text x="520" y="187" font-size="9" fill="#8e44ad">ハムストリングス</text>
+<text x="416" y="365" font-size="10" fill="#c0392b">近位骨片：ほぼ中間位</text>
+<text x="416" y="379" font-size="10" fill="#555">（まっすぐのまま）</text>
+<text x="416" y="398" font-size="10" fill="#c0392b">遠位骨片：強く後方へ（文字で）</text>
+<text x="416" y="412" font-size="10" fill="#555">＋上へ重なり短縮</text>
+<text x="16" y="436" font-size="10" fill="#555">灰色の点線＝折れる前のまっすぐな骨。ヒモ（筋）は代表だけ。</text>
 </svg>

@@ -1,47 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 345" font-family="sans-serif" font-size="13"><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="#c0392b"/></marker></defs><rect width="600" height="345" fill="#fff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 398" font-family="sans-serif" font-size="13"><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="#c0392b"/></marker></defs><rect width="600" height="398" fill="#fff"/>
 <text x="16" y="24" font-size="15" fill="#000" font-weight="bold">棒とヒモで考える：上腕骨骨幹部骨折</text>
-<text x="16" y="44" font-size="12" fill="#555">折れた所が三角筋の付着部（●）より上か下かで、それぞれの骨片を引くヒモが入れ替わる</text>
+<rect x="470" y="10" width="118" height="24" rx="12" fill="#c0392b"/><text x="488" y="27" font-size="11" fill="#fff" font-weight="bold">転位後</text>
+<text x="16" y="44" font-size="12" fill="#555">三角筋付着部（●）より上か下かで、骨片を引くヒモが入れ替わり、ずれ方が変わる</text>
 <line x1="16" y1="64" x2="46" y2="64" stroke="#d4a373" stroke-width="10" stroke-linecap="round"/><text x="52" y="68" font-size="11" fill="#000">骨＝棒</text>
 <line x1="110" y1="64" x2="140" y2="64" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3"/><text x="146" y="68" font-size="11" fill="#000">筋＝ヒモ（●が付く所）</text>
 <line x1="290" y1="64" x2="318" y2="64" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/><text x="324" y="68" font-size="11" fill="#000">骨片が引かれる向き</text>
 
-<line x1="300" y1="80" x2="300" y2="330" stroke="#ddd"/><text x="16" y="96" font-size="12" fill="#000" font-weight="bold">a. 付着部より上（近位）で折れる</text>
+<line x1="470" y1="64" x2="500" y2="64" stroke="#e6e6e6" stroke-width="10" stroke-dasharray="4 4"/><text x="506" y="68" font-size="11" fill="#000">元の位置</text>
+
+<line x1="300" y1="80" x2="300" y2="380" stroke="#ddd"/><text x="16" y="96" font-size="12" fill="#000" font-weight="bold">a. 付着部より上（近位）で折れる</text>
 <text x="16" y="112" font-size="10" fill="#555">正面から見た右上腕（左が外側）</text>
-<line x1="150" y1="130" x2="150" y2="142" stroke="#d4a373" stroke-width="14" stroke-linecap="round"/>
-<line x1="150" y1="158" x2="150" y2="310" stroke="#d4a373" stroke-width="14" stroke-linecap="round"/>
-<path d="M141,152 l6,-5 l6,5 l6,-5" stroke="#2c3e50" stroke-width="2.5" fill="none"/>
-<circle cx="150" cy="128" r="16" fill="#f5cba7" stroke="#d4a373"/><circle cx="143" cy="190" r="4" fill="#8e44ad"/>
-<polyline points="143,190 90,135" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
-<text x="40" y="130" font-size="10" fill="#8e44ad">三角筋</text>
 <text x="316" y="96" font-size="12" fill="#000" font-weight="bold">b. 付着部より下（遠位）で折れる</text>
 <text x="316" y="112" font-size="10" fill="#555">正面から見た右上腕（左が外側）</text>
-<line x1="450" y1="130" x2="450" y2="222" stroke="#d4a373" stroke-width="14" stroke-linecap="round"/>
-<line x1="450" y1="238" x2="450" y2="310" stroke="#d4a373" stroke-width="14" stroke-linecap="round"/>
-<path d="M441,232 l6,-5 l6,5 l6,-5" stroke="#2c3e50" stroke-width="2.5" fill="none"/>
-<circle cx="450" cy="128" r="16" fill="#f5cba7" stroke="#d4a373"/><circle cx="443" cy="190" r="4" fill="#8e44ad"/>
-<polyline points="443,190 390,135" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
-<text x="340" y="130" font-size="10" fill="#8e44ad">三角筋</text>
-<circle cx="157" cy="140" r="4" fill="#8e44ad"/>
-<polyline points="157,140 240,150" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
-<text x="210" y="170" font-size="10" fill="#8e44ad">大胸筋・大円筋</text>
-<text x="210" y="183" font-size="10" fill="#8e44ad">広背筋</text>
-<line x1="160" y1="120" x2="195" y2="120" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/>
-<text x="180" y="112" font-size="11" fill="#c0392b">近位骨片：内側へ</text>
-<polyline points="143,190 143,170" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
-<line x1="138" y1="260" x2="110" y2="232" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/>
-<text x="16" y="262" font-size="11" fill="#c0392b">遠位骨片：</text>
-<text x="16" y="277" font-size="11" fill="#c0392b">外上方へ</text>
-<text x="16" y="300" font-size="10" fill="#555">（三角筋・上腕二頭筋・</text>
-<text x="16" y="313" font-size="10" fill="#555">上腕三頭筋・烏口腕筋）</text>
-<line x1="438" y1="160" x2="400" y2="160" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/>
-<text x="316" y="180" font-size="11" fill="#c0392b">近位骨片：前外側へ</text>
-<text x="316" y="194" font-size="10" fill="#555">（三角筋）</text>
-<circle cx="457" cy="290" r="4" fill="#8e44ad"/>
-<polyline points="457,290 470,140" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
-<text x="478" y="200" font-size="10" fill="#8e44ad">上腕二頭筋</text>
-<text x="478" y="213" font-size="10" fill="#8e44ad">上腕三頭筋</text>
-<line x1="490" y1="290" x2="490" y2="255" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/>
-<text x="498" y="280" font-size="11" fill="#c0392b">遠位骨片：</text>
-<text x="498" y="294" font-size="11" fill="#c0392b">後上方へ</text>
-<text x="16" y="336" font-size="10" fill="#555">b では骨折部が前外方凸の変形になる。前後の向きは平面図では表せないので文字で示す。</text>
+<circle cx="150" cy="128" r="16" fill="#f5cba7" stroke="#d4a373"/><line x1="150" y1="140" x2="150" y2="305" stroke="#e6e6e6" stroke-width="14" stroke-linecap="round" stroke-dasharray="4 4"/>
+<line x1="150" y1="140" x2="178" y2="185" stroke="#d4a373" stroke-width="14" stroke-linecap="round"/>
+<circle cx="178" cy="185" r="3" fill="#2c3e50"/><line x1="144" y1="305" x2="128" y2="175" stroke="#d4a373" stroke-width="14" stroke-linecap="round"/>
+<circle cx="128" cy="175" r="3" fill="#2c3e50"/><circle cx="171" cy="173" r="4" fill="#8e44ad"/>
+<polyline points="171,173 250,150" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
+<line x1="171" y1="173" x2="197" y2="165" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/>
+<circle cx="134" cy="224" r="4" fill="#8e44ad"/>
+<polyline points="134,224 80,130" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
+<line x1="134" y1="224" x2="116" y2="192" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/>
+<text x="200" y="180" font-size="10" fill="#8e44ad">大胸筋・大円筋・広背筋</text>
+<text x="25" y="125" font-size="10" fill="#8e44ad">三角筋など</text>
+<text x="16" y="330" font-size="10" fill="#c0392b">近位骨片：内側へ</text>
+<text x="16" y="344" font-size="10" fill="#555">（大胸筋・大円筋・広背筋）</text>
+<text x="160" y="330" font-size="10" fill="#c0392b">遠位骨片：外上方へ</text>
+<text x="160" y="344" font-size="10" fill="#555">（三角筋・上腕二頭筋・</text>
+<text x="160" y="358" font-size="10" fill="#555">上腕三頭筋・烏口腕筋）</text>
+<circle cx="450" cy="128" r="16" fill="#f5cba7" stroke="#d4a373"/><line x1="450" y1="140" x2="450" y2="300" stroke="#e6e6e6" stroke-width="14" stroke-linecap="round" stroke-dasharray="4 4"/>
+<line x1="450" y1="140" x2="418" y2="232" stroke="#d4a373" stroke-width="14" stroke-linecap="round"/>
+<circle cx="418" cy="232" r="3" fill="#2c3e50"/><line x1="452" y1="300" x2="446" y2="212" stroke="#d4a373" stroke-width="14" stroke-linecap="round"/>
+<circle cx="446" cy="212" r="3" fill="#2c3e50"/><circle cx="434" cy="186" r="4" fill="#8e44ad"/>
+<polyline points="434,186 370,128" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
+<line x1="434" y1="186" x2="412" y2="166" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/>
+<circle cx="446" cy="220" r="4" fill="#8e44ad"/>
+<polyline points="446,220 490,135" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
+<line x1="446" y1="220" x2="460" y2="191" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/>
+<text x="335" y="125" font-size="10" fill="#8e44ad">三角筋</text>
+<text x="480" y="150" font-size="10" fill="#8e44ad">上腕二頭筋・三頭筋</text>
+<text x="316" y="330" font-size="10" fill="#c0392b">近位骨片：前外側へ</text>
+<text x="316" y="344" font-size="10" fill="#555">（三角筋。前は文字で）</text>
+<text x="460" y="330" font-size="10" fill="#c0392b">遠位骨片：後上方へ</text>
+<text x="460" y="344" font-size="10" fill="#555">（上に重なり短縮）</text>
+<text x="16" y="388" font-size="10" fill="#555">b では骨折部が前外方凸の変形になる。灰色の点線＝折れる前のまっすぐな骨。</text>
 </svg>

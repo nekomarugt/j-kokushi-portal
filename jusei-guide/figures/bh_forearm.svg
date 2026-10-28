@@ -1,40 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 348" font-family="sans-serif" font-size="13"><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="#c0392b"/></marker></defs><rect width="600" height="348" fill="#fff"/>
-<text x="16" y="24" font-size="15" fill="#000" font-weight="bold">棒とヒモで考える：前腕（橈骨）骨幹部骨折の回旋</text>
-<text x="16" y="44" font-size="12" fill="#555">折れた所が円回内筋の付着部より上か下かで、近位骨片をねじるヒモの勝ち負けが変わる</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 438" font-family="sans-serif" font-size="13"><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="#c0392b"/></marker></defs><rect width="600" height="438" fill="#fff"/>
+<text x="16" y="24" font-size="15" fill="#000" font-weight="bold">棒とヒモで考える：橈骨骨幹部骨折の回旋</text>
+<rect x="470" y="10" width="118" height="24" rx="12" fill="#c0392b"/><text x="488" y="27" font-size="11" fill="#fff" font-weight="bold">転位後</text>
+<text x="16" y="44" font-size="12" fill="#555">右前腕を正面から（左＝橈骨＝外側）。ねじれは左の「断面マーク」の●の位置で見る</text>
 <line x1="16" y1="64" x2="46" y2="64" stroke="#d4a373" stroke-width="10" stroke-linecap="round"/><text x="52" y="68" font-size="11" fill="#000">骨＝棒</text>
 <line x1="110" y1="64" x2="140" y2="64" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3"/><text x="146" y="68" font-size="11" fill="#000">筋＝ヒモ（●が付く所）</text>
 <line x1="290" y1="64" x2="318" y2="64" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/><text x="324" y="68" font-size="11" fill="#000">骨片が引かれる向き</text>
 
-<line x1="300" y1="80" x2="300" y2="340" stroke="#ddd"/><text x="16" y="96" font-size="12" fill="#000" font-weight="bold">a. 円回内筋付着部より上で折れる</text>
-<line x1="90" y1="118" x2="90" y2="157" stroke="#d4a373" stroke-width="14" stroke-linecap="round"/>
-<line x1="90" y1="173" x2="90" y2="320" stroke="#d4a373" stroke-width="14" stroke-linecap="round"/>
-<path d="M81,167 l6,-5 l6,5 l6,-5" stroke="#2c3e50" stroke-width="2.5" fill="none"/>
-<circle cx="84" cy="135" r="4" fill="#8e44ad"/>
-<text x="10" y="140" font-size="10" fill="#8e44ad">回外筋</text>
-<polyline points="84,135 60,137" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
-<circle cx="96" cy="195" r="4" fill="#8e44ad"/>
-<text x="16" y="199" font-size="10" fill="#8e44ad">円回内筋</text>
-<circle cx="96" cy="305" r="4" fill="#8e44ad"/>
-<text x="104" y="309" font-size="10" fill="#8e44ad">方形回内筋</text>
-<path d="M64,143 A26,9 0 1,1 116,143" stroke="#c0392b" stroke-width="2" fill="none" marker-end="url(#a)"/><path d="M116,225 A26,9 0 1,0 64,225" stroke="#c0392b" stroke-width="2" fill="none" marker-end="url(#a)"/><text x="150" y="129" font-size="10" fill="#c0392b">近位骨片：回外・屈曲</text>
-<text x="150" y="143" font-size="10" fill="#555">（回外筋・上腕二頭筋）</text>
-<text x="150" y="221" font-size="10" fill="#c0392b">遠位骨片：回内</text>
-<text x="150" y="235" font-size="10" fill="#555">（円回内筋・方形回内筋）</text>
+<line x1="470" y1="64" x2="500" y2="64" stroke="#e6e6e6" stroke-width="10" stroke-dasharray="4 4"/><text x="506" y="68" font-size="11" fill="#000">元の位置</text>
+
+<line x1="300" y1="80" x2="300" y2="420" stroke="#ddd"/><text x="16" y="96" font-size="12" fill="#000" font-weight="bold">a. 円回内筋付着部より上で折れる</text>
+<line x1="200" y1="118" x2="200" y2="330" stroke="#d4a373" stroke-width="14" stroke-linecap="round"/>
+<text x="212" y="334" font-size="10" fill="#555">尺骨</text>
+<text x="118" y="350" font-size="10" fill="#555">橈骨</text>
+<line x1="130" y1="118" x2="130" y2="330" stroke="#e6e6e6" stroke-width="14" stroke-linecap="round" stroke-dasharray="4 4"/>
+<line x1="130" y1="118" x2="126" y2="164" stroke="#d4a373" stroke-width="14" stroke-linecap="round"/>
+<circle cx="126" cy="164" r="3" fill="#2c3e50"/><line x1="136" y1="330" x2="138" y2="176" stroke="#d4a373" stroke-width="14" stroke-linecap="round"/>
+<circle cx="138" cy="176" r="3" fill="#2c3e50"/><circle cx="129" cy="132" r="4" fill="#8e44ad"/>
+<polyline points="129,132 192,124" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
+<text x="212" y="126" font-size="10" fill="#8e44ad">回外筋</text>
+<circle cx="132" cy="205" r="4" fill="#8e44ad"/>
+<polyline points="132,205 192,150" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
+<text x="212" y="154" font-size="10" fill="#8e44ad">円回内筋</text>
+<circle cx="137" cy="315" r="4" fill="#8e44ad"/>
+<polyline points="137,315 200,312" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
+<text x="212" y="300" font-size="10" fill="#8e44ad">方形回内筋</text>
+<circle cx="50" cy="120" r="12" fill="#fff" stroke="#d4a373" stroke-width="3"/><circle cx="39" cy="114" r="4" fill="#2c3e50"/><text x="36" y="148" font-size="10" fill="#c0392b" font-weight="bold">回外</text>
+<circle cx="50" cy="220" r="12" fill="#fff" stroke="#d4a373" stroke-width="3"/><circle cx="60" cy="214" r="4" fill="#2c3e50"/><text x="36" y="248" font-size="10" fill="#c0392b" font-weight="bold">回内</text>
+<line x1="64" y1="120" x2="122" y2="120" stroke="#bbb"/><line x1="64" y1="220" x2="124" y2="220" stroke="#bbb"/><text x="16" y="372" font-size="10" fill="#c0392b">近位骨片：回外・屈曲</text>
+<text x="16" y="386" font-size="10" fill="#555">（回外筋・上腕二頭筋）</text>
+<text x="170" y="372" font-size="10" fill="#c0392b">遠位骨片：回内</text>
+<text x="170" y="386" font-size="10" fill="#555">（円回内筋・方形回内筋）</text>
 <text x="316" y="96" font-size="12" fill="#000" font-weight="bold">b. 円回内筋付着部より下で折れる</text>
-<line x1="390" y1="118" x2="390" y2="237" stroke="#d4a373" stroke-width="14" stroke-linecap="round"/>
-<line x1="390" y1="253" x2="390" y2="320" stroke="#d4a373" stroke-width="14" stroke-linecap="round"/>
-<path d="M381,247 l6,-5 l6,5 l6,-5" stroke="#2c3e50" stroke-width="2.5" fill="none"/>
-<circle cx="384" cy="135" r="4" fill="#8e44ad"/>
-<text x="310" y="140" font-size="10" fill="#8e44ad">回外筋</text>
-<polyline points="384,135 360,137" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
-<circle cx="396" cy="195" r="4" fill="#8e44ad"/>
-<text x="316" y="199" font-size="10" fill="#8e44ad">円回内筋</text>
-<circle cx="396" cy="305" r="4" fill="#8e44ad"/>
-<text x="404" y="309" font-size="10" fill="#8e44ad">方形回内筋</text>
-<path d="M364,223 A26,9 0 1,1 416,223" stroke="#c0392b" stroke-width="2" fill="none" marker-end="url(#a)"/><path d="M416,305 A26,9 0 1,0 364,305" stroke="#c0392b" stroke-width="2" fill="none" marker-end="url(#a)"/><text x="450" y="209" font-size="10" fill="#c0392b">近位骨片：回内・回外の中間</text>
-<text x="450" y="223" font-size="10" fill="#555">（回外筋・上腕二頭筋 と</text>
-<text x="450" y="237" font-size="10" fill="#555">　円回内筋が引き合う）</text>
-<text x="450" y="301" font-size="10" fill="#c0392b">遠位骨片：回内</text>
-<text x="450" y="315" font-size="10" fill="#555">（方形回内筋）</text>
-<text x="16" y="338" font-size="10" fill="#555">ねじりの矢印は「回外」「回内」の文字で読む（左右の向き自体に意味はない）。</text>
+<line x1="500" y1="118" x2="500" y2="330" stroke="#d4a373" stroke-width="14" stroke-linecap="round"/>
+<text x="512" y="334" font-size="10" fill="#555">尺骨</text>
+<text x="418" y="350" font-size="10" fill="#555">橈骨</text>
+<line x1="430" y1="118" x2="430" y2="330" stroke="#e6e6e6" stroke-width="14" stroke-linecap="round" stroke-dasharray="4 4"/>
+<line x1="430" y1="118" x2="426" y2="244" stroke="#d4a373" stroke-width="14" stroke-linecap="round"/>
+<circle cx="426" cy="244" r="3" fill="#2c3e50"/><line x1="436" y1="330" x2="438" y2="256" stroke="#d4a373" stroke-width="14" stroke-linecap="round"/>
+<circle cx="438" cy="256" r="3" fill="#2c3e50"/><circle cx="429" cy="132" r="4" fill="#8e44ad"/>
+<polyline points="429,132 492,124" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
+<text x="512" y="126" font-size="10" fill="#8e44ad">回外筋</text>
+<circle cx="432" cy="205" r="4" fill="#8e44ad"/>
+<polyline points="432,205 492,150" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
+<text x="512" y="154" font-size="10" fill="#8e44ad">円回内筋</text>
+<circle cx="437" cy="315" r="4" fill="#8e44ad"/>
+<polyline points="437,315 500,312" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
+<text x="512" y="300" font-size="10" fill="#8e44ad">方形回内筋</text>
+<circle cx="350" cy="200" r="12" fill="#fff" stroke="#d4a373" stroke-width="3"/><circle cx="350" cy="188" r="4" fill="#2c3e50"/><text x="336" y="228" font-size="10" fill="#c0392b" font-weight="bold">中間</text>
+<circle cx="350" cy="300" r="12" fill="#fff" stroke="#d4a373" stroke-width="3"/><circle cx="360" cy="294" r="4" fill="#2c3e50"/><text x="336" y="328" font-size="10" fill="#c0392b" font-weight="bold">回内</text>
+<line x1="364" y1="200" x2="422" y2="200" stroke="#bbb"/><line x1="364" y1="300" x2="424" y2="300" stroke="#bbb"/><text x="316" y="372" font-size="10" fill="#c0392b">近位骨片：回内・回外の中間位</text>
+<text x="316" y="386" font-size="10" fill="#555">（回外筋・二頭筋と</text>
+<text x="316" y="400" font-size="10" fill="#555">　円回内筋が引き合う）</text>
+<text x="470" y="372" font-size="10" fill="#c0392b">遠位骨片：回内</text>
+<text x="470" y="386" font-size="10" fill="#555">（方形回内筋）</text>
+<text x="16" y="428" font-size="10" fill="#555">断面マーク：●が真上＝中間位、外へ回る＝回外、内へ回る＝回内（模式）。尺骨は折れていない想定。</text>
 </svg>

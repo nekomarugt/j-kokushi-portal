@@ -489,3 +489,9 @@ footer {
 .mb-go a { display: inline-flex; align-items: center; max-width: 100%; min-height: 44px; padding: 4px 12px; border: 1px solid #9db8c9; border-radius: 14px; color: #0b4f8a; background: #fff; text-decoration: none; font-size: .88rem; font-weight: 700; line-height: 1.4; }
 @media print { .more-box { break-inside: avoid; } }
 
+
+.fig-toggle { display: block; margin: 6px auto 0; padding: 8px 14px; min-height: 40px; border-radius: 999px; border: 1px solid #c0392b; background: #fff; color: #c0392b; font-size: .85rem; font-weight: 600; cursor: pointer; }
+.fig-toggle[aria-pressed="true"] { background: #7f8c8d; border-color: #7f8c8d; color: #fff; }
+.illustration img { transition: opacity .18s ease; }
+.illustration img.is-fading { opacity: 0; }
+@media (prefers-reduced-motion: reduce) { .illustration img { transition: none; } }

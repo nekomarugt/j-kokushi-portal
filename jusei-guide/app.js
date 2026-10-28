@@ -171,7 +171,7 @@
           image + (section.illustrations || []).map((item) =>
             '<figure class="illustration"' + (item.id ? ' id="' + escapeHtml(item.id) + '"' : '') + '><button type="button" class="illustration-open" data-src="' + escapeHtml(item.src) + '" data-caption="' + escapeHtml(item.caption) + '" aria-label="' + escapeHtml(item.caption) + 'を拡大">' +
             '<img src="' + escapeHtml(item.src) + '" alt="' + escapeHtml(item.caption) + '" loading="lazy" decoding="async">' +
-            '<span>タップで拡大</span></button><figcaption>' + escapeHtml(item.caption) + '</figcaption></figure>'
+            '<span>タップで拡大</span></button>' + (item.before ? '<button type="button" class="fig-toggle" data-after="' + escapeHtml(item.src) + '" data-before="' + escapeHtml(item.before) + '" aria-pressed="false">転位前 ⇄ 転位後（いま：転位後）</button>' : '') + '<figcaption>' + escapeHtml(item.caption) + '</figcaption></figure>'
           ).join('') +
           (section.tips || []).map((tip) =>
             '<details class="tips-box">' +
@@ -259,7 +259,21 @@
     window.scrollTo({top: 0, behavior: 'smooth'});
   }
 
+  const preloaded = new Set();
+  const preloadBefore = () => document.querySelectorAll('.fig-toggle').forEach((b) => { if (preloaded.has(b.dataset.before)) return; preloaded.add(b.dataset.before); const i = new Image(); i.src = b.dataset.before; });
+  new MutationObserver(preloadBefore).observe(document.body, {childList: true, subtree: true});
   document.addEventListener('click', (event) => {
+    const tog = event.target.closest('.fig-toggle');
+    if (tog) {
+      const fig = tog.closest('figure'); const img = fig.querySelector('img'); const open = fig.querySelector('.illustration-open');
+      const toBefore = tog.getAttribute('aria-pressed') !== 'true';
+      const src = toBefore ? tog.dataset.before : tog.dataset.after;
+      img.classList.add('is-fading');
+      setTimeout(() => { img.src = src; open.dataset.src = src; img.classList.remove('is-fading'); }, 180);
+      tog.setAttribute('aria-pressed', String(toBefore));
+      tog.textContent = '転位前 ⇄ 転位後（いま：' + (toBefore ? '転位前' : '転位後') + '）';
+      return;
+    }
     const illustration = event.target.closest('.illustration-open');
     if (illustration) {
       viewerImage.src = illustration.dataset.src;
