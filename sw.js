@@ -3,7 +3,7 @@
  * - ?v=hash assets : cache-first (immutable); images / fonts / icons : stale-while-revalidate
  * - Only touches Cache Storage entries prefixed "jkp-"; never touches localStorage.
  * Bump VERSION when changing this file's strategy or the precache list. */
-const VERSION = 'v60';
+const VERSION = 'v61';
 const PREFIX = 'jkp-';
 const PAGES = PREFIX + 'pages-' + VERSION;
 const STATIC = PREFIX + 'static-' + VERSION;

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" font-family="sans-serif" font-size="13"><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="#c0392b"/></marker></defs><rect width="600" height="500" fill="#fff"/>
+<text x="16" y="24" font-size="15" fill="#000" font-weight="bold">棒とヒモで考える：顆上骨折（上腕骨・大腿骨）</text>
+<rect x="470" y="10" width="118" height="24" rx="12" fill="#c0392b"/><text x="488" y="27" font-size="11" fill="#fff" font-weight="bold">転位後</text>
+<text x="16" y="44" font-size="11" fill="#555">右側を外側から見た図（左＝前、右＝後ろ）。遠位端の形は上腕骨も大腿骨もほぼ同じ</text>
+<line x1="16" y1="64" x2="46" y2="64" stroke="#d4a373" stroke-width="10" stroke-linecap="round"/><text x="52" y="68" font-size="11" fill="#000">骨＝棒</text>
+<line x1="110" y1="64" x2="140" y2="64" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3"/><text x="146" y="68" font-size="11" fill="#000">筋＝ヒモ（●が付く所）</text>
+<line x1="290" y1="64" x2="318" y2="64" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/><text x="324" y="68" font-size="11" fill="#000">骨片が引かれる向き</text>
+
+<line x1="470" y1="64" x2="500" y2="64" stroke="#e6e6e6" stroke-width="10" stroke-dasharray="4 4"/><text x="506" y="68" font-size="11" fill="#000">元の位置</text>
+
+<line x1="150" y1="80" x2="150" y2="440" stroke="#ddd"/><line x1="300" y1="80" x2="300" y2="440" stroke="#ddd"/><line x1="450" y1="80" x2="450" y2="440" stroke="#ddd"/><text x="10" y="96" font-size="12" fill="#000" font-weight="bold">上腕骨・伸展型</text>
+<text x="10" y="110" font-size="9" fill="#555">（大部分）</text>
+<polygon points="66,112 84,112 84,238 66,262" fill="none" stroke="#ccc" stroke-width="1.5" stroke-dasharray="4 3"/>
+<polygon points="66,262 84,238 89,310 61,310" fill="none" stroke="#ccc" stroke-width="1.5" stroke-dasharray="4 3"/>
+<circle cx="75" cy="320" r="12" fill="none" stroke="#ccc" stroke-dasharray="4 3"/><g transform="translate(0,0) rotate(0,0,0)"><polygon points="66,112 84,112 84,238 66,262" fill="#d4a373" stroke="#b08050" stroke-width="1" />
+</g><g transform="translate(16,-24) rotate(0,75,320)"><polygon points="66,262 84,238 89,310 61,310" fill="#d4a373" stroke="#b08050" stroke-width="1" />
+<circle cx="75" cy="320" r="12" fill="#f5cba7" stroke="#d4a373"/></g><line x1="82" y1="238" x2="100" y2="214" stroke="#2c3e50" stroke-width="2"/><line x1="121" y1="266" x2="135" y2="244" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/>
+<text x="10" y="380" font-size="9" fill="#555">筋のヒモでなく外力の向き</text>
+<text x="10" y="392" font-size="9" fill="#555">で決まる（割り箸Ⅱ型）</text>
+<text x="160" y="96" font-size="12" fill="#000" font-weight="bold">上腕骨・屈曲型</text>
+<text x="160" y="110" font-size="9" fill="#555"></text>
+<polygon points="216,112 234,112 234,262 216,238" fill="none" stroke="#ccc" stroke-width="1.5" stroke-dasharray="4 3"/>
+<polygon points="216,238 234,262 239,310 211,310" fill="none" stroke="#ccc" stroke-width="1.5" stroke-dasharray="4 3"/>
+<circle cx="225" cy="320" r="12" fill="none" stroke="#ccc" stroke-dasharray="4 3"/><g transform="translate(0,0) rotate(0,0,0)"><polygon points="216,112 234,112 234,262 216,238" fill="#d4a373" stroke="#b08050" stroke-width="1" />
+</g><g transform="translate(-16,-22) rotate(0,225,320)"><polygon points="216,238 234,262 239,310 211,310" fill="#d4a373" stroke="#b08050" stroke-width="1" />
+<circle cx="225" cy="320" r="12" fill="#f5cba7" stroke="#d4a373"/></g><line x1="200" y1="216" x2="218" y2="240" stroke="#2c3e50" stroke-width="2"/><line x1="175" y1="268" x2="159" y2="246" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/>
+<text x="160" y="380" font-size="9" fill="#555">筋のヒモでなく外力の向き</text>
+<text x="160" y="392" font-size="9" fill="#555">で決まる（割り箸Ⅱ型）</text>
+<text x="310" y="96" font-size="12" fill="#000" font-weight="bold">大腿骨・屈曲型</text>
+<text x="310" y="110" font-size="9" fill="#555">（膝を曲げて衝く）</text>
+<polygon points="366,112 384,112 384,238 366,262" fill="none" stroke="#ccc" stroke-width="1.5" stroke-dasharray="4 3"/>
+<polygon points="366,262 384,238 389,310 361,310" fill="none" stroke="#ccc" stroke-width="1.5" stroke-dasharray="4 3"/>
+<circle cx="379" cy="320" r="17" fill="none" stroke="#ccc" stroke-dasharray="4 3"/><g transform="translate(-6,0) rotate(0,0,0)"><polygon points="366,112 384,112 384,238 366,262" fill="#d4a373" stroke="#b08050" stroke-width="1" />
+</g><g transform="translate(10,-18) rotate(22,379,320)"><polygon points="366,262 384,238 389,310 361,310" fill="#d4a373" stroke="#b08050" stroke-width="1" />
+<circle cx="379" cy="320" r="17" fill="#f5cba7" stroke="#d4a373"/></g><line x1="398" y1="243" x2="424" y2="227" stroke="#2c3e50" stroke-width="2"/><circle cx="400" cy="300" r="4" fill="#8e44ad"/>
+<polyline points="400,300 435,368" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
+<text x="387" y="380" font-size="9" fill="#8e44ad">腓腹筋</text>
+<line x1="400" y1="300" x2="412" y2="323" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/>
+<circle cx="360" cy="222" r="4" fill="#8e44ad"/>
+<polyline points="360,222 315,150" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
+<text x="304" y="140" font-size="9" fill="#8e44ad">大腿四頭筋</text>
+<text x="304" y="152" font-size="9" fill="#8e44ad">大内転筋</text>
+<line x1="360" y1="222" x2="346" y2="200" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/>
+<text x="460" y="96" font-size="12" fill="#000" font-weight="bold">大腿骨・伸展型</text>
+<text x="460" y="110" font-size="9" fill="#555"></text>
+<polygon points="516,112 534,112 534,262 516,238" fill="none" stroke="#ccc" stroke-width="1.5" stroke-dasharray="4 3"/>
+<polygon points="516,238 534,262 539,310 511,310" fill="none" stroke="#ccc" stroke-width="1.5" stroke-dasharray="4 3"/>
+<circle cx="529" cy="320" r="17" fill="none" stroke="#ccc" stroke-dasharray="4 3"/><g transform="translate(6,0) rotate(0,0,0)"><polygon points="516,112 534,112 534,262 516,238" fill="#d4a373" stroke="#b08050" stroke-width="1" />
+</g><g transform="translate(-14,-16) rotate(0,529,320)"><polygon points="516,238 534,262 539,310 511,310" fill="#d4a373" stroke="#b08050" stroke-width="1" />
+<circle cx="529" cy="320" r="17" fill="#f5cba7" stroke="#d4a373"/></g><line x1="502" y1="222" x2="520" y2="246" stroke="#2c3e50" stroke-width="2"/><line x1="481" y1="274" x2="463" y2="254" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/>
+<text x="10" y="410" font-size="9" fill="#c0392b">遠位骨片：後上方へ</text>
+<text x="10" y="423" font-size="9" fill="#555">（骨折線は前→後上）</text>
+<text x="160" y="410" font-size="9" fill="#c0392b">遠位骨片：前上方へ</text>
+<text x="160" y="423" font-size="9" fill="#555">（骨折線は後→前上）</text>
+<text x="310" y="410" font-size="9" fill="#c0392b">遠位骨片：後方（腓腹筋）</text>
+<text x="310" y="423" font-size="9" fill="#555">近位骨片：前内方・短縮</text>
+<text x="460" y="410" font-size="9" fill="#c0392b">遠位骨片：前方</text>
+<text x="460" y="423" font-size="9" fill="#555">近位骨片：後方</text>
+<text x="10" y="448" font-size="9" fill="#555">点線＝折れる前の位置。大腿骨・屈曲型の「内方」は横から見た図に出ないので文字で示す。</text>
+<rect x="476" y="454" width="118" height="40" rx="6" fill="#f8f9fa" stroke="#ccc"/><text x="482" y="469" font-size="9" fill="#555">↑近位(上) ↓遠位(下)</text>
+<text x="482" y="486" font-size="9" fill="#555">←前方　後方→</text>
+</svg>
