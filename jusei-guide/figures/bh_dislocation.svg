@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 305" font-family="sans-serif" font-size="13"><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="#c0392b"/></marker></defs><rect width="600" height="305" fill="#fff"/>
+<text x="16" y="24" font-size="15" fill="#000" font-weight="bold">棒とヒモで考える：脱臼と弾発性固定（支点と引っかかり）</text>
+<text x="16" y="44" font-size="12" fill="#555">関節窩の縁・骨の出っ張りなどを支点に、てこのように骨頭がこじり出される</text>
+<line x1="200" y1="56" x2="200" y2="275" stroke="#ddd"/><line x1="400" y1="56" x2="400" y2="275" stroke="#ddd"/><text x="16" y="74" font-size="12" fill="#000" font-weight="bold">① ふつう</text>
+<path d="M60,120 Q30,165 60,210" stroke="#95a5a6" stroke-width="12" fill="none"/><rect x="56" y="110" width="8" height="12" fill="#7f8c8d"/><circle cx="62" cy="165" r="20" fill="#f5cba7" stroke="#d4a373"/><line x1="80" y1="165" x2="180" y2="165" stroke="#d4a373" stroke-width="14" stroke-linecap="round"/>
+<polyline points="60,120 120,158" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
+<polyline points="60,210 120,172" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
+<text x="16" y="236" font-size="11" fill="#000">骨頭は関節窩の中。</text>
+<text x="16" y="251" font-size="11" fill="#000">関節包・靱帯・筋（ヒモ）は</text>
+<text x="16" y="266" font-size="11" fill="#000">ゆるんでいる</text>
+<text x="216" y="74" font-size="12" fill="#000" font-weight="bold">② こじり出される</text>
+<path d="M260,120 Q230,165 260,210" stroke="#95a5a6" stroke-width="12" fill="none"/><rect x="256" y="110" width="8" height="12" fill="#7f8c8d"/><circle cx="244" cy="128" r="20" fill="#f5cba7" stroke="#d4a373"/><line x1="262" y1="136" x2="360" y2="200" stroke="#d4a373" stroke-width="14" stroke-linecap="round"/>
+<path d="M250,124 l8,-14 l8,14z" fill="#2c3e50"/><text x="272" y="118" font-size="10" fill="#000">支点（窩の縁）</text>
+<line x1="372" y1="168" x2="372" y2="208" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/>
+<text x="332" y="165" font-size="10" fill="#c0392b">強い力</text>
+<line x1="228" y1="118" x2="212" y2="100" stroke="#c0392b" stroke-width="3" marker-end="url(#a)"/>
+<text x="206" y="95" font-size="10" fill="#c0392b">骨頭</text>
+<text x="216" y="236" font-size="11" fill="#000">正常範囲を越えて動かされ、</text>
+<text x="216" y="251" font-size="11" fill="#000">縁を支点に骨頭が外へ</text>
+<text x="216" y="266" font-size="11" fill="#000">（関節包が破れる）</text>
+<text x="416" y="74" font-size="12" fill="#000" font-weight="bold">③ 引っかかって戻る</text>
+<path d="M460,120 Q430,165 460,210" stroke="#95a5a6" stroke-width="12" fill="none"/><rect x="456" y="110" width="8" height="12" fill="#7f8c8d"/><circle cx="444" cy="128" r="20" fill="#f5cba7" stroke="#d4a373"/><line x1="462" y1="136" x2="560" y2="200" stroke="#d4a373" stroke-width="14" stroke-linecap="round"/>
+<path d="M450,124 l8,-14 l8,14z" fill="#2c3e50"/><line x1="460" y1="210" x2="490" y2="152" stroke="#8e44ad" stroke-width="3"/><circle cx="490" cy="152" r="4" fill="#8e44ad"/><text x="470" y="226" font-size="10" fill="#000"></text>
+<text x="480" y="90" font-size="10" fill="#8e44ad">ピンと張った</text>
+<text x="480" y="103" font-size="10" fill="#8e44ad">関節包・靱帯・筋</text>
+<path d="M575,215 Q595,180 560,160" stroke="#c0392b" stroke-width="3" fill="none" marker-end="url(#a)"/><text x="530" y="250" font-size="10" fill="#000"></text>
+<text x="416" y="236" font-size="11" fill="#000">動かそうとすると抵抗があり、</text>
+<text x="416" y="251" font-size="11" fill="#000">手を離すと元の位置へ戻る</text>
+<text x="416" y="266" font-size="11" fill="#c0392b" font-weight="bold">＝弾発性固定</text>
+<text x="16" y="294" font-size="11" fill="#555">骨折は「動かないはずの所が動く」、脱臼は「動くはずの関節が一定の肢位で動かない」。</text>
+</svg>
