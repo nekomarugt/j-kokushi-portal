@@ -847,7 +847,7 @@ window.physiologyChapters = [
     "sections": [
       {
         "title": "糖質・タンパク質・脂質の消化",
-        "anchor": "<ul><li>糖質：単糖まで分解して吸収</li><li>タンパク質：アミノ酸や小さなペプチドまで分解</li><li>脂質：胆汁で乳化し、リパーゼで脂肪酸などへ分解</li></ul>",
+        "anchor": "<ul><li>糖質：単糖まで分解して吸収</li><li>タンパク質：アミノ酸や小さなペプチドまで分解</li><li>脂質：胆汁で乳化し、リパーゼで脂肪酸などへ分解</li></ul><figure class=\"fig fig-diagram\"><a href=\"figures/p08_enzyme_table.webp\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/p08_enzyme_table.webp\" alt=\"消化酵素とできたもの・行き先のまとめ表\" loading=\"lazy\" decoding=\"async\" width=\"720\"></a><figcaption><strong>まとめ表</strong>　まとめ表　消化酵素とできたもの・行き先（縦＝栄養素、横＝唾液・胃液・膵液・小腸。★＝国試でよく問われる所）<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
         "explanation": "消化とは、大きな栄養素を腸管から吸収できる形へ分解すること。口腔では唾液アミラーゼがデンプンの消化を始める。糖質とタンパク質の分解産物は主に門脈血へ入り、長鎖脂肪酸からつくられたカイロミクロンはリンパ管へ入る。",
         "image": "assets/image143.webp",
         "caption": "糖質の消化",
@@ -897,7 +897,7 @@ window.physiologyChapters = [
       },
       {
         "title": "消化管ホルモンと肝臓",
-        "anchor": "<p>ガストリンは胃液分泌、セクレチンは重炭酸を多く含む膵液、CCKは消化酵素を含む膵液と胆嚢収縮を促す。</p><p>肝臓は代謝、解毒、胆汁産生、血漿タンパク質・凝固因子の合成を行う。</p><figure class=\"fig fig-diagram\"><a href=\"figures/p08_hormones.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/p08_hormones.svg\" alt=\"消化管ホルモンのきっかけと働き\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a><figcaption><strong>ひとことポイント</strong>　セクレチン＝酸が来たら重炭酸、CCK＝脂肪・アミノ酸が来たら酵素と胆汁。なぜ十二指腸で重炭酸？ 胃から来た酸を中和して、膵液の酵素が働ける環境にするため。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
+        "anchor": "<p>ガストリンは胃液分泌、セクレチンは重炭酸を多く含む膵液、CCKは消化酵素を含む膵液と胆嚢収縮を促す。</p><p>肝臓は代謝、解毒、胆汁産生、血漿タンパク質・凝固因子の合成を行う。</p><figure class=\"fig fig-diagram\"><a href=\"figures/p08_hormones.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/p08_hormones.svg\" alt=\"消化管ホルモンのきっかけと働き\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a><figcaption><strong>ひとことポイント</strong>　セクレチン＝酸が来たら重炭酸、CCK＝脂肪・アミノ酸が来たら酵素と胆汁。なぜ十二指腸で重炭酸？ 胃から来た酸を中和して、膵液の酵素が働ける環境にするため。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure><figure class=\"fig fig-diagram\"><a href=\"figures/p08_hormone_table.webp\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/p08_hormone_table.webp\" alt=\"消化管ホルモンまとめ表\" loading=\"lazy\" decoding=\"async\" width=\"720\"></a><figcaption><strong>まとめ表</strong>　消化管ホルモンの産生・きっかけ・はたらき（ガストリン・セクレチン・CCK・GIP・VIP）<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
         "explanation": "十二指腸へ酸性内容物が入るとセクレチン、脂肪やアミノ酸が入るとCCKが分泌される。肝臓は門脈から入った栄養素を処理し、必要に応じて貯蔵・変換する。胆汁は肝臓でつくられ、胆嚢で濃縮される。",
         "image": "assets/image155.webp",
         "caption": "肝臓の主な働き",
