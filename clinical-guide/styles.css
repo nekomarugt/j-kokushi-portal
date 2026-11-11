@@ -638,3 +638,17 @@ body { padding-bottom: calc(92px + env(safe-area-inset-bottom, 0px)); }
 .mb-main { margin: 8px 0 12px; }
 .mb-main .mb-list, .mb-main > p { font-size: .95rem; }
 @media print { .fig { break-inside: avoid; padding: 6px; } .fig img { max-width: 110mm; max-height: 105mm; width: auto; } .fig-zoom { display: none; } }
+
+/* はり灸で出る箱（はり灸ポータルの共通倉庫から。柔整の試験では読まなくてよい） */
+.more-box.mb-hk { border-color: #c9c0e0; background: #fbfaff; }
+.more-box.mb-hk .more-badge { background: #ece6fb; color: #4b3a8c; }
+.more-body .mb-tblw { overflow-x: auto; margin: 6px 0; }
+.more-body .mb-tbl { width: 100%; border-collapse: collapse; font-size: .86rem; }
+.more-body .mb-tbl th, .more-body .mb-tbl td { border: 1px solid #d8e2df; padding: 4px 6px; vertical-align: top; text-align: left; }
+.more-body .mb-tbl th { background: #eef5f2; }
+.more-body .mb-h4 { margin: 10px 0 4px; font-size: .92rem; }
+.more-body .mb-one { margin: 6px 0; padding: 6px 10px; background: #f3f1fb; border-radius: 6px; }
+.more-body .mb-links, .more-body .mb-hkq { font-size: .85rem; }
+.more-body .fig { margin: 8px 0; }
+.more-body .fig img { width: 100%; max-width: 560px; height: auto; }
+.more-body .fig figcaption { font-size: .84rem; }

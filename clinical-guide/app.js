@@ -31,7 +31,8 @@
     { id: "hematology", title: "血液・造血器疾患" },
     { id: "neurology", title: "神経疾患" },
     { id: "renal", title: "腎・尿路疾患" },
-    { id: "infection_rheumatology", title: "感染症・リウマチ系疾患" }
+    { id: "infection_rheumatology", title: "感染症・リウマチ系疾患" },
+    { id: "hk_extra", title: "はり灸で出る分野" }
   ].map((item) => ({ ...item, chapter: availableDiseases.get(item.id) || null }));
 
   function escapeHtml(value) {
@@ -202,8 +203,9 @@
       const btn = hasAnswer(block) ? answerButton(bid) : "";
       if (block.kind === "main") return `<div class="mb-main">${html}${btn}</div>`;
       const isLink = block.kind === "link";
-      const label = escapeHtml(String(block.title || "").replace(/^(つながりで覚える|より深く)：/, ""));
-      return `<details class="more-box mb-${isLink ? "link" : "deep"}" data-box-id="${escapeHtml(bid)}"${openBoxes.has(bid) ? " open" : ""}><summary><span class="more-badge">${isLink ? "つながり" : "より深く"}</span><span class="more-title">${label}</span><span class="more-open" aria-hidden="true">ひらく</span></summary><div class="more-body">${html}${btn}</div></details>`;
+      const isHk = block.kind === "hk"; // はり灸の臨床医学で出る所（柔整では読まなくてよい）
+      const label = escapeHtml(String(block.title || "").replace(/^(つながりで覚える|より深く|はり灸で出る)：/, ""));
+      return `<details class="more-box mb-${isHk ? "hk" : isLink ? "link" : "deep"}" data-box-id="${escapeHtml(bid)}"${openBoxes.has(bid) ? " open" : ""}><summary><span class="more-badge">${isHk ? "はり灸で出る" : isLink ? "つながり" : "より深く"}</span><span class="more-title">${label}</span><span class="more-open" aria-hidden="true">ひらく</span></summary><div class="more-body">${html}${btn}</div></details>`;
     }
 
     if (block.type === "figure") {
