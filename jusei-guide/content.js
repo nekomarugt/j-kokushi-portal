@@ -972,7 +972,14 @@ window.juseiChapters = [
       "title": "より深く：頚部骨折と転子部骨折を一言で",
       "html": "<p>頚部＝関節包内・血流が乏しい・骨癒合しにくい。転子部＝関節包外・血流が豊か・骨癒合しやすいが出血が多い。</p>"
      }
-    ]
+    ,
+        {
+          "kind": "art",
+          "id": "illust-femur-prox",
+          "title": "大腿骨頭の栄養血管と腸腰筋（小転子）",
+          "html": "<p class=\"mb-caption\">頚部骨折で問題になる骨頭の血流と、小転子に付く腸腰筋。</p><figure class=\"fig manga-fig\"><a href=\"../manga/femur-blood.webp\" target=\"_blank\" rel=\"noopener\"><img src=\"../manga/femur-blood.webp\" alt=\"大腿骨頭の栄養血管。内側大腿回旋動脈が主。頚部骨折で血流が絶たれやすい。\" width=\"1200\" height=\"1080\" loading=\"lazy\" decoding=\"async\"></a><figcaption>大腿骨頭の栄養血管。内側大腿回旋動脈が主。頚部骨折で血流が絶たれやすい。</figcaption></figure><figure class=\"fig manga-fig\"><a href=\"../manga/femur-capsule.webp\" target=\"_blank\" rel=\"noopener\"><img src=\"../manga/femur-capsule.webp\" alt=\"股関節の関節包の付着。頚部骨折は関節包の内側、転子部骨折は外側。\" width=\"1200\" height=\"1000\" loading=\"lazy\" decoding=\"async\"></a><figcaption>股関節の関節包の付着。頚部骨折は関節包の内側、転子部骨折は外側。</figcaption></figure><figure class=\"fig manga-fig\"><a href=\"../manga/iliopsoas.webp\" target=\"_blank\" rel=\"noopener\"><img src=\"../manga/iliopsoas.webp\" alt=\"腸腰筋＝大腰筋（腰椎）＋腸骨筋（腸骨窩）。両方とも小転子に停止し、縮むと股関節が屈曲する。\" width=\"1280\" height=\"884\" loading=\"lazy\" decoding=\"async\"></a><figcaption>腸腰筋＝大腰筋（腰椎）＋腸骨筋（腸骨窩）。両方とも小転子に停止し、縮むと股関節が屈曲する。</figcaption></figure>"
+        }
+      ]
    },
    {
     "title": "大腿骨骨幹部骨折",

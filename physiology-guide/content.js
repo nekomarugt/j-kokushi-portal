@@ -14,7 +14,31 @@ window.physiologyChapters = [
         "caption": "細胞の基本構造",
         "question": "ATPを多く合成する細胞小器官は何か。",
         "answer": "ミトコンドリア"
-      },
+      ,
+        "tips": [
+          {
+            "id": "manga-mito",
+            "title": "🎨 漫画で見る：ミトコンドリア",
+            "images": [
+              {
+                "src": "../manga/mito-01.webp",
+                "alt": "ミトコンドリアのつくり：外膜・内膜・クリステ。自分のDNAを持ち、母から子へ伝わる。"
+              },
+              {
+                "src": "../manga/mito-02.webp",
+                "alt": "クエン酸回路と電子伝達系でATPをつくるイメージ。"
+              },
+              {
+                "src": "../manga/mito-03.webp",
+                "alt": "酸素を使って効率よくATPをつくる（好気的代謝）。"
+              }
+            ],
+            "caption": "二重膜でATPをつくる。ミトコンドリアのDNAは母から子へ。",
+            "note": "授業用に作ったオリジナル漫画です。たとえ話なので、正確な用語や数値は本文で確認しよう。"
+          }
+        
+        ]
+},
       {
         "title": "核・DNA・RNA",
         "anchor": "<p>ヒトの体細胞では、22対の常染色体と2本の性染色体を合わせて<span class=\"answer\">46本</span>の染色体をもつ。</p><p>DNAの塩基は、アデニンと<span class=\"answer\">チミン</span>、グアニンと<span class=\"answer\">シトシン</span>が対になる。RNAではチミンの代わりにウラシルを用いる。</p>",
@@ -498,6 +522,39 @@ window.physiologyChapters = [
             "alt": "免疫に働く細胞のつながりの模式図",
             "caption": "免疫に働く細胞。貪食するもの、リンパ球の種類をたしかめよう。"
           }
+        ,
+          {
+            "id": "manga-immune",
+            "title": "🎨 漫画で見る：免疫の流れ（侵入から攻撃まで）",
+            "images": [
+              {
+                "src": "../manga/immune-01.webp",
+                "alt": "免疫の漫画 1/6：侵入と一時防衛（バリア・貪食）"
+              },
+              {
+                "src": "../manga/immune-02.webp",
+                "alt": "免疫の漫画 2/6：報告と指令（抗原提示・ヘルパーT細胞）"
+              },
+              {
+                "src": "../manga/immune-03.webp",
+                "alt": "免疫の漫画 3/6：伝令と展開（サイトカイン・出動）"
+              },
+              {
+                "src": "../manga/immune-04.webp",
+                "alt": "免疫の漫画 4/6：攻撃のまとめ（キラーT・抗体）"
+              },
+              {
+                "src": "../manga/immune-05.webp",
+                "alt": "免疫の漫画 5/6：液性免疫と細胞性免疫"
+              },
+              {
+                "src": "../manga/immune-06.webp",
+                "alt": "免疫の漫画 6/6：B細胞から形質細胞へ、抗体のポイント"
+              }
+            ],
+            "caption": "侵入→報告→指令→攻撃。液性免疫と細胞性免疫、B細胞から形質細胞へ。",
+            "note": "授業用に作ったオリジナル漫画です。たとえ話なので、正確な用語や数値は本文で確認しよう。"
+          }
         ]
       },
       {
@@ -853,7 +910,107 @@ window.physiologyChapters = [
         "caption": "糖質の消化",
         "question": "タンパク質が最終的に分解されて生じる主な単位は何か。",
         "answer": "アミノ酸"
-      },
+      ,
+        "tips": [
+          {
+            "id": "manga-shoka",
+            "title": "🎨 漫画で見る：消化と吸収（4コマ）",
+            "images": [
+              {
+                "src": "../manga/shoka-01.webp",
+                "alt": "消化と吸収の4コマ「タイトル「消化と吸収」」"
+              },
+              {
+                "src": "../manga/shoka-02.webp",
+                "alt": "消化と吸収の4コマ「三大栄養素は刻む」"
+              },
+              {
+                "src": "../manga/shoka-03.webp",
+                "alt": "消化と吸収の4コマ「消化酵素の地図（口→胃→膵→小腸）」"
+              },
+              {
+                "src": "../manga/shoka-04.webp",
+                "alt": "消化と吸収の4コマ「アミラーゼ」"
+              },
+              {
+                "src": "../manga/shoka-05.webp",
+                "alt": "消化と吸収の4コマ「史実：タカジアスターゼ」"
+              },
+              {
+                "src": "../manga/shoka-06.webp",
+                "alt": "消化と吸収の4コマ「ペプシン」"
+              },
+              {
+                "src": "../manga/shoka-07.webp",
+                "alt": "消化と吸収の4コマ「史実：ペプシコーラ」"
+              },
+              {
+                "src": "../manga/shoka-08.webp",
+                "alt": "消化と吸収の4コマ「リパーゼ」"
+              },
+              {
+                "src": "../manga/shoka-09.webp",
+                "alt": "消化と吸収の4コマ「史実：洗剤・阻害薬・アブラソコムツ」"
+              },
+              {
+                "src": "../manga/shoka-10.webp",
+                "alt": "消化と吸収の4コマ「ガストリン」"
+              },
+              {
+                "src": "../manga/shoka-11.webp",
+                "alt": "消化と吸収の4コマ「セクレチン」"
+              },
+              {
+                "src": "../manga/shoka-12.webp",
+                "alt": "消化と吸収の4コマ「CCK（コレシストキニン）」"
+              },
+              {
+                "src": "../manga/shoka-13.webp",
+                "alt": "消化と吸収の4コマ「膵液 vs 胆汁」"
+              },
+              {
+                "src": "../manga/shoka-14.webp",
+                "alt": "消化と吸収の4コマ「乳化→ミセル」"
+              },
+              {
+                "src": "../manga/shoka-15.webp",
+                "alt": "消化と吸収の4コマ「カイロミクロン→乳び管」"
+              },
+              {
+                "src": "../manga/shoka-16.webp",
+                "alt": "消化と吸収の4コマ「門脈の根」"
+              },
+              {
+                "src": "../manga/shoka-17.webp",
+                "alt": "消化と吸収の4コマ「初回通過回避」"
+              },
+              {
+                "src": "../manga/shoka-18.webp",
+                "alt": "消化と吸収の4コマ「ビリルビン」"
+              },
+              {
+                "src": "../manga/shoka-19.webp",
+                "alt": "消化と吸収の4コマ「腸肝循環」"
+              },
+              {
+                "src": "../manga/shoka-20.webp",
+                "alt": "消化と吸収の4コマ「胃の分泌細胞」"
+              },
+              {
+                "src": "../manga/shoka-21.webp",
+                "alt": "消化と吸収の4コマ「肝臓の仕事」"
+              },
+              {
+                "src": "../manga/shoka-22.webp",
+                "alt": "消化と吸収の4コマ「まとめ」"
+              }
+            ],
+            "caption": "酵素・ホルモン・吸収の芯を4コマで。①から順に読む（全22枚）。",
+            "note": "授業用に作ったオリジナル漫画です。たとえ話なので、正確な用語や数値は本文で確認しよう。"
+          }
+        
+        ]
+},
       {
         "title": "胃の分泌",
         "anchor": "<ul><li>主細胞：ペプシノゲン</li><li>壁細胞：塩酸と<span class=\"answer\">内因子</span></li><li>副細胞：粘液</li><li>G細胞：ガストリン</li></ul>",
@@ -942,7 +1099,59 @@ window.physiologyChapters = [
         "caption": "主な栄養素と働き",
         "question": "1gあたりのエネルギー量が最も大きい栄養素は何か。",
         "answer": "脂質"
-      },
+      ,
+        "tips": [
+          {
+            "id": "manga-vitamin",
+            "title": "🎨 漫画で見る：ビタミン（食べ物と歴史のヘンな話）",
+            "images": [
+              {
+                "src": "../manga/vitamin-01.webp",
+                "alt": "ビタミンの漫画「タイトル「マンガで覚えるビタミン」」"
+              },
+              {
+                "src": "../manga/vitamin-02.webp",
+                "alt": "ビタミンの漫画「ビタミンA：シロクマの肝臓」"
+              },
+              {
+                "src": "../manga/vitamin-03.webp",
+                "alt": "ビタミンの漫画「ナイアシン：トウモロコシとペラグラ」"
+              },
+              {
+                "src": "../manga/vitamin-04.webp",
+                "alt": "ビタミンの漫画「ビタミンB1：鈴木梅太郎とオリザニン」"
+              },
+              {
+                "src": "../manga/vitamin-05.webp",
+                "alt": "ビタミンの漫画「ビタミンA：ニンジンと夜目」"
+              },
+              {
+                "src": "../manga/vitamin-06.webp",
+                "alt": "ビタミンの漫画「ビタミンK：新生児とKシロップ」"
+              },
+              {
+                "src": "../manga/vitamin-07.webp",
+                "alt": "ビタミンの漫画「ビタミンD：日光が届かない街」"
+              },
+              {
+                "src": "../manga/vitamin-08.webp",
+                "alt": "ビタミンの漫画「ビオチン：生卵白と欠乏」"
+              },
+              {
+                "src": "../manga/vitamin-09.webp",
+                "alt": "ビタミンの漫画「ビタミンB12：胃を取ったあと」"
+              },
+              {
+                "src": "../manga/vitamin-10.webp",
+                "alt": "ビタミンの漫画「早見表：作用・欠乏症・多い食品」"
+              }
+            ],
+            "caption": "脂溶性と水溶性、欠乏症と食品。歴史のエピソードつき（全10枚）。",
+            "note": "授業用に作ったオリジナル漫画です。たとえ話なので、正確な用語や数値は本文で確認しよう。"
+          }
+        
+        ]
+},
       {
         "title": "糖質代謝と血糖調節",
         "anchor": "<p>食後はインスリンが働き、グルコースを細胞へ取り込み、グリコーゲンや脂肪として蓄える。空腹時は<span class=\"answer\">グルカゴン</span>などが血糖を上げる。</p><figure class=\"fig fig-diagram\"><a href=\"figures/p09_glucose.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/p09_glucose.svg\" alt=\"インスリンとグルカゴンによる血糖調節の模式図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a><figcaption><strong>ひとことポイント</strong>　血糖を下げるのは主にインスリン（B細胞）。なぜ上げる側はたくさんある？ 低血糖は脳のエネルギー切れに直結するので、グルカゴンなど複数の仕組みで守っているから。<small class=\"fig-zoom\">（図をタップすると拡大）</small></figcaption></figure>",
@@ -976,7 +1185,43 @@ window.physiologyChapters = [
         "caption": "ATPは細胞活動の共通エネルギー源",
         "question": "酸素がなくても進行できるATP産生経路は何か。",
         "answer": "解糖系"
-      },
+      ,
+        "tips": [
+          {
+            "id": "manga-atp",
+            "title": "🎨 漫画で見る：ATP産生の旅",
+            "images": [
+              {
+                "src": "../manga/atp-01.webp",
+                "alt": "ATPは細胞のエネルギー通貨。運動や脳の活動に使われる。"
+              },
+              {
+                "src": "../manga/atp-02.webp",
+                "alt": "グルコースが細胞質の解糖系で分解され、ATPが少量できる。"
+              },
+              {
+                "src": "../manga/atp-03.webp",
+                "alt": "酸素が足りないとピルビン酸は乳酸になる（無酸素的解糖）。"
+              },
+              {
+                "src": "../manga/atp-04.webp",
+                "alt": "酸素が十分だとミトコンドリアのクエン酸回路へ進む。"
+              },
+              {
+                "src": "../manga/atp-05.webp",
+                "alt": "電子伝達系でATPをたくさんつくる（マンガの『38個』は古典的な数え方。本文では少量／多量と押さえる）。"
+              },
+              {
+                "src": "../manga/atp-06.webp",
+                "alt": "乳酸は肝臓でブドウ糖に戻せる（コリ回路）。まとめ。"
+              }
+            ],
+            "caption": "解糖系（細胞質）→酸素があればミトコンドリアへ。酸素が足りないと乳酸。",
+            "note": "授業用のオリジナル漫画です。マンガ中の「ATP 38個」は古典的な教科書の数え方です。本文では「解糖系は少量、ミトコンドリアは多量」と押さえてあります（実際は約30〜32ともされます）。"
+          }
+        
+        ]
+},
       {
         "title": "基礎代謝とエネルギー消費",
         "anchor": "<p>基礎代謝は、覚醒・安静・空腹・適温などの条件で生命維持に必要な最小限のエネルギー量。体表面積、年齢、性別、ホルモンなどの影響を受ける。</p>",
@@ -1233,7 +1478,35 @@ window.physiologyChapters = [
             "html": "<div class=\"mb\"><p><span class=\"mb-k\">つながり</span>膵島の<span class=\"answer\">B細胞</span>が<span class=\"answer\">インスリン</span>を出す。足りない・効かないと<span class=\"answer\">糖尿病</span>になる。</p><figure class=\"mb-fig\"><a href=\"figures/x_sugar.svg\" target=\"_blank\" rel=\"noopener\"><img src=\"figures/x_sugar.svg\" alt=\"血糖の解剖・生理・臨床のつながり図\" loading=\"lazy\" decoding=\"async\" width=\"560\"></a></figure><p><span class=\"mb-k\">なぜ</span>血糖が高いと、尿にもブドウ糖が出る。ブドウ糖は水を引っぱるので尿がふえ（多尿）、のどが渇く（多飲）。</p><p><span class=\"mb-k\">覚え方</span>貯金箱：インスリンは「入れる係」、グルカゴンは「出す係」。1型＝入れる係がいない。2型＝入れる係の力が落ちている。</p><p class=\"mb-go\"><span class=\"mb-k\">ほかの科目</span><a href=\"../anatomy-guide/#endocrine-6\">解剖学：膵島</a><a href=\"../clinical-guide/#sec-metabolic-1\">一般臨床：糖尿病</a></p></div>"
           }
         ]
-      }
+      ,
+        "tips": [
+          {
+            "id": "manga-insulin",
+            "title": "🎨 漫画で見る：インスリンとグルカゴン",
+            "images": [
+              {
+                "src": "../manga/insulin-01.webp",
+                "alt": "インスリンは銀行の窓口：血糖（現金）を細胞（金庫）へ入れる。膵B細胞から出る。"
+              },
+              {
+                "src": "../manga/insulin-02.webp",
+                "alt": "グルカゴンは金庫から出す：血糖を上げる。膵A細胞から出る。"
+              },
+              {
+                "src": "../manga/insulin-03.webp",
+                "alt": "インスリンとグルカゴンはシーソー。血糖を反対向きに調節する。"
+              },
+              {
+                "src": "../manga/insulin-04.webp",
+                "alt": "両方とも足りない／効かないと血糖の調節が崩れる（糖尿病など）。"
+              }
+            ],
+            "caption": "インスリンは血糖を下げ、グルカゴンは血糖を上げる。銀行の窓口と金庫のたとえ。",
+            "note": "授業用に作ったオリジナル漫画です。たとえ話なので、正確な用語や数値は本文で確認しよう。"
+          }
+        
+        ]
+}
     ],
     "quiz": [
       {
@@ -1419,7 +1692,91 @@ window.physiologyChapters = [
         "caption": "光が網膜へ届く流れ",
         "question": "暗所で働きやすい視細胞は何か。",
         "answer": "杆体"
-      }
+      ,
+        "tips": [
+          {
+            "id": "manga-kankaku",
+            "title": "🖼 イラストで見る：視覚の実験（盲点・残像・プルキニエ）",
+            "images": [
+              {
+                "src": "../manga/kankaku-01.webp",
+                "alt": "盲点の実験1：白い背景、黒い点。右目を閉じ左目で＋を見たまま顔を近づける。"
+              },
+              {
+                "src": "../manga/kankaku-02.webp",
+                "alt": "盲点の実験2：黄色い背景。消えた所は何色に見えるか。"
+              },
+              {
+                "src": "../manga/kankaku-03.webp",
+                "alt": "盲点の実験3：色を入れ替えた版。"
+              },
+              {
+                "src": "../manga/kankaku-04.webp",
+                "alt": "盲点の実験4：線が点を貫く。消えても線はつながって見えるか。"
+              },
+              {
+                "src": "../manga/kankaku-05.webp",
+                "alt": "盲点の実験5：縞模様が点を貫く。"
+              },
+              {
+                "src": "../manga/kankaku-06.webp",
+                "alt": "盲点の実験6：線が点の中で途切れる。どう見えるか。"
+              },
+              {
+                "src": "../manga/kankaku-07.webp",
+                "alt": "盲点の実験7：スイカ模様。赤い点はどうなるか。"
+              },
+              {
+                "src": "../manga/kankaku-08.webp",
+                "alt": "模式図：視神経乳頭には視細胞がなく、ここが盲点になる。"
+              },
+              {
+                "src": "../manga/kankaku-09.webp",
+                "alt": "模式図：脳が周りの模様で盲点を埋めている（フィリングイン）。"
+              },
+              {
+                "src": "../manga/kankaku-10.webp",
+                "alt": "残像の実験1：マゼンタの円を数十秒じっと見る。"
+              },
+              {
+                "src": "../manga/kankaku-11.webp",
+                "alt": "残像の実験2：緑の画面に目を移す（残像の色を確認）。"
+              },
+              {
+                "src": "../manga/kankaku-12.webp",
+                "alt": "残像の実験3：対照の緑画面。"
+              },
+              {
+                "src": "../manga/kankaku-13.webp",
+                "alt": "模式図：錐体の順応。見続けた色の錐体が疲れ、残った錐体の色が残像になる。"
+              },
+              {
+                "src": "../manga/kankaku-14.webp",
+                "alt": "プルキニエ現象1：明るい所では赤い花が目立つ。"
+              },
+              {
+                "src": "../manga/kankaku-15.webp",
+                "alt": "プルキニエ現象2：暗い所では青い花の方が相対的に見えやすい。"
+              },
+              {
+                "src": "../manga/kankaku-16.webp",
+                "alt": "模式図：明るい所は錐体（赤に敏感）、暗い所は杆体（青緑に敏感）＝プルキニエ移動。"
+              },
+              {
+                "src": "../manga/kankaku-17.webp",
+                "alt": "順応の図：杆体と錐体の感度が明るさで入れ替わる。"
+              },
+              {
+                "src": "../manga/kankaku-18.webp",
+                "alt": "光受容の図：視細胞が光を電気信号に変える。"
+              }
+            ],
+            "caption": "盲点の穴あき、残像の色、暗い所で青が目立つ現象。図の指示どおりに試してみよう。",
+            "note": "授業用のオリジナル図です。盲点・残像は画面でも試せます（片目で＋を見たまま顔を近づける、色をじっと見てから視線を移す）。"
+          }
+        
+        ]
+}
     ],
     "quiz": [
       {

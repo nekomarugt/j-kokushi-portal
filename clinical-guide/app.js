@@ -204,8 +204,12 @@
       if (block.kind === "main") return `<div class="mb-main">${html}${btn}</div>`;
       const isLink = block.kind === "link";
       const isHk = block.kind === "hk"; // はり灸の臨床医学で出る所（柔整では読まなくてよい）
-      const label = escapeHtml(String(block.title || "").replace(/^(つながりで覚える|より深く|はり灸で出る)：/, ""));
-      return `<details class="more-box mb-${isHk ? "hk" : isLink ? "link" : "deep"}" data-box-id="${escapeHtml(bid)}"${openBoxes.has(bid) ? " open" : ""}><summary><span class="more-badge">${isHk ? "はり灸で出る" : isLink ? "つながり" : "より深く"}</span><span class="more-title">${label}</span><span class="more-open" aria-hidden="true">ひらく</span></summary><div class="more-body">${html}${btn}</div></details>`;
+      const isManga = block.kind === "manga";
+      const isArt = block.kind === "art";
+      const label = escapeHtml(String(block.title || "").replace(/^(つながりで覚える|より深く|はり灸で出る|🎨 漫画で見る|🖼 イラストで見る)：/, ""));
+      const mb = isHk ? "hk" : isManga ? "manga" : isArt ? "art" : isLink ? "link" : "deep";
+      const badge = isHk ? "はり灸で出る" : isManga ? "🎨 漫画で見る" : isArt ? "🖼 イラストで見る" : isLink ? "つながり" : "より深く";
+      return `<details class="more-box mb-${mb}" data-box-id="${escapeHtml(bid)}"${openBoxes.has(bid) ? " open" : ""}><summary><span class="more-badge">${badge}</span><span class="more-title">${label}</span><span class="more-open" aria-hidden="true">ひらく</span></summary><div class="more-body">${html}${btn}</div></details>`;
     }
 
     if (block.type === "figure") {

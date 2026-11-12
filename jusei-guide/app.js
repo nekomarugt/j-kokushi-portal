@@ -189,8 +189,8 @@
             '</details>'
           ).join('') +
           (section.boxes || []).map((box) =>
-            '<details class="more-box mb-' + (box.kind === 'link' ? 'link' : 'deep') + '">' +
-              '<summary><span class="more-badge">' + (box.kind === 'link' ? 'つながり' : 'より深く') + '</span><span class="more-title">' + escapeHtml(String(box.title || '').replace(/^(つながりで覚える|より深く)：/, '')) + '</span><span class="more-open" aria-hidden="true">ひらく</span></summary>' +
+            '<details class="more-box mb-' + (box.kind === 'link' ? 'link' : box.kind === 'manga' ? 'manga' : box.kind === 'art' ? 'art' : 'deep') + '">' +
+              '<summary><span class="more-badge">' + (box.kind === 'link' ? 'つながり' : box.kind === 'manga' ? '🎨 漫画で見る' : box.kind === 'art' ? '🖼 イラストで見る' : 'より深く') + '</span><span class="more-title">' + escapeHtml(String(box.title || '').replace(/^(つながりで覚える|より深く)：/, '')) + '</span><span class="more-open" aria-hidden="true">ひらく</span></summary>' +
               '<div class="more-body">' + box.html + '</div>' +
             '</details>'
           ).join('') +

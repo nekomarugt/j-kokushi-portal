@@ -160,8 +160,8 @@
             '<span>タップで拡大</span></button><figcaption>' + escapeHtml(item.caption) + '</figcaption></figure>'
           ).join('') +
           (section.tips || []).map((tip) =>
-            '<details class="tips-box">' +
-              '<summary><span class="tips-badge">TIPS</span><span class="tips-title">' + escapeHtml(String(tip.title || '').replace(/^TIPS\s*/, '')) + '</span><span class="tips-open" aria-hidden="true">ひらく</span></summary>' +
+            '<details class="tips-box' + (/漫画で見る|イラストで見る/.test(String(tip.title || '')) ? ' more-box mb-manga' : '') + '">' +
+              '<summary><span class="' + (/漫画で見る|イラストで見る/.test(String(tip.title || '')) ? 'more-badge' : 'tips-badge') + '">' + (/🎨/.test(String(tip.title || '')) ? '🎨 漫画で見る' : /🖼/.test(String(tip.title || '')) ? '🖼 イラストで見る' : 'TIPS') + '</span><span class="tips-title">' + escapeHtml(String(tip.title || '').replace(/^TIPS\s*/, '').replace(/^🎨 漫画で見る：/, '').replace(/^🖼 イラストで見る：/, '')) + '</span><span class="tips-open" aria-hidden="true">ひらく</span></summary>' +
               '<div class="tips-body">' +
                 '<p class="tips-caption">' + escapeHtml(tip.caption || '') + '</p>' +
                 (tip.images || [{src: tip.src, alt: tip.alt}]).map((im) =>
@@ -174,8 +174,8 @@
             '</details>'
           ).join('') +
           (section.boxes || []).map((box) =>
-            '<details class="more-box mb-' + (box.kind === 'link' ? 'link' : 'deep') + '">' +
-              '<summary><span class="more-badge">' + (box.kind === 'link' ? 'つながり' : 'より深く') + '</span><span class="more-title">' + escapeHtml(String(box.title || '').replace(/^(つながりで覚える|より深く)：/, '')) + '</span><span class="more-open" aria-hidden="true">ひらく</span></summary>' +
+            '<details class="more-box mb-' + (box.kind === 'link' ? 'link' : box.kind === 'manga' ? 'manga' : box.kind === 'art' ? 'art' : 'deep') + '">' +
+              '<summary><span class="more-badge">' + (box.kind === 'link' ? 'つながり' : box.kind === 'manga' ? '🎨 漫画で見る' : box.kind === 'art' ? '🖼 イラストで見る' : 'より深く') + '</span><span class="more-title">' + escapeHtml(String(box.title || '').replace(/^(つながりで覚える|より深く)：/, '')) + '</span><span class="more-open" aria-hidden="true">ひらく</span></summary>' +
               '<div class="more-body">' + box.html + '</div>' +
             '</details>'
           ).join('') +

@@ -1054,7 +1054,17 @@ window.anatomyChapters = [
     "id": "lower-limb-8",
     "no": "05-08",
     "freq": 3
-   },
+   ,
+     "boxes": [
+       {
+         "kind": "art",
+         "id": "illust-femur-joint",
+         "title": "大腿骨の部位・栄養血管・関節包",
+         "html": "<p class=\"zu-cap\">内側大腿回旋動脈が骨頭を主に栄養する。頚部骨折（関節包の内側）では血流が絶たれやすい。</p><figure class=\"fig manga-fig\"><a href=\"../manga/femur-parts.webp\" target=\"_blank\" rel=\"noopener\"><img src=\"../manga/femur-parts.webp\" alt=\"大腿骨の部位：骨頭・頸・大転子・小転子・骨幹部・顆など。\" width=\"1280\" height=\"1024\" loading=\"lazy\" decoding=\"async\"></a><figcaption>大腿骨の部位：骨頭・頸・大転子・小転子・骨幹部・顆など。</figcaption></figure><figure class=\"fig manga-fig\"><a href=\"../manga/femur-angles.webp\" target=\"_blank\" rel=\"noopener\"><img src=\"../manga/femur-angles.webp\" alt=\"大腿骨の頸体角（約125〜130°）と前捻角の模式図。\" width=\"1280\" height=\"654\" loading=\"lazy\" decoding=\"async\"></a><figcaption>大腿骨の頸体角（約125〜130°）と前捻角の模式図。</figcaption></figure><figure class=\"fig manga-fig\"><a href=\"../manga/femur-blood.webp\" target=\"_blank\" rel=\"noopener\"><img src=\"../manga/femur-blood.webp\" alt=\"大腿骨頭の栄養血管。内側大腿回旋動脈が主。頚部骨折で血流が絶たれやすい。\" width=\"1200\" height=\"1080\" loading=\"lazy\" decoding=\"async\"></a><figcaption>大腿骨頭の栄養血管。内側大腿回旋動脈が主。頚部骨折で血流が絶たれやすい。</figcaption></figure><figure class=\"fig manga-fig\"><a href=\"../manga/femur-capsule.webp\" target=\"_blank\" rel=\"noopener\"><img src=\"../manga/femur-capsule.webp\" alt=\"股関節の関節包の付着。頚部骨折は関節包の内側、転子部骨折は外側。\" width=\"1200\" height=\"1000\" loading=\"lazy\" decoding=\"async\"></a><figcaption>股関節の関節包の付着。頚部骨折は関節包の内側、転子部骨折は外側。</figcaption></figure>"
+       }
+     
+     ]
+},
    {
     "title": "腸腰筋は股関節の屈曲",
     "items": [
@@ -1070,7 +1080,17 @@ window.anatomyChapters = [
     "id": "lower-limb-9",
     "no": "05-09",
     "freq": 1
-   },
+   ,
+     "boxes": [
+       {
+         "kind": "art",
+         "id": "illust-iliopsoas",
+         "title": "腸腰筋と小転子",
+         "html": "<p class=\"zu-cap\">腸腰筋＝大腰筋＋腸骨筋。両方とも小転子に付き、縮むと股関節が屈曲する。</p><figure class=\"fig manga-fig\"><a href=\"../manga/iliopsoas.webp\" target=\"_blank\" rel=\"noopener\"><img src=\"../manga/iliopsoas.webp\" alt=\"腸腰筋＝大腰筋（腰椎）＋腸骨筋（腸骨窩）。両方とも小転子に停止し、縮むと股関節が屈曲する。\" width=\"1280\" height=\"884\" loading=\"lazy\" decoding=\"async\"></a><figcaption>腸腰筋＝大腰筋（腰椎）＋腸骨筋（腸骨窩）。両方とも小転子に停止し、縮むと股関節が屈曲する。</figcaption></figure><figure class=\"fig manga-fig\"><a href=\"../manga/femur-muscles.webp\" target=\"_blank\" rel=\"noopener\"><img src=\"../manga/femur-muscles.webp\" alt=\"小転子に付く腸腰筋、大転子に付く中殿筋・小殿筋・外旋筋など。\" width=\"1280\" height=\"1280\" loading=\"lazy\" decoding=\"async\"></a><figcaption>小転子に付く腸腰筋、大転子に付く中殿筋・小殿筋・外旋筋など。</figcaption></figure>"
+       }
+     
+     ]
+},
    {
     "title": "ハムストリングと大腿二頭筋短頭",
     "items": [
